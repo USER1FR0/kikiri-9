@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: 1b00afa89c7471b4d8b34b23e429d7c5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5673362456916000316
+    second: kikiri9_reposo_dano_derrota_0
+  - first:
+      213: 2526646822071675490
+    second: kikiri9_reposo_dano_derrota_1
+  - first:
+      213: -773200039582749123
+    second: kikiri9_reposo_dano_derrota_2
+  - first:
+      213: -921075586668572127
+    second: kikiri9_reposo_dano_derrota_3
+  - first:
+      213: -5450183517884873374
+    second: kikiri9_reposo_dano_derrota_4
+  - first:
+      213: -5534780342033081844
+    second: kikiri9_reposo_dano_derrota_5
+  - first:
+      213: -1334032957652543701
+    second: kikiri9_reposo_dano_derrota_6
+  - first:
+      213: 7255187039945665474
+    second: kikiri9_reposo_dano_derrota_7
+  - first:
+      213: -4391949626456279648
+    second: kikiri9_reposo_dano_derrota_8
+  - first:
+      213: 2217294063550681638
+    second: kikiri9_reposo_dano_derrota_9
+  - first:
+      213: -8874892137519018002
+    second: kikiri9_reposo_dano_derrota_10
+  - first:
+      213: 3966884845726715369
+    second: kikiri9_reposo_dano_derrota_11
+  - first:
+      213: 2799538108795535764
+    second: kikiri9_reposo_dano_derrota_12
+  - first:
+      213: -2249185512177396018
+    second: kikiri9_reposo_dano_derrota_13
+  - first:
+      213: -8428855034219703141
+    second: kikiri9_reposo_dano_derrota_14
+  - first:
+      213: 2582744956807081673
+    second: kikiri9_reposo_dano_derrota_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kikiri9_reposo_dano_derrota_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 714
+        width: 295
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c10c7977ea2441b0800000000000000
+      internalID: -5673362456916000316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_reposo_dano_derrota_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 686
+        width: 391
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26aa37ed5e3701320800000000000000
+      internalID: 2526646822071675490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_reposo_dano_derrota_2
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 1044
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3e2a5c19aa0545f0800000000000000
+      internalID: -773200039582749123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_reposo_dano_derrota_3
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 757
+        width: 305
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 122d55d42aea733f0800000000000000
+      internalID: -921075586668572127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_reposo_dano_derrota_4
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 712
+        width: 379
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26588cf77fe0d54b0800000000000000
+      internalID: -5450183517884873374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_reposo_dano_derrota_5
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 339
+        width: 297
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a9d4b7a928033b0800000000000000
+      internalID: -5534780342033081844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_reposo_dano_derrota_6
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 305
+        width: 405
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b27d470d7109c7de0800000000000000
+      internalID: -1334032957652543701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_reposo_dano_derrota_7
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 694
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cbaaf65c2a9fa460800000000000000
+      internalID: 7255187039945665474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_reposo_dano_derrota_8
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 281
+        width: 349
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a5f9a39519ac03c0800000000000000
+      internalID: -4391949626456279648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_reposo_dano_derrota_9
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 212
+        width: 347
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 622558cf33965ce10800000000000000
+      internalID: 2217294063550681638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_reposo_dano_derrota_10
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 0
+        width: 321
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef85434f9c06d480800000000000000
+      internalID: -8874892137519018002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_reposo_dano_derrota_11
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 61
+        width: 311
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9edcb6eefb43d0730800000000000000
+      internalID: 3966884845726715369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_reposo_dano_derrota_12
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 275
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4914dedc315f9d620800000000000000
+      internalID: 2799538108795535764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_reposo_dano_derrota_13
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 0
+        width: 363
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec616b081b949c0e0800000000000000
+      internalID: -2249185512177396018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_reposo_dano_derrota_14
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 23
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b94521e1101b60b80800000000000000
+      internalID: -8428855034219703141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_reposo_dano_derrota_15
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 45
+        width: 387
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ceeaefaad0c7d320800000000000000
+      internalID: 2582744956807081673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      kikiri9_reposo_dano_derrota_0: -5673362456916000316
+      kikiri9_reposo_dano_derrota_1: 2526646822071675490
+      kikiri9_reposo_dano_derrota_10: -8874892137519018002
+      kikiri9_reposo_dano_derrota_11: 3966884845726715369
+      kikiri9_reposo_dano_derrota_12: 2799538108795535764
+      kikiri9_reposo_dano_derrota_13: -2249185512177396018
+      kikiri9_reposo_dano_derrota_14: -8428855034219703141
+      kikiri9_reposo_dano_derrota_15: 2582744956807081673
+      kikiri9_reposo_dano_derrota_2: -773200039582749123
+      kikiri9_reposo_dano_derrota_3: -921075586668572127
+      kikiri9_reposo_dano_derrota_4: -5450183517884873374
+      kikiri9_reposo_dano_derrota_5: -5534780342033081844
+      kikiri9_reposo_dano_derrota_6: -1334032957652543701
+      kikiri9_reposo_dano_derrota_7: 7255187039945665474
+      kikiri9_reposo_dano_derrota_8: -4391949626456279648
+      kikiri9_reposo_dano_derrota_9: 2217294063550681638
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

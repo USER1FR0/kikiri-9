@@ -1,0 +1,1991 @@
+fileFormatVersion: 2
+guid: 766143245cd948d498e2c8e1b9676e53
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4806507343042961377
+    second: electricidad_activacion_cempasuchil_0
+  - first:
+      213: 7685541686828133541
+    second: electricidad_activacion_cempasuchil_1
+  - first:
+      213: -3684166653060339506
+    second: electricidad_activacion_cempasuchil_2
+  - first:
+      213: -5636790153206523476
+    second: electricidad_activacion_cempasuchil_3
+  - first:
+      213: -3800005612363024977
+    second: electricidad_activacion_cempasuchil_4
+  - first:
+      213: 6547275965266751703
+    second: electricidad_activacion_cempasuchil_5
+  - first:
+      213: 1420355203124443068
+    second: electricidad_activacion_cempasuchil_6
+  - first:
+      213: -1257009782467500989
+    second: electricidad_activacion_cempasuchil_7
+  - first:
+      213: 8886957246385157414
+    second: electricidad_activacion_cempasuchil_8
+  - first:
+      213: 7073798729603958920
+    second: electricidad_activacion_cempasuchil_9
+  - first:
+      213: 2107788958759907555
+    second: electricidad_activacion_cempasuchil_10
+  - first:
+      213: -1585927279131795227
+    second: electricidad_activacion_cempasuchil_11
+  - first:
+      213: -1398752676391739111
+    second: electricidad_activacion_cempasuchil_12
+  - first:
+      213: -329386663719085633
+    second: electricidad_activacion_cempasuchil_13
+  - first:
+      213: 6623331293047570625
+    second: electricidad_activacion_cempasuchil_14
+  - first:
+      213: 5560659536336615632
+    second: electricidad_activacion_cempasuchil_15
+  - first:
+      213: -755180227079359962
+    second: electricidad_activacion_cempasuchil_16
+  - first:
+      213: 4669920892638876328
+    second: electricidad_activacion_cempasuchil_17
+  - first:
+      213: 7212910706068329344
+    second: electricidad_activacion_cempasuchil_18
+  - first:
+      213: 440060911204334619
+    second: electricidad_activacion_cempasuchil_19
+  - first:
+      213: 4727905691160877024
+    second: electricidad_activacion_cempasuchil_20
+  - first:
+      213: -5699819560076516649
+    second: electricidad_activacion_cempasuchil_21
+  - first:
+      213: -590349628166543234
+    second: electricidad_activacion_cempasuchil_22
+  - first:
+      213: -1066507524925928095
+    second: electricidad_activacion_cempasuchil_23
+  - first:
+      213: 2839012235278592779
+    second: electricidad_activacion_cempasuchil_24
+  - first:
+      213: 4563694787139926774
+    second: electricidad_activacion_cempasuchil_25
+  - first:
+      213: -8969301874763130827
+    second: electricidad_activacion_cempasuchil_26
+  - first:
+      213: -5835834391994586527
+    second: electricidad_activacion_cempasuchil_27
+  - first:
+      213: 5938154819446735504
+    second: electricidad_activacion_cempasuchil_28
+  - first:
+      213: 6324901061605600465
+    second: electricidad_activacion_cempasuchil_29
+  - first:
+      213: 8694918358676628728
+    second: electricidad_activacion_cempasuchil_30
+  - first:
+      213: -980428781180513512
+    second: electricidad_activacion_cempasuchil_31
+  - first:
+      213: 1820263023035039690
+    second: electricidad_activacion_cempasuchil_32
+  - first:
+      213: 7417478003961451843
+    second: electricidad_activacion_cempasuchil_33
+  - first:
+      213: 5263544664799617879
+    second: electricidad_activacion_cempasuchil_34
+  - first:
+      213: 1290458564176470948
+    second: electricidad_activacion_cempasuchil_35
+  - first:
+      213: 969187325211021938
+    second: electricidad_activacion_cempasuchil_36
+  - first:
+      213: 6895539032476247126
+    second: electricidad_activacion_cempasuchil_37
+  - first:
+      213: 1134029054467077522
+    second: electricidad_activacion_cempasuchil_38
+  - first:
+      213: 6348865939565587147
+    second: electricidad_activacion_cempasuchil_39
+  - first:
+      213: -6922782025228965496
+    second: electricidad_activacion_cempasuchil_40
+  - first:
+      213: 1672403220015569052
+    second: electricidad_activacion_cempasuchil_41
+  - first:
+      213: -5370445197008969160
+    second: electricidad_activacion_cempasuchil_42
+  - first:
+      213: -7202709620552252775
+    second: electricidad_activacion_cempasuchil_43
+  - first:
+      213: -220355511123482685
+    second: electricidad_activacion_cempasuchil_44
+  - first:
+      213: -1165626390363031531
+    second: electricidad_activacion_cempasuchil_45
+  - first:
+      213: -8790959248699841915
+    second: electricidad_activacion_cempasuchil_46
+  - first:
+      213: -2522448104976160664
+    second: electricidad_activacion_cempasuchil_47
+  - first:
+      213: -8973048458120578589
+    second: electricidad_activacion_cempasuchil_48
+  - first:
+      213: -6707763047238002087
+    second: electricidad_activacion_cempasuchil_49
+  - first:
+      213: 6347606723042023881
+    second: electricidad_activacion_cempasuchil_50
+  - first:
+      213: -6059464184934141657
+    second: electricidad_activacion_cempasuchil_51
+  - first:
+      213: -781830605390178273
+    second: electricidad_activacion_cempasuchil_52
+  - first:
+      213: -1024659698782756848
+    second: electricidad_activacion_cempasuchil_53
+  - first:
+      213: -5271756145484222536
+    second: electricidad_activacion_cempasuchil_54
+  - first:
+      213: 5511127575616340656
+    second: electricidad_activacion_cempasuchil_55
+  - first:
+      213: -6956306617263812655
+    second: electricidad_activacion_cempasuchil_56
+  - first:
+      213: -7837728707159491464
+    second: electricidad_activacion_cempasuchil_57
+  - first:
+      213: 6411772474817183200
+    second: electricidad_activacion_cempasuchil_58
+  - first:
+      213: 1104188104754086339
+    second: electricidad_activacion_cempasuchil_59
+  - first:
+      213: 2234516923543655594
+    second: electricidad_activacion_cempasuchil_60
+  - first:
+      213: 8569720262939666689
+    second: electricidad_activacion_cempasuchil_61
+  - first:
+      213: 2598474963496437623
+    second: electricidad_activacion_cempasuchil_62
+  - first:
+      213: 194415944368009334
+    second: electricidad_activacion_cempasuchil_63
+  - first:
+      213: 8782968192399241259
+    second: electricidad_activacion_cempasuchil_64
+  - first:
+      213: -9127724404580362625
+    second: electricidad_activacion_cempasuchil_65
+  - first:
+      213: 2054758808570808559
+    second: electricidad_activacion_cempasuchil_66
+  - first:
+      213: 6470930303358310686
+    second: electricidad_activacion_cempasuchil_67
+  - first:
+      213: -1644937321027769099
+    second: electricidad_activacion_cempasuchil_68
+  - first:
+      213: 7181232075070701473
+    second: electricidad_activacion_cempasuchil_69
+  - first:
+      213: -7037469311141393621
+    second: electricidad_activacion_cempasuchil_70
+  - first:
+      213: -194299860197210979
+    second: electricidad_activacion_cempasuchil_71
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 599
+        width: 351
+        height: 487
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f102e97990bdb4db0800000000000000
+      internalID: -4806507343042961377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_1
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 682
+        width: 309
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ace8d5c17788aa60800000000000000
+      internalID: 7685541686828133541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_2
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 688
+        width: 428
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec8aff6d2f53fdcc0800000000000000
+      internalID: -3684166653060339506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_3
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 971
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca994bc783916c1b0800000000000000
+      internalID: -5636790153206523476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_4
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 676
+        width: 235
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa57c92670ba34bc0800000000000000
+      internalID: -3800005612363024977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_5
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 945
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d07d2c2dc89cda50800000000000000
+      internalID: 6547275965266751703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_6
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 899
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb73c19288d16b310800000000000000
+      internalID: 1420355203124443068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_7
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 909
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34465d443443e8ee0800000000000000
+      internalID: -1257009782467500989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_8
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 866
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 625fedcc780d45b70800000000000000
+      internalID: 8886957246385157414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_9
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 860
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88847aa477e2b2260800000000000000
+      internalID: 7073798729603958920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_10
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 838
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e0ff54f3ee504d10800000000000000
+      internalID: 2107788958759907555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_11
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 844
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e06fbfca87adf9e0800000000000000
+      internalID: -1585927279131795227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_12
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 840
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9112b0b0ad1a69ce0800000000000000
+      internalID: -1398752676391739111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_13
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 854
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb9d5431398cd6bf0800000000000000
+      internalID: -329386663719085633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_14
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 844
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c044d718bccaeb50800000000000000
+      internalID: 6623331293047570625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_15
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 840
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d87b3cf26e6b2d40800000000000000
+      internalID: 5560659536336615632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_16
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 733
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6223987a59f0585f0800000000000000
+      internalID: -755180227079359962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_17
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 663
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a25aee3f44eec040800000000000000
+      internalID: 4669920892638876328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_18
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 351
+        width: 417
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08390df4218691460800000000000000
+      internalID: 7212910706068329344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_19
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 676
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1c7ed331196b1600800000000000000
+      internalID: 440060911204334619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_20
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 663
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e711353d25ec9140800000000000000
+      internalID: 4727905691160877024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_21
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 313
+        width: 321
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d2e0dd1f4c26e0b0800000000000000
+      internalID: -5699819560076516649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_22
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 651
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7869d71428aec7f0800000000000000
+      internalID: -590349628166543234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_23
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 649
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16d42828e010331f0800000000000000
+      internalID: -1066507524925928095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_24
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 342
+        width: 287
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ba4c41692366720800000000000000
+      internalID: 2839012235278592779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_25
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 631
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6faf6caba30855f30800000000000000
+      internalID: 4563694787139926774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 295
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5389f7f5773a68380800000000000000
+      internalID: -8969301874763130827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_27
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 589
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16aa7214a83f20fa0800000000000000
+      internalID: -5835834391994586527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_28
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 469
+        width: 83
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 092856ab850986250800000000000000
+      internalID: 5938154819446735504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_29
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 526
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc2e78310096c750800000000000000
+      internalID: 6324901061605600465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_30
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 388
+        width: 47
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f461f7fd2e8aa870800000000000000
+      internalID: 8694918358676628728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_31
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 446
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8139a22d731d462f0800000000000000
+      internalID: -980428781180513512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_32
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 238
+        width: 103
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acf38c5439fd24910800000000000000
+      internalID: 1820263023035039690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_33
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 0
+        width: 407
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3455563f1fc20f660800000000000000
+      internalID: 7417478003961451843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_34
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 337
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 753a8c43cfddb0940800000000000000
+      internalID: 5263544664799617879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_35
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 352
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a3691b1a31a8e110800000000000000
+      internalID: 1290458564176470948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_36
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 339
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2729300ccbe337d00800000000000000
+      internalID: 969187325211021938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_37
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 317
+        width: 17
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65466954730e1bf50800000000000000
+      internalID: 6895539032476247126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_38
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 355
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2957b7caa61ecbf00800000000000000
+      internalID: 1134029054467077522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_39
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 301
+        width: 57
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bca226e2fe3bb1850800000000000000
+      internalID: 6348865939565587147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_40
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 315
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 889a4c03d665def90800000000000000
+      internalID: -6922782025228965496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_41
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 329
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c985f3a2ed1953710800000000000000
+      internalID: 1672403220015569052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_42
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 317
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 832e3921c885875b0800000000000000
+      internalID: -5370445197008969160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_43
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 317
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 992c1bef2c5da0c90800000000000000
+      internalID: -7202709620552252775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_44
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 306
+        width: 9
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c76f2384d321fcf0800000000000000
+      internalID: -220355511123482685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_45
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 286
+        width: 37
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 518379549fcd2dfe0800000000000000
+      internalID: -1165626390363031531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_46
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 0
+        width: 340
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 582af4ac32d300680800000000000000
+      internalID: -8790959248699841915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_47
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 275
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 868e98220d67efcd0800000000000000
+      internalID: -2522448104976160664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_48
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 291
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e93b55f7f3597380800000000000000
+      internalID: -8973048458120578589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_49
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 0
+        width: 408
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95a13eb3c0d39e2a0800000000000000
+      internalID: -6707763047238002087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_50
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 254
+        width: 19
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c91dccfeaa371850800000000000000
+      internalID: 6347606723042023881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_51
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 274
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7217ccf9d6578eba0800000000000000
+      internalID: -6059464184934141657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_52
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 269
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f18903be4316625f0800000000000000
+      internalID: -781830605390178273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_53
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 108
+        width: 175
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 010256ece6da7c1f0800000000000000
+      internalID: -1024659698782756848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_54
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 242
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bf2ee577b5f6d6b0800000000000000
+      internalID: -5271756145484222536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_55
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 225
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b2c870b4557b7c40800000000000000
+      internalID: 5511127575616340656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_56
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 199
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1df8a49dcfb367f90800000000000000
+      internalID: -6956306617263812655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_57
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 167
+        width: 41
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87c70e3544bca3390800000000000000
+      internalID: -7837728707159491464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_58
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 129
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0edfa1648113bf850800000000000000
+      internalID: 6411772474817183200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_59
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 163
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c144152b3dd25f00800000000000000
+      internalID: 1104188104754086339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_60
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 135
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa41b609d49920f10800000000000000
+      internalID: 2234516923543655594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_61
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 0
+        width: 146
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1096cf0cc23cde670800000000000000
+      internalID: 8569720262939666689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_62
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 82
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77783f44633af0420800000000000000
+      internalID: 2598474963496437623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_63
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 64
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6703ab67544b2b200800000000000000
+      internalID: 194415944368009334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_64
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 56
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b20f28d690f53e970800000000000000
+      internalID: 8782968192399241259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_65
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 13
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f76d259c30fc35180800000000000000
+      internalID: -9127724404580362625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_66
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 34
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe8c7f3ff38f38c10800000000000000
+      internalID: 2054758808570808559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_67
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 29
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e199bf193dc5dc950800000000000000
+      internalID: 6470930303358310686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_68
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 37
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc6b56c8320c29e0800000000000000
+      internalID: -1644937321027769099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_69
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 0
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1affa34468cd8a360800000000000000
+      internalID: 7181232075070701473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_70
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 21
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2b44b792f2e55e90800000000000000
+      internalID: -7037469311141393621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricidad_activacion_cempasuchil_71
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 17
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d94890d7e45bd4df0800000000000000
+      internalID: -194299860197210979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      electricidad_activacion_cempasuchil_0: -4806507343042961377
+      electricidad_activacion_cempasuchil_1: 7685541686828133541
+      electricidad_activacion_cempasuchil_10: 2107788958759907555
+      electricidad_activacion_cempasuchil_11: -1585927279131795227
+      electricidad_activacion_cempasuchil_12: -1398752676391739111
+      electricidad_activacion_cempasuchil_13: -329386663719085633
+      electricidad_activacion_cempasuchil_14: 6623331293047570625
+      electricidad_activacion_cempasuchil_15: 5560659536336615632
+      electricidad_activacion_cempasuchil_16: -755180227079359962
+      electricidad_activacion_cempasuchil_17: 4669920892638876328
+      electricidad_activacion_cempasuchil_18: 7212910706068329344
+      electricidad_activacion_cempasuchil_19: 440060911204334619
+      electricidad_activacion_cempasuchil_2: -3684166653060339506
+      electricidad_activacion_cempasuchil_20: 4727905691160877024
+      electricidad_activacion_cempasuchil_21: -5699819560076516649
+      electricidad_activacion_cempasuchil_22: -590349628166543234
+      electricidad_activacion_cempasuchil_23: -1066507524925928095
+      electricidad_activacion_cempasuchil_24: 2839012235278592779
+      electricidad_activacion_cempasuchil_25: 4563694787139926774
+      electricidad_activacion_cempasuchil_26: -8969301874763130827
+      electricidad_activacion_cempasuchil_27: -5835834391994586527
+      electricidad_activacion_cempasuchil_28: 5938154819446735504
+      electricidad_activacion_cempasuchil_29: 6324901061605600465
+      electricidad_activacion_cempasuchil_3: -5636790153206523476
+      electricidad_activacion_cempasuchil_30: 8694918358676628728
+      electricidad_activacion_cempasuchil_31: -980428781180513512
+      electricidad_activacion_cempasuchil_32: 1820263023035039690
+      electricidad_activacion_cempasuchil_33: 7417478003961451843
+      electricidad_activacion_cempasuchil_34: 5263544664799617879
+      electricidad_activacion_cempasuchil_35: 1290458564176470948
+      electricidad_activacion_cempasuchil_36: 969187325211021938
+      electricidad_activacion_cempasuchil_37: 6895539032476247126
+      electricidad_activacion_cempasuchil_38: 1134029054467077522
+      electricidad_activacion_cempasuchil_39: 6348865939565587147
+      electricidad_activacion_cempasuchil_4: -3800005612363024977
+      electricidad_activacion_cempasuchil_40: -6922782025228965496
+      electricidad_activacion_cempasuchil_41: 1672403220015569052
+      electricidad_activacion_cempasuchil_42: -5370445197008969160
+      electricidad_activacion_cempasuchil_43: -7202709620552252775
+      electricidad_activacion_cempasuchil_44: -220355511123482685
+      electricidad_activacion_cempasuchil_45: -1165626390363031531
+      electricidad_activacion_cempasuchil_46: -8790959248699841915
+      electricidad_activacion_cempasuchil_47: -2522448104976160664
+      electricidad_activacion_cempasuchil_48: -8973048458120578589
+      electricidad_activacion_cempasuchil_49: -6707763047238002087
+      electricidad_activacion_cempasuchil_5: 6547275965266751703
+      electricidad_activacion_cempasuchil_50: 6347606723042023881
+      electricidad_activacion_cempasuchil_51: -6059464184934141657
+      electricidad_activacion_cempasuchil_52: -781830605390178273
+      electricidad_activacion_cempasuchil_53: -1024659698782756848
+      electricidad_activacion_cempasuchil_54: -5271756145484222536
+      electricidad_activacion_cempasuchil_55: 5511127575616340656
+      electricidad_activacion_cempasuchil_56: -6956306617263812655
+      electricidad_activacion_cempasuchil_57: -7837728707159491464
+      electricidad_activacion_cempasuchil_58: 6411772474817183200
+      electricidad_activacion_cempasuchil_59: 1104188104754086339
+      electricidad_activacion_cempasuchil_6: 1420355203124443068
+      electricidad_activacion_cempasuchil_60: 2234516923543655594
+      electricidad_activacion_cempasuchil_61: 8569720262939666689
+      electricidad_activacion_cempasuchil_62: 2598474963496437623
+      electricidad_activacion_cempasuchil_63: 194415944368009334
+      electricidad_activacion_cempasuchil_64: 8782968192399241259
+      electricidad_activacion_cempasuchil_65: -9127724404580362625
+      electricidad_activacion_cempasuchil_66: 2054758808570808559
+      electricidad_activacion_cempasuchil_67: 6470930303358310686
+      electricidad_activacion_cempasuchil_68: -1644937321027769099
+      electricidad_activacion_cempasuchil_69: 7181232075070701473
+      electricidad_activacion_cempasuchil_7: -1257009782467500989
+      electricidad_activacion_cempasuchil_70: -7037469311141393621
+      electricidad_activacion_cempasuchil_71: -194299860197210979
+      electricidad_activacion_cempasuchil_8: 8886957246385157414
+      electricidad_activacion_cempasuchil_9: 7073798729603958920
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
