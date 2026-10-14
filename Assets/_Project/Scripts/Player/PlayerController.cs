@@ -16,14 +16,14 @@ namespace Kikiri9.Player
         [SerializeField] private float runSpeed = 4f;
 
         [Header("Jump")]
-        [SerializeField] private float jumpVelocity = 10.5f;
+        [SerializeField] private float jumpVelocity = 12f;
         [SerializeField] private float coyoteTime = 0.08f;
         [SerializeField] private float jumpBuffer = 0.12f;
-        [SerializeField] private float fallGravityMultiplier = 1.6f;
-        [SerializeField] private float lowJumpGravityMultiplier = 2.2f;
+        [SerializeField] private float fallGravityMultiplier = 1.2f;
+        [SerializeField] private float lowJumpGravityMultiplier = 1.8f;
 
         [Header("Slide")]
-        [SerializeField] private float slideDuration = 0.6f;
+        [SerializeField] private float slideDuration = 0.9f;
         [SerializeField, Range(0.1f, 0.9f)] private float slideHeightFactor = 0.5f;
         [SerializeField] private float slideBuffer = 0.12f;
 

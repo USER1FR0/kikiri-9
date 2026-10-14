@@ -74,32 +74,40 @@ namespace Kikiri9.EditorTools
 
         private static void BuildBackground(Transform camT)
         {
-            // Single guanajuato background that TILES horizontally and parallaxes with wrap.
-            var sprite = LoadBgSprite(BgCiudad);
+            // Dos capas: Cielo al fondo (ocupa todo el viewport, parallax casi nulo),
+            // Silueta de Guanajuato enfrente del cielo (parallax medio para profundidad).
+            // Ambas escaladas para llenar la altura del viewport.
+            SpawnBgLayer("Bg_Cielo",   BgCielo,   camT, lockedY: -1.5f, scaleMul: 1.5f, parallax: 0.05f, sortingOrder: -30);
+            SpawnBgLayer("Bg_Silueta", BgSilueta, camT, lockedY: -0.5f, scaleMul: 1.0f, parallax: 0.4f, sortingOrder: -20);
+        }
+
+        private static void SpawnBgLayer(string name, string path, Transform camT, float lockedY, float scaleMul, float parallax, int sortingOrder)
+        {
+            var sprite = LoadBgSprite(path);
             if (sprite == null) return;
 
             float naturalW = sprite.rect.width / sprite.pixelsPerUnit;
             float naturalH = sprite.rect.height / sprite.pixelsPerUnit;
             float viewportH = 9f;
-            float scale = (viewportH / naturalH) * 0.85f;
+            float scale = (viewportH / naturalH) * scaleMul;
 
-            var go = new GameObject("Bg_Guanajuato");
-            go.transform.position = new Vector3(0f, -0.3f, 10f);
+            var go = new GameObject(name);
+            go.transform.position = new Vector3(0f, lockedY, 10f);
             go.transform.localScale = new Vector3(scale, scale, 1f);
 
             var sr = go.AddComponent<SpriteRenderer>();
             sr.sprite = sprite;
             sr.drawMode = SpriteDrawMode.Tiled;
             sr.size = new Vector2(naturalW * 5f, naturalH);
-            sr.sortingOrder = -20;
+            sr.sortingOrder = sortingOrder;
 
             float tileWidthWorld = naturalW * scale;
 
             var pf = go.AddComponent<ParallaxLayer>();
             var so = new SerializedObject(pf);
             so.FindProperty("cameraTransform").objectReferenceValue = camT;
-            so.FindProperty("parallaxFactor").floatValue = 0.4f;
-            so.FindProperty("lockedY").floatValue = -0.3f;
+            so.FindProperty("parallaxFactor").floatValue = parallax;
+            so.FindProperty("lockedY").floatValue = lockedY;
             so.FindProperty("tileWidth").floatValue = tileWidthWorld;
             so.ApplyModifiedProperties();
         }
@@ -156,7 +164,7 @@ namespace Kikiri9.EditorTools
             sr.sortingOrder = 20;
 
             var rb = go.AddComponent<Rigidbody2D>();
-            rb.gravityScale = 3f;
+            rb.gravityScale = 2f;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             rb.linearDamping = 0f;
             rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
@@ -173,7 +181,7 @@ namespace Kikiri9.EditorTools
 
             var muzzleGo = new GameObject("Muzzle");
             muzzleGo.transform.SetParent(go.transform, worldPositionStays: false);
-            muzzleGo.transform.localPosition = new Vector3(0.7f, 1.2f, 0f);
+            muzzleGo.transform.localPosition = new Vector3(1.0f, 1.3f, 0f);
 
             var animator = go.AddComponent<Animator>();
             var controller = AssetDatabase.LoadAssetAtPath<AnimatorController>(ControllerPath);
@@ -182,12 +190,13 @@ namespace Kikiri9.EditorTools
             animator.applyRootMotion = false;
 
             var launcher = go.AddComponent<BreadLauncher>();
-            // objetos_02 = pan proyectil (fila 1, col 2 del atlas Items/objetos_efectos.png)
-            var breadSprite = FindSubSprite(ItemsSheet, "objetos_02");
-            if (breadSprite == null) Debug.LogWarning("[Kikiri-9] Pan projectile sprite 'objetos_02' not found.");
+            // objetos_01 = pan (visual), efectos_a_02 = impacto naranja splash
+            var breadSprite = FindSubSprite(ItemsSheet, "objetos_01");
+            var splashSprite = FindSubSprite(ItemsSheet, "efectos_a_02");
             var soL = new SerializedObject(launcher);
             soL.FindProperty("muzzle").objectReferenceValue = muzzleGo.transform;
             if (breadSprite != null) soL.FindProperty("breadSprite").objectReferenceValue = breadSprite;
+            if (splashSprite != null) soL.FindProperty("splashSprite").objectReferenceValue = splashSprite;
             soL.ApplyModifiedProperties();
 
             var pc = go.AddComponent<PlayerController>();

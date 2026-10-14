@@ -9,7 +9,8 @@ namespace Kikiri9.Combat
     {
         [SerializeField] private Transform muzzle;
         [SerializeField] private Sprite breadSprite;
-        [SerializeField] private float launchSpeed = 14f;
+        [SerializeField] private Sprite splashSprite;
+        [SerializeField] private float launchSpeed = 9f;
         [SerializeField] private float cooldown = 0.3f;
         [SerializeField] private float visualScale = 0.35f;
 
@@ -32,14 +33,17 @@ namespace Kikiri9.Combat
             sr.sortingOrder = 15;
 
             var rb = go.AddComponent<Rigidbody2D>();
-            rb.gravityScale = 0f;
+            rb.gravityScale = 0.1f;
             rb.freezeRotation = true;
+            rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+            rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 
             var cc = go.AddComponent<CircleCollider2D>();
             cc.radius = 0.4f;
-            cc.isTrigger = true;
+            cc.isTrigger = false;
 
             var bread = go.AddComponent<Bread>();
+            if (splashSprite != null) bread.SetSplashSprite(splashSprite);
             bread.Launch(new Vector2(launchSpeed + extraForwardSpeed, 0f));
             return true;
         }

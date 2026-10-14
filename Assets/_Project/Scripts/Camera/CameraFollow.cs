@@ -1,5 +1,6 @@
-// Follows the target smoothly on the X axis (and loosely on Y). Clamp above Y limit so
-// the camera does not dip below the ground when the pollo falls.
+// Follows the target smoothly on X only. The Y position stays wherever the camera was
+// placed in the Scene view — so you can compose the view manually without Play undoing
+// your framing. Enable followY if you ever want vertical tracking.
 
 using UnityEngine;
 
@@ -9,8 +10,10 @@ namespace Kikiri9.CameraSystem
     public class CameraFollow : MonoBehaviour
     {
         [SerializeField] private Transform target;
-        [SerializeField] private Vector2 offset = new Vector2(5f, 1f);
+        [SerializeField] private float offsetX = 7f;
         [SerializeField, Min(0f)] private float smoothTime = 0.15f;
+        [SerializeField] private bool followY = false;
+        [SerializeField] private float offsetY = 1f;
         [SerializeField] private float minY = -2f;
 
         private Vector3 velocity;
@@ -20,10 +23,9 @@ namespace Kikiri9.CameraSystem
         private void LateUpdate()
         {
             if (target == null) return;
-            var desired = new Vector3(
-                target.position.x + offset.x,
-                Mathf.Max(target.position.y + offset.y, minY),
-                transform.position.z);
+            float x = target.position.x + offsetX;
+            float y = followY ? Mathf.Max(target.position.y + offsetY, minY) : transform.position.y;
+            var desired = new Vector3(x, y, transform.position.z);
             transform.position = Vector3.SmoothDamp(transform.position, desired, ref velocity, smoothTime);
         }
     }

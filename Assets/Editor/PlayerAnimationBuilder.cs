@@ -26,8 +26,8 @@ namespace Kikiri9.EditorTools
             System.IO.Directory.CreateDirectory(AnimDir);
 
             var runClip = CreateClip("Kikiri9_Run", MainSheet, "correr", 12, loop: true);
-            var jumpClip = CreateClip("Kikiri9_Jump", MainSheet, "saltar", 12, loop: false);
-            var slideClip = CreateClip("Kikiri9_Slide", MainSheet, "deslizar", 12, loop: false);
+            var jumpClip = CreateClip("Kikiri9_Jump", MainSheet, "saltar", 8, loop: true);
+            var slideClip = CreateClip("Kikiri9_Slide", MainSheet, "deslizar", 8, loop: true);
             var throwClip = CreateClip("Kikiri9_Throw", MainSheet, "lanzar", 14, loop: false);
             var idleClip = CreateClip("Kikiri9_Idle", ExtraSheet, "reposo", 8, loop: true);
             var hitClip = CreateClip("Kikiri9_Hit", ExtraSheet, "dano", 10, loop: false);
