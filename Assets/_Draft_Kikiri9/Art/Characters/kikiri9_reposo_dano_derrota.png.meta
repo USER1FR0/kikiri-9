@@ -82,7 +82,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -101,9 +101,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationMethod: 0
   spriteTessellationDetail: -1
-  spriteGeometrySubdivision: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -143,6 +141,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -150,12 +174,12 @@ TextureImporter:
       name: kikiri9_reposo_dano_derrota_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 714
-        width: 295
-        height: 350
+        x: 15
+        y: 715
+        width: 293
+        height: 348
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -172,12 +196,12 @@ TextureImporter:
       name: kikiri9_reposo_dano_derrota_1
       rect:
         serializedVersion: 2
-        x: 320
-        y: 686
-        width: 391
-        height: 388
+        x: 321
+        y: 687
+        width: 389
+        height: 386
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -194,12 +218,12 @@ TextureImporter:
       name: kikiri9_reposo_dano_derrota_2
       rect:
         serializedVersion: 2
-        x: 509
-        y: 1044
-        width: 9
-        height: 10
+        x: 510
+        y: 1045
+        width: 7
+        height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -216,12 +240,12 @@ TextureImporter:
       name: kikiri9_reposo_dano_derrota_3
       rect:
         serializedVersion: 2
-        x: 732
-        y: 757
-        width: 305
-        height: 303
+        x: 733
+        y: 758
+        width: 303
+        height: 301
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -238,12 +262,12 @@ TextureImporter:
       name: kikiri9_reposo_dano_derrota_4
       rect:
         serializedVersion: 2
-        x: 1052
-        y: 712
-        width: 379
-        height: 350
+        x: 1053
+        y: 713
+        width: 377
+        height: 348
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -260,12 +284,12 @@ TextureImporter:
       name: kikiri9_reposo_dano_derrota_5
       rect:
         serializedVersion: 2
-        x: 15
-        y: 339
-        width: 297
-        height: 376
+        x: 16
+        y: 340
+        width: 295
+        height: 374
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -282,12 +306,12 @@ TextureImporter:
       name: kikiri9_reposo_dano_derrota_6
       rect:
         serializedVersion: 2
-        x: 320
-        y: 305
-        width: 405
-        height: 408
+        x: 321
+        y: 306
+        width: 403
+        height: 406
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -304,12 +328,12 @@ TextureImporter:
       name: kikiri9_reposo_dano_derrota_7
       rect:
         serializedVersion: 2
-        x: 328
-        y: 694
-        width: 9
-        height: 13
+        x: 329
+        y: 695
+        width: 7
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -326,12 +350,12 @@ TextureImporter:
       name: kikiri9_reposo_dano_derrota_8
       rect:
         serializedVersion: 2
-        x: 716
-        y: 281
-        width: 349
-        height: 431
+        x: 717
+        y: 282
+        width: 347
+        height: 429
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -348,12 +372,12 @@ TextureImporter:
       name: kikiri9_reposo_dano_derrota_9
       rect:
         serializedVersion: 2
-        x: 1086
-        y: 212
-        width: 347
-        height: 488
+        x: 1087
+        y: 213
+        width: 345
+        height: 486
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -370,12 +394,12 @@ TextureImporter:
       name: kikiri9_reposo_dano_derrota_10
       rect:
         serializedVersion: 2
-        x: 28
+        x: 29
         y: 0
-        width: 321
-        height: 326
+        width: 319
+        height: 325
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -392,12 +416,12 @@ TextureImporter:
       name: kikiri9_reposo_dano_derrota_11
       rect:
         serializedVersion: 2
-        x: 382
-        y: 61
-        width: 311
-        height: 233
+        x: 383
+        y: 62
+        width: 309
+        height: 231
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -414,12 +438,12 @@ TextureImporter:
       name: kikiri9_reposo_dano_derrota_12
       rect:
         serializedVersion: 2
-        x: 1343
-        y: 275
-        width: 6
-        height: 6
+        x: 1344
+        y: 276
+        width: 4
+        height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -436,12 +460,12 @@ TextureImporter:
       name: kikiri9_reposo_dano_derrota_13
       rect:
         serializedVersion: 2
-        x: 702
+        x: 703
         y: 0
-        width: 363
-        height: 268
+        width: 361
+        height: 267
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -458,12 +482,12 @@ TextureImporter:
       name: kikiri9_reposo_dano_derrota_14
       rect:
         serializedVersion: 2
-        x: 724
-        y: 23
-        width: 9
-        height: 12
+        x: 725
+        y: 24
+        width: 7
+        height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -480,12 +504,12 @@ TextureImporter:
       name: kikiri9_reposo_dano_derrota_15
       rect:
         serializedVersion: 2
-        x: 1048
-        y: 45
-        width: 387
-        height: 164
+        x: 1049
+        y: 46
+        width: 385
+        height: 162
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -502,7 +526,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b5a4c8576c6dccc49ba343ac32565145
     internalID: 0
     vertices: []
     indices: 
@@ -510,7 +534,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":1,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      - key: SpriteEditor.SliceOnImport
+        value: False
     nameFileIdTable:
       kikiri9_reposo_dano_derrota_0: -5673362456916000316
       kikiri9_reposo_dano_derrota_1: 2526646822071675490

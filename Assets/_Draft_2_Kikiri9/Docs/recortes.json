@@ -1,0 +1,1155 @@
+{
+  "sheets": [
+    {
+      "file": "Characters/kikiri9.png",
+      "cell_size": [
+        512,
+        384
+      ],
+      "columns": 6,
+      "rows": 4,
+      "rows_top_to_bottom": [
+        "correr",
+        "saltar",
+        "deslizar",
+        "lanzar"
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.125
+      ],
+      "orientation": "right",
+      "pixels_per_unit_suggested": 128,
+      "scale_applied_to_sheet": 1.0476190476190477,
+      "source_bounds": [
+        [
+          34,
+          28,
+          251,
+          238
+        ],
+        [
+          280,
+          28,
+          497,
+          238
+        ],
+        [
+          525,
+          28,
+          737,
+          238
+        ],
+        [
+          784,
+          28,
+          1004,
+          238
+        ],
+        [
+          1047,
+          28,
+          1264,
+          238
+        ],
+        [
+          1299,
+          28,
+          1518,
+          238
+        ],
+        [
+          30,
+          322,
+          252,
+          529
+        ],
+        [
+          286,
+          296,
+          511,
+          530
+        ],
+        [
+          544,
+          263,
+          754,
+          513
+        ],
+        [
+          785,
+          267,
+          1014,
+          502
+        ],
+        [
+          1059,
+          285,
+          1275,
+          524
+        ],
+        [
+          1301,
+          327,
+          1519,
+          528
+        ],
+        [
+          28,
+          560,
+          252,
+          760
+        ],
+        [
+          285,
+          591,
+          512,
+          760
+        ],
+        [
+          536,
+          612,
+          786,
+          758
+        ],
+        [
+          795,
+          610,
+          1047,
+          758
+        ],
+        [
+          1056,
+          579,
+          1272,
+          762
+        ],
+        [
+          1306,
+          556,
+          1519,
+          765
+        ],
+        [
+          31,
+          772,
+          255,
+          993
+        ],
+        [
+          279,
+          777,
+          489,
+          993
+        ],
+        [
+          519,
+          777,
+          765,
+          993
+        ],
+        [
+          769,
+          784,
+          1029,
+          993
+        ],
+        [
+          1037,
+          784,
+          1276,
+          993
+        ],
+        [
+          1305,
+          777,
+          1517,
+          993
+        ]
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "validation": "outside Unity; validate animation timing and in-engine physics"
+    },
+    {
+      "file": "Characters/kikiri9_reposo_dano_derrota.png",
+      "cell_size": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 3,
+      "rows_top_to_bottom": [
+        "reposo",
+        "dano",
+        "derrota"
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.125
+      ],
+      "orientation": "right",
+      "pixels_per_unit_suggested": 128,
+      "scale_applied_to_sheet": 0.7885304659498208,
+      "source_bounds": [
+        [
+          25,
+          33,
+          305,
+          312
+        ],
+        [
+          389,
+          41,
+          672,
+          317
+        ],
+        [
+          752,
+          31,
+          1026,
+          316
+        ],
+        [
+          1111,
+          34,
+          1394,
+          313
+        ],
+        [
+          25,
+          385,
+          309,
+          670
+        ],
+        [
+          391,
+          379,
+          683,
+          677
+        ],
+        [
+          756,
+          423,
+          1058,
+          675
+        ],
+        [
+          1110,
+          389,
+          1398,
+          673
+        ],
+        [
+          36,
+          765,
+          335,
+          1028
+        ],
+        [
+          392,
+          796,
+          686,
+          1021
+        ],
+        [
+          736,
+          825,
+          1059,
+          1026
+        ],
+        [
+          1055,
+          889,
+          1428,
+          1028
+        ]
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "validation": "outside Unity; validate animation timing and in-engine physics"
+    },
+    {
+      "file": "Characters/momia.png",
+      "cell_size": [
+        512,
+        384
+      ],
+      "columns": 6,
+      "rows": 2,
+      "rows_top_to_bottom": [
+        "caminar",
+        "derrota"
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.125
+      ],
+      "orientation": "left",
+      "pixels_per_unit_suggested": 128,
+      "scale_applied_to_sheet": 0.7418397626112759,
+      "source_bounds": [
+        [
+          27,
+          18,
+          308,
+          356
+        ],
+        [
+          379,
+          19,
+          667,
+          356
+        ],
+        [
+          732,
+          20,
+          1039,
+          356
+        ],
+        [
+          1076,
+          24,
+          1384,
+          356
+        ],
+        [
+          1448,
+          19,
+          1753,
+          356
+        ],
+        [
+          1839,
+          16,
+          2139,
+          356
+        ],
+        [
+          29,
+          387,
+          326,
+          705
+        ],
+        [
+          369,
+          393,
+          700,
+          705
+        ],
+        [
+          671,
+          387,
+          1047,
+          705
+        ],
+        [
+          1061,
+          474,
+          1445,
+          705
+        ],
+        [
+          1452,
+          540,
+          1807,
+          705
+        ],
+        [
+          1840,
+          587,
+          2143,
+          705
+        ]
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "validation": "outside Unity; validate animation timing and in-engine physics"
+    },
+    {
+      "file": "Characters/coronela.png",
+      "cell_size": [
+        512,
+        384
+      ],
+      "columns": 6,
+      "rows": 3,
+      "rows_top_to_bottom": [
+        "caminar",
+        "ataque",
+        "derrota"
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.125
+      ],
+      "orientation": "left",
+      "pixels_per_unit_suggested": 128,
+      "scale_applied_to_sheet": 0.9385113268608414,
+      "source_bounds": [
+        [
+          53,
+          32,
+          256,
+          340
+        ],
+        [
+          318,
+          32,
+          513,
+          342
+        ],
+        [
+          573,
+          32,
+          778,
+          341
+        ],
+        [
+          825,
+          32,
+          1029,
+          340
+        ],
+        [
+          1074,
+          32,
+          1271,
+          342
+        ],
+        [
+          1323,
+          31,
+          1517,
+          340
+        ],
+        [
+          32,
+          377,
+          251,
+          684
+        ],
+        [
+          259,
+          387,
+          518,
+          683
+        ],
+        [
+          510,
+          387,
+          776,
+          684
+        ],
+        [
+          769,
+          384,
+          1018,
+          684
+        ],
+        [
+          1009,
+          393,
+          1282,
+          683
+        ],
+        [
+          1261,
+          399,
+          1530,
+          684
+        ],
+        [
+          30,
+          695,
+          229,
+          984
+        ],
+        [
+          274,
+          740,
+          493,
+          984
+        ],
+        [
+          505,
+          775,
+          734,
+          978
+        ],
+        [
+          735,
+          823,
+          975,
+          986
+        ],
+        [
+          969,
+          846,
+          1246,
+          984
+        ],
+        [
+          1248,
+          876,
+          1521,
+          982
+        ]
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "validation": "outside Unity; validate animation timing and in-engine physics"
+    },
+    {
+      "file": "Characters/zombi.png",
+      "cell_size": [
+        512,
+        384
+      ],
+      "columns": 6,
+      "rows": 2,
+      "rows_top_to_bottom": [
+        "caminar",
+        "derrota"
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.125
+      ],
+      "orientation": "left",
+      "pixels_per_unit_suggested": 128,
+      "scale_applied_to_sheet": 0.6666666666666666,
+      "source_bounds": [
+        [
+          47,
+          61,
+          309,
+          437
+        ],
+        [
+          317,
+          60,
+          584,
+          437
+        ],
+        [
+          606,
+          66,
+          878,
+          437
+        ],
+        [
+          909,
+          69,
+          1193,
+          437
+        ],
+        [
+          1206,
+          62,
+          1471,
+          437
+        ],
+        [
+          1493,
+          62,
+          1755,
+          437
+        ],
+        [
+          47,
+          482,
+          306,
+          832
+        ],
+        [
+          331,
+          495,
+          588,
+          832
+        ],
+        [
+          598,
+          560,
+          869,
+          831
+        ],
+        [
+          855,
+          637,
+          1155,
+          833
+        ],
+        [
+          1158,
+          678,
+          1471,
+          830
+        ],
+        [
+          1477,
+          711,
+          1762,
+          830
+        ]
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "validation": "outside Unity; validate animation timing and in-engine physics"
+    },
+    {
+      "file": "Environment/suelo.png",
+      "cell_size": [
+        464,
+        368
+      ],
+      "columns": 4,
+      "rows": 2,
+      "rows_top_to_bottom": [
+        "suelo",
+        "plataformas"
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.8260869565217391
+      ],
+      "orientation": null,
+      "pixels_per_unit_suggested": null,
+      "scale_applied_to_sheet": 1.0,
+      "source_bounds": [
+        [
+          37,
+          214,
+          433,
+          403
+        ],
+        [
+          473,
+          229,
+          867,
+          338
+        ],
+        [
+          907,
+          214,
+          1302,
+          403
+        ],
+        [
+          1347,
+          229,
+          1747,
+          343
+        ],
+        [
+          37,
+          476,
+          433,
+          772
+        ],
+        [
+          472,
+          492,
+          867,
+          772
+        ],
+        [
+          906,
+          476,
+          1298,
+          772
+        ],
+        [
+          1391,
+          518,
+          1705,
+          728
+        ]
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "validation": "outside Unity; validate animation timing and in-engine physics"
+    },
+    {
+      "file": "Environment/obstaculos_decoracion.png",
+      "cell_size": [
+        464,
+        400
+      ],
+      "columns": 4,
+      "rows": 3,
+      "rows_top_to_bottom": [
+        "obstaculos",
+        "decoracion_a",
+        "decoracion_b"
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.08
+      ],
+      "orientation": null,
+      "pixels_per_unit_suggested": null,
+      "scale_applied_to_sheet": 1.0,
+      "source_bounds": [
+        [
+          12,
+          173,
+          323,
+          404
+        ],
+        [
+          354,
+          195,
+          695,
+          413
+        ],
+        [
+          718,
+          68,
+          1097,
+          404
+        ],
+        [
+          1108,
+          120,
+          1446,
+          404
+        ],
+        [
+          6,
+          477,
+          393,
+          744
+        ],
+        [
+          451,
+          494,
+          688,
+          744
+        ],
+        [
+          766,
+          502,
+          1094,
+          744
+        ],
+        [
+          1164,
+          504,
+          1387,
+          753
+        ],
+        [
+          92,
+          754,
+          265,
+          1056
+        ],
+        [
+          369,
+          884,
+          711,
+          1056
+        ],
+        [
+          789,
+          877,
+          1082,
+          1054
+        ],
+        [
+          1154,
+          889,
+          1398,
+          1054
+        ]
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "validation": "outside Unity; validate animation timing and in-engine physics"
+    },
+    {
+      "file": "Items/objetos_efectos.png",
+      "cell_size": [
+        464,
+        384
+      ],
+      "columns": 4,
+      "rows": 3,
+      "rows_top_to_bottom": [
+        "objetos",
+        "efectos_a",
+        "efectos_b"
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.08333333333333333
+      ],
+      "orientation": null,
+      "pixels_per_unit_suggested": null,
+      "scale_applied_to_sheet": 1.0,
+      "source_bounds": [
+        [
+          47,
+          103,
+          335,
+          359
+        ],
+        [
+          381,
+          135,
+          769,
+          335
+        ],
+        [
+          826,
+          76,
+          1023,
+          383
+        ],
+        [
+          1095,
+          76,
+          1413,
+          383
+        ],
+        [
+          30,
+          436,
+          382,
+          712
+        ],
+        [
+          443,
+          418,
+          766,
+          720
+        ],
+        [
+          805,
+          452,
+          1043,
+          701
+        ],
+        [
+          1116,
+          508,
+          1418,
+          689
+        ],
+        [
+          35,
+          779,
+          418,
+          1005
+        ],
+        [
+          459,
+          790,
+          747,
+          1019
+        ],
+        [
+          787,
+          756,
+          1083,
+          1038
+        ],
+        [
+          1132,
+          743,
+          1412,
+          1033
+        ]
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "validation": "outside Unity; validate animation timing and in-engine physics",
+      "cell_orientation_overrides": {
+        "row_1_col_0": "left; mirrored spectral projectile"
+      }
+    },
+    {
+      "file": "UI/interfaz.png",
+      "cell_size": [
+        464,
+        304
+      ],
+      "columns": 4,
+      "rows": 4,
+      "rows_top_to_bottom": [
+        "hud",
+        "controles",
+        "botones",
+        "paneles"
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.5
+      ],
+      "orientation": null,
+      "pixels_per_unit_suggested": null,
+      "scale_applied_to_sheet": 1.0,
+      "source_bounds": [
+        [
+          103,
+          103,
+          321,
+          295
+        ],
+        [
+          468,
+          103,
+          684,
+          295
+        ],
+        [
+          839,
+          110,
+          1070,
+          295
+        ],
+        [
+          1275,
+          71,
+          1405,
+          311
+        ],
+        [
+          104,
+          342,
+          316,
+          563
+        ],
+        [
+          508,
+          381,
+          646,
+          540
+        ],
+        [
+          853,
+          369,
+          1058,
+          553
+        ],
+        [
+          1243,
+          360,
+          1433,
+          551
+        ],
+        [
+          33,
+          590,
+          381,
+          733
+        ],
+        [
+          408,
+          590,
+          756,
+          733
+        ],
+        [
+          780,
+          590,
+          1130,
+          733
+        ],
+        [
+          1154,
+          590,
+          1503,
+          733
+        ],
+        [
+          33,
+          783,
+          381,
+          949
+        ],
+        [
+          426,
+          795,
+          823,
+          942
+        ],
+        [
+          880,
+          843,
+          1226,
+          908
+        ],
+        [
+          1298,
+          782,
+          1479,
+          957
+        ]
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "validation": "outside Unity; validate animation timing and in-engine physics"
+    },
+    {
+      "file": "Effects/electricidad_activacion_cempasuchil.png",
+      "cell_size": [
+        416,
+        448
+      ],
+      "columns": 4,
+      "rows": 3,
+      "rows_top_to_bottom": [
+        "relampago",
+        "activacion",
+        "cempasuchil"
+      ],
+      "pivot_normalized": [
+        0.5,
+        0.5
+      ],
+      "orientation": null,
+      "pixels_per_unit_suggested": null,
+      "scale_applied_to_sheet": 1.0,
+      "source_bounds": [
+        [
+          129,
+          13,
+          234,
+          383
+        ],
+        [
+          447,
+          13,
+          636,
+          383
+        ],
+        [
+          762,
+          13,
+          1036,
+          383
+        ],
+        [
+          1205,
+          13,
+          1331,
+          383
+        ],
+        [
+          111,
+          486,
+          262,
+          634
+        ],
+        [
+          418,
+          453,
+          643,
+          681
+        ],
+        [
+          747,
+          414,
+          1050,
+          713
+        ],
+        [
+          1152,
+          436,
+          1392,
+          686
+        ],
+        [
+          108,
+          816,
+          261,
+          970
+        ],
+        [
+          403,
+          784,
+          643,
+          1015
+        ],
+        [
+          718,
+          745,
+          1063,
+          1051
+        ],
+        [
+          1134,
+          745,
+          1416,
+          1035
+        ]
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "validation": "outside Unity; validate animation timing and in-engine physics"
+    }
+  ],
+  "review_flags": []
+}

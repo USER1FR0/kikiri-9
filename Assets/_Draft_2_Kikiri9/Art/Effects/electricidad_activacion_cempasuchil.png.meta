@@ -1,0 +1,692 @@
+fileFormatVersion: 2
+guid: 41b8a8d8fe416a94b9bec5cca0c0db3d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4806507343042961377
+    second: electricidad_activacion_cempasuchil_0
+  - first:
+      213: 7685541686828133541
+    second: electricidad_activacion_cempasuchil_1
+  - first:
+      213: -3684166653060339506
+    second: electricidad_activacion_cempasuchil_2
+  - first:
+      213: -5636790153206523476
+    second: electricidad_activacion_cempasuchil_3
+  - first:
+      213: -3800005612363024977
+    second: electricidad_activacion_cempasuchil_4
+  - first:
+      213: 6547275965266751703
+    second: electricidad_activacion_cempasuchil_5
+  - first:
+      213: 1420355203124443068
+    second: electricidad_activacion_cempasuchil_6
+  - first:
+      213: -1257009782467500989
+    second: electricidad_activacion_cempasuchil_7
+  - first:
+      213: 8886957246385157414
+    second: electricidad_activacion_cempasuchil_8
+  - first:
+      213: 7073798729603958920
+    second: electricidad_activacion_cempasuchil_9
+  - first:
+      213: 2107788958759907555
+    second: electricidad_activacion_cempasuchil_10
+  - first:
+      213: -1585927279131795227
+    second: electricidad_activacion_cempasuchil_11
+  - first:
+      213: -1398752676391739111
+    second: electricidad_activacion_cempasuchil_12
+  - first:
+      213: -329386663719085633
+    second: electricidad_activacion_cempasuchil_13
+  - first:
+      213: 6623331293047570625
+    second: electricidad_activacion_cempasuchil_14
+  - first:
+      213: 5560659536336615632
+    second: electricidad_activacion_cempasuchil_15
+  - first:
+      213: -755180227079359962
+    second: electricidad_activacion_cempasuchil_16
+  - first:
+      213: 4669920892638876328
+    second: electricidad_activacion_cempasuchil_17
+  - first:
+      213: 7212910706068329344
+    second: electricidad_activacion_cempasuchil_18
+  - first:
+      213: 440060911204334619
+    second: electricidad_activacion_cempasuchil_19
+  - first:
+      213: 4727905691160877024
+    second: electricidad_activacion_cempasuchil_20
+  - first:
+      213: -5699819560076516649
+    second: electricidad_activacion_cempasuchil_21
+  - first:
+      213: -590349628166543234
+    second: electricidad_activacion_cempasuchil_22
+  - first:
+      213: -1066507524925928095
+    second: electricidad_activacion_cempasuchil_23
+  - first:
+      213: 2839012235278592779
+    second: electricidad_activacion_cempasuchil_24
+  - first:
+      213: 4563694787139926774
+    second: electricidad_activacion_cempasuchil_25
+  - first:
+      213: -8969301874763130827
+    second: electricidad_activacion_cempasuchil_26
+  - first:
+      213: -5835834391994586527
+    second: electricidad_activacion_cempasuchil_27
+  - first:
+      213: 5938154819446735504
+    second: electricidad_activacion_cempasuchil_28
+  - first:
+      213: 6324901061605600465
+    second: electricidad_activacion_cempasuchil_29
+  - first:
+      213: 8694918358676628728
+    second: electricidad_activacion_cempasuchil_30
+  - first:
+      213: -980428781180513512
+    second: electricidad_activacion_cempasuchil_31
+  - first:
+      213: 1820263023035039690
+    second: electricidad_activacion_cempasuchil_32
+  - first:
+      213: 7417478003961451843
+    second: electricidad_activacion_cempasuchil_33
+  - first:
+      213: 5263544664799617879
+    second: electricidad_activacion_cempasuchil_34
+  - first:
+      213: 1290458564176470948
+    second: electricidad_activacion_cempasuchil_35
+  - first:
+      213: 969187325211021938
+    second: electricidad_activacion_cempasuchil_36
+  - first:
+      213: 6895539032476247126
+    second: electricidad_activacion_cempasuchil_37
+  - first:
+      213: 1134029054467077522
+    second: electricidad_activacion_cempasuchil_38
+  - first:
+      213: 6348865939565587147
+    second: electricidad_activacion_cempasuchil_39
+  - first:
+      213: -6922782025228965496
+    second: electricidad_activacion_cempasuchil_40
+  - first:
+      213: 1672403220015569052
+    second: electricidad_activacion_cempasuchil_41
+  - first:
+      213: -5370445197008969160
+    second: electricidad_activacion_cempasuchil_42
+  - first:
+      213: -7202709620552252775
+    second: electricidad_activacion_cempasuchil_43
+  - first:
+      213: -220355511123482685
+    second: electricidad_activacion_cempasuchil_44
+  - first:
+      213: -1165626390363031531
+    second: electricidad_activacion_cempasuchil_45
+  - first:
+      213: -8790959248699841915
+    second: electricidad_activacion_cempasuchil_46
+  - first:
+      213: -2522448104976160664
+    second: electricidad_activacion_cempasuchil_47
+  - first:
+      213: -8973048458120578589
+    second: electricidad_activacion_cempasuchil_48
+  - first:
+      213: -6707763047238002087
+    second: electricidad_activacion_cempasuchil_49
+  - first:
+      213: 6347606723042023881
+    second: electricidad_activacion_cempasuchil_50
+  - first:
+      213: -6059464184934141657
+    second: electricidad_activacion_cempasuchil_51
+  - first:
+      213: -781830605390178273
+    second: electricidad_activacion_cempasuchil_52
+  - first:
+      213: -1024659698782756848
+    second: electricidad_activacion_cempasuchil_53
+  - first:
+      213: -5271756145484222536
+    second: electricidad_activacion_cempasuchil_54
+  - first:
+      213: 5511127575616340656
+    second: electricidad_activacion_cempasuchil_55
+  - first:
+      213: -6956306617263812655
+    second: electricidad_activacion_cempasuchil_56
+  - first:
+      213: -7837728707159491464
+    second: electricidad_activacion_cempasuchil_57
+  - first:
+      213: 6411772474817183200
+    second: electricidad_activacion_cempasuchil_58
+  - first:
+      213: 1104188104754086339
+    second: electricidad_activacion_cempasuchil_59
+  - first:
+      213: 2234516923543655594
+    second: electricidad_activacion_cempasuchil_60
+  - first:
+      213: 8569720262939666689
+    second: electricidad_activacion_cempasuchil_61
+  - first:
+      213: 2598474963496437623
+    second: electricidad_activacion_cempasuchil_62
+  - first:
+      213: 194415944368009334
+    second: electricidad_activacion_cempasuchil_63
+  - first:
+      213: 8782968192399241259
+    second: electricidad_activacion_cempasuchil_64
+  - first:
+      213: -9127724404580362625
+    second: electricidad_activacion_cempasuchil_65
+  - first:
+      213: 2054758808570808559
+    second: electricidad_activacion_cempasuchil_66
+  - first:
+      213: 6470930303358310686
+    second: electricidad_activacion_cempasuchil_67
+  - first:
+      213: -1644937321027769099
+    second: electricidad_activacion_cempasuchil_68
+  - first:
+      213: 7181232075070701473
+    second: electricidad_activacion_cempasuchil_69
+  - first:
+      213: -7037469311141393621
+    second: electricidad_activacion_cempasuchil_70
+  - first:
+      213: -194299860197210979
+    second: electricidad_activacion_cempasuchil_71
+  - first:
+      213: -5936780997813250969
+    second: electricidad_activacion_cempasuchil_72
+  - first:
+      213: 6543156270651388161
+    second: electricidad_activacion_cempasuchil_73
+  - first:
+      213: -7694774474700871570
+    second: electricidad_activacion_cempasuchil_74
+  - first:
+      213: -7878044764412457729
+    second: electricidad_activacion_cempasuchil_75
+  - first:
+      213: -5674775201631802246
+    second: electricidad_activacion_cempasuchil_76
+  - first:
+      213: -4613183503105062560
+    second: electricidad_activacion_cempasuchil_77
+  - first:
+      213: 6881131989297443104
+    second: electricidad_activacion_cempasuchil_78
+  - first:
+      213: 501501418188787507
+    second: electricidad_activacion_cempasuchil_79
+  - first:
+      213: -3276869796656899195
+    second: electricidad_activacion_cempasuchil_80
+  - first:
+      213: 5212950749611677968
+    second: electricidad_activacion_cempasuchil_81
+  - first:
+      213: 5798566042060520163
+    second: electricidad_activacion_cempasuchil_82
+  - first:
+      213: 6751281156932223188
+    second: electricidad_activacion_cempasuchil_83
+  - first:
+      213: 7371767372452644736
+    second: electricidad_activacion_cempasuchil_84
+  - first:
+      213: -5163907679104404776
+    second: electricidad_activacion_cempasuchil_85
+  - first:
+      213: 3722135753369856980
+    second: electricidad_activacion_cempasuchil_86
+  - first:
+      213: 2689280727187196003
+    second: electricidad_activacion_cempasuchil_87
+  - first:
+      213: -8409554071399932636
+    second: electricidad_activacion_cempasuchil_88
+  - first:
+      213: 8911478182824713126
+    second: electricidad_activacion_cempasuchil_89
+  - first:
+      213: -8445992176596272907
+    second: electricidad_activacion_cempasuchil_90
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: relampago_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 416
+        height: 448
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a5bcf8d8ee1c54a829b7a10e10622d
+      internalID: -1478769609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: relampago_02
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 896
+        width: 416
+        height: 448
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b596bcd101f7845862db5fba1c6743
+      internalID: 133825536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: relampago_03
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 896
+        width: 416
+        height: 448
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60c484b5d13134408d6ca9ecf8963ce
+      internalID: 761338291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: relampago_04
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 896
+        width: 416
+        height: 448
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0beef6e60fffa947ae8a6b8e924b9b0
+      internalID: -934902289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: activacion_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 416
+        height: 448
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6d1fbb3b5208042bda80f6990c7289
+      internalID: -819946207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: activacion_02
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 448
+        width: 416
+        height: 448
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 189a00d6601da3946a37ee5e8fadafb5
+      internalID: 2037618413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: activacion_03
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 448
+        width: 416
+        height: 448
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da062cd26a79b1f439b11821cb852b54
+      internalID: -1928317748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: activacion_04
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 448
+        width: 416
+        height: 448
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dba643a73bc1d642ae4871dcd57b7bb
+      internalID: 1863152343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cempasuchil_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 416
+        height: 448
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d6582a0a37c4f489030c2f83eef9cc
+      internalID: 190986936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cempasuchil_02
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 416
+        height: 448
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234dd8cc72366024e809b83810d1dd29
+      internalID: -1968250982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cempasuchil_03
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 416
+        height: 448
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0117822bcbfcd14a97fe1da288a45cc
+      internalID: 1316478228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cempasuchil_04
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 0
+        width: 416
+        height: 448
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc9a5ff6d73cb9542bce42c687683f66
+      internalID: 1592440299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ef79baeeae2b79643967cc8ebf2c7571
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      activacion_01: -819946207
+      activacion_02: 2037618413
+      activacion_03: -1928317748
+      activacion_04: 1863152343
+      cempasuchil_01: 190986936
+      cempasuchil_02: -1968250982
+      cempasuchil_03: 1316478228
+      cempasuchil_04: 1592440299
+      relampago_01: -1478769609
+      relampago_02: 133825536
+      relampago_03: 761338291
+      relampago_04: -934902289
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
