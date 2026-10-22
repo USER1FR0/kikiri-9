@@ -10,7 +10,9 @@
 using System.IO;
 using Kikiri9.CameraSystem;
 using Kikiri9.Combat;
+using Kikiri9.Enemies;
 using Kikiri9.Player;
+using Kikiri9.Session;
 using Kikiri9.World;
 using UnityEditor;
 using UnityEditor.Animations;
@@ -29,6 +31,7 @@ namespace Kikiri9.EditorTools
         private const string BgSilueta = ArtRoot + "/Backgrounds/silueta_guanajuato.png";
         private const string BgCiudad = ArtRoot + "/Backgrounds/guanajuato.png";
         private const string ControllerPath = "Assets/_Project/Animations/Kikiri9.controller";
+        private const string EnemyPrefabPath = "Assets/_Project/Prefabs/Enemies/Enemy_Mummy.prefab";
         private const string ScenePath = "Assets/_Project/Scenes/Sandbox.unity";
 
         [MenuItem("Tools/Kikiri-9/Setup Sandbox Scene")]
@@ -47,7 +50,10 @@ namespace Kikiri9.EditorTools
             {
                 var follow = cam.gameObject.AddComponent<CameraFollow>();
                 follow.SetTarget(pollo.transform);
+                pollo.AddComponent<GameOverHandler>();
             }
+
+            BuildEnemySpawner(cam.transform);
             // Ground is static in world space; no follower, no Rigidbody2D needed.
 
             Selection.activeGameObject = pollo;
@@ -209,6 +215,25 @@ namespace Kikiri9.EditorTools
             so.ApplyModifiedProperties();
 
             return go;
+        }
+
+        private static void BuildEnemySpawner(Transform camT)
+        {
+            var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(EnemyPrefabPath);
+            if (prefab == null)
+            {
+                Debug.LogWarning($"[Kikiri-9] Enemy prefab not found at {EnemyPrefabPath}. Skipping spawner.");
+                return;
+            }
+
+            var go = new GameObject("EnemySpawner");
+            var spawner = go.AddComponent<EnemySpawner>();
+            var so = new SerializedObject(spawner);
+            so.FindProperty("enemyPrefab").objectReferenceValue = prefab;
+            so.FindProperty("spawnReference").objectReferenceValue = camT;
+            so.FindProperty("spawnAheadDistance").floatValue = 15f;
+            so.FindProperty("groundY").floatValue = -2.75f;
+            so.ApplyModifiedProperties();
         }
 
         private static Sprite FindSubSprite(string path, string spriteName)

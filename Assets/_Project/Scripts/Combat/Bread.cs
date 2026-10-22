@@ -35,10 +35,17 @@ namespace Kikiri9.Combat
         private float spawnTime;
         [SerializeField] private float grace = 0.08f;
 
-        private void OnCollisionEnter2D(Collision2D _)
+        private void OnCollisionEnter2D(Collision2D collision)
         {
             if (landed) return;
             if (Time.time - spawnTime < grace) return; // ignore muzzle contact
+
+            if (collision.collider.CompareTag("Enemy"))
+            {
+                var enemyHealth = collision.collider.GetComponent<Kikiri9.Enemies.EnemyHealth>();
+                if (enemyHealth != null) enemyHealth.TakeDamage(1);
+            }
+
             landed = true;
             if (col != null) col.enabled = false;
             if (rb != null)
