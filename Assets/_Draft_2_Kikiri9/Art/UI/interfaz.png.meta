@@ -192,13 +192,101 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hud_01
+      name: corazon_lleno
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 245
+        width: 76
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5884943bcbc3ac44a6c7088134e9ffb
+      internalID: -704613854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corazon_vacio
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 245
+        width: 76
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766a6e84996aeb647a2a094c76fd1a4b
+      internalID: 1135584926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pan
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 248
+        width: 76
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b2be8028c98724e975061b66822361
+      internalID: -1938312686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botella_verde
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 238
+        width: 41
+        height: 84
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5874a1ac56e04b4084960a4f82e7e4b
+      internalID: -617786572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botella_dorada
       rect:
         serializedVersion: 2
         x: 0
-        y: 912
-        width: 464
-        height: 304
+        y: 112
+        width: 320
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,20 +295,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d504a716d6cfbd48921e83a26f52662
-      internalID: 1143346088
+      spriteID: 4d9206d62bc9b11439874cf915b47fcd
+      internalID: 1825743704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud_02
+      name: pausa
       rect:
         serializedVersion: 2
-        x: 464
-        y: 912
-        width: 464
-        height: 304
+        x: 442
+        y: 128
+        width: 76
+        height: 80
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +317,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb7de91b96500474ea33c3ffe9e1cff7
-      internalID: 800698770
+      spriteID: 17a1707a944beac44be72ec3224b4d5d
+      internalID: -570852814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud_03
+      name: sonido
       rect:
         serializedVersion: 2
-        x: 928
-        y: 912
-        width: 464
-        height: 304
+        x: 640
+        y: 112
+        width: 320
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,20 +339,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f8eb19f3e4c75f478b47d6b093a14ef
-      internalID: 1028471802
+      spriteID: 328ba3cca97afeb458ef272c2366493a
+      internalID: -983660482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud_04
+      name: silencio
       rect:
         serializedVersion: 2
-        x: 1392
-        y: 912
-        width: 464
-        height: 304
+        x: 960
+        y: 112
+        width: 320
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,196 +361,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07c1ff414d1379a4e87f6c97ff8d7fe0
-      internalID: -141235667
+      spriteID: 07fc10be69d8c2e45b2d2bbb9e29f2b8
+      internalID: -850687754
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controles_01
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 608
-        width: 464
-        height: 304
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06079531ca3ae1348a226d1205fdb814
-      internalID: 184795828
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: controles_02
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 608
-        width: 464
-        height: 304
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e5c74e91e3f75b47b74475a25034a6a
-      internalID: -556962637
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: controles_03
-      rect:
-        serializedVersion: 2
-        x: 928
-        y: 608
-        width: 464
-        height: 304
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 349661a4fdf36c14f9ef289b3a7186aa
-      internalID: 274072248
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: controles_04
-      rect:
-        serializedVersion: 2
-        x: 1392
-        y: 608
-        width: 464
-        height: 304
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17e9757605c58cf40b91a4b1643d4d45
-      internalID: -416118109
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: botones_01
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 304
-        width: 464
-        height: 304
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e54d0e4e333b8a4aa490bdb97b9c9ce
-      internalID: 776520826
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: botones_02
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 304
-        width: 464
-        height: 304
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12d6a0d0925f9e6469805ccefbb9fa26
-      internalID: 1349847429
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: botones_03
-      rect:
-        serializedVersion: 2
-        x: 928
-        y: 304
-        width: 464
-        height: 304
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e7b8231e6f4e392498dd74366d0eb08d
-      internalID: -675942317
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: botones_04
-      rect:
-        serializedVersion: 2
-        x: 1392
-        y: 304
-        width: 464
-        height: 304
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e30cb426e78efb4c873f5fdfabf22f7
-      internalID: -245228811
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: paneles_01
+      name: placa_vidas
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 464
-        height: 304
+        width: 320
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -471,20 +383,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ace298816497ed345b9dcb966c78cc3b
-      internalID: 455444171
+      spriteID: a17e5674375c320419c674c7515fb9e5
+      internalID: 1311963545
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: paneles_02
+      name: placa_puntos
       rect:
         serializedVersion: 2
-        x: 464
+        x: 320
         y: 0
-        width: 464
-        height: 304
+        width: 320
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -493,20 +405,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14293e462ce41a149a29dee1f9b668d2
-      internalID: -743030659
+      spriteID: 8430ce33aeb3de24285c72f080f11b50
+      internalID: -373542928
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: paneles_03
+      name: placa_tiempo
       rect:
         serializedVersion: 2
-        x: 928
+        x: 640
         y: 0
-        width: 464
-        height: 304
+        width: 320
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -515,20 +427,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b1a60a89d1aca14e9ab4ffb94fd5f2e
-      internalID: -1048652866
+      spriteID: 19f027d314c6e294fa5a8ad2d1024a1e
+      internalID: -1030511366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: paneles_04
+      name: base_pausa
       rect:
         serializedVersion: 2
-        x: 1392
+        x: 960
         y: 0
-        width: 464
-        height: 304
+        width: 320
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -537,8 +449,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9795bd4e586143b41bc653581614b49e
-      internalID: -1224548292
+      spriteID: ba16000d45d01d148937ecec3e7ec583
+      internalID: 123737496
       vertices: []
       indices: 
       edges: []
@@ -557,22 +469,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      botones_01: 776520826
-      botones_02: 1349847429
-      botones_03: -675942317
-      botones_04: -245228811
-      controles_01: 184795828
-      controles_02: -556962637
-      controles_03: 274072248
-      controles_04: -416118109
-      hud_01: 1143346088
-      hud_02: 800698770
-      hud_03: 1028471802
-      hud_04: -141235667
-      paneles_01: 455444171
-      paneles_02: -743030659
-      paneles_03: -1048652866
-      paneles_04: -1224548292
+      base_pausa: 123737496
+      botella_dorada: 1825743704
+      botella_verde: -617786572
+      corazon_lleno: -704613854
+      corazon_vacio: 1135584926
+      pan: -1938312686
+      pausa: -570852814
+      placa_puntos: -373542928
+      placa_tiempo: -1030511366
+      placa_vidas: 1311963545
+      silencio: -850687754
+      sonido: -983660482
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

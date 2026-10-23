@@ -3,6 +3,7 @@
 // with input buffer, bread throw, variable jump height via gravity multipliers.
 
 using Kikiri9.Combat;
+using Kikiri9.Session;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,7 +17,7 @@ namespace Kikiri9.Player
         [SerializeField] private float runSpeed = 4f;
 
         [Header("Jump")]
-        [SerializeField] private float jumpVelocity = 12f;
+        [SerializeField] private float jumpVelocity = 15f;
         [SerializeField] private float coyoteTime = 0.08f;
         [SerializeField] private float jumpBuffer = 0.12f;
         [SerializeField] private float fallGravityMultiplier = 1.2f;
@@ -35,6 +36,7 @@ namespace Kikiri9.Player
         [Header("References (optional)")]
         [SerializeField] private Animator animator;
         [SerializeField] private BreadLauncher breadLauncher;
+        [SerializeField] private PlayerSfx sfx;
 
         private static readonly int HashIsGrounded = Animator.StringToHash("IsGrounded");
         private static readonly int HashIsSliding = Animator.StringToHash("IsSliding");
@@ -54,8 +56,11 @@ namespace Kikiri9.Player
         private InputAction throwAction;
 
         private bool isGrounded;
+        private bool wasGrounded;
+        private float lastJumpTime = -999f;
         private bool isSliding;
-        private bool hasJumpedSinceGround;
+        private int jumpsUsed;         // contador de saltos consumidos desde el ultimo contacto con suelo
+        [SerializeField] private int maxJumpsInAir = 2;  // 1 salto suelo + 1 salto aereo = 2 totales
         private float slideEndTime;
         private float lastGroundedTime = -999f;
         private float lastJumpPressTime = -999f;
@@ -71,6 +76,7 @@ namespace Kikiri9.Player
             baseGravityScale = rb.gravityScale;
             if (animator == null) animator = GetComponent<Animator>();
             if (breadLauncher == null) breadLauncher = GetComponent<BreadLauncher>();
+            if (sfx == null) sfx = GetComponent<PlayerSfx>();
 
             jumpAction = new InputAction("Jump", InputActionType.Button);
             jumpAction.AddBinding("<Keyboard>/space");
@@ -114,26 +120,29 @@ namespace Kikiri9.Player
             isGrounded = groundCheck != null &&
                 Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-            // Reset the jump lockout any frame we are grounded AND not currently rising
-            // from a jump (so the lockout survives one frame of ground-overlap after jump).
-            if (isGrounded)
-            {
-                lastGroundedTime = Time.time;
-                if (rb.linearVelocity.y <= 0.1f)
-                    hasJumpedSinceGround = false;
-            }
+            // Reset del contador cuando estamos grounded Y ya pasaron >100ms del ultimo salto.
+            // El cutoff de tiempo evita reset inmediato tras saltar (el collider puede seguir
+            // overlapeando por 1-2 frames), pero permite reset normal al aterrizar.
+            if (isGrounded && Time.time - lastJumpTime > 0.1f) jumpsUsed = 0;
+            if (isGrounded) lastGroundedTime = Time.time;
+            wasGrounded = isGrounded;
 
             rb.linearVelocity = new Vector2(runSpeed, rb.linearVelocity.y);
 
-            // Jump: single per landing, with coyote time + press buffer.
+            // Jump: maximo maxJumpsInAir saltos antes de volver a tocar el suelo.
+            // Primer salto permite coyote time; saltos aereos no requieren coyote.
             bool withinCoyote = Time.time - lastGroundedTime <= coyoteTime;
             bool bufferedJump = Time.time - lastJumpPressTime <= jumpBuffer;
-            if (withinCoyote && bufferedJump && !isSliding && !hasJumpedSinceGround)
+            bool canFirstJump = withinCoyote && jumpsUsed == 0;
+            bool canAirJump = !isGrounded && jumpsUsed > 0 && jumpsUsed < maxJumpsInAir;
+            if ((canFirstJump || canAirJump) && bufferedJump && !isSliding)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpVelocity);
                 lastJumpPressTime = -999f;
-                hasJumpedSinceGround = true;
+                lastJumpTime = Time.time;
+                jumpsUsed++;
                 if (animator != null) animator.SetTrigger(HashJump);
+                if (sfx != null) sfx.PlayJump();
             }
 
             // Slide: must be grounded; buffered a bit so a press just before landing counts.
@@ -163,8 +172,15 @@ namespace Kikiri9.Player
             }
         }
 
+        private bool IsGameplayActive()
+        {
+            var gsm = GameStateManager.Instance;
+            return gsm == null || gsm.CurrentState == GameState.Playing;
+        }
+
         private void OnJumpPressed(InputAction.CallbackContext _)
         {
+            if (!IsGameplayActive()) return;
             lastJumpPressTime = Time.time;
             jumpHeld = true;
             if (isSliding) EndSlide();
@@ -177,6 +193,7 @@ namespace Kikiri9.Player
 
         private void OnSlidePressed(InputAction.CallbackContext _)
         {
+            if (!IsGameplayActive()) return;
             lastSlidePressTime = Time.time;
         }
 
@@ -185,6 +202,7 @@ namespace Kikiri9.Player
             if (breadLauncher != null && breadLauncher.TryLaunch(rb.linearVelocity.x))
             {
                 if (animator != null) animator.SetTrigger(HashThrow);
+                if (sfx != null) sfx.PlayThrow();
             }
         }
 
@@ -198,6 +216,7 @@ namespace Kikiri9.Player
             // Clamp vertical velocity to zero to avoid any physics nudge from collider resize.
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
             if (animator != null) animator.SetTrigger(HashSlide);
+            if (sfx != null) sfx.PlaySlide();
         }
 
         private void EndSlide()

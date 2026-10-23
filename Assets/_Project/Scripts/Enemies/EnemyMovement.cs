@@ -1,6 +1,7 @@
 // Moves an enemy to the left at a constant speed. The enemy destroys itself once it is far
 // behind the camera, so enemies the pollo already passed do not pile up in the scene.
 
+using Kikiri9.World;
 using UnityEngine;
 
 namespace Kikiri9.Enemies
@@ -10,6 +11,7 @@ namespace Kikiri9.Enemies
     {
         [SerializeField] private float speedX = -2f;
         [SerializeField] private float despawnDistanceBehind = 20f;
+        [SerializeField] private bool useWorldScrollerIfPresent = false;
 
         private Rigidbody2D rb;
         private Transform cameraTransform;
@@ -26,8 +28,13 @@ namespace Kikiri9.Enemies
 
         private void FixedUpdate()
         {
+            float sx = speedX;
+            if (useWorldScrollerIfPresent && WorldScroller.Instance != null)
+            {
+                sx = -WorldScroller.Instance.CurrentSpeed;
+            }
             // Keep Y velocity in case gravity is added later.
-            rb.linearVelocity = new Vector2(speedX, rb.linearVelocity.y);
+            rb.linearVelocity = new Vector2(sx, rb.linearVelocity.y);
         }
 
         private void Update()

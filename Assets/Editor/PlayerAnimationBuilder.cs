@@ -25,7 +25,7 @@ namespace Kikiri9.EditorTools
         {
             System.IO.Directory.CreateDirectory(AnimDir);
 
-            var runClip = CreateClip("Kikiri9_Run", MainSheet, "correr", 12, loop: true);
+            var runClip = CreateClip("Kikiri9_Run", MainSheet, "correr", 14, loop: true);
             var jumpClip = CreateClip("Kikiri9_Jump", MainSheet, "saltar", 8, loop: true);
             var slideClip = CreateClip("Kikiri9_Slide", MainSheet, "deslizar", 8, loop: true);
             var throwClip = CreateClip("Kikiri9_Throw", MainSheet, "lanzar", 14, loop: false);
@@ -40,6 +40,8 @@ namespace Kikiri9.EditorTools
             controller.AddParameter("Jump", AnimatorControllerParameterType.Trigger);
             controller.AddParameter("Slide", AnimatorControllerParameterType.Trigger);
             controller.AddParameter("Throw", AnimatorControllerParameterType.Trigger);
+            controller.AddParameter("Hit", AnimatorControllerParameterType.Trigger);
+            controller.AddParameter("Dead", AnimatorControllerParameterType.Trigger);
 
             var sm = controller.layers[0].stateMachine;
 
@@ -51,6 +53,10 @@ namespace Kikiri9.EditorTools
             slideState.motion = slideClip;
             var throwState = sm.AddState("Throw");
             throwState.motion = throwClip;
+            var hitState = sm.AddState("Hit");
+            hitState.motion = hitClip;
+            var deathState = sm.AddState("Death");
+            deathState.motion = dieClip;
 
             sm.defaultState = runState;
 
@@ -90,6 +96,26 @@ namespace Kikiri9.EditorTools
             tThrowRun.hasExitTime = true;
             tThrowRun.exitTime = 0.9f;
             tThrowRun.duration = 0.05f;
+
+            // Any -> Hit when Hit trigger (ignored when already in Death)
+            var tAnyHit = sm.AddAnyStateTransition(hitState);
+            tAnyHit.hasExitTime = false;
+            tAnyHit.duration = 0f;
+            tAnyHit.canTransitionToSelf = false;
+            tAnyHit.AddCondition(AnimatorConditionMode.If, 0f, "Hit");
+
+            // Hit -> Run on exit time
+            var tHitRun = hitState.AddTransition(runState);
+            tHitRun.hasExitTime = true;
+            tHitRun.exitTime = 0.9f;
+            tHitRun.duration = 0.05f;
+
+            // Any -> Death when Dead trigger
+            var tAnyDeath = sm.AddAnyStateTransition(deathState);
+            tAnyDeath.hasExitTime = false;
+            tAnyDeath.duration = 0f;
+            tAnyDeath.canTransitionToSelf = false;
+            tAnyDeath.AddCondition(AnimatorConditionMode.If, 0f, "Dead");
 
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();

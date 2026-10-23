@@ -31,6 +31,8 @@ namespace Kikiri9.EditorTools
             public float pivotX;
             public float pivotY;
             public string[] rowNames;
+            public string[,] cellNames;   // override por celda [row, col]; null = usa rowNames
+            public Vector4 slice9Border;  // L B R T; Vector4.zero = sin 9-slice
         }
 
         private static readonly SheetDef[] Sheets =
@@ -72,13 +74,6 @@ namespace Kikiri9.EditorTools
             },
             new SheetDef
             {
-                relPath = "Environment/suelo.png",
-                cellW = 464, cellH = 368, cols = 4, rows = 2,
-                pivotX = 0.5f, pivotY = 0.826086956f,
-                rowNames = new[] { "suelo", "plataformas" }
-            },
-            new SheetDef
-            {
                 relPath = "Environment/obstaculos_decoracion.png",
                 cellW = 464, cellH = 400, cols = 4, rows = 3,
                 pivotX = 0.5f, pivotY = 0.08f,
@@ -104,6 +99,60 @@ namespace Kikiri9.EditorTools
                 cellW = 416, cellH = 448, cols = 4, rows = 3,
                 pivotX = 0.5f, pivotY = 0.5f,
                 rowNames = new[] { "relampago", "activacion", "cempasuchil" }
+            },
+            new SheetDef
+            {
+                relPath = "UI/interfaz.png",
+                cellW = 320, cellH = 112, cols = 4, rows = 3,
+                pivotX = 0.5f, pivotY = 0.5f,
+                rowNames = new[] { "f0", "f1", "f2" },
+                cellNames = new string[,]
+                {
+                    { "corazon_lleno", "corazon_vacio", "pan", "botella_verde" },
+                    { "botella_dorada", "pausa", "sonido", "silencio" },
+                    { "placa_vidas", "placa_puntos", "placa_tiempo", "base_pausa" }
+                }
+            },
+            new SheetDef
+            {
+                relPath = "UI/botones.png",
+                cellW = 320, cellH = 112, cols = 4, rows = 2,
+                pivotX = 0.5f, pivotY = 0.5f,
+                rowNames = new[] { "f0", "f1" },
+                cellNames = new string[,]
+                {
+                    { "primario_normal", "primario_seleccionado", "primario_presionado", "primario_desactivado" },
+                    { "secundario_normal", "secundario_seleccionado", "secundario_presionado", "secundario_desactivado" }
+                },
+                slice9Border = new Vector4(24, 24, 24, 24)
+            },
+            new SheetDef
+            {
+                relPath = "UI/controles_tactiles.png",
+                cellW = 128, cellH = 128, cols = 3, rows = 2,
+                pivotX = 0.5f, pivotY = 0.5f,
+                rowNames = new[] { "f0", "f1" },
+                cellNames = new string[,]
+                {
+                    { "saltar_normal", "deslizar_normal", "lanzar_normal" },
+                    { "saltar_presionado", "deslizar_presionado", "lanzar_presionado" }
+                }
+            },
+            new SheetDef
+            {
+                relPath = "UI/estados_nivel.png",
+                cellW = 96, cellH = 96, cols = 2, rows = 1,
+                pivotX = 0.5f, pivotY = 0.5f,
+                rowNames = new[] { "f0" },
+                cellNames = new string[,] { { "candado", "completado" } }
+            },
+            new SheetDef
+            {
+                relPath = "UI/selector_niveles.png",
+                cellW = 320, cellH = 112, cols = 4, rows = 1,
+                pivotX = 0.5f, pivotY = 0.5f,
+                rowNames = new[] { "f0" },
+                cellNames = new string[,] { { "nivel_disponible", "nivel_seleccionado", "nivel_bloqueado", "nivel_completado" } }
             },
         };
 
@@ -169,7 +218,12 @@ namespace Kikiri9.EditorTools
                     int yFromBottom = def.rows - 1 - r;
                     int x = c * def.cellW;
                     int y = yFromBottom * def.cellH;
-                    string spriteName = $"{rowName}_{(c + 1):00}";
+                    string spriteName = (def.cellNames != null
+                        && r < def.cellNames.GetLength(0)
+                        && c < def.cellNames.GetLength(1)
+                        && !string.IsNullOrEmpty(def.cellNames[r, c]))
+                        ? def.cellNames[r, c]
+                        : $"{rowName}_{(c + 1):00}";
 
                     rects.Add(new SpriteRect
                     {
@@ -178,7 +232,7 @@ namespace Kikiri9.EditorTools
                         pivot = new Vector2(def.pivotX, def.pivotY),
                         alignment = SpriteAlignment.Custom,
                         spriteID = GUID.Generate(),
-                        border = Vector4.zero,
+                        border = def.slice9Border,
                     });
                 }
             }

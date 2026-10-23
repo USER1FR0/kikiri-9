@@ -30,6 +30,9 @@ namespace Kikiri9.Combat
             sr = GetComponent<SpriteRenderer>();
             rb.linearVelocity = velocity;
             spawnTime = Time.time;
+            // Safety net: si el pan no colisiona con nada (vuela al vacio), se destruye
+            // tras 5 segundos para evitar sprites huerfanos en la escena.
+            Destroy(gameObject, 5f);
         }
 
         private float spawnTime;

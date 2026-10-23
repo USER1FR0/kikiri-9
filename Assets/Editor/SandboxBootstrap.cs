@@ -130,7 +130,8 @@ namespace Kikiri9.EditorTools
 
         private static GameObject BuildGround()
         {
-            var sprite = FindSubSprite(GroundSheet, "suelo_02") ?? FindFirstSprite(GroundSheet);
+            // Nuevo suelo.png es Single, no multi-sprite.
+            var sprite = AssetDatabase.LoadAssetAtPath<Sprite>(GroundSheet);
             if (sprite == null) { Debug.LogError($"[Kikiri-9] No ground sprite in {GroundSheet}"); return null; }
 
             // Static very-wide ground (1000 units). Pollo at runSpeed=4 would need ~4min to
@@ -138,20 +139,19 @@ namespace Kikiri9.EditorTools
             // follow the camera: it stays in world coordinates so the camera sliding over
             // it reveals new tiles, giving the perceived movement.
             //
-            // Pivot (0.5, 0.826) → visible top sits at GO.y + (1 - 0.826) * sizeY.
-            // Collider is offset so its top aligns with the visible top line.
+            // Nuevo suelo pivot (0.5, 1.0) → GO.y = top del sprite = superficie de apoyo.
             var go = new GameObject("Ground");
-            go.transform.position = new Vector3(400f, -3.1f, 0f);
+            go.transform.position = new Vector3(400f, -2f, 0f);
 
             var sr = go.AddComponent<SpriteRenderer>();
             sr.sprite = sprite;
             sr.drawMode = SpriteDrawMode.Tiled;
-            sr.size = new Vector2(1000f, 2f);
-            sr.sortingOrder = -5; // behind the pollo, in front of background
+            sr.size = new Vector2(1000f, 1.789f);
+            sr.sortingOrder = -5;
 
             var bc = go.AddComponent<BoxCollider2D>();
-            bc.size = new Vector2(1000f, 2f);
-            bc.offset = new Vector2(0f, -0.652f);
+            bc.size = new Vector2(1000f, 1.789f);
+            bc.offset = new Vector2(0f, -0.8945f);
 
             return go;
         }
@@ -197,7 +197,7 @@ namespace Kikiri9.EditorTools
 
             var launcher = go.AddComponent<BreadLauncher>();
             // objetos_01 = pan (visual), efectos_a_02 = impacto naranja splash
-            var breadSprite = FindSubSprite(ItemsSheet, "objetos_01");
+            var breadSprite = FindSubSprite(ItemsSheet, "objetos_02");
             var splashSprite = FindSubSprite(ItemsSheet, "efectos_a_02");
             var soL = new SerializedObject(launcher);
             soL.FindProperty("muzzle").objectReferenceValue = muzzleGo.transform;

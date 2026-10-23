@@ -21,6 +21,8 @@ namespace Kikiri9.Combat
         public bool TryLaunch(float extraForwardSpeed = 0f)
         {
             if (Time.time < nextFireTime) return false;
+            var ammo = GetComponent<Kikiri9.Player.PlayerAmmo>();
+            if (ammo != null && !ammo.TryConsume(1)) return false;
             nextFireTime = Time.time + cooldown;
 
             var origin = muzzle != null ? muzzle.position : transform.position;
