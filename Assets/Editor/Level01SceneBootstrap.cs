@@ -323,6 +323,9 @@ namespace Kikiri9.EditorTools
             root.AddComponent<GameStateManager>();
             root.AddComponent<PauseInput>();
             root.AddComponent<ScoreTracker>();
+            // GameSession fallback: si la escena se arranca directo (sin pasar por Boot),
+            // creamos uno aqui para que los panels puedan actualizarlo sin NREs.
+            root.AddComponent<GameSessionBootstrapper>();
 
             var ws = root.AddComponent<WorldScroller>();
             var soW = new SerializedObject(ws);

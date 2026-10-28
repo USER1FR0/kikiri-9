@@ -38,16 +38,23 @@ namespace Kikiri9.UI
         private void HandleStateChanged(GameState s) { if (root != null) root.SetActive(s == GameState.Paused); }
 
         public void OnResumeClicked() => GameStateManager.Instance?.SetState(GameState.Playing);
+
         public void OnRestartClicked()
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            string current = SceneManager.GetActiveScene().name;
+            if (SceneFader.Instance != null) SceneFader.Instance.LoadSceneWithFade(current);
+            else SceneManager.LoadScene(current);
         }
+
         public void OnOptionsClicked() { /* placeholder: ampliar en avance 3 */ }
+
         public void OnMenuClicked()
         {
             Time.timeScale = 1f;
-            if (Application.CanStreamedLevelBeLoaded(menuSceneName))
+            if (SceneFader.Instance != null && Application.CanStreamedLevelBeLoaded(menuSceneName))
+                SceneFader.Instance.LoadSceneWithFade(menuSceneName);
+            else if (Application.CanStreamedLevelBeLoaded(menuSceneName))
                 SceneManager.LoadScene(menuSceneName);
             else
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

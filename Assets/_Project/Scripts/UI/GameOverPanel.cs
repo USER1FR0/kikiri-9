@@ -63,13 +63,17 @@ namespace Kikiri9.UI
         public void OnRetryClicked()
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            string current = SceneManager.GetActiveScene().name;
+            if (SceneFader.Instance != null) SceneFader.Instance.LoadSceneWithFade(current);
+            else SceneManager.LoadScene(current);
         }
 
         public void OnMenuClicked()
         {
             Time.timeScale = 1f;
-            if (Application.CanStreamedLevelBeLoaded(menuSceneName))
+            if (SceneFader.Instance != null && Application.CanStreamedLevelBeLoaded(menuSceneName))
+                SceneFader.Instance.LoadSceneWithFade(menuSceneName);
+            else if (Application.CanStreamedLevelBeLoaded(menuSceneName))
                 SceneManager.LoadScene(menuSceneName);
             else
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

@@ -7,6 +7,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Al completar nivel: persistir score en GameSession y marcar progreso para 'Continuar'.
+
 namespace Kikiri9.UI
 {
     public class LevelCompletePanel : MonoBehaviour
@@ -67,21 +69,37 @@ namespace Kikiri9.UI
                 var lc = FindFirstObjectByType<LevelController>();
                 if (lc != null && lc.Definition != null) narrativeText.text = lc.Definition.endingNarrative;
             }
-        }
 
-        public void OnNextClicked()
-        {
-            Time.timeScale = 1f;
-            if (Application.CanStreamedLevelBeLoaded(nextSceneName))
-                SceneManager.LoadScene(nextSceneName);
-            else
-                OnMenuClicked();
+            // Persistir estado para 'Continuar' en el MainMenu
+            if (GameSession.Instance != null && ScoreTracker.Instance != null)
+            {
+                GameSession.Instance.SetScore(ScoreTracker.Instance.CurrentScore);
+                GameSession.Instance.SetCurrentLevel(SceneManager.GetActiveScene().name);
+            }
         }
 
         public void OnMenuClicked()
         {
             Time.timeScale = 1f;
-            if (Application.CanStreamedLevelBeLoaded(menuSceneName))
+            LoadWithFade(menuSceneName, true);
+        }
+
+        public void OnNextClicked()
+        {
+            Time.timeScale = 1f;
+            LoadWithFade(nextSceneName, false);
+        }
+
+        private void LoadWithFade(string sceneName, bool fallbackToMenu)
+        {
+            if (SceneFader.Instance != null && Application.CanStreamedLevelBeLoaded(sceneName))
+            {
+                SceneFader.Instance.LoadSceneWithFade(sceneName);
+                return;
+            }
+            if (Application.CanStreamedLevelBeLoaded(sceneName))
+                SceneManager.LoadScene(sceneName);
+            else if (fallbackToMenu && Application.CanStreamedLevelBeLoaded(menuSceneName))
                 SceneManager.LoadScene(menuSceneName);
             else
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

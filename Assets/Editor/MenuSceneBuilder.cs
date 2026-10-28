@@ -19,8 +19,10 @@ namespace Kikiri9.EditorTools
     public static class MenuSceneBuilder
     {
         private const string InterfaceSpriteSheetPath = "Assets/_Draft_2_Kikiri9/Art/UI/interfaz.png";
+        private const string ButtonsSpriteSheetPath = "Assets/_Draft_2_Kikiri9/Art/UI/botones.png";
         private const string BootScenePath = "Assets/_Project/Scenes/Boot.unity";
         private const string MainMenuScenePath = "Assets/_Project/Scenes/MainMenu.unity";
+        private const string Level01ScenePath = "Assets/_Project/Scenes/Level01_Dolores.unity";
 
         [MenuItem("Tools/Kikiri-9/Build Main Menu")]
         public static void BuildMainMenuScenes()
@@ -66,10 +68,10 @@ namespace Kikiri9.EditorTools
             var titleText = CreateText(canvasTransform, "TitleText", "KIKIRI-9: EL ULTIMO PAN", 40, TextAnchor.MiddleCenter);
             SetAnchoredRect(titleText.rectTransform, new Vector2(0.5f, 1f), new Vector2(0.5f, 1f), new Vector2(0f, -120f), new Vector2(900f, 100f));
 
-            var normal = LoadSprite(InterfaceSpriteSheetPath, "botones_01");
-            var highlighted = LoadSprite(InterfaceSpriteSheetPath, "botones_02");
-            var pressed = LoadSprite(InterfaceSpriteSheetPath, "botones_03");
-            var disabled = LoadSprite(InterfaceSpriteSheetPath, "botones_04");
+            var normal = LoadSprite(ButtonsSpriteSheetPath, "primario_normal");
+            var highlighted = LoadSprite(ButtonsSpriteSheetPath, "primario_seleccionado");
+            var pressed = LoadSprite(ButtonsSpriteSheetPath, "primario_presionado");
+            var disabled = LoadSprite(ButtonsSpriteSheetPath, "primario_desactivado");
 
             var playButton = CreateMenuButton(canvasTransform, "PlayButton", "JUGAR", 120f, normal, highlighted, pressed, disabled);
             var continueButton = CreateMenuButton(canvasTransform, "ContinueButton", "CONTINUAR", 10f, normal, highlighted, pressed, disabled);
@@ -96,7 +98,7 @@ namespace Kikiri9.EditorTools
             SetPrivateField(controller, "creditsPanel", creditsPanel);
             SetPrivateField(controller, "continueButton", continueButton.gameObject);
             SetPrivateField(controller, "exitMessagePanel", exitMessagePanel);
-            SetPrivateField(controller, "defaultLevelSceneName", "Sandbox");
+            SetPrivateField(controller, "defaultLevelSceneName", "Level01_Dolores");
             SetPrivateField(controller, "firstSelectedButton", playButton.gameObject);
 
             UnityEventTools.AddPersistentListener(playButton.onClick, controller.OnPlayPressed);
@@ -127,12 +129,24 @@ namespace Kikiri9.EditorTools
         private static void RegisterScenesInBuildSettings()
         {
             var scenes = EditorBuildSettings.scenes.ToList();
-            scenes.RemoveAll(s => s.path == BootScenePath || s.path == MainMenuScenePath);
+            scenes.RemoveAll(s => s.path == BootScenePath
+                || s.path == MainMenuScenePath
+                || s.path == Level01ScenePath);
 
+            // Orden: Boot (0) -> MainMenu (1) -> Level01_Dolores (2)
+            scenes.Insert(0, new EditorBuildSettingsScene(Level01ScenePath, true));
             scenes.Insert(0, new EditorBuildSettingsScene(MainMenuScenePath, true));
             scenes.Insert(0, new EditorBuildSettingsScene(BootScenePath, true));
 
             EditorBuildSettings.scenes = scenes.ToArray();
+        }
+
+        // Menu rapido independiente para agregar Level01 a Build Settings sin regenerar Boot/MainMenu
+        [MenuItem("Tools/Kikiri-9/Register Scenes In Build")]
+        public static void RegisterScenesOnly()
+        {
+            RegisterScenesInBuildSettings();
+            Debug.Log("Build Settings actualizado: Boot, MainMenu, Level01_Dolores.");
         }
 
         private static GameObject CreateEventSystem()

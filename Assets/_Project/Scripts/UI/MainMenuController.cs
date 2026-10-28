@@ -14,7 +14,7 @@ namespace Kikiri9.UI
         [SerializeField] private GameObject creditsPanel;
         [SerializeField] private GameObject continueButton;
         [SerializeField] private GameObject exitMessagePanel;
-        [SerializeField] private string defaultLevelSceneName = "Sandbox";
+        [SerializeField] private string defaultLevelSceneName = "Level01_Dolores";
         [SerializeField] private GameObject firstSelectedButton;
 
         private void Start()
