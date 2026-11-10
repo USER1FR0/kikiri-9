@@ -20,6 +20,7 @@ namespace Kikiri9.EditorTools
     {
         private const string InterfaceSpriteSheetPath = "Assets/_Draft_2_Kikiri9/Art/UI/interfaz.png";
         private const string ButtonsSpriteSheetPath = "Assets/_Draft_2_Kikiri9/Art/UI/botones.png";
+        private const string MenuBackgroundPath = "Assets/_Draft_Kikiri9/Art/Backgrounds/menu_guanajuato.png";
         private const string BootScenePath = "Assets/_Project/Scenes/Boot.unity";
         private const string MainMenuScenePath = "Assets/_Project/Scenes/MainMenu.unity";
         private const string Level01ScenePath = "Assets/_Project/Scenes/Level01_Dolores.unity";
@@ -65,25 +66,55 @@ namespace Kikiri9.EditorTools
             var canvasGo = CreateCanvas("Canvas");
             var canvasTransform = canvasGo.transform;
 
-            var titleText = CreateText(canvasTransform, "TitleText", "KIKIRI-9: EL ULTIMO PAN", 40, TextAnchor.MiddleCenter);
-            SetAnchoredRect(titleText.rectTransform, new Vector2(0.5f, 1f), new Vector2(0.5f, 1f), new Vector2(0f, -120f), new Vector2(900f, 100f));
+            // Fondo: la ilustracion de Guanajuato (Dia de Muertos) ocupando toda la
+            // pantalla, detras de todo lo demas. preserveAspect queda en false porque
+            // la relacion de aspecto de la imagen (1672x941) practicamente coincide
+            // con la resolucion de referencia del canvas (1920x1080).
+            CreateBackgroundImage(canvasTransform);
+
+            // Titulo en dos lineas (nombre + subtitulo) en vez de una sola linea larga,
+            // para que se lea como un logotipo. Contorno oscuro para que no se pierda
+            // contra el cielo de la imagen de fondo.
+            var titleText = CreateText(canvasTransform, "TitleText", "KIKIRI-9", 64, TextAnchor.MiddleCenter);
+            titleText.fontStyle = FontStyle.Bold;
+            titleText.color = new Color(1f, 0.78f, 0.32f);
+            AddOutline(titleText.gameObject, new Color(0.15f, 0.05f, 0.2f), new Vector2(3f, -3f));
+            SetAnchoredRect(titleText.rectTransform, new Vector2(0.5f, 1f), new Vector2(0.5f, 1f), new Vector2(0f, -220f), new Vector2(900f, 90f));
+
+            var subtitleText = CreateText(canvasTransform, "SubtitleText", "EL ULTIMO PAN", 26, TextAnchor.MiddleCenter);
+            subtitleText.color = new Color(0.92f, 0.9f, 1f);
+            AddOutline(subtitleText.gameObject, new Color(0.15f, 0.05f, 0.2f), new Vector2(2f, -2f));
+            SetAnchoredRect(subtitleText.rectTransform, new Vector2(0.5f, 1f), new Vector2(0.5f, 1f), new Vector2(0f, -300f), new Vector2(700f, 50f));
+
+            // Panel semitransparente detras de los botones: asegura contraste sin
+            // importar que parte de la imagen quede detras (cielo, cerro o pueblo).
+            CreateMenuPanel(canvasTransform, new Vector2(0f, -146f), new Vector2(480f, 692f));
 
             var normal = LoadSprite(ButtonsSpriteSheetPath, "primario_normal");
             var highlighted = LoadSprite(ButtonsSpriteSheetPath, "primario_seleccionado");
             var pressed = LoadSprite(ButtonsSpriteSheetPath, "primario_presionado");
             var disabled = LoadSprite(ButtonsSpriteSheetPath, "primario_desactivado");
 
-            var playButton = CreateMenuButton(canvasTransform, "PlayButton", "JUGAR", 120f, normal, highlighted, pressed, disabled);
-            var continueButton = CreateMenuButton(canvasTransform, "ContinueButton", "CONTINUAR", 10f, normal, highlighted, pressed, disabled);
-            var optionsButton = CreateMenuButton(canvasTransform, "OptionsButton", "OPCIONES", -100f, normal, highlighted, pressed, disabled);
-            var creditsButton = CreateMenuButton(canvasTransform, "CreditsButton", "CREDITOS", -210f, normal, highlighted, pressed, disabled);
-            var exitButton = CreateMenuButton(canvasTransform, "ExitButton", "SALIR", -320f, normal, highlighted, pressed, disabled);
+            var normalSecondary = LoadSprite(ButtonsSpriteSheetPath, "secundario_normal");
+            var highlightedSecondary = LoadSprite(ButtonsSpriteSheetPath, "secundario_seleccionado");
+            var pressedSecondary = LoadSprite(ButtonsSpriteSheetPath, "secundario_presionado");
+            var disabledSecondary = LoadSprite(ButtonsSpriteSheetPath, "secundario_desactivado");
+
+            // JUGAR usa el sprite primario y es el boton mas grande: es la accion
+            // principal del menu. Los otros cuatro usan el sprite secundario y son
+            // mas pequenos, para dar jerarquia visual clara. SALIR queda con un
+            // espacio extra arriba para separarlo del resto (accion distinta a jugar).
+            var playButton = CreateMenuButton(canvasTransform, "PlayButton", "JUGAR", 90f, new Vector2(440f, 150f), 36, 0f, normal, highlighted, pressed, disabled);
+            var continueButton = CreateMenuButton(canvasTransform, "ContinueButton", "CONTINUAR", -50f, new Vector2(340f, 100f), 26, 0.8f, normalSecondary, highlightedSecondary, pressedSecondary, disabledSecondary);
+            var optionsButton = CreateMenuButton(canvasTransform, "OptionsButton", "OPCIONES", -165f, new Vector2(340f, 100f), 26, 1.6f, normalSecondary, highlightedSecondary, pressedSecondary, disabledSecondary);
+            var creditsButton = CreateMenuButton(canvasTransform, "CreditsButton", "CREDITOS", -280f, new Vector2(340f, 100f), 26, 2.4f, normalSecondary, highlightedSecondary, pressedSecondary, disabledSecondary);
+            var exitButton = CreateMenuButton(canvasTransform, "ExitButton", "SALIR", -410f, new Vector2(340f, 100f), 26, 3.2f, normalSecondary, highlightedSecondary, pressedSecondary, disabledSecondary);
 
             ChainNavigationVertical(playButton, continueButton, optionsButton, creditsButton, exitButton);
 
             var optionsPanel = CreateOverlayPanel(canvasTransform, "OptionsPanel", "OPCIONES\n\n(Proximamente)");
             var creditsPanel = CreateOverlayPanel(canvasTransform, "CreditsPanel", "CREDITOS\n\nManuel Mata Campos\nJuan Francisco Rodriguez Guerrero");
-            var exitMessagePanel = CreateOverlayPanel(canvasTransform, "ExitMessagePanel", "Gracias por jugar. Puedes cerrar esta pestana.");
+            var exitMessagePanel = CreateOverlayPanel(canvasTransform, "ExitMessagePanel", "Gracias por jugar. Puedes cerrar esta pestana para volver al portal.");
 
             AddCloseButton(optionsPanel.transform);
             AddCloseButton(creditsPanel.transform);
@@ -218,6 +249,36 @@ namespace Kikiri9.EditorTools
             return go;
         }
 
+        private static void CreateBackgroundImage(Transform parent)
+        {
+            var go = new GameObject("Background", typeof(RectTransform));
+            go.transform.SetParent(parent, false);
+            go.transform.SetAsFirstSibling();
+
+            var image = go.AddComponent<Image>();
+            image.sprite = LoadSprite(MenuBackgroundPath, "menu_guanajuato_0");
+            image.type = Image.Type.Simple;
+            image.preserveAspect = false;
+            image.raycastTarget = false;
+
+            StretchFull(go.GetComponent<RectTransform>());
+        }
+
+        private static GameObject CreateMenuPanel(Transform parent, Vector2 anchoredPosition, Vector2 size)
+        {
+            var go = new GameObject("ButtonPanel", typeof(RectTransform));
+            go.transform.SetParent(parent, false);
+
+            var rect = go.GetComponent<RectTransform>();
+            SetAnchoredRect(rect, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), anchoredPosition, size);
+
+            var image = go.AddComponent<Image>();
+            image.color = new Color(0.06f, 0.03f, 0.09f, 0.55f);
+            image.raycastTarget = false;
+
+            return go;
+        }
+
         private static Text CreateText(Transform parent, string name, string content, int fontSize, TextAnchor alignment)
         {
             var go = new GameObject(name, typeof(RectTransform));
@@ -232,13 +293,20 @@ namespace Kikiri9.EditorTools
             return text;
         }
 
-        private static Button CreateMenuButton(Transform parent, string name, string label, float yOffset, Sprite normal, Sprite highlighted, Sprite pressed, Sprite disabled)
+        private static void AddOutline(GameObject go, Color color, Vector2 distance)
+        {
+            var outline = go.AddComponent<Outline>();
+            outline.effectColor = color;
+            outline.effectDistance = distance;
+        }
+
+        private static Button CreateMenuButton(Transform parent, string name, string label, float yOffset, Vector2 size, int fontSize, float floatPhase, Sprite normal, Sprite highlighted, Sprite pressed, Sprite disabled)
         {
             var go = new GameObject(name, typeof(RectTransform));
             go.transform.SetParent(parent, false);
 
             var rect = go.GetComponent<RectTransform>();
-            SetAnchoredRect(rect, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0f, yOffset), new Vector2(460f, 90f));
+            SetAnchoredRect(rect, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0f, yOffset), size);
 
             var image = go.AddComponent<Image>();
             image.sprite = normal;
@@ -256,8 +324,14 @@ namespace Kikiri9.EditorTools
             };
             button.spriteState = spriteState;
 
-            var textComponent = CreateText(go.transform, "Label", label, 32, TextAnchor.MiddleCenter);
+            var textComponent = CreateText(go.transform, "Label", label, fontSize, TextAnchor.MiddleCenter);
+            textComponent.fontStyle = FontStyle.Bold;
             StretchFull(textComponent.rectTransform);
+
+            // Flotado suave e independiente por boton (phaseOffset distinto en cada
+            // llamada) para que el menu se sienta "vivo" sin verse sincronizado.
+            var floating = go.AddComponent<FloatingButton>();
+            SetPrivateField(floating, "phaseOffset", floatPhase);
 
             return button;
         }
