@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4056072440775707527
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4906479429786585893, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_Color.b
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906479429786585893, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564748067615936379, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_Name
+      value: Enemy_MummyResistant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731396248077895426, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: maxHealth
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731396248077895426, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: defeatPoints
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6564748067615936379, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3702350423425966878}
+    - targetCorrespondingSourceObject: {fileID: 6564748067615936379, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1578735509809089613}
+  m_SourcePrefab: {fileID: 100100000, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+--- !u!1 &7156426460605842684 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6564748067615936379, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+  m_PrefabInstance: {fileID: 4056072440775707527}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3702350423425966878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7156426460605842684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32af63e70b92a849bcf6d04847c4b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.Enemies.EnemyDamageFlash
+  flashDuration: 0.08
+  flashColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1578735509809089613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7156426460605842684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de38cc7558a32cf40ba3a50e4216b2c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.Enemies.EnemyHealthBar
+  size: {x: 1.2, y: 0.18}
+  yOffset: 2.4
+  bgColor: {r: 0, g: 0, b: 0, a: 0.7}
+  fillColor: {r: 0.95, g: 0.25, b: 0.25, a: 1}

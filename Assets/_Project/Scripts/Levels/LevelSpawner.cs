@@ -1,8 +1,9 @@
 // Spawns a mixed pool (enemies + obstacles) ahead of the camera at random intervals, using
-// the active LevelController's LevelDefinition. Independent from Manuel's EnemySpawner so
-// the Sandbox scene keeps its original single-prefab spawner untouched.
+// the active LevelController's LevelDefinition. Pausa durante BossArenaManager.IsActive.
+// Respeta safeStartMeters (primeros metros solo pickups) para dar un onramp calido al nivel.
 
 using System.Collections.Generic;
+using Kikiri9.Session;
 using UnityEngine;
 
 namespace Kikiri9.Levels
@@ -13,6 +14,7 @@ namespace Kikiri9.Levels
         [SerializeField] private Transform spawnReference;
         [SerializeField] private float spawnAheadDistance = 15f;
         [SerializeField] private float groundY = -2.75f;
+        [SerializeField] private float minSeparation = 7f;
 
         private readonly List<GameObject> active = new List<GameObject>();
         private float nextSpawnTime;
@@ -24,10 +26,18 @@ namespace Kikiri9.Levels
             ScheduleNext();
         }
 
-        [SerializeField] private float minSeparation = 7f;
+        private float ActiveMinSeparation
+        {
+            get
+            {
+                var def = level != null ? level.Definition : null;
+                return (def != null && def.minSpawnSeparation > 0f) ? def.minSpawnSeparation : minSeparation;
+            }
+        }
 
         private void Update()
         {
+            if (BossArenaManager.IsActive) return;
             if (level == null || level.Definition == null || spawnReference == null) return;
             if (Time.time < nextSpawnTime) return;
 
@@ -36,18 +46,26 @@ namespace Kikiri9.Levels
             {
                 var pos = new Vector3(spawnReference.position.x + spawnAheadDistance, groundY, 0f);
 
-                // Evitar sobreponer con otro ya spawneado cerca
                 bool clear = true;
                 foreach (var e in active)
                 {
                     if (e == null) continue;
-                    if (Mathf.Abs(e.transform.position.x - pos.x) < minSeparation) { clear = false; break; }
+                    if (Mathf.Abs(e.transform.position.x - pos.x) < ActiveMinSeparation) { clear = false; break; }
                 }
 
                 if (clear)
                 {
                     var prefab = PickRandomPrefab(level.Definition);
-                    if (prefab != null) active.Add(Instantiate(prefab, pos, Quaternion.identity));
+                    if (prefab != null)
+                    {
+                        var p = pos;
+                        if (lastCategory == SpawnCategory.Pickup && level.Definition.pickupHighChance > 0f)
+                        {
+                            if (Random.value < level.Definition.pickupHighChance)
+                                p.y += level.Definition.pickupHighYBonus;
+                        }
+                        active.Add(Instantiate(prefab, p, Quaternion.identity));
+                    }
                 }
             }
             ScheduleNext();
@@ -57,6 +75,39 @@ namespace Kikiri9.Levels
         private SpawnCategory lastCategory = SpawnCategory.Enemy;
         private int consecutive = 0;
         private const int MaxConsecutive = 2;
+
+        private static SpawnCategory PickWeighted(List<SpawnCategory> avail, LevelDefinition def)
+        {
+            float sum = 0f;
+            foreach (var c in avail) sum += CategoryWeight(def, c);
+            if (sum <= 0f) return avail[Random.Range(0, avail.Count)];
+            float roll = Random.value * sum;
+            float cum = 0f;
+            foreach (var c in avail)
+            {
+                cum += CategoryWeight(def, c);
+                if (roll <= cum) return c;
+            }
+            return avail[avail.Count - 1];
+        }
+
+        private static float CategoryWeight(LevelDefinition def, SpawnCategory c)
+        {
+            switch (c)
+            {
+                case SpawnCategory.Enemy: return Mathf.Max(0f, def.enemyWeight);
+                case SpawnCategory.Obstacle: return Mathf.Max(0f, def.obstacleWeight);
+                default: return Mathf.Max(0f, def.pickupWeight);
+            }
+        }
+
+        private static GameObject FindBreadPickup(LevelDefinition def)
+        {
+            foreach (var p in def.pickupPrefabs)
+                if (p != null && p.name.Contains("Pickup_Bread") && !p.name.Contains("Boost"))
+                    return p;
+            return def.pickupPrefabs.Length > 0 ? def.pickupPrefabs[0] : null;
+        }
 
         private int CountActiveEnemies()
         {
@@ -69,6 +120,12 @@ namespace Kikiri9.Levels
             return n;
         }
 
+        private bool InSafeZone(LevelDefinition def)
+        {
+            if (def.safeStartMeters <= 0f || Kikiri9.World.WorldScroller.Instance == null) return false;
+            return Kikiri9.World.WorldScroller.Instance.MetersAdvanced < def.safeStartMeters;
+        }
+
         private GameObject PickRandomPrefab(LevelDefinition def)
         {
             int eC = def.enemyPrefabs != null ? def.enemyPrefabs.Length : 0;
@@ -76,24 +133,59 @@ namespace Kikiri9.Levels
             int pC = def.pickupPrefabs != null ? def.pickupPrefabs.Length : 0;
             if (eC + oC + pC == 0) return null;
 
-            var avail = new System.Collections.Generic.List<SpawnCategory>(3);
+            bool inSafeZone = InSafeZone(def);
+
+            if (def.breadLowRatio > 0f && pC > 0 && !inSafeZone)
+            {
+                var lowAmmo = Object.FindFirstObjectByType<Kikiri9.Player.PlayerAmmo>();
+                int lowBread = lowAmmo != null ? lowAmmo.CurrentBread : 999;
+                int lowEnemies = CountActiveEnemies();
+                if (lowEnemies > 0 && lowBread < Mathf.CeilToInt(lowEnemies * def.breadLowRatio))
+                {
+                    var breadPickup = FindBreadPickup(def);
+                    if (breadPickup != null)
+                    {
+                        lastCategory = SpawnCategory.Pickup;
+                        consecutive = 1;
+                        return breadPickup;
+                    }
+                }
+            }
+
+            float wE = def.enemyWeight, wO = def.obstacleWeight, wP = def.pickupWeight;
+            bool useWeighted = (wE + wO + wP) > 0f;
+
+            var avail = new List<SpawnCategory>(3);
             if (eC > 0) avail.Add(SpawnCategory.Enemy);
             if (oC > 0) avail.Add(SpawnCategory.Obstacle);
             if (pC > 0) avail.Add(SpawnCategory.Pickup);
 
-            // Regla: no spawnear enemigos si el pollo no tiene suficiente pan para matarlos
-            // (CurrentBread debe ser > enemigos activos para permitir el spawn).
-            var ammo = Object.FindFirstObjectByType<Kikiri9.Player.PlayerAmmo>();
-            int bread = ammo != null ? ammo.CurrentBread : int.MaxValue;
-            int activeEnemies = CountActiveEnemies();
-            if (bread <= activeEnemies && avail.Count > 1) avail.Remove(SpawnCategory.Enemy);
+            // Zona segura inicial: solo pickups
+            if (inSafeZone)
+            {
+                avail.Remove(SpawnCategory.Enemy);
+                avail.Remove(SpawnCategory.Obstacle);
+                if (avail.Count == 0) return null;
+            }
+            else
+            {
+                var ammo = Object.FindFirstObjectByType<Kikiri9.Player.PlayerAmmo>();
+                int bread = ammo != null ? ammo.CurrentBread : int.MaxValue;
+                int activeEnemies = CountActiveEnemies();
+                if (bread <= activeEnemies && avail.Count > 1) avail.Remove(SpawnCategory.Enemy);
 
-            if (consecutive >= MaxConsecutive && avail.Count > 1)
-                avail.Remove(lastCategory);
+                if (consecutive >= MaxConsecutive && avail.Count > 1)
+                    avail.Remove(lastCategory);
+            }
 
-            if (avail.Count == 0) return null; // no hay nada seguro de spawnear este tick
+            if (avail.Count == 0) return null;
 
-            var chosen = avail[Random.Range(0, avail.Count)];
+            SpawnCategory chosen;
+            if (useWeighted)
+                chosen = PickWeighted(avail, def);
+            else
+                chosen = avail[Random.Range(0, avail.Count)];
+
             if (chosen == lastCategory) consecutive++;
             else { lastCategory = chosen; consecutive = 1; }
 

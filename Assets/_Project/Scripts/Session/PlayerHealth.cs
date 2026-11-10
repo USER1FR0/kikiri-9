@@ -1,7 +1,5 @@
-// Player hit points for levels. When present on the pollo, intercepts enemy collisions and
-// consumes one heart with a short invulnerability window (sprite blinks). At zero hearts
-// fires OnDeath, which GameOverHandler listens to. The Sandbox scene has no PlayerHealth,
-// so GameOverHandler keeps its original one-hit behavior there.
+// Player hit points for levels. Añadido: SetTemporaryInvulnerability() publico para
+// que PlayerPunch pueda proteger al pollo durante la rafaga.
 
 using System;
 using System.Collections;
@@ -81,7 +79,6 @@ namespace Kikiri9.Session
         public void TakeDamage(int amount)
         {
             if (IsDead || IsInvulnerable) return;
-            // Durante el outro del nivel el pollo no puede morir
             if (GameStateManager.Instance != null && GameStateManager.Instance.CurrentState == GameState.LevelOutro) return;
             CurrentHealth = Mathf.Max(0, CurrentHealth - amount);
             OnHealthChanged?.Invoke(CurrentHealth, maxHealth);
@@ -98,6 +95,19 @@ namespace Kikiri9.Session
             if (damageVfxSprite != null)
                 Kikiri9.World.VfxSpawner.Spawn(damageVfxSprite, transform.position + Vector3.up * 1f, 0.5f, 0.6f, 22);
             StartCoroutine(InvulnerabilityRoutine());
+        }
+
+        public void SetTemporaryInvulnerability(float duration)
+        {
+            StartCoroutine(TempInvulnRoutine(duration));
+        }
+
+        private IEnumerator TempInvulnRoutine(float duration)
+        {
+            IsInvulnerable = true;
+            yield return new WaitForSeconds(duration);
+            IsInvulnerable = false;
+            RestoreIgnoredCollisions();
         }
 
         private IEnumerator InvulnerabilityRoutine()

@@ -33,7 +33,34 @@ namespace Kikiri9.Levels
         private void Start()
         {
             if (definition == null) { Debug.LogError("[Level] definition missing"); return; }
+            ApplyJumpLimit();
             StartCoroutine(BindWorldScroller());
+        }
+
+        private void ApplyJumpLimit()
+        {
+            StartCoroutine(ApplyJumpLimitRoutine());
+        }
+
+        private IEnumerator ApplyJumpLimitRoutine()
+        {
+            float timeout = 3f;
+            float elapsed = 0f;
+            while (elapsed < timeout)
+            {
+                var player = GameObject.FindGameObjectWithTag("Player");
+                if (player != null)
+                {
+                    var ctrl = player.GetComponent<Kikiri9.Player.PlayerController>();
+                    if (ctrl != null)
+                    {
+                        ctrl.SetMaxJumpsInAir(definition.maxJumpsInAir);
+                        yield break;
+                    }
+                }
+                yield return null;
+                elapsed += Time.deltaTime;
+            }
         }
 
         private IEnumerator BindWorldScroller()

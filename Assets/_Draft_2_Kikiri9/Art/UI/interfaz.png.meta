@@ -195,10 +195,10 @@ TextureImporter:
       name: corazon_lleno
       rect:
         serializedVersion: 2
-        x: 122
-        y: 245
-        width: 76
-        height: 70
+        x: 0
+        y: 224
+        width: 320
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,8 +207,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5884943bcbc3ac44a6c7088134e9ffb
-      internalID: -704613854
+      spriteID: 4d9d5d906a7622c45bc1dedeaa5ee8d2
+      internalID: -11256279
       vertices: []
       indices: 
       edges: []
@@ -217,10 +217,10 @@ TextureImporter:
       name: corazon_vacio
       rect:
         serializedVersion: 2
-        x: 442
-        y: 245
-        width: 76
-        height: 70
+        x: 320
+        y: 224
+        width: 320
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 766a6e84996aeb647a2a094c76fd1a4b
-      internalID: 1135584926
+      spriteID: da6ec9496d8dfd74eb219d18e24a326b
+      internalID: -1205199897
       vertices: []
       indices: 
       edges: []
@@ -239,10 +239,10 @@ TextureImporter:
       name: pan
       rect:
         serializedVersion: 2
-        x: 762
-        y: 248
-        width: 76
-        height: 65
+        x: 640
+        y: 224
+        width: 320
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,8 +251,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04b2be8028c98724e975061b66822361
-      internalID: -1938312686
+      spriteID: 1a6b85214a5f1fb478b23e1af2fae073
+      internalID: -172973083
       vertices: []
       indices: 
       edges: []
@@ -261,10 +261,10 @@ TextureImporter:
       name: botella_verde
       rect:
         serializedVersion: 2
-        x: 1099
-        y: 238
-        width: 41
-        height: 84
+        x: 960
+        y: 224
+        width: 320
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,8 +273,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5874a1ac56e04b4084960a4f82e7e4b
-      internalID: -617786572
+      spriteID: ad0760f9f5bc6514eac0ffabba5f7154
+      internalID: -704831184
       vertices: []
       indices: 
       edges: []
@@ -295,8 +295,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d9206d62bc9b11439874cf915b47fcd
-      internalID: 1825743704
+      spriteID: a29bf998dc2cecf4ead79c7a3e44f0e9
+      internalID: -1612474422
       vertices: []
       indices: 
       edges: []
@@ -305,10 +305,10 @@ TextureImporter:
       name: pausa
       rect:
         serializedVersion: 2
-        x: 442
-        y: 128
-        width: 76
-        height: 80
+        x: 320
+        y: 112
+        width: 320
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -317,8 +317,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17a1707a944beac44be72ec3224b4d5d
-      internalID: -570852814
+      spriteID: 59bf3115207451f43a1ff0bc69357c54
+      internalID: 479876178
       vertices: []
       indices: 
       edges: []
@@ -339,8 +339,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 328ba3cca97afeb458ef272c2366493a
-      internalID: -983660482
+      spriteID: c6ce480b76e17284588aa96cee522394
+      internalID: 1216694396
       vertices: []
       indices: 
       edges: []
@@ -361,8 +361,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07fc10be69d8c2e45b2d2bbb9e29f2b8
-      internalID: -850687754
+      spriteID: 7b4ad7e130fd09249b4f7fa11367b242
+      internalID: 1686437100
       vertices: []
       indices: 
       edges: []
@@ -383,8 +383,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a17e5674375c320419c674c7515fb9e5
-      internalID: 1311963545
+      spriteID: 004d3c309f4f75744a5241afb549cc71
+      internalID: 1821747030
       vertices: []
       indices: 
       edges: []
@@ -405,8 +405,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8430ce33aeb3de24285c72f080f11b50
-      internalID: -373542928
+      spriteID: e7b90d139299df542bab726c26df78de
+      internalID: 199511967
       vertices: []
       indices: 
       edges: []
@@ -427,8 +427,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19f027d314c6e294fa5a8ad2d1024a1e
-      internalID: -1030511366
+      spriteID: 6e9be976f7f49fe4eb789556129016a4
+      internalID: -1414232858
       vertices: []
       indices: 
       edges: []
@@ -449,8 +449,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba16000d45d01d148937ecec3e7ec583
-      internalID: 123737496
+      spriteID: ccaea68f9141f72409655ac13c8f58e3
+      internalID: 993142558
       vertices: []
       indices: 
       edges: []
@@ -469,18 +469,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      base_pausa: 123737496
-      botella_dorada: 1825743704
-      botella_verde: -617786572
-      corazon_lleno: -704613854
-      corazon_vacio: 1135584926
-      pan: -1938312686
-      pausa: -570852814
-      placa_puntos: -373542928
-      placa_tiempo: -1030511366
-      placa_vidas: 1311963545
-      silencio: -850687754
-      sonido: -983660482
+      base_pausa: 993142558
+      botella_dorada: -1612474422
+      botella_verde: -704831184
+      corazon_lleno: -11256279
+      corazon_vacio: -1205199897
+      pan: -172973083
+      pausa: 479876178
+      placa_puntos: 199511967
+      placa_tiempo: -1414232858
+      placa_vidas: 1821747030
+      silencio: 1686437100
+      sonido: 1216694396
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

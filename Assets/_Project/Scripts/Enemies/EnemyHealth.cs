@@ -37,6 +37,8 @@ namespace Kikiri9.Enemies
         {
             if (isDefeated) return;
             currentHealth -= amount;
+            var flash = GetComponent<EnemyDamageFlash>();
+            if (flash != null) flash.Flash();
             if (currentHealth <= 0) Defeat();
         }
 

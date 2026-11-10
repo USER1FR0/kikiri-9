@@ -24,8 +24,13 @@ namespace Kikiri9.Player
             OnBreadChanged?.Invoke(CurrentBread);
         }
 
+        private bool infinite;
+        public bool InfiniteActive => infinite;
+        public void SetInfinite(bool on) { infinite = on; OnBreadChanged?.Invoke(CurrentBread); }
+
         public bool TryConsume(int amount = 1)
         {
+            if (infinite) return true;
             if (CurrentBread < amount) return false;
             CurrentBread -= amount;
             OnBreadChanged?.Invoke(CurrentBread);

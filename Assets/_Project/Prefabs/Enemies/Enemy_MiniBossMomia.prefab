@@ -1,0 +1,164 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3276192897092608138
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1923035318254987461, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906479429786585893, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906479429786585893, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564748067615936379, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_Name
+      value: Enemy_MiniBossMomia
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731396248077895426, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: maxHealth
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731396248077895426, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: defeatPoints
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863509132244616669, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6564748067615936379, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4962434376440275695}
+    - targetCorrespondingSourceObject: {fileID: 6564748067615936379, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3019063655655202245}
+    - targetCorrespondingSourceObject: {fileID: 6564748067615936379, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1813520735669755344}
+  m_SourcePrefab: {fileID: 100100000, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+--- !u!1 &8533700632252706801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6564748067615936379, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
+  m_PrefabInstance: {fileID: 3276192897092608138}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4962434376440275695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8533700632252706801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32af63e70b92a849bcf6d04847c4b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.Enemies.EnemyDamageFlash
+  flashDuration: 0.08
+  flashColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &3019063655655202245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8533700632252706801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de38cc7558a32cf40ba3a50e4216b2c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.Enemies.EnemyHealthBar
+  size: {x: 1.2, y: 0.18}
+  yOffset: 2.4
+  bgColor: {r: 0, g: 0, b: 0, a: 0.7}
+  fillColor: {r: 0.95, g: 0.25, b: 0.25, a: 1}
+--- !u!114 &1813520735669755344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8533700632252706801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 485356cbff2e38e48b3b5190ea8d368a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.Enemies.MiniBossMomia
+  horizontalWanderSpeed: 3
+  wanderRange: 3
+  jumpInterval: 2.2
+  jumpVelocity: 11
+  attackCooldown: 3.5
+  lungeSpeed: 9
+  lungeDuration: 0.4
+  contactDamage: 1
+  contactCooldown: 1
+  breadDropPrefab: {fileID: 8911047900946545455, guid: 5d18d3957dbd2a1489b1531273aec55f, type: 3}
+  bottleDropPrefab: {fileID: 177379635892079049, guid: 805c12f4c17c17d42a8c1bf50fbe1345, type: 3}
+  breadBoostPrefab: {fileID: 1436819208553476444, guid: 156c367dd5ffa9c479bf5dbe442a3a84, type: 3}
+  dropInterval: 2.5
+  defeatBreadBurst: 6
+  breadSpawnY: 4
+  suspenseMusicPitch: 0.75
+  suspenseMusicVolume: 0.7
