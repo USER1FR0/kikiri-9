@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04fa85f781487524496dafe37228aa33, type: 3}
+  m_Name: Wave_L3_02
+  m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.Levels.Waves.WaveDefinition
+  triggerMeters: 750
+  bannerLabel: OLEADA 2/3
+  spawnInterval: 0.8
+  waveTimeLimit: 60
+  entries:
+  - enemyPrefab: {fileID: 7156426460605842684, guid: 5741265a9b421a94081ad38888ae95b5, type: 3}
+    count: 3
+  - enemyPrefab: {fileID: 3443737381281573657, guid: d60b9efaac8364b48b957719afb29742, type: 3}
+    count: 3
+  rewards:
+  - prefab: {fileID: 8911047900946545455, guid: 5d18d3957dbd2a1489b1531273aec55f, type: 3}
+    count: 3
+  - prefab: {fileID: 177379635892079049, guid: 805c12f4c17c17d42a8c1bf50fbe1345, type: 3}
+    count: 2
+  - prefab: {fileID: 8748737126947186384, guid: 7515df69ace06cc48bdae29294a7a465, type: 3}
+    count: 1
+  endsLevelOnClear: 0
+  groupSpawn: 0
+  freeMovementMode: 0

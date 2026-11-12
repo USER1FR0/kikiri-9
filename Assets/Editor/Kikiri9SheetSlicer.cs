@@ -209,6 +209,14 @@ namespace Kikiri9.EditorTools
 
             dp.InitSpriteEditorDataProvider();
 
+            // Preservar GUIDs existentes por nombre para no romper referencias en prefabs/escenas.
+            var previous = dp.GetSpriteRects();
+            var previousById = new Dictionary<string, GUID>();
+            if (previous != null)
+                foreach (var pr in previous)
+                    if (!string.IsNullOrEmpty(pr.name) && !previousById.ContainsKey(pr.name))
+                        previousById[pr.name] = pr.spriteID;
+
             var rects = new List<SpriteRect>();
             for (int r = 0; r < def.rows; r++)
             {
@@ -225,13 +233,17 @@ namespace Kikiri9.EditorTools
                         ? def.cellNames[r, c]
                         : $"{rowName}_{(c + 1):00}";
 
+                    GUID keepId = previousById.TryGetValue(spriteName, out var oldId) && !oldId.Empty()
+                        ? oldId
+                        : GUID.Generate();
+
                     rects.Add(new SpriteRect
                     {
                         name = spriteName,
                         rect = new Rect(x, y, def.cellW, def.cellH),
                         pivot = new Vector2(def.pivotX, def.pivotY),
                         alignment = SpriteAlignment.Custom,
-                        spriteID = GUID.Generate(),
+                        spriteID = keepId,
                         border = def.slice9Border,
                     });
                 }

@@ -1,6 +1,6 @@
-// Bread projectile. Flies forward with gentle gravity, lands on first collision, blinks
-// 3 times, spawns a splash effect sprite over the landing point, then self-destroys. The
-// collider is disabled on landing so the pollo can walk straight through the resting pan.
+// Bread projectile v2. Usa trigger para no colisionar fisicamente con pickups u obstaculos.
+// Dana a enemigos al tocarlos. Al tocar algo que no sea pickup (enemigo, obstaculo, suelo)
+// se queda pegado, parpadea 3 veces, spawnea un splash y se destruye.
 
 using System.Collections;
 using UnityEngine;
@@ -20,6 +20,8 @@ namespace Kikiri9.Combat
         private Collider2D col;
         private SpriteRenderer sr;
         private bool landed;
+        private float spawnTime;
+        [SerializeField] private float grace = 0.08f;
 
         public void SetSplashSprite(Sprite s) => splashSprite = s;
 
@@ -30,25 +32,37 @@ namespace Kikiri9.Combat
             sr = GetComponent<SpriteRenderer>();
             rb.linearVelocity = velocity;
             spawnTime = Time.time;
-            // Safety net: si el pan no colisiona con nada (vuela al vacio), se destruye
-            // tras 5 segundos para evitar sprites huerfanos en la escena.
             Destroy(gameObject, 5f);
         }
 
-        private float spawnTime;
-        [SerializeField] private float grace = 0.08f;
-
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnTriggerEnter2D(Collider2D other)
         {
             if (landed) return;
-            if (Time.time - spawnTime < grace) return; // ignore muzzle contact
+            if (Time.time - spawnTime < grace) return;
+            if (other == null) return;
 
-            if (collision.collider.CompareTag("Enemy"))
+            // Ignorar pickups, el propio pollo y otros panes (atraviesa sin detonar).
+            if (other.CompareTag("Player")) return;
+            if (other.CompareTag("Pickup")) return;
+            if (other.CompareTag("Bread")) return;
+            if (other.CompareTag("Enemy"))
             {
-                var enemyHealth = collision.collider.GetComponent<Kikiri9.Enemies.EnemyHealth>();
-                if (enemyHealth != null) enemyHealth.TakeDamage(1);
+                var enemyHealth = other.GetComponent<Kikiri9.Enemies.EnemyHealth>();
+                if (enemyHealth == null)
+                    enemyHealth = other.GetComponentInParent<Kikiri9.Enemies.EnemyHealth>();
+                if (enemyHealth != null)
+                {
+                    bool inAir = transform.position.y > -2.5f;
+                    var src = inAir ? Kikiri9.Enemies.New.DamageSource.BreadInAir : Kikiri9.Enemies.New.DamageSource.Bread;
+                    enemyHealth.TakeDamage(1, src, transform.position);
+                }
             }
 
+            Land();
+        }
+
+        private void Land()
+        {
             landed = true;
             if (col != null) col.enabled = false;
             if (rb != null)

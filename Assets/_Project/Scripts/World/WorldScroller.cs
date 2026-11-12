@@ -1,8 +1,10 @@
 // Scene-level source of world movement. Provides a single speed and tracks accumulated
 // meters. Supports a progressive speed curve (lineal baseSpeed -> maxSpeed over the
 // target distance), driven by LevelController.
+// Si BossArenaManager.IsActive = true, el scroll se congela hasta que el jefe caiga.
 
 using System;
+using Kikiri9.Session;
 using UnityEngine;
 
 namespace Kikiri9.World
@@ -18,8 +20,6 @@ namespace Kikiri9.World
         public float CurrentSpeed { get; private set; }
         public float MetersAdvanced { get; private set; }
 
-        // Progression curve (optional). When maxSpeed > baseSpeed, CurrentSpeed interpolates
-        // from base to max as MetersAdvanced goes from 0 to targetMeters.
         private float baseSpeed, maxSpeed, targetMeters;
         private bool progressionEnabled;
 
@@ -54,6 +54,9 @@ namespace Kikiri9.World
 
         private void Update()
         {
+            if (BossArenaManager.IsActive) { return; }
+            if (Kikiri9.Levels.Waves.WaveManager.WaveActive) { return; }
+
             if (progressionEnabled && targetMeters > 0f)
             {
                 float t = Mathf.Clamp01(MetersAdvanced / targetMeters);

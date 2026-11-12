@@ -1,7 +1,5 @@
-// Player hit points for levels. When present on the pollo, intercepts enemy collisions and
-// consumes one heart with a short invulnerability window (sprite blinks). At zero hearts
-// fires OnDeath, which GameOverHandler listens to. The Sandbox scene has no PlayerHealth,
-// so GameOverHandler keeps its original one-hit behavior there.
+// Player hit points for levels. Añadido: SetTemporaryInvulnerability() publico para
+// que PlayerPunch pueda proteger al pollo durante la rafaga.
 
 using System;
 using System.Collections;
@@ -81,15 +79,17 @@ namespace Kikiri9.Session
         public void TakeDamage(int amount)
         {
             if (IsDead || IsInvulnerable) return;
-            // Durante el outro del nivel el pollo no puede morir
             if (GameStateManager.Instance != null && GameStateManager.Instance.CurrentState == GameState.LevelOutro) return;
             CurrentHealth = Mathf.Max(0, CurrentHealth - amount);
             OnHealthChanged?.Invoke(CurrentHealth, maxHealth);
+            Kikiri9.Session.FX.ComboManager.NotifyDamage();
+            Kikiri9.Session.FX.CameraShake.Shake(0.4f, 0.2f);
+            Kikiri9.Session.FX.HitStop.Freeze(0.05f, 0.05f);
 
             if (CurrentHealth <= 0)
             {
                 IsDead = true;
-                OnDeath?.Invoke();
+                TriggerDeathFeedbackThenGameOver();
                 return;
             }
 
@@ -98,6 +98,19 @@ namespace Kikiri9.Session
             if (damageVfxSprite != null)
                 Kikiri9.World.VfxSpawner.Spawn(damageVfxSprite, transform.position + Vector3.up * 1f, 0.5f, 0.6f, 22);
             StartCoroutine(InvulnerabilityRoutine());
+        }
+
+        public void SetTemporaryInvulnerability(float duration)
+        {
+            StartCoroutine(TempInvulnRoutine(duration));
+        }
+
+        private IEnumerator TempInvulnRoutine(float duration)
+        {
+            IsInvulnerable = true;
+            yield return new WaitForSeconds(duration);
+            IsInvulnerable = false;
+            RestoreIgnoredCollisions();
         }
 
         private IEnumerator InvulnerabilityRoutine()
@@ -113,6 +126,49 @@ namespace Kikiri9.Session
             if (sr != null) sr.enabled = true;
             IsInvulnerable = false;
             RestoreIgnoredCollisions();
+        }
+
+        private void TriggerDeathFeedbackThenGameOver()
+        {
+            // Parar el auto-run para que la animacion Death se vea sin desplazamiento
+            var pc = GetComponent<Kikiri9.Player.PlayerController>();
+            if (pc != null) pc.enabled = false;
+
+            // Congelar fisica: pollo se queda en su sitio y toca el piso
+            var rb = GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector2.zero;
+                rb.angularVelocity = 0f;
+                rb.bodyType = RigidbodyType2D.Kinematic;
+            }
+
+            // Desactivar colisiones con enemigos durante la muerte
+            foreach (var c in GetComponentsInChildren<Collider2D>()) c.enabled = false;
+
+            // Disparar la animacion Death del pollito (trigger "Dead")
+            var animator = GetComponent<Animator>();
+            if (animator != null)
+            {
+                bool hasDead = false;
+                foreach (var par in animator.parameters)
+                    if (par.name == "Dead" && (par.type == AnimatorControllerParameterType.Trigger
+                        || par.type == AnimatorControllerParameterType.Bool)) { hasDead = true; break; }
+                if (hasDead) animator.SetTrigger("Dead");
+                // Fallback: Play directo al estado "Death" si existe
+                if (animator.HasState(0, Animator.StringToHash("Death")))
+                    animator.Play("Death", 0, 0f);
+            }
+
+            var fx = FindFirstObjectByType<Kikiri9.Session.FX.DeathFeedback>();
+            if (fx == null)
+            {
+                var go = new GameObject("DeathFeedback");
+                fx = go.AddComponent<Kikiri9.Session.FX.DeathFeedback>();
+            }
+            fx.PlayDeath(transform, () => {
+                OnDeath?.Invoke();
+            });
         }
     }
 }

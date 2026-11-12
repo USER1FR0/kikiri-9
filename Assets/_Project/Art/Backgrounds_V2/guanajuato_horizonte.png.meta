@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 2e409c1370f058846971c1b5c0774ae5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1114254196535655675
+    second: guanajuato_horizonte_0
+  - first:
+      213: -256056550282242377
+    second: guanajuato_horizonte_1
+  - first:
+      213: 990056993088477182
+    second: guanajuato_horizonte_2
+  - first:
+      213: -9017898660539214774
+    second: guanajuato_horizonte_3
+  - first:
+      213: 5384236529858466500
+    second: guanajuato_horizonte_4
+  - first:
+      213: -5209255469374591779
+    second: guanajuato_horizonte_5
+  - first:
+      213: -3532313575520861289
+    second: guanajuato_horizonte_6
+  - first:
+      213: -4441164464133578834
+    second: guanajuato_horizonte_7
+  - first:
+      213: -6832774637065733770
+    second: guanajuato_horizonte_8
+  - first:
+      213: -3439502864398955857
+    second: guanajuato_horizonte_9
+  - first:
+      213: -5992034651358567868
+    second: guanajuato_horizonte_10
+  - first:
+      213: 8878468112155886415
+    second: guanajuato_horizonte_11
+  - first:
+      213: -8983901367469974056
+    second: guanajuato_horizonte_12
+  - first:
+      213: 4911167069640259547
+    second: guanajuato_horizonte_13
+  - first:
+      213: 5373838813138329586
+    second: guanajuato_horizonte_14
+  - first:
+      213: 683493945893029228
+    second: guanajuato_horizonte_15
+  - first:
+      213: -802145721789244376
+    second: guanajuato_horizonte_16
+  - first:
+      213: 4927661991173927431
+    second: guanajuato_horizonte_17
+  - first:
+      213: -4649350179933698749
+    second: guanajuato_horizonte_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: guanajuato_horizonte_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1672
+        height: 763
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfcfef5c940a67f00800000000000000
+      internalID: 1114254196535655675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guanajuato_horizonte_1
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 770
+        width: 113
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b6d3069ced427cf0800000000000000
+      internalID: -256056550282242377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guanajuato_horizonte_2
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 739
+        width: 43
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef71e64f6936dbd00800000000000000
+      internalID: 990056993088477182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guanajuato_horizonte_3
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 758
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a44d61672fcf9d280800000000000000
+      internalID: -9017898660539214774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guanajuato_horizonte_4
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 765
+        width: 53
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c255e4d896a8ba40800000000000000
+      internalID: 5384236529858466500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guanajuato_horizonte_5
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 786
+        width: 98
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddcaaab10c105b7b0800000000000000
+      internalID: -5209255469374591779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guanajuato_horizonte_6
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 776
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7930acf9483bafec0800000000000000
+      internalID: -3532313575520861289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guanajuato_horizonte_7
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 808
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eafda3e3370dd52c0800000000000000
+      internalID: -4441164464133578834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guanajuato_horizonte_8
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 770
+        width: 47
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 679f56f4bab1d21a0800000000000000
+      internalID: -6832774637065733770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guanajuato_horizonte_9
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 688
+        width: 11
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faacf8b3e5e6440d0800000000000000
+      internalID: -3439502864398955857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guanajuato_horizonte_10
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 759
+        width: 218
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 442e0f35b3408dca0800000000000000
+      internalID: -5992034651358567868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guanajuato_horizonte_11
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 723
+        width: 84
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f434fa635b7a63b70800000000000000
+      internalID: 8878468112155886415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guanajuato_horizonte_12
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 778
+        width: 44
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dd5ec61e45c25380800000000000000
+      internalID: -8983901367469974056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guanajuato_horizonte_13
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 745
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd7f08aed68f72440800000000000000
+      internalID: 4911167069640259547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guanajuato_horizonte_14
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 759
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ff1151cde5b39a40800000000000000
+      internalID: 5373838813138329586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guanajuato_horizonte_15
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 733
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c65851b5f124c7900800000000000000
+      internalID: 683493945893029228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guanajuato_horizonte_16
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 721
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c17aa47b43ed4f0800000000000000
+      internalID: -802145721789244376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guanajuato_horizonte_17
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 711
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 702bd1d1972926440800000000000000
+      internalID: 4927661991173927431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guanajuato_horizonte_18
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 717
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34547a805a03a7fb0800000000000000
+      internalID: -4649350179933698749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      guanajuato_horizonte_0: 1114254196535655675
+      guanajuato_horizonte_1: -256056550282242377
+      guanajuato_horizonte_10: -5992034651358567868
+      guanajuato_horizonte_11: 8878468112155886415
+      guanajuato_horizonte_12: -8983901367469974056
+      guanajuato_horizonte_13: 4911167069640259547
+      guanajuato_horizonte_14: 5373838813138329586
+      guanajuato_horizonte_15: 683493945893029228
+      guanajuato_horizonte_16: -802145721789244376
+      guanajuato_horizonte_17: 4927661991173927431
+      guanajuato_horizonte_18: -4649350179933698749
+      guanajuato_horizonte_2: 990056993088477182
+      guanajuato_horizonte_3: -9017898660539214774
+      guanajuato_horizonte_4: 5384236529858466500
+      guanajuato_horizonte_5: -5209255469374591779
+      guanajuato_horizonte_6: -3532313575520861289
+      guanajuato_horizonte_7: -4441164464133578834
+      guanajuato_horizonte_8: -6832774637065733770
+      guanajuato_horizonte_9: -3439502864398955857
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

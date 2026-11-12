@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.Levels.LevelDefinition
   levelName: Dolores Hidalgo - Etapa 1
   backgroundSprite: {fileID: 21300000, guid: 47b1f466024af08468b5957f39affa56, type: 3}
-  musicClip: {fileID: 8300000, guid: 9884d2da821a8e340accfbd2bceba053, type: 3}
+  musicClip: {fileID: 8300000, guid: 0ec1ec7dcdc8cad4ba6f8ae9aafcd100, type: 3}
   worldSpeed: 3.5
   maxSpeed: 6
   targetDistance: 500
@@ -38,6 +38,15 @@ MonoBehaviour:
 
 
     Meta: 500 metros sin perder los 3 corazones.'
+  pickupHighChance: 0.25
+  pickupHighYBonus: 1.2
+  minSpawnSeparation: 8
+  maxJumpsInAir: 1
+  breadLowRatio: 1.5
+  enemyWeight: 45
+  obstacleWeight: 10
+  pickupWeight: 45
+  safeStartMeters: 25
   endingNarrative: Primera etapa superada. Las calles de Dolores Hidalgo siguen llenas
     de zombis. El pollo recupera el aliento y continua.
   goldBottlesReward: 1

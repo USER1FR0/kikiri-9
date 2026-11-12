@@ -1,0 +1,3601 @@
+fileFormatVersion: 2
+guid: a03365f661f6ab945adf406b513a4b8d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6374737027757550960
+    second: nodos_mapa_0
+  - first:
+      213: -3982468765783141495
+    second: nodos_mapa_1
+  - first:
+      213: 1955382543776153905
+    second: nodos_mapa_2
+  - first:
+      213: -3643175442137180799
+    second: nodos_mapa_3
+  - first:
+      213: 6650372735936567281
+    second: nodos_mapa_4
+  - first:
+      213: 8219607911229125963
+    second: nodos_mapa_5
+  - first:
+      213: 1365494724737013562
+    second: nodos_mapa_6
+  - first:
+      213: 2005989082047650841
+    second: nodos_mapa_7
+  - first:
+      213: 6988447724846687243
+    second: nodos_mapa_8
+  - first:
+      213: -2338513098417783031
+    second: nodos_mapa_9
+  - first:
+      213: -8260268759067598074
+    second: nodos_mapa_10
+  - first:
+      213: -4842598344935780745
+    second: nodos_mapa_11
+  - first:
+      213: -5632388721834633387
+    second: nodos_mapa_12
+  - first:
+      213: 1700026672920465768
+    second: nodos_mapa_13
+  - first:
+      213: 4561254767539738742
+    second: nodos_mapa_14
+  - first:
+      213: -2905117407782846962
+    second: nodos_mapa_15
+  - first:
+      213: 4878815476720166438
+    second: nodos_mapa_16
+  - first:
+      213: -3008735373390325255
+    second: nodos_mapa_17
+  - first:
+      213: -3744197775787011685
+    second: nodos_mapa_18
+  - first:
+      213: 4007876523040312387
+    second: nodos_mapa_19
+  - first:
+      213: 5210509629028097658
+    second: nodos_mapa_20
+  - first:
+      213: 7540427134095535763
+    second: nodos_mapa_21
+  - first:
+      213: 2962469880310614085
+    second: nodos_mapa_22
+  - first:
+      213: 5644275850670526412
+    second: nodos_mapa_23
+  - first:
+      213: 5792847055463986491
+    second: nodos_mapa_24
+  - first:
+      213: -7813044166000517428
+    second: nodos_mapa_25
+  - first:
+      213: 3264484928979520843
+    second: nodos_mapa_26
+  - first:
+      213: 2721571229917673000
+    second: nodos_mapa_27
+  - first:
+      213: 6808559789770980195
+    second: nodos_mapa_28
+  - first:
+      213: -8228824142102238269
+    second: nodos_mapa_29
+  - first:
+      213: 4075008635848753883
+    second: nodos_mapa_30
+  - first:
+      213: -8233926072917957440
+    second: nodos_mapa_31
+  - first:
+      213: -4181182930542086901
+    second: nodos_mapa_32
+  - first:
+      213: -3093481865827691551
+    second: nodos_mapa_33
+  - first:
+      213: 3346264090132152321
+    second: nodos_mapa_34
+  - first:
+      213: 3251752986692504622
+    second: nodos_mapa_35
+  - first:
+      213: 8351552173933200348
+    second: nodos_mapa_36
+  - first:
+      213: -2121394028425139431
+    second: nodos_mapa_37
+  - first:
+      213: 5410407492637542024
+    second: nodos_mapa_38
+  - first:
+      213: 4358416219292175259
+    second: nodos_mapa_39
+  - first:
+      213: 1183938004263120875
+    second: nodos_mapa_40
+  - first:
+      213: 4989996622941227061
+    second: nodos_mapa_41
+  - first:
+      213: -2680294875292803579
+    second: nodos_mapa_42
+  - first:
+      213: 317611128659728643
+    second: nodos_mapa_43
+  - first:
+      213: -7851438538026152098
+    second: nodos_mapa_44
+  - first:
+      213: -2744787711747585873
+    second: nodos_mapa_45
+  - first:
+      213: -5609040518243667785
+    second: nodos_mapa_46
+  - first:
+      213: -2981771566235249236
+    second: nodos_mapa_47
+  - first:
+      213: -3251603540722467505
+    second: nodos_mapa_48
+  - first:
+      213: -8583067031859970161
+    second: nodos_mapa_49
+  - first:
+      213: -4384659588892124680
+    second: nodos_mapa_50
+  - first:
+      213: 2385289032159270414
+    second: nodos_mapa_51
+  - first:
+      213: 3717652317426307321
+    second: nodos_mapa_52
+  - first:
+      213: 3133155020472808380
+    second: nodos_mapa_53
+  - first:
+      213: -2131502803490779426
+    second: nodos_mapa_54
+  - first:
+      213: -9131022234411897742
+    second: nodos_mapa_55
+  - first:
+      213: -3500729971888634613
+    second: nodos_mapa_56
+  - first:
+      213: 5561731237051411354
+    second: nodos_mapa_57
+  - first:
+      213: -4949746543400402640
+    second: nodos_mapa_58
+  - first:
+      213: -6059871761663396448
+    second: nodos_mapa_59
+  - first:
+      213: 626745181223651258
+    second: nodos_mapa_60
+  - first:
+      213: 1661300373677333768
+    second: nodos_mapa_61
+  - first:
+      213: -691105428383489288
+    second: nodos_mapa_62
+  - first:
+      213: -2060697013687992354
+    second: nodos_mapa_63
+  - first:
+      213: 8345958743102747855
+    second: nodos_mapa_64
+  - first:
+      213: -9204592262881204585
+    second: nodos_mapa_65
+  - first:
+      213: 1733117086785920219
+    second: nodos_mapa_66
+  - first:
+      213: -1586093004992480478
+    second: nodos_mapa_67
+  - first:
+      213: 5402361767275012775
+    second: nodos_mapa_68
+  - first:
+      213: -3786740520749572505
+    second: nodos_mapa_69
+  - first:
+      213: -8632408400327888340
+    second: nodos_mapa_70
+  - first:
+      213: 8991925767926270435
+    second: nodos_mapa_71
+  - first:
+      213: 6546245154602554606
+    second: nodos_mapa_72
+  - first:
+      213: -1084708761876581254
+    second: nodos_mapa_73
+  - first:
+      213: 1143738789633909268
+    second: nodos_mapa_74
+  - first:
+      213: 2140149272725504398
+    second: nodos_mapa_75
+  - first:
+      213: 1929722968663829944
+    second: nodos_mapa_76
+  - first:
+      213: 5882090432112839767
+    second: nodos_mapa_77
+  - first:
+      213: -8822036581222870335
+    second: nodos_mapa_78
+  - first:
+      213: 6579636565036473336
+    second: nodos_mapa_79
+  - first:
+      213: 2737050064360856323
+    second: nodos_mapa_80
+  - first:
+      213: 4173231980518731111
+    second: nodos_mapa_81
+  - first:
+      213: -5395724916078942072
+    second: nodos_mapa_82
+  - first:
+      213: 9126755994348399725
+    second: nodos_mapa_83
+  - first:
+      213: 2980965714821350564
+    second: nodos_mapa_84
+  - first:
+      213: -8132793508807140091
+    second: nodos_mapa_85
+  - first:
+      213: 5307600406399802498
+    second: nodos_mapa_86
+  - first:
+      213: -1686305445166762575
+    second: nodos_mapa_87
+  - first:
+      213: -6324704541303033017
+    second: nodos_mapa_88
+  - first:
+      213: -5972595650960330840
+    second: nodos_mapa_89
+  - first:
+      213: 6666159520847368469
+    second: nodos_mapa_90
+  - first:
+      213: -5603355658005799845
+    second: nodos_mapa_91
+  - first:
+      213: 6955305374561539777
+    second: nodos_mapa_92
+  - first:
+      213: -9121580903207758014
+    second: nodos_mapa_93
+  - first:
+      213: 5101768922738923997
+    second: nodos_mapa_94
+  - first:
+      213: 8938741270255017180
+    second: nodos_mapa_95
+  - first:
+      213: -8877812603816547528
+    second: nodos_mapa_96
+  - first:
+      213: 2544579872161760374
+    second: nodos_mapa_97
+  - first:
+      213: -8548719838783948483
+    second: nodos_mapa_98
+  - first:
+      213: 642568187386547991
+    second: nodos_mapa_99
+  - first:
+      213: 1488196194745139838
+    second: nodos_mapa_100
+  - first:
+      213: 4101623358327429193
+    second: nodos_mapa_101
+  - first:
+      213: 3881156658345877503
+    second: nodos_mapa_102
+  - first:
+      213: 2382329916848796271
+    second: nodos_mapa_103
+  - first:
+      213: -7688703113557474677
+    second: nodos_mapa_104
+  - first:
+      213: 7031452977995672583
+    second: nodos_mapa_105
+  - first:
+      213: 2342078140637807013
+    second: nodos_mapa_106
+  - first:
+      213: -3916843595526350981
+    second: nodos_mapa_107
+  - first:
+      213: -4799231463571934671
+    second: nodos_mapa_108
+  - first:
+      213: 2972111660157347546
+    second: nodos_mapa_109
+  - first:
+      213: -4946995461305623891
+    second: nodos_mapa_110
+  - first:
+      213: -1635935651102955139
+    second: nodos_mapa_111
+  - first:
+      213: -6688860026085831848
+    second: nodos_mapa_112
+  - first:
+      213: 8966605669311125027
+    second: nodos_mapa_113
+  - first:
+      213: 1429448029946157454
+    second: nodos_mapa_114
+  - first:
+      213: -1796082949789512234
+    second: nodos_mapa_115
+  - first:
+      213: -5292341710401726559
+    second: nodos_mapa_116
+  - first:
+      213: 8107985724995925266
+    second: nodos_mapa_117
+  - first:
+      213: -5515611150967874879
+    second: nodos_mapa_118
+  - first:
+      213: -5226069627828990740
+    second: nodos_mapa_119
+  - first:
+      213: 5032681756565526251
+    second: nodos_mapa_120
+  - first:
+      213: -8625925663439565388
+    second: nodos_mapa_121
+  - first:
+      213: 2459320064566050786
+    second: nodos_mapa_122
+  - first:
+      213: -4717164530206677202
+    second: nodos_mapa_123
+  - first:
+      213: 1094662721190208788
+    second: nodos_mapa_124
+  - first:
+      213: 1720966518591451520
+    second: nodos_mapa_125
+  - first:
+      213: -6415851276467386591
+    second: nodos_mapa_126
+  - first:
+      213: 6925522750776011985
+    second: nodos_mapa_127
+  - first:
+      213: -1485879114309728381
+    second: nodos_mapa_128
+  - first:
+      213: 4777307723804449143
+    second: nodos_mapa_129
+  - first:
+      213: -5589930299347903080
+    second: nodos_mapa_130
+  - first:
+      213: -6121351005295185406
+    second: nodos_mapa_131
+  - first:
+      213: 8395811736550061842
+    second: nodos_mapa_132
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nodos_mapa_0
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 560
+        width: 134
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0925bf3b2726887a0800000000000000
+      internalID: -6374737027757550960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_1
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 659
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 983586ee1cd6bb8c0800000000000000
+      internalID: -3982468765783141495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_2
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 626
+        width: 130
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13107c1401ae22b10800000000000000
+      internalID: 1955382543776153905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_3
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 691
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1859cfcdc37d07dc0800000000000000
+      internalID: -3643175442137180799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_4
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 550
+        width: 92
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f71175a4ceda4c50800000000000000
+      internalID: 6650372735936567281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_5
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 624
+        width: 106
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b457dcd88d9e11270800000000000000
+      internalID: 8219607911229125963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_6
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 641
+        width: 19
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a379e9aa73633f210800000000000000
+      internalID: 1365494724737013562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_7
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 639
+        width: 71
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91c13c22174b6db10800000000000000
+      internalID: 2005989082047650841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_8
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 0
+        width: 632
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b04afdaed24fbf060800000000000000
+      internalID: 6988447724846687243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_9
+      rect:
+        serializedVersion: 2
+        x: 1846
+        y: 628
+        width: 55
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90fb53a1abeeb8fd0800000000000000
+      internalID: -2338513098417783031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_10
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 667
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 603e4821451ad5d80800000000000000
+      internalID: -8260268759067598074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_11
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 631
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77e45346672abccb0800000000000000
+      internalID: -4842598344935780745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_12
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 631
+        width: 16
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55751269c4cb5d1b0800000000000000
+      internalID: -5632388721834633387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_13
+      rect:
+        serializedVersion: 2
+        x: 1954
+        y: 671
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8611d1c7045b79710800000000000000
+      internalID: 1700026672920465768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_14
+      rect:
+        serializedVersion: 2
+        x: 1981
+        y: 578
+        width: 75
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67853456b05dc4f30800000000000000
+      internalID: 4561254767539738742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_15
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 671
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0ebc4e0c13fea7d0800000000000000
+      internalID: -2905117407782846962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_16
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 631
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6266596b3d805b340800000000000000
+      internalID: 4878815476720166438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_17
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 620
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f9daed6e13de36d0800000000000000
+      internalID: -3008735373390325255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_18
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 656
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b915865e5ffe90cc0800000000000000
+      internalID: -3744197775787011685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_19
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 649
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34c027b8676de9730800000000000000
+      internalID: 4007876523040312387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_20
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 532
+        width: 69
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7ed8f0b6e27f4840800000000000000
+      internalID: 5210509629028097658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_21
+      rect:
+        serializedVersion: 2
+        x: 1958
+        y: 649
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e2b7e078af4a860800000000000000
+      internalID: 7540427134095535763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_22
+      rect:
+        serializedVersion: 2
+        x: 2053
+        y: 626
+        width: 69
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54845b909aecc1920800000000000000
+      internalID: 2962469880310614085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_23
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 582
+        width: 72
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccf48854bfe745e40800000000000000
+      internalID: 5644275850670526412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_24
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 582
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b35391384b3546050800000000000000
+      internalID: 5792847055463986491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_25
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 580
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cced91fe9bd729390800000000000000
+      internalID: -7813044166000517428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_26
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 566
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4dc0763fb7cd4d20800000000000000
+      internalID: 3264484928979520843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_27
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 578
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8267a263d96f4c520800000000000000
+      internalID: 2721571229917673000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_28
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 596
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36bbe453e0ddc7e50800000000000000
+      internalID: 6808559789770980195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_29
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 639
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cb66da7a085dcd80800000000000000
+      internalID: -8228824142102238269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_30
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 564
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd20a6493c65d8830800000000000000
+      internalID: 4075008635848753883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_31
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 554
+        width: 72
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c4e5e4acd73bbd80800000000000000
+      internalID: -8233926072917957440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_32
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 580
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b05bc1c074479f5c0800000000000000
+      internalID: -4181182930542086901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_33
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 550
+        width: 36
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e35a3c02aeb115d0800000000000000
+      internalID: -3093481865827691551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_34
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 558
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10009f0f571507e20800000000000000
+      internalID: 3346264090132152321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_35
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 590
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2c4f15ec1c802d20800000000000000
+      internalID: 3251752986692504622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_36
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 534
+        width: 86
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd30e6a247ca6e370800000000000000
+      internalID: 8351552173933200348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_37
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 542
+        width: 35
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91ba51bee5b4f82e0800000000000000
+      internalID: -2121394028425139431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_38
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 558
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 886c5c0f2f0a51b40800000000000000
+      internalID: 5410407492637542024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_39
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 590
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9b0636a5743c7c30800000000000000
+      internalID: 4358416219292175259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_40
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 631
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bef203497513e6010800000000000000
+      internalID: 1183938004263120875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_41
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 574
+        width: 47
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5388fcc8d77004540800000000000000
+      internalID: 4989996622941227061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_42
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 572
+        width: 50
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50e5fd0030eadcad0800000000000000
+      internalID: -2680294875292803579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_43
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 598
+        width: 23
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 309597483a1686400800000000000000
+      internalID: 317611128659728643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_44
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 554
+        width: 69
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5f83259f361a0390800000000000000
+      internalID: -7851438538026152098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_45
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 542
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa88d616e1e88e9d0800000000000000
+      internalID: -2744787711747585873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_46
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 574
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b0305bdd5fa822b0800000000000000
+      internalID: -5609040518243667785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_47
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 580
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca510310f8e9e96d0800000000000000
+      internalID: -2981771566235249236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_48
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 558
+        width: 28
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4db5d4becbffd2d0800000000000000
+      internalID: -3251603540722467505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_49
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 594
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8fbe927202d2e880800000000000000
+      internalID: -8583067031859970161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_50
+      rect:
+        serializedVersion: 2
+        x: 1725
+        y: 580
+        width: 42
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f91317b55f8623c0800000000000000
+      internalID: -4384659588892124680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_51
+      rect:
+        serializedVersion: 2
+        x: 1725
+        y: 560
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e061d78acbf3a1120800000000000000
+      internalID: 2385289032159270414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_52
+      rect:
+        serializedVersion: 2
+        x: 1747
+        y: 0
+        width: 470
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f05a92f511c79330800000000000000
+      internalID: 3717652317426307321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_53
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 559
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb3738514e33b7b20800000000000000
+      internalID: 3133155020472808380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_54
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 601
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edece205e716b62e0800000000000000
+      internalID: -2131502803490779426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_55
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 564
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27c6fa1f7a7184180800000000000000
+      internalID: -9131022234411897742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_56
+      rect:
+        serializedVersion: 2
+        x: 1763
+        y: 556
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b05c30363a8ea6fc0800000000000000
+      internalID: -3500729971888634613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_57
+      rect:
+        serializedVersion: 2
+        x: 1789
+        y: 562
+        width: 74
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9ba4a0c71d3f2d40800000000000000
+      internalID: 5561731237051411354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_58
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 590
+        width: 39
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 031c6606eb7fe4bb0800000000000000
+      internalID: -4949746543400402640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_59
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 617
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a5f1a54db207eba0800000000000000
+      internalID: -6059871761663396448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_60
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 596
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab70683fb65a2b800800000000000000
+      internalID: 626745181223651258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_61
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 558
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80dd24e43ef1e0710800000000000000
+      internalID: 1661300373677333768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_62
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 552
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f2abd64643b866f0800000000000000
+      internalID: -691105428383489288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_63
+      rect:
+        serializedVersion: 2
+        x: 2031
+        y: 582
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edf3b6debfee663e0800000000000000
+      internalID: -2060697013687992354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_64
+      rect:
+        serializedVersion: 2
+        x: 2055
+        y: 578
+        width: 31
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc474b0124dc2d370800000000000000
+      internalID: 8345958743102747855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_65
+      rect:
+        serializedVersion: 2
+        x: 2061
+        y: 564
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79628acda18b24080800000000000000
+      internalID: -9204592262881204585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_66
+      rect:
+        serializedVersion: 2
+        x: 2067
+        y: 560
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdcd808dec44d0810800000000000000
+      internalID: 1733117086785920219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_67
+      rect:
+        serializedVersion: 2
+        x: 2085
+        y: 574
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22bf0b0c0d01df9e0800000000000000
+      internalID: -1586093004992480478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_68
+      rect:
+        serializedVersion: 2
+        x: 2093
+        y: 560
+        width: 104
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a22496876b09fa40800000000000000
+      internalID: 5402361767275012775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_69
+      rect:
+        serializedVersion: 2
+        x: 2127
+        y: 558
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76ed4243f8bc27bc0800000000000000
+      internalID: -3786740520749572505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_70
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 505
+        height: 553
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c22bb5edb46833880800000000000000
+      internalID: -8632408400327888340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_71
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 538
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e94deb38dcb9cc70800000000000000
+      internalID: 8991925767926270435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_72
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 510
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee415bcd84fe8da50800000000000000
+      internalID: 6546245154602554606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_73
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 512
+        width: 17
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a74b79bc02752f0f0800000000000000
+      internalID: -1084708761876581254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_74
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 547
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 412e6ff8e506fdf00800000000000000
+      internalID: 1143738789633909268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_75
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 0
+        width: 522
+        height: 543
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e814d1fac6653bd10800000000000000
+      internalID: 2140149272725504398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_76
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 516
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bdae1ed0d0c7ca10800000000000000
+      internalID: 1929722968663829944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_77
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 512
+        width: 44
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75c4fc6551261a150800000000000000
+      internalID: 5882090432112839767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_78
+      rect:
+        serializedVersion: 2
+        x: 2133
+        y: 523
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c295b47874d19580800000000000000
+      internalID: -8822036581222870335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_79
+      rect:
+        serializedVersion: 2
+        x: 2149
+        y: 528
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fb9b2278909f4b50800000000000000
+      internalID: 6579636565036473336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_80
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 415
+        width: 53
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30b50b23884fbf520800000000000000
+      internalID: 2737050064360856323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_81
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 502
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d6e14206c4ae930800000000000000
+      internalID: 4173231980518731111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_82
+      rect:
+        serializedVersion: 2
+        x: 2190
+        y: 504
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 888e36fc6c88e15b0800000000000000
+      internalID: -5395724916078942072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_83
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 441
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6cadc2a830c8ae70800000000000000
+      internalID: 9126755994348399725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_84
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 450
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a48b8716848e5920800000000000000
+      internalID: 2980965714821350564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_85
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 254
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50d92f3a463822f80800000000000000
+      internalID: -8132793508807140091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_86
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 213
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28cdd21e27268a940800000000000000
+      internalID: 5307600406399802498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_87
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 190
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b5370ec12a0998e0800000000000000
+      internalID: -1686305445166762575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_88
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 190
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 743355abab22a38a0800000000000000
+      internalID: -6324704541303033017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_89
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 171
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8af677d46e31d1da0800000000000000
+      internalID: -5972595650960330840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_90
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 171
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5111230f3c4f28c50800000000000000
+      internalID: 6666159520847368469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_91
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 128
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5c936687b1ec32b0800000000000000
+      internalID: -5603355658005799845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_92
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 130
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c61b1b2365368060800000000000000
+      internalID: 6955305374561539777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_93
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 134
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 247905a2f72a96180800000000000000
+      internalID: -9121580903207758014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_94
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 120
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd91bfd0ecf1dc640800000000000000
+      internalID: 5101768922738923997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_95
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 98
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdc9ca863d9cc0c70800000000000000
+      internalID: 8938741270255017180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_96
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 106
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b6707397cabc480800000000000000
+      internalID: -8877812603816547528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_97
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 112
+        width: 68
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6748fc679e9205320800000000000000
+      internalID: 2544579872161760374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_98
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 107
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d39b2f48998dc5980800000000000000
+      internalID: -8548719838783948483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_99
+      rect:
+        serializedVersion: 2
+        x: 2131
+        y: 90
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71f4429ac5cdae800800000000000000
+      internalID: 642568187386547991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_100
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 96
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e724fd7ed8227a410800000000000000
+      internalID: 1488196194745139838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_101
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 81
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9481d8b86b4ebe830800000000000000
+      internalID: 4101623358327429193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_102
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 92
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fff1952ea63acd530800000000000000
+      internalID: 3881156658345877503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_103
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 65
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f62fe8fef6cbf0120800000000000000
+      internalID: 2382329916848796271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_104
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 83
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8287f4314d3c4590800000000000000
+      internalID: -7688703113557474677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_105
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 81
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70c6b40ba3db49160800000000000000
+      internalID: 7031452977995672583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_106
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 83
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a18ce8f8abb08020800000000000000
+      internalID: 2342078140637807013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_107
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 75
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7753ef808394a9c0800000000000000
+      internalID: -3916843595526350981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_108
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 79
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 132baea4964b56db0800000000000000
+      internalID: -4799231463571934671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_109
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 66
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad6a978decf0f3920800000000000000
+      internalID: 2972111660157347546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_110
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 65
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daa986796ddb85bb0800000000000000
+      internalID: -4946995461305623891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_111
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 39
+        width: 42
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d796c90613dfb49e0800000000000000
+      internalID: -1635935651102955139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_112
+      rect:
+        serializedVersion: 2
+        x: 1789
+        y: 67
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85b08d0de356c23a0800000000000000
+      internalID: -6688860026085831848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_113
+      rect:
+        serializedVersion: 2
+        x: 1789
+        y: 61
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3261b406958cf6c70800000000000000
+      internalID: 8966605669311125027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_114
+      rect:
+        serializedVersion: 2
+        x: 2065
+        y: 57
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8992d1e86b66d310800000000000000
+      internalID: 1429448029946157454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_115
+      rect:
+        serializedVersion: 2
+        x: 2119
+        y: 55
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dd09aeb2180317e0800000000000000
+      internalID: -1796082949789512234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_116
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 33
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a795812143dd86b0800000000000000
+      internalID: -5292341710401726559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_117
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 49
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 215f1561f0a558070800000000000000
+      internalID: 8107985724995925266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_118
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 5
+        width: 20
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ca506391ec9473b0800000000000000
+      internalID: -5515611150967874879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_119
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 27
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cec8bc5cc554977b0800000000000000
+      internalID: -5226069627828990740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_120
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 13
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be65dafa46da7d540800000000000000
+      internalID: 5032681756565526251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_121
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 29
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bd42cbaf4e8a4880800000000000000
+      internalID: -8625925663439565388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_122
+      rect:
+        serializedVersion: 2
+        x: 1786
+        y: 27
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ef33759192412220800000000000000
+      internalID: 2459320064566050786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_123
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 0
+        width: 77
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2765f53ad3498eb0800000000000000
+      internalID: -4717164530206677202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_124
+      rect:
+        serializedVersion: 2
+        x: 2035
+        y: 3
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 415a765f1f5013f00800000000000000
+      internalID: 1094662721190208788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_125
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 13
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 081fbfa3ee912e710800000000000000
+      internalID: 1720966518591451520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_126
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 9
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 127cc66b14156f6a0800000000000000
+      internalID: -6415851276467386591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_127
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 13
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dce3e3bf366c1060800000000000000
+      internalID: 6925522750776011985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_128
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 13
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 387856c61d8116be0800000000000000
+      internalID: -1485879114309728381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_129
+      rect:
+        serializedVersion: 2
+        x: 1962
+        y: 11
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 779181440186c4240800000000000000
+      internalID: 4777307723804449143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_130
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 7
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89ddc2c62049c62b0800000000000000
+      internalID: -5589930299347903080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_131
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 0
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20276e761b79c0ba0800000000000000
+      internalID: -6121351005295185406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodos_mapa_132
+      rect:
+        serializedVersion: 2
+        x: 1881
+        y: 0
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2173f1e9a4ae38470800000000000000
+      internalID: 8395811736550061842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      nodos_mapa_0: -6374737027757550960
+      nodos_mapa_1: -3982468765783141495
+      nodos_mapa_10: -8260268759067598074
+      nodos_mapa_100: 1488196194745139838
+      nodos_mapa_101: 4101623358327429193
+      nodos_mapa_102: 3881156658345877503
+      nodos_mapa_103: 2382329916848796271
+      nodos_mapa_104: -7688703113557474677
+      nodos_mapa_105: 7031452977995672583
+      nodos_mapa_106: 2342078140637807013
+      nodos_mapa_107: -3916843595526350981
+      nodos_mapa_108: -4799231463571934671
+      nodos_mapa_109: 2972111660157347546
+      nodos_mapa_11: -4842598344935780745
+      nodos_mapa_110: -4946995461305623891
+      nodos_mapa_111: -1635935651102955139
+      nodos_mapa_112: -6688860026085831848
+      nodos_mapa_113: 8966605669311125027
+      nodos_mapa_114: 1429448029946157454
+      nodos_mapa_115: -1796082949789512234
+      nodos_mapa_116: -5292341710401726559
+      nodos_mapa_117: 8107985724995925266
+      nodos_mapa_118: -5515611150967874879
+      nodos_mapa_119: -5226069627828990740
+      nodos_mapa_12: -5632388721834633387
+      nodos_mapa_120: 5032681756565526251
+      nodos_mapa_121: -8625925663439565388
+      nodos_mapa_122: 2459320064566050786
+      nodos_mapa_123: -4717164530206677202
+      nodos_mapa_124: 1094662721190208788
+      nodos_mapa_125: 1720966518591451520
+      nodos_mapa_126: -6415851276467386591
+      nodos_mapa_127: 6925522750776011985
+      nodos_mapa_128: -1485879114309728381
+      nodos_mapa_129: 4777307723804449143
+      nodos_mapa_13: 1700026672920465768
+      nodos_mapa_130: -5589930299347903080
+      nodos_mapa_131: -6121351005295185406
+      nodos_mapa_132: 8395811736550061842
+      nodos_mapa_14: 4561254767539738742
+      nodos_mapa_15: -2905117407782846962
+      nodos_mapa_16: 4878815476720166438
+      nodos_mapa_17: -3008735373390325255
+      nodos_mapa_18: -3744197775787011685
+      nodos_mapa_19: 4007876523040312387
+      nodos_mapa_2: 1955382543776153905
+      nodos_mapa_20: 5210509629028097658
+      nodos_mapa_21: 7540427134095535763
+      nodos_mapa_22: 2962469880310614085
+      nodos_mapa_23: 5644275850670526412
+      nodos_mapa_24: 5792847055463986491
+      nodos_mapa_25: -7813044166000517428
+      nodos_mapa_26: 3264484928979520843
+      nodos_mapa_27: 2721571229917673000
+      nodos_mapa_28: 6808559789770980195
+      nodos_mapa_29: -8228824142102238269
+      nodos_mapa_3: -3643175442137180799
+      nodos_mapa_30: 4075008635848753883
+      nodos_mapa_31: -8233926072917957440
+      nodos_mapa_32: -4181182930542086901
+      nodos_mapa_33: -3093481865827691551
+      nodos_mapa_34: 3346264090132152321
+      nodos_mapa_35: 3251752986692504622
+      nodos_mapa_36: 8351552173933200348
+      nodos_mapa_37: -2121394028425139431
+      nodos_mapa_38: 5410407492637542024
+      nodos_mapa_39: 4358416219292175259
+      nodos_mapa_4: 6650372735936567281
+      nodos_mapa_40: 1183938004263120875
+      nodos_mapa_41: 4989996622941227061
+      nodos_mapa_42: -2680294875292803579
+      nodos_mapa_43: 317611128659728643
+      nodos_mapa_44: -7851438538026152098
+      nodos_mapa_45: -2744787711747585873
+      nodos_mapa_46: -5609040518243667785
+      nodos_mapa_47: -2981771566235249236
+      nodos_mapa_48: -3251603540722467505
+      nodos_mapa_49: -8583067031859970161
+      nodos_mapa_5: 8219607911229125963
+      nodos_mapa_50: -4384659588892124680
+      nodos_mapa_51: 2385289032159270414
+      nodos_mapa_52: 3717652317426307321
+      nodos_mapa_53: 3133155020472808380
+      nodos_mapa_54: -2131502803490779426
+      nodos_mapa_55: -9131022234411897742
+      nodos_mapa_56: -3500729971888634613
+      nodos_mapa_57: 5561731237051411354
+      nodos_mapa_58: -4949746543400402640
+      nodos_mapa_59: -6059871761663396448
+      nodos_mapa_6: 1365494724737013562
+      nodos_mapa_60: 626745181223651258
+      nodos_mapa_61: 1661300373677333768
+      nodos_mapa_62: -691105428383489288
+      nodos_mapa_63: -2060697013687992354
+      nodos_mapa_64: 8345958743102747855
+      nodos_mapa_65: -9204592262881204585
+      nodos_mapa_66: 1733117086785920219
+      nodos_mapa_67: -1586093004992480478
+      nodos_mapa_68: 5402361767275012775
+      nodos_mapa_69: -3786740520749572505
+      nodos_mapa_7: 2005989082047650841
+      nodos_mapa_70: -8632408400327888340
+      nodos_mapa_71: 8991925767926270435
+      nodos_mapa_72: 6546245154602554606
+      nodos_mapa_73: -1084708761876581254
+      nodos_mapa_74: 1143738789633909268
+      nodos_mapa_75: 2140149272725504398
+      nodos_mapa_76: 1929722968663829944
+      nodos_mapa_77: 5882090432112839767
+      nodos_mapa_78: -8822036581222870335
+      nodos_mapa_79: 6579636565036473336
+      nodos_mapa_8: 6988447724846687243
+      nodos_mapa_80: 2737050064360856323
+      nodos_mapa_81: 4173231980518731111
+      nodos_mapa_82: -5395724916078942072
+      nodos_mapa_83: 9126755994348399725
+      nodos_mapa_84: 2980965714821350564
+      nodos_mapa_85: -8132793508807140091
+      nodos_mapa_86: 5307600406399802498
+      nodos_mapa_87: -1686305445166762575
+      nodos_mapa_88: -6324704541303033017
+      nodos_mapa_89: -5972595650960330840
+      nodos_mapa_9: -2338513098417783031
+      nodos_mapa_90: 6666159520847368469
+      nodos_mapa_91: -5603355658005799845
+      nodos_mapa_92: 6955305374561539777
+      nodos_mapa_93: -9121580903207758014
+      nodos_mapa_94: 5101768922738923997
+      nodos_mapa_95: 8938741270255017180
+      nodos_mapa_96: -8877812603816547528
+      nodos_mapa_97: 2544579872161760374
+      nodos_mapa_98: -8548719838783948483
+      nodos_mapa_99: 642568187386547991
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

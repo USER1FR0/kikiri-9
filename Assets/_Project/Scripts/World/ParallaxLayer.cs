@@ -21,7 +21,9 @@ namespace Kikiri9.World
             float cameraX = cameraTransform.position.x;
             float slip = cameraX * parallaxFactor;
             float wrapped = slip - Mathf.Floor(slip / tileWidth) * tileWidth;
-            float x = cameraX - wrapped;
+            // Offset por tileWidth/2 para que el sprite siempre cubra la vista derecha
+            // de la camara (evita el hueco al moverse rapido).
+            float x = cameraX - wrapped + tileWidth * 0.5f;
             transform.position = new Vector3(x, lockedY, transform.position.z);
         }
     }

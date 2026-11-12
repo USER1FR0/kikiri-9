@@ -1,0 +1,13 @@
+﻿archivo,frecuencia_hz,canales,bits_pcm,muestras_por_canal,duracion_s,loop,pico_lineal
+audio/musica/dolores_hidalgo_loop.wav,48000,2,16,720000,15.000000,si,0.7200
+audio/musica/guanajuato_loop.wav,48000,2,16,598441,12.467521,si,0.7500
+audio/efectos/mariachi_trompeta.wav,48000,2,16,38400,0.800000,no,0.4900
+audio/efectos/zombi_aviso.wav,48000,2,16,26400,0.550000,no,0.4900
+audio/efectos/zombi_aterrizaje.wav,48000,2,16,24000,0.500000,no,0.4900
+audio/efectos/xolo_patitas.wav,48000,2,16,29760,0.620000,no,0.4900
+audio/efectos/impacto.wav,48000,2,16,21600,0.450000,no,0.4900
+audio/efectos/combo.wav,48000,2,16,24960,0.520000,no,0.4900
+audio/efectos/oleada_inicio.wav,48000,2,16,36480,0.760000,no,0.4900
+audio/efectos/oleada_completa.wav,48000,2,16,40320,0.840000,no,0.4900
+audio/efectos/pan_dorado.wav,48000,2,16,31200,0.650000,no,0.4900
+audio/efectos/rafaga.wav,48000,2,16,22080,0.460000,no,0.4256

@@ -1,9 +1,11 @@
-// Auto-runner player controller for Kikiri-9.
-// Features: constant forward run, single jump per landing, buffered + coyote jump, slide
-// with input buffer, bread throw, variable jump height via gravity multipliers.
+// Auto-runner player controller for Kikiri-9 v5.
+// v5: salto unico forzoso (debe tocar piso antes de volver a saltar), ground check
+// filtra el propio collider del pollo, enemigos, pickups y obstaculos (solo "piso real"
+// cuenta como grounded). Multi-salto se habilita solo si LevelDefinition.maxJumpsInAir > 1.
 
 using Kikiri9.Combat;
 using Kikiri9.Session;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +17,9 @@ namespace Kikiri9.Player
     {
         [Header("Run")]
         [SerializeField] private float runSpeed = 4f;
+
+        [Header("Arena")]
+        [SerializeField] private float arenaMoveSpeed = 5f;
 
         [Header("Jump")]
         [SerializeField] private float jumpVelocity = 15f;
@@ -54,18 +59,33 @@ namespace Kikiri9.Player
         private InputAction jumpAction;
         private InputAction slideAction;
         private InputAction throwAction;
+        private InputAction moveAction;
+        private InputAction barredorAction;
 
         private bool isGrounded;
         private bool wasGrounded;
         private float lastJumpTime = -999f;
         private bool isSliding;
-        private int jumpsUsed;         // contador de saltos consumidos desde el ultimo contacto con suelo
-        [SerializeField] private int maxJumpsInAir = 2;  // 1 salto suelo + 1 salto aereo = 2 totales
+        private int jumpsUsed;
+        // Guard contra multi-salto infinito: hay que tocar piso real entre saltos.
+        // Pasa a true en el momento que saltamos; vuelve a false al aterrizar realmente.
+        private bool airborneSinceJump;
+        [SerializeField] private int maxJumpsInAir = 1;
+        public void SetMaxJumpsInAir(int value) => maxJumpsInAir = Mathf.Max(0, value);
         private float slideEndTime;
         private float lastGroundedTime = -999f;
         private float lastJumpPressTime = -999f;
         private float lastSlidePressTime = -999f;
         private bool jumpHeld;
+        private bool punchAnimActive;
+
+        private readonly Collider2D[] groundHitBuffer = new Collider2D[8];
+
+        private Kikiri9.Levels.LevelController cachedLevelController;
+
+        public Animator Animator => animator;
+        public bool IsSliding => isSliding;
+        public int HashIsSlidingPublic => HashIsSliding;
 
         private void Awake()
         {
@@ -99,10 +119,24 @@ namespace Kikiri9.Player
             throwAction.AddBinding("<Mouse>/leftButton");
             throwAction.AddBinding("<Gamepad>/buttonWest");
             throwAction.performed += OnThrow;
+
+            barredorAction = new InputAction("Barredor", InputActionType.Button);
+            barredorAction.AddBinding("<Keyboard>/l");
+            barredorAction.AddBinding("<Gamepad>/leftTrigger");
+            barredorAction.performed += OnBarredor;
+
+            moveAction = new InputAction("Move", InputActionType.Value);
+            var comp = moveAction.AddCompositeBinding("1DAxis");
+            comp.With("negative", "<Keyboard>/a");
+            comp.With("positive", "<Keyboard>/d");
+            comp.With("negative", "<Keyboard>/leftArrow");
+            comp.With("positive", "<Keyboard>/rightArrow");
+            comp.With("negative", "<Gamepad>/leftStick/left");
+            comp.With("positive", "<Gamepad>/leftStick/right");
         }
 
-        private void OnEnable()  { jumpAction.Enable();  slideAction.Enable();  throwAction.Enable();  }
-        private void OnDisable() { jumpAction.Disable(); slideAction.Disable(); throwAction.Disable(); }
+        private void OnEnable()  { jumpAction.Enable();  slideAction.Enable();  throwAction.Enable();  moveAction.Enable();  barredorAction.Enable();  SubscribeStateForGrace(); }
+        private void OnDisable() { jumpAction.Disable(); slideAction.Disable(); throwAction.Disable(); moveAction.Disable(); barredorAction.Disable(); UnsubscribeStateForGrace(); }
 
         private void OnDestroy()
         {
@@ -110,42 +144,120 @@ namespace Kikiri9.Player
             jumpAction.canceled -= OnJumpReleased;
             slideAction.performed -= OnSlidePressed;
             throwAction.performed -= OnThrow;
+            barredorAction.performed -= OnBarredor;
             jumpAction.Dispose();
             slideAction.Dispose();
             throwAction.Dispose();
+            moveAction.Dispose();
+            barredorAction.Dispose();
+        }
+
+        private float inputGraceEnd;
+        private Kikiri9.Session.GameState lastState = Kikiri9.Session.GameState.Playing;
+
+        private bool InputBlocked() => Time.time < inputGraceEnd;
+
+        private int LiveMaxJumpsInAir()
+        {
+            if (BossArenaManager.IsActive) return 1;
+            if (cachedLevelController == null)
+                cachedLevelController = FindFirstObjectByType<Kikiri9.Levels.LevelController>();
+            if (cachedLevelController != null && cachedLevelController.Definition != null)
+                return Mathf.Max(0, cachedLevelController.Definition.maxJumpsInAir);
+            return maxJumpsInAir;
+        }
+
+        public void BeginPunchAnimation(float duration)
+        {
+            StartCoroutine(PunchAnimRoutine(duration));
+        }
+
+        private IEnumerator PunchAnimRoutine(float duration)
+        {
+            punchAnimActive = true;
+            if (animator != null)
+            {
+                animator.SetTrigger(HashSlide);
+                animator.SetBool(HashIsSliding, true);
+            }
+            yield return new WaitForSeconds(duration);
+            punchAnimActive = false;
+            if (animator != null) animator.SetBool(HashIsSliding, false);
+        }
+
+        // Ground check robusto: ignora el propio collider del pollo, enemigos, pickups,
+        // obstaculos y triggers. Solo cuenta "piso real" para resetear el salto.
+        private bool CheckGrounded()
+        {
+            if (groundCheck == null) return false;
+            int count = Physics2D.OverlapCircleNonAlloc(groundCheck.position, groundCheckRadius, groundHitBuffer, groundLayer);
+            for (int i = 0; i < count; i++)
+            {
+                var c = groundHitBuffer[i];
+                if (c == null) continue;
+                if (c.isTrigger) continue;
+                if (c.transform == transform) continue;
+                if (c.transform.IsChildOf(transform)) continue;
+                if (c.CompareTag("Player")) continue;
+                if (c.CompareTag("Enemy")) continue;
+                if (c.CompareTag("Pickup")) continue;
+                if (c.CompareTag("Obstacle")) continue;
+                if (c.CompareTag("Bread")) continue;
+                return true;
+            }
+            return false;
         }
 
         private void FixedUpdate()
         {
-            isGrounded = groundCheck != null &&
-                Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-
-            // Reset del contador cuando estamos grounded Y ya pasaron >100ms del ultimo salto.
-            // El cutoff de tiempo evita reset inmediato tras saltar (el collider puede seguir
-            // overlapeando por 1-2 frames), pero permite reset normal al aterrizar.
-            if (isGrounded && Time.time - lastJumpTime > 0.1f) jumpsUsed = 0;
-            if (isGrounded) lastGroundedTime = Time.time;
+            TrackStateForInputGrace();
             wasGrounded = isGrounded;
+            isGrounded = CheckGrounded();
 
-            rb.linearVelocity = new Vector2(runSpeed, rb.linearVelocity.y);
+            // Al aterrizar (edge false -> true) resetea el contador de saltos.
+            if (isGrounded && !wasGrounded)
+            {
+                jumpsUsed = 0;
+                airborneSinceJump = false;
+            }
+            if (isGrounded) lastGroundedTime = Time.time;
 
-            // Jump: maximo maxJumpsInAir saltos antes de volver a tocar el suelo.
-            // Primer salto permite coyote time; saltos aereos no requieren coyote.
+            float horizontal;
+            if (BossArenaManager.IsActive)
+            {
+                float axis = moveAction.ReadValue<float>();
+                horizontal = axis * arenaMoveSpeed;
+            }
+            else if (Kikiri9.Levels.Waves.WaveManager.WaveActive)
+            {
+                // Durante oleada: pollo libre con A/D, sin auto-run
+                float axis = moveAction.ReadValue<float>();
+                horizontal = axis * arenaMoveSpeed;
+            }
+            else
+            {
+                horizontal = runSpeed;
+            }
+            rb.linearVelocity = new Vector2(horizontal, rb.linearVelocity.y);
+
+            int liveMax = LiveMaxJumpsInAir();
             bool withinCoyote = Time.time - lastGroundedTime <= coyoteTime;
             bool bufferedJump = Time.time - lastJumpPressTime <= jumpBuffer;
-            bool canFirstJump = withinCoyote && jumpsUsed == 0;
-            bool canAirJump = !isGrounded && jumpsUsed > 0 && jumpsUsed < maxJumpsInAir;
+            // Salto inicial: debe estar en el piso (o coyote) Y no haber saltado aun.
+            bool canFirstJump = withinCoyote && jumpsUsed == 0 && !airborneSinceJump;
+            // Salto aereo: solo si el nivel permite liveMax > 1. Con liveMax = 1 es imposible.
+            bool canAirJump = !isGrounded && jumpsUsed > 0 && jumpsUsed < liveMax && airborneSinceJump;
             if ((canFirstJump || canAirJump) && bufferedJump && !isSliding)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpVelocity);
                 lastJumpPressTime = -999f;
                 lastJumpTime = Time.time;
                 jumpsUsed++;
+                airborneSinceJump = true;
                 if (animator != null) animator.SetTrigger(HashJump);
                 if (sfx != null) sfx.PlayJump();
             }
 
-            // Slide: must be grounded; buffered a bit so a press just before landing counts.
             bool bufferedSlide = Time.time - lastSlidePressTime <= slideBuffer;
             if (bufferedSlide && isGrounded && !isSliding)
             {
@@ -153,7 +265,6 @@ namespace Kikiri9.Player
                 lastSlidePressTime = -999f;
             }
 
-            // Variable jump height.
             if (rb.linearVelocity.y < 0f)
                 rb.gravityScale = baseGravityScale * fallGravityMultiplier;
             else if (rb.linearVelocity.y > 0f && !jumpHeld)
@@ -167,8 +278,20 @@ namespace Kikiri9.Player
             if (animator != null)
             {
                 animator.SetBool(HashIsGrounded, isGrounded);
-                animator.SetBool(HashIsSliding, isSliding);
+                if (!punchAnimActive) animator.SetBool(HashIsSliding, isSliding);
                 animator.SetFloat(HashSpeedY, rb.linearVelocity.y);
+            }
+        }
+
+        private void TrackStateForInputGrace()
+        {
+            var gm = Kikiri9.Session.GameStateManager.Instance;
+            if (gm == null) return;
+            if (gm.CurrentState != lastState)
+            {
+                if (gm.CurrentState == Kikiri9.Session.GameState.Playing && lastState != Kikiri9.Session.GameState.Playing)
+                    inputGraceEnd = Time.time + 0.2f;
+                lastState = gm.CurrentState;
             }
         }
 
@@ -180,29 +303,43 @@ namespace Kikiri9.Player
 
         private void OnJumpPressed(InputAction.CallbackContext _)
         {
+            if (InputBlocked()) return;
             if (!IsGameplayActive()) return;
             lastJumpPressTime = Time.time;
             jumpHeld = true;
             if (isSliding) EndSlide();
         }
 
-        private void OnJumpReleased(InputAction.CallbackContext _)
-        {
-            jumpHeld = false;
-        }
+        private void OnJumpReleased(InputAction.CallbackContext _) { jumpHeld = false; }
 
         private void OnSlidePressed(InputAction.CallbackContext _)
         {
+            if (InputBlocked()) return;
             if (!IsGameplayActive()) return;
             lastSlidePressTime = Time.time;
         }
 
         private void OnThrow(InputAction.CallbackContext _)
         {
+            if (InputBlocked()) return;
             if (breadLauncher != null && breadLauncher.TryLaunch(rb.linearVelocity.x))
             {
                 if (animator != null) animator.SetTrigger(HashThrow);
                 if (sfx != null) sfx.PlayThrow();
+            }
+        }
+
+        private void OnBarredor(InputAction.CallbackContext _)
+        {
+            if (InputBlocked()) return;
+            if (!IsGameplayActive()) return;
+            if (breadLauncher != null)
+            {
+                if (breadLauncher.TryLaunchBarredor(rb.linearVelocity.x))
+                {
+                    if (animator != null) animator.SetTrigger(HashThrow);
+                    if (sfx != null) sfx.PlayThrow();
+                }
             }
         }
 
@@ -213,10 +350,12 @@ namespace Kikiri9.Player
             float newHeight = colSizeFull.y * slideHeightFactor;
             col.size = new Vector2(colSizeFull.x, newHeight);
             col.offset = new Vector2(colOffsetFull.x, colOffsetFull.y - (colSizeFull.y - newHeight) * 0.5f);
-            // Clamp vertical velocity to zero to avoid any physics nudge from collider resize.
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
             if (animator != null) animator.SetTrigger(HashSlide);
             if (sfx != null) sfx.PlaySlide();
+
+            // Slide NO hace dano: solo esquiva obstaculos bajos reduciendo el collider.
+            // (El xolo, que requeria slide, quedo fuera del pool por ahora).
         }
 
         private void EndSlide()
@@ -231,6 +370,25 @@ namespace Kikiri9.Player
             if (groundCheck == null) return;
             Gizmos.color = isGrounded ? Color.green : Color.red;
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+        }
+
+        private void SubscribeStateForGrace()
+        {
+            var gm = Kikiri9.Session.GameStateManager.Instance;
+            if (gm != null) gm.OnStateChanged += HandleGraceOnStateChanged;
+        }
+
+        private void UnsubscribeStateForGrace()
+        {
+            var gm = Kikiri9.Session.GameStateManager.Instance;
+            if (gm != null) gm.OnStateChanged -= HandleGraceOnStateChanged;
+        }
+
+        private void HandleGraceOnStateChanged(Kikiri9.Session.GameState next)
+        {
+            if (next == Kikiri9.Session.GameState.Playing && lastState != Kikiri9.Session.GameState.Playing)
+                inputGraceEnd = Time.time + 0.25f;
+            lastState = next;
         }
     }
 }

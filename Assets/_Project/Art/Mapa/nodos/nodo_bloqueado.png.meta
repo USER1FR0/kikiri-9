@@ -1,0 +1,1547 @@
+fileFormatVersion: 2
+guid: 65c88f513262bc940a2eb26d52eab980
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1786828477746914805
+    second: nodo_bloqueado_0
+  - first:
+      213: 4229805617570347799
+    second: nodo_bloqueado_1
+  - first:
+      213: 7456210716003968909
+    second: nodo_bloqueado_2
+  - first:
+      213: -7211194965667797483
+    second: nodo_bloqueado_3
+  - first:
+      213: 5871816047782873478
+    second: nodo_bloqueado_4
+  - first:
+      213: 8388825306100453928
+    second: nodo_bloqueado_5
+  - first:
+      213: -5564407047503025543
+    second: nodo_bloqueado_6
+  - first:
+      213: 4713784644233400941
+    second: nodo_bloqueado_7
+  - first:
+      213: 2810503290131049075
+    second: nodo_bloqueado_8
+  - first:
+      213: -1676915778924914644
+    second: nodo_bloqueado_9
+  - first:
+      213: -1613832943332375414
+    second: nodo_bloqueado_10
+  - first:
+      213: -5330811723717248045
+    second: nodo_bloqueado_11
+  - first:
+      213: 2370431761982559367
+    second: nodo_bloqueado_12
+  - first:
+      213: -2080535083347964170
+    second: nodo_bloqueado_13
+  - first:
+      213: 2756246399925723900
+    second: nodo_bloqueado_14
+  - first:
+      213: -3300530735638011314
+    second: nodo_bloqueado_15
+  - first:
+      213: -1900021358352438565
+    second: nodo_bloqueado_16
+  - first:
+      213: 503359901115131065
+    second: nodo_bloqueado_17
+  - first:
+      213: 3121682264792378845
+    second: nodo_bloqueado_18
+  - first:
+      213: -7487440472035647199
+    second: nodo_bloqueado_19
+  - first:
+      213: -5812849843160135188
+    second: nodo_bloqueado_20
+  - first:
+      213: -8072798154939235500
+    second: nodo_bloqueado_21
+  - first:
+      213: -8051901153041519627
+    second: nodo_bloqueado_22
+  - first:
+      213: 316941006396302606
+    second: nodo_bloqueado_23
+  - first:
+      213: 6790475463273615942
+    second: nodo_bloqueado_24
+  - first:
+      213: 3193740709312368214
+    second: nodo_bloqueado_25
+  - first:
+      213: 3247471900212373549
+    second: nodo_bloqueado_26
+  - first:
+      213: -1730891477688125240
+    second: nodo_bloqueado_27
+  - first:
+      213: -8103504154119569673
+    second: nodo_bloqueado_28
+  - first:
+      213: 5601948199663135208
+    second: nodo_bloqueado_29
+  - first:
+      213: -2910522073195462106
+    second: nodo_bloqueado_30
+  - first:
+      213: 5737575262327214414
+    second: nodo_bloqueado_31
+  - first:
+      213: -1397216880492417728
+    second: nodo_bloqueado_32
+  - first:
+      213: -7756581050842208172
+    second: nodo_bloqueado_33
+  - first:
+      213: -5143142489944534958
+    second: nodo_bloqueado_34
+  - first:
+      213: -2216660783454171393
+    second: nodo_bloqueado_35
+  - first:
+      213: -3772096240577952941
+    second: nodo_bloqueado_36
+  - first:
+      213: 1311789515892587952
+    second: nodo_bloqueado_37
+  - first:
+      213: -4661691277274443809
+    second: nodo_bloqueado_38
+  - first:
+      213: 7237734221936960729
+    second: nodo_bloqueado_39
+  - first:
+      213: -4466696403904738307
+    second: nodo_bloqueado_40
+  - first:
+      213: 4744273672159382014
+    second: nodo_bloqueado_41
+  - first:
+      213: -6878517252849982241
+    second: nodo_bloqueado_42
+  - first:
+      213: -64910773244901186
+    second: nodo_bloqueado_43
+  - first:
+      213: -7474888009974197947
+    second: nodo_bloqueado_44
+  - first:
+      213: 8983813747027162981
+    second: nodo_bloqueado_45
+  - first:
+      213: 2620987159354244971
+    second: nodo_bloqueado_46
+  - first:
+      213: 8654691829424666967
+    second: nodo_bloqueado_47
+  - first:
+      213: -508385489937000275
+    second: nodo_bloqueado_48
+  - first:
+      213: -2852328438521684591
+    second: nodo_bloqueado_49
+  - first:
+      213: 3221823954796993547
+    second: nodo_bloqueado_50
+  - first:
+      213: -2141243334432288967
+    second: nodo_bloqueado_51
+  - first:
+      213: -349381780228191549
+    second: nodo_bloqueado_52
+  - first:
+      213: 4159705613040179708
+    second: nodo_bloqueado_53
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nodo_bloqueado_0
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 628
+        width: 55
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ad75d67f8e337e0800000000000000
+      internalID: -1786828477746914805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 667
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71b7b387cc943ba30800000000000000
+      internalID: 4229805617570347799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_2
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 631
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d87a0e93428c97760800000000000000
+      internalID: 7456210716003968909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_3
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 631
+        width: 16
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5162941a260bceb90800000000000000
+      internalID: -7211194965667797483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_4
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 671
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6894982d591ec7150800000000000000
+      internalID: 5871816047782873478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_5
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 578
+        width: 75
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 822dce48b281b6470800000000000000
+      internalID: 8388825306100453928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_6
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 671
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97ae6e3954147c2b0800000000000000
+      internalID: -5564407047503025543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_7
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 562
+        width: 74
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d621933c82aba6140800000000000000
+      internalID: 4713784644233400941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_8
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 590
+        width: 39
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37ae3580ad9e00720800000000000000
+      internalID: 2810503290131049075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_9
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 617
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c28dee6dbf56ab8e0800000000000000
+      internalID: -1676915778924914644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_10
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 596
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a84c9dd0d738a99e0800000000000000
+      internalID: -1613832943332375414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_11
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 649
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3db785b2bf62506b0800000000000000
+      internalID: -5330811723717248045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_12
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 626
+        width: 69
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7841641e02775e020800000000000000
+      internalID: 2370431761982559367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_13
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 580
+        width: 42
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fe8e466d547023e0800000000000000
+      internalID: -2080535083347964170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_14
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 601
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2a50d5f77204620800000000000000
+      internalID: 2756246399925723900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_15
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 558
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e42a90c68c82232d0800000000000000
+      internalID: -3300530735638011314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_16
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 582
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bda6fbd24a4c1a5e0800000000000000
+      internalID: -1900021358352438565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_17
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 578
+        width: 31
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b4a424c92b4cf600800000000000000
+      internalID: 503359901115131065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_18
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 564
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddd269efa71725b20800000000000000
+      internalID: 3121682264792378845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_19
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 574
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 121ae639f84471890800000000000000
+      internalID: -7487440472035647199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_20
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 560
+        width: 104
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce941cd8ddb945fa0800000000000000
+      internalID: -5812849843160135188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 337
+        width: 76
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4530b6f79d8a7ff80800000000000000
+      internalID: -8072798154939235500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_22
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 534
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fbe666ef86e14090800000000000000
+      internalID: -8051901153041519627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_23
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 559
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e05a1058a20066400800000000000000
+      internalID: 316941006396302606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_24
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 564
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6421e64d47d9c3e50800000000000000
+      internalID: 6790475463273615942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_25
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 552
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65e84430142725c20800000000000000
+      internalID: 3193740709312368214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_26
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 560
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d28a836cc76511d20800000000000000
+      internalID: 3247471900212373549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_27
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 558
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c8f5a72f53aaf7e0800000000000000
+      internalID: -1730891477688125240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_28
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 556
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fefcc1f7e19a8f80800000000000000
+      internalID: -8103504154119569673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_29
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 512
+        width: 44
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e96f0b053e1ebd40800000000000000
+      internalID: 5601948199663135208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_30
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 523
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6224044589fbb97d0800000000000000
+      internalID: -2910522073195462106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_31
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 528
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4115175d46ff9f40800000000000000
+      internalID: 5737575262327214414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_32
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 415
+        width: 53
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04de11466a61c9ce0800000000000000
+      internalID: -1397216880492417728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_33
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 502
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 458260161a61b5490800000000000000
+      internalID: -7756581050842208172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_34
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 504
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25053a9a723ef98b0800000000000000
+      internalID: -5143142489944534958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 230
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffecca603c6dc31e0800000000000000
+      internalID: -2216660783454171393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 182
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 353c3c16472d6abc0800000000000000
+      internalID: -3772096240577952941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 171
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bdfbd25d99643210800000000000000
+      internalID: 1311789515892587952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_38
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 76
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdf05856b785e4fb0800000000000000
+      internalID: -4661691277274443809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_39
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 90
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d4ad3d7de8917460800000000000000
+      internalID: 7237734221936960729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_40
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 55
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfb4eb5494b1302c0800000000000000
+      internalID: -4466696403904738307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_41
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 79
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef94c42c4cb07d140800000000000000
+      internalID: 4744273672159382014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_42
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 63
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd42b72a0099a80a0800000000000000
+      internalID: -6878517252849982241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_43
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 39
+        width: 42
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb844a2eef3691ff0800000000000000
+      internalID: -64910773244901186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_44
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 67
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54159a565fcd34890800000000000000
+      internalID: -7474888009974197947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_45
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 61
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56733df210becac70800000000000000
+      internalID: 8983813747027162981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_46
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 57
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6f7b225fed9f5420800000000000000
+      internalID: 2620987159354244971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_47
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 29
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75935554d54ab1870800000000000000
+      internalID: 8654691829424666967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_48
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 27
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da89757271ad1f8f0800000000000000
+      internalID: -508385489937000275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_49
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 0
+        width: 77
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19d9b2fb56e7a68d0800000000000000
+      internalID: -2852328438521684591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_50
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 3
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0cd48221d736bc20800000000000000
+      internalID: 3221823954796993547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_51
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 11
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93f8d793886c842e0800000000000000
+      internalID: -2141243334432288967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_52
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 7
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ca418a3f1fb62bf0800000000000000
+      internalID: -349381780228191549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nodo_bloqueado_53
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 0
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf9557b473e3ab930800000000000000
+      internalID: 4159705613040179708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      nodo_bloqueado_0: -1786828477746914805
+      nodo_bloqueado_1: 4229805617570347799
+      nodo_bloqueado_10: -1613832943332375414
+      nodo_bloqueado_11: -5330811723717248045
+      nodo_bloqueado_12: 2370431761982559367
+      nodo_bloqueado_13: -2080535083347964170
+      nodo_bloqueado_14: 2756246399925723900
+      nodo_bloqueado_15: -3300530735638011314
+      nodo_bloqueado_16: -1900021358352438565
+      nodo_bloqueado_17: 503359901115131065
+      nodo_bloqueado_18: 3121682264792378845
+      nodo_bloqueado_19: -7487440472035647199
+      nodo_bloqueado_2: 7456210716003968909
+      nodo_bloqueado_20: -5812849843160135188
+      nodo_bloqueado_21: -8072798154939235500
+      nodo_bloqueado_22: -8051901153041519627
+      nodo_bloqueado_23: 316941006396302606
+      nodo_bloqueado_24: 6790475463273615942
+      nodo_bloqueado_25: 3193740709312368214
+      nodo_bloqueado_26: 3247471900212373549
+      nodo_bloqueado_27: -1730891477688125240
+      nodo_bloqueado_28: -8103504154119569673
+      nodo_bloqueado_29: 5601948199663135208
+      nodo_bloqueado_3: -7211194965667797483
+      nodo_bloqueado_30: -2910522073195462106
+      nodo_bloqueado_31: 5737575262327214414
+      nodo_bloqueado_32: -1397216880492417728
+      nodo_bloqueado_33: -7756581050842208172
+      nodo_bloqueado_34: -5143142489944534958
+      nodo_bloqueado_35: -2216660783454171393
+      nodo_bloqueado_36: -3772096240577952941
+      nodo_bloqueado_37: 1311789515892587952
+      nodo_bloqueado_38: -4661691277274443809
+      nodo_bloqueado_39: 7237734221936960729
+      nodo_bloqueado_4: 5871816047782873478
+      nodo_bloqueado_40: -4466696403904738307
+      nodo_bloqueado_41: 4744273672159382014
+      nodo_bloqueado_42: -6878517252849982241
+      nodo_bloqueado_43: -64910773244901186
+      nodo_bloqueado_44: -7474888009974197947
+      nodo_bloqueado_45: 8983813747027162981
+      nodo_bloqueado_46: 2620987159354244971
+      nodo_bloqueado_47: 8654691829424666967
+      nodo_bloqueado_48: -508385489937000275
+      nodo_bloqueado_49: -2852328438521684591
+      nodo_bloqueado_5: 8388825306100453928
+      nodo_bloqueado_50: 3221823954796993547
+      nodo_bloqueado_51: -2141243334432288967
+      nodo_bloqueado_52: -349381780228191549
+      nodo_bloqueado_53: 4159705613040179708
+      nodo_bloqueado_6: -5564407047503025543
+      nodo_bloqueado_7: 4713784644233400941
+      nodo_bloqueado_8: 2810503290131049075
+      nodo_bloqueado_9: -1676915778924914644
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
