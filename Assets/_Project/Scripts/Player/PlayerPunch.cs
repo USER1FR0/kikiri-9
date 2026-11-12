@@ -1,6 +1,6 @@
-// Ráfaga v3: usa PlayerController.BeginPunchAnimation() para una animacion visible,
-// hace al pollo invulnerable por 0.5s mientras golpea (asi ya no te quitan vida al
-// pegarse al enemigo), daño 2, cooldown 9s.
+// Rafaga v4: expone FireFromExternal() para que el boton de UI pueda disparar sin
+// duplicar la logica. Ademas, enciende la Estela via EstelaRafagaDriver, aplica
+// invulnerabilidad 0.5s y anima slide. Dano 2, cooldown 9s.
 
 using Kikiri9.Enemies;
 using Kikiri9.Session;
@@ -13,12 +13,12 @@ namespace Kikiri9.Player
     {
         [Header("Cooldown y daño")]
         [SerializeField] private float cooldown = 9f;
-        [SerializeField] private int damage = 2;
+        [SerializeField] private int damage = 3;
 
         [Header("Hitbox")]
-        [SerializeField] private Vector2 hitboxSize = new Vector2(2.4f, 1.6f);
-        [SerializeField] private float hitboxForward = 1.2f;
-        [SerializeField] private float hitboxLifetime = 0.3f;
+        [SerializeField] private Vector2 hitboxSize = new Vector2(3.2f, 2.2f);
+        [SerializeField] private float hitboxForward = 1.4f;
+        [SerializeField] private float hitboxLifetime = 0.4f;
 
         [Header("Animacion e inmunidad")]
         [SerializeField] private float animDuration = 0.45f;
@@ -28,6 +28,7 @@ namespace Kikiri9.Player
         private PlayerController pc;
         private PlayerHealth health;
         private PlayerSfx sfx;
+        private EstelaRafagaDriver estelaDriver;
         private float nextPunchTime;
 
         public float Cooldown => cooldown;
@@ -40,6 +41,7 @@ namespace Kikiri9.Player
             pc = GetComponent<PlayerController>();
             health = GetComponent<PlayerHealth>();
             sfx = GetComponent<PlayerSfx>();
+            estelaDriver = GetComponent<EstelaRafagaDriver>();
 
             punchAction = new InputAction("Punch", InputActionType.Button);
             punchAction.AddBinding("<Keyboard>/k");
@@ -58,6 +60,22 @@ namespace Kikiri9.Player
 
         private void OnPunch(InputAction.CallbackContext _)
         {
+            TryFire();
+        }
+
+        // Para que el boton de UI pueda disparar (RafagaButtonHook)
+        public void FireFromExternal()
+        {
+            TryFire();
+        }
+
+        [Header("Estela VFX fallback")]
+        [SerializeField] private Sprite estelaFallbackSprite;
+        [SerializeField] private float estelaVisualScale = 0.04f;
+        [SerializeField] private float estelaDuration = 0.45f;
+
+        private void TryFire()
+        {
             if (!Ready) return;
             var gm = GameStateManager.Instance;
             if (gm != null && gm.CurrentState != GameState.Playing) return;
@@ -66,9 +84,28 @@ namespace Kikiri9.Player
 
             if (pc != null) pc.BeginPunchAnimation(animDuration);
             if (health != null) health.SetTemporaryInvulnerability(invulnDuration);
+            if (estelaDriver != null) estelaDriver.ShowForDuration();
+            // Fallback visual: spawn un sprite estela directo, garantizado (si no se asigno
+            // el driver o no se encontro el hijo Estela).
+            SpawnEstelaFallback();
             if (sfx != null) sfx.PlaySlide();
 
             SpawnHitbox();
+        }
+
+        private void SpawnEstelaFallback()
+        {
+            if (estelaFallbackSprite == null) return;
+            var go = new GameObject("EstelaVFX");
+            go.transform.SetParent(transform, false);
+            go.transform.localPosition = new Vector3(0.2f, 0.0f, 0f);
+            go.transform.localScale = Vector3.one * estelaVisualScale;
+            var sr = go.AddComponent<SpriteRenderer>();
+            sr.sprite = estelaFallbackSprite;
+            sr.color = new Color(1f, 0.75f, 0.25f, 1f);
+            var polloSr = GetComponent<SpriteRenderer>();
+            sr.sortingOrder = (polloSr != null ? polloSr.sortingOrder : 5) + 2;
+            Destroy(go, estelaDuration);
         }
 
         private void SpawnHitbox()
@@ -99,7 +136,7 @@ namespace Kikiri9.Player
         {
             if (!other.CompareTag("Enemy")) return;
             var h = other.GetComponent<EnemyHealth>();
-            if (h != null) h.TakeDamage(damage);
+            if (h != null) h.TakeDamage(damage, Kikiri9.Enemies.New.DamageSource.Rafaga, transform.position);
         }
     }
 }

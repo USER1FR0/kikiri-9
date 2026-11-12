@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.Levels.LevelDefinition
   levelName: Guanajuato - Etapa 3
   backgroundSprite: {fileID: 0}
-  musicClip: {fileID: 8300000, guid: 9884d2da821a8e340accfbd2bceba053, type: 3}
+  musicClip: {fileID: 8300000, guid: 782cc7d336b3ba3418b1fccf0aa05583, type: 3}
   worldSpeed: 9
   maxSpeed: 12
-  targetDistance: 1200
+  targetDistance: 1400
   enemyPrefabs:
   - {fileID: 6564748067615936379, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
   - {fileID: 6564748067615936379, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
@@ -26,6 +26,8 @@ MonoBehaviour:
   - {fileID: 7156426460605842684, guid: 5741265a9b421a94081ad38888ae95b5, type: 3}
   - {fileID: 7156426460605842684, guid: 5741265a9b421a94081ad38888ae95b5, type: 3}
   - {fileID: 2569044545581120060, guid: 01907e4b6f1d2d14089747e4f8e3b343, type: 3}
+  - {fileID: 3443737381281573657, guid: d60b9efaac8364b48b957719afb29742, type: 3}
+  - {fileID: 6062753040246495774, guid: 36a82df9e49a3384d99477c790321998, type: 3}
   obstaclePrefabs:
   - {fileID: 8268349202210289163, guid: 0a962317b4c556a48a756395757f1181, type: 3}
   - {fileID: 9039477373747572779, guid: 14398c5d95088b84fa38cb52f9490c22, type: 3}
@@ -35,7 +37,7 @@ MonoBehaviour:
   - {fileID: 177379635892079049, guid: 805c12f4c17c17d42a8c1bf50fbe1345, type: 3}
   - {fileID: 5482860974971058126, guid: dd72ce932b4651141a6c0377df9ac0cd, type: 3}
   - {fileID: 1436819208553476444, guid: 156c367dd5ffa9c479bf5dbe442a3a84, type: 3}
-  spawnIntervalRange: {x: 0.9, y: 1.5}
+  spawnIntervalRange: {x: 0.8, y: 1.3}
   maxActiveEntities: 7
   tutorialText: 'Momias doradas aguantan 2 panes. Al llegar a 1000m aparece la Momia
     Jefe: el mapa se congela y pelea en el arena.
@@ -43,13 +45,13 @@ MonoBehaviour:
     Meta: 1200 metros. Pan dorado
     dura 10s.'
   pickupHighChance: 0.45
-  pickupHighYBonus: 2.2
-  minSpawnSeparation: 6.5
+  pickupHighYBonus: 1.2
+  minSpawnSeparation: 6
   maxJumpsInAir: 1
-  breadLowRatio: 1.5
-  enemyWeight: 65
-  obstacleWeight: 8
-  pickupWeight: 27
+  breadLowRatio: 3.5
+  enemyWeight: 48
+  obstacleWeight: 7
+  pickupWeight: 45
   safeStartMeters: 40
   endingNarrative: El Callejon del Beso queda atras. Kikiri-9 llega a su proximo
     horizonte.

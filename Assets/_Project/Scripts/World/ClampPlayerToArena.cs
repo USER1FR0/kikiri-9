@@ -8,7 +8,7 @@ namespace Kikiri9.World
 {
     public class ClampPlayerToArena : MonoBehaviour
     {
-        [SerializeField] private float range = 7f;
+        [SerializeField] private float range = 6.5f;
         private float centerX;
         private Transform player;
 

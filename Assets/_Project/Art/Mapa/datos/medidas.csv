@@ -1,0 +1,19 @@
+﻿archivo,ancho_px,alto_px,modo_sprite,recorte_x,recorte_y,recorte_ancho,recorte_alto,pivot_x,pivot_y,ppu_referencia,uso,nota
+rafaga/boton_listo.png,448,448,Single,0,0,448,448,0.5,0.5,100,UI,Mismo centro y lienzo en los tres estados. Recarga_muestra es solo referencia fija al 50%.
+rafaga/boton_pulsado.png,448,448,Single,0,0,448,448,0.5,0.5,100,UI,Mismo centro y lienzo en los tres estados. Recarga_muestra es solo referencia fija al 50%.
+vistas/boton_recarga_muestra.png,448,448,Single,0,0,448,448,0.5,0.5,100,UI,Mismo centro y lienzo en los tres estados. Recarga_muestra es solo referencia fija al 50%.
+rafaga/estela_derecha.png,480,220,Single,0,0,480,220,0.85,0.5,100,SpriteRenderer,Frente brillante a la derecha. Pivot cerca del frente para anclar detrás del personaje. Sin pollito.
+vistas/ejemplo_estela.png,700,385,Single,0,0,700,385,0.5,0.5,100,Referencia; no importar,Solo ejemplo de efecto; no sustituye el sprite actual del personaje.
+pan_dorado/pan_dorado_infinito.png,670,580,Single,0,0,670,580,0.5,0.5,100,SpriteRenderer,"Incluye pan, brillo y símbolo infinito. No añadir otro halo por defecto."
+pan_dorado/halo_dorado.png,700,580,Single,0,0,700,580,0.5,0.5,100,SpriteRenderer,Usar con el pan existente como alternativa al sprite completo. No combinar ambos brillos.
+vistas/indicador_completo.png,680,320,Single,0,0,680,320,0.5,0.5,100,Referencia; no importar,Vista fija de la duración completa.
+pan_dorado/barra_dorada.png,488,32,Single,0,0,488,32,0.5,0.5,100,UI,"Relleno extraído del marco. Image Filled Horizontal en un rectángulo 488x32 centrado en 0,-68 respecto al marco 680x320."
+pan_dorado/indicador_marco.png,680,320,Single,0,0,680,320,0.5,0.5,100,UI,"Marco con hueco transparente. Pista y relleno son hijos 488x32 centrados en 0,-68 a tamaño nativo."
+vistas/indicador_casi_agotado.png,680,320,Single,0,0,680,320,0.5,0.5,100,Referencia; no importar,Ejemplo fijo del final de duración.
+mapa/nodos/nodo_completado.png,560,704,Single,0,0,560,704,0.5,0.45454545,100,UI,"Centro del medallón a 280,384 desde arriba. En UI usar pivot RectTransform 0.5,0.454545; número separado en ese centro."
+mapa/nodos/nodo_disponible.png,560,704,Single,0,0,560,704,0.5,0.45454545,100,UI,"Centro del medallón a 280,384 desde arriba. En UI usar pivot RectTransform 0.5,0.454545; número separado en ese centro."
+mapa/nodos/nodo_seleccionado.png,560,704,Single,0,0,560,704,0.5,0.45454545,100,UI,"Centro del medallón a 280,384 desde arriba. En UI usar pivot RectTransform 0.5,0.454545; número separado en ese centro."
+mapa/nodos/nodo_bloqueado.png,560,704,Single,0,0,560,704,0.5,0.45454545,100,UI,"Centro del medallón a 280,384 desde arriba. En UI usar pivot RectTransform 0.5,0.454545; número separado en ese centro."
+mapa/mapa_dolores_guanajuato.png,1774,887,Single,0,0,1774,887,0.5,0.5,100,UI,Mantener relación 2:1. Compartir el mismo contenedor con todos los nodos.
+rafaga/mascara_recarga.png,448,448,Single,0,0,448,448,0.5,0.5,100,UI,Blanca para tintar #140C26 con alfa 0.85. Image Filled Radial360. Tamaño y centro iguales al botón.
+pan_dorado/mascara_barra.png,256,16,Single,0,0,256,16,0.5,0.5,100,UI,Geometría blanca para la pista oscura; tintar desde UI. Estirar solo esta barra.

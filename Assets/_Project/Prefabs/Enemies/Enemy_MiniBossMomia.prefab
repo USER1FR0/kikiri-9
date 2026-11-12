@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8731396248077895426, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
       propertyPath: maxHealth
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8731396248077895426, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
       propertyPath: defeatPoints

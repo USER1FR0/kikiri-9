@@ -9,6 +9,7 @@ namespace Kikiri9.World
     [RequireComponent(typeof(Collider2D))]
     public class BreadBoostPickup : MonoBehaviour
     {
+        [SerializeField] private AudioClip pickupSfx;
         [SerializeField] private float duration = 10f;
         [SerializeField] private Sprite pickupVfxSprite;
         [SerializeField] private AudioClip pickupClip;
@@ -37,6 +38,7 @@ namespace Kikiri9.World
             if (pickupClip != null && Camera.main != null)
                 AudioSource.PlayClipAtPoint(pickupClip, Camera.main.transform.position, volume);
 
+            if (pickupSfx != null) AudioSource.PlayClipAtPoint(pickupSfx, transform.position, 0.8f);
             Destroy(gameObject);
         }
     }

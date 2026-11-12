@@ -55,6 +55,7 @@ namespace Kikiri9.World
         private void Update()
         {
             if (BossArenaManager.IsActive) { return; }
+            if (Kikiri9.Levels.Waves.WaveManager.WaveActive) { return; }
 
             if (progressionEnabled && targetMeters > 0f)
             {

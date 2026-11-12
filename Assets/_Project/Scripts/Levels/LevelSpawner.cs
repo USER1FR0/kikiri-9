@@ -14,6 +14,9 @@ namespace Kikiri9.Levels
         [SerializeField] private Transform spawnReference;
         [SerializeField] private float spawnAheadDistance = 15f;
         [SerializeField] private float groundY = -2.75f;
+        [SerializeField] private float pickupExtraY = 0.5f; // eleva pickups respecto a groundY
+        [SerializeField] private float intenseFromMeters = 1000f;
+        [SerializeField] private float intenseSpawnMultiplier = 0.55f; // intervalo *0.55 = ~2x spawn
         [SerializeField] private float minSeparation = 7f;
 
         private readonly List<GameObject> active = new List<GameObject>();
@@ -59,9 +62,10 @@ namespace Kikiri9.Levels
                     if (prefab != null)
                     {
                         var p = pos;
-                        if (lastCategory == SpawnCategory.Pickup && level.Definition.pickupHighChance > 0f)
+                        if (lastCategory == SpawnCategory.Pickup)
                         {
-                            if (Random.value < level.Definition.pickupHighChance)
+                            p.y += pickupExtraY;
+                            if (level.Definition.pickupHighChance > 0f && Random.value < level.Definition.pickupHighChance)
                                 p.y += level.Definition.pickupHighYBonus;
                         }
                         active.Add(Instantiate(prefab, p, Quaternion.identity));
@@ -75,6 +79,9 @@ namespace Kikiri9.Levels
         private SpawnCategory lastCategory = SpawnCategory.Enemy;
         private int consecutive = 0;
         private const int MaxConsecutive = 2;
+        private const int MaxConsecutiveObstacles = 1;
+        private float lastObstacleMeters = -999f;
+        [SerializeField] private float enemyGapAfterObstacle = 10f;
 
         private static SpawnCategory PickWeighted(List<SpawnCategory> avail, LevelDefinition def)
         {
@@ -174,8 +181,21 @@ namespace Kikiri9.Levels
                 int activeEnemies = CountActiveEnemies();
                 if (bread <= activeEnemies && avail.Count > 1) avail.Remove(SpawnCategory.Enemy);
 
+                // Tras un obstaculo, esperar enemyGapAfterObstacle metros antes de enemigo
+                float metersNow = Kikiri9.World.WorldScroller.Instance != null
+                    ? Kikiri9.World.WorldScroller.Instance.MetersAdvanced : 0f;
+                if (lastCategory == SpawnCategory.Obstacle
+                    && metersNow - lastObstacleMeters < enemyGapAfterObstacle
+                    && avail.Count > 1)
+                {
+                    avail.Remove(SpawnCategory.Enemy);
+                }
+
                 if (consecutive >= MaxConsecutive && avail.Count > 1)
                     avail.Remove(lastCategory);
+                // Evita que dos obstaculos seguidos se amontonen
+                if (lastCategory == SpawnCategory.Obstacle && consecutive >= MaxConsecutiveObstacles && avail.Count > 1)
+                    avail.Remove(SpawnCategory.Obstacle);
             }
 
             if (avail.Count == 0) return null;
@@ -189,6 +209,12 @@ namespace Kikiri9.Levels
             if (chosen == lastCategory) consecutive++;
             else { lastCategory = chosen; consecutive = 1; }
 
+            if (chosen == SpawnCategory.Obstacle)
+            {
+                lastObstacleMeters = Kikiri9.World.WorldScroller.Instance != null
+                    ? Kikiri9.World.WorldScroller.Instance.MetersAdvanced : 0f;
+            }
+
             switch (chosen)
             {
                 case SpawnCategory.Enemy:    return def.enemyPrefabs[Random.Range(0, eC)];
@@ -201,7 +227,14 @@ namespace Kikiri9.Levels
         {
             var def = level != null ? level.Definition : null;
             var range = def != null ? def.spawnIntervalRange : new Vector2(2f, 3.5f);
-            nextSpawnTime = Time.time + Random.Range(range.x, range.y);
+            float gap = Random.Range(range.x, range.y);
+            // Si estamos en la recta final (ultimos metros), spawn mas intenso
+            if (Kikiri9.World.WorldScroller.Instance != null
+                && Kikiri9.World.WorldScroller.Instance.MetersAdvanced >= intenseFromMeters)
+            {
+                gap *= intenseSpawnMultiplier;
+            }
+            nextSpawnTime = Time.time + gap;
         }
     }
 }

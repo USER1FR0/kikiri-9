@@ -1,6 +1,7 @@
-// Auto-runner player controller for Kikiri-9 v4.
-// Añade BeginPunchAnimation(duration) para que la ráfaga reproduzca la animacion
-// de slide sin redimensionar el collider ni activar la logica normal de slide.
+// Auto-runner player controller for Kikiri-9 v5.
+// v5: salto unico forzoso (debe tocar piso antes de volver a saltar), ground check
+// filtra el propio collider del pollo, enemigos, pickups y obstaculos (solo "piso real"
+// cuenta como grounded). Multi-salto se habilita solo si LevelDefinition.maxJumpsInAir > 1.
 
 using Kikiri9.Combat;
 using Kikiri9.Session;
@@ -59,13 +60,17 @@ namespace Kikiri9.Player
         private InputAction slideAction;
         private InputAction throwAction;
         private InputAction moveAction;
+        private InputAction barredorAction;
 
         private bool isGrounded;
         private bool wasGrounded;
         private float lastJumpTime = -999f;
         private bool isSliding;
         private int jumpsUsed;
-        [SerializeField] private int maxJumpsInAir = 2;
+        // Guard contra multi-salto infinito: hay que tocar piso real entre saltos.
+        // Pasa a true en el momento que saltamos; vuelve a false al aterrizar realmente.
+        private bool airborneSinceJump;
+        [SerializeField] private int maxJumpsInAir = 1;
         public void SetMaxJumpsInAir(int value) => maxJumpsInAir = Mathf.Max(0, value);
         private float slideEndTime;
         private float lastGroundedTime = -999f;
@@ -74,9 +79,12 @@ namespace Kikiri9.Player
         private bool jumpHeld;
         private bool punchAnimActive;
 
+        private readonly Collider2D[] groundHitBuffer = new Collider2D[8];
+
         private Kikiri9.Levels.LevelController cachedLevelController;
 
         public Animator Animator => animator;
+        public bool IsSliding => isSliding;
         public int HashIsSlidingPublic => HashIsSliding;
 
         private void Awake()
@@ -112,6 +120,11 @@ namespace Kikiri9.Player
             throwAction.AddBinding("<Gamepad>/buttonWest");
             throwAction.performed += OnThrow;
 
+            barredorAction = new InputAction("Barredor", InputActionType.Button);
+            barredorAction.AddBinding("<Keyboard>/l");
+            barredorAction.AddBinding("<Gamepad>/leftTrigger");
+            barredorAction.performed += OnBarredor;
+
             moveAction = new InputAction("Move", InputActionType.Value);
             var comp = moveAction.AddCompositeBinding("1DAxis");
             comp.With("negative", "<Keyboard>/a");
@@ -122,8 +135,8 @@ namespace Kikiri9.Player
             comp.With("positive", "<Gamepad>/leftStick/right");
         }
 
-        private void OnEnable()  { jumpAction.Enable();  slideAction.Enable();  throwAction.Enable();  moveAction.Enable();  SubscribeStateForGrace(); }
-        private void OnDisable() { jumpAction.Disable(); slideAction.Disable(); throwAction.Disable(); moveAction.Disable(); UnsubscribeStateForGrace(); }
+        private void OnEnable()  { jumpAction.Enable();  slideAction.Enable();  throwAction.Enable();  moveAction.Enable();  barredorAction.Enable();  SubscribeStateForGrace(); }
+        private void OnDisable() { jumpAction.Disable(); slideAction.Disable(); throwAction.Disable(); moveAction.Disable(); barredorAction.Disable(); UnsubscribeStateForGrace(); }
 
         private void OnDestroy()
         {
@@ -131,10 +144,12 @@ namespace Kikiri9.Player
             jumpAction.canceled -= OnJumpReleased;
             slideAction.performed -= OnSlidePressed;
             throwAction.performed -= OnThrow;
+            barredorAction.performed -= OnBarredor;
             jumpAction.Dispose();
             slideAction.Dispose();
             throwAction.Dispose();
             moveAction.Dispose();
+            barredorAction.Dispose();
         }
 
         private float inputGraceEnd;
@@ -170,19 +185,52 @@ namespace Kikiri9.Player
             if (animator != null) animator.SetBool(HashIsSliding, false);
         }
 
+        // Ground check robusto: ignora el propio collider del pollo, enemigos, pickups,
+        // obstaculos y triggers. Solo cuenta "piso real" para resetear el salto.
+        private bool CheckGrounded()
+        {
+            if (groundCheck == null) return false;
+            int count = Physics2D.OverlapCircleNonAlloc(groundCheck.position, groundCheckRadius, groundHitBuffer, groundLayer);
+            for (int i = 0; i < count; i++)
+            {
+                var c = groundHitBuffer[i];
+                if (c == null) continue;
+                if (c.isTrigger) continue;
+                if (c.transform == transform) continue;
+                if (c.transform.IsChildOf(transform)) continue;
+                if (c.CompareTag("Player")) continue;
+                if (c.CompareTag("Enemy")) continue;
+                if (c.CompareTag("Pickup")) continue;
+                if (c.CompareTag("Obstacle")) continue;
+                if (c.CompareTag("Bread")) continue;
+                return true;
+            }
+            return false;
+        }
+
         private void FixedUpdate()
         {
             TrackStateForInputGrace();
-            isGrounded = groundCheck != null &&
-                Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-
-            if (isGrounded && Time.time - lastJumpTime > 0.1f) jumpsUsed = 0;
-            if (isGrounded) lastGroundedTime = Time.time;
             wasGrounded = isGrounded;
+            isGrounded = CheckGrounded();
+
+            // Al aterrizar (edge false -> true) resetea el contador de saltos.
+            if (isGrounded && !wasGrounded)
+            {
+                jumpsUsed = 0;
+                airborneSinceJump = false;
+            }
+            if (isGrounded) lastGroundedTime = Time.time;
 
             float horizontal;
             if (BossArenaManager.IsActive)
             {
+                float axis = moveAction.ReadValue<float>();
+                horizontal = axis * arenaMoveSpeed;
+            }
+            else if (Kikiri9.Levels.Waves.WaveManager.WaveActive)
+            {
+                // Durante oleada: pollo libre con A/D, sin auto-run
                 float axis = moveAction.ReadValue<float>();
                 horizontal = axis * arenaMoveSpeed;
             }
@@ -195,14 +243,17 @@ namespace Kikiri9.Player
             int liveMax = LiveMaxJumpsInAir();
             bool withinCoyote = Time.time - lastGroundedTime <= coyoteTime;
             bool bufferedJump = Time.time - lastJumpPressTime <= jumpBuffer;
-            bool canFirstJump = withinCoyote && jumpsUsed == 0;
-            bool canAirJump = !isGrounded && jumpsUsed > 0 && jumpsUsed < liveMax;
+            // Salto inicial: debe estar en el piso (o coyote) Y no haber saltado aun.
+            bool canFirstJump = withinCoyote && jumpsUsed == 0 && !airborneSinceJump;
+            // Salto aereo: solo si el nivel permite liveMax > 1. Con liveMax = 1 es imposible.
+            bool canAirJump = !isGrounded && jumpsUsed > 0 && jumpsUsed < liveMax && airborneSinceJump;
             if ((canFirstJump || canAirJump) && bufferedJump && !isSliding)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpVelocity);
                 lastJumpPressTime = -999f;
                 lastJumpTime = Time.time;
                 jumpsUsed++;
+                airborneSinceJump = true;
                 if (animator != null) animator.SetTrigger(HashJump);
                 if (sfx != null) sfx.PlayJump();
             }
@@ -278,6 +329,20 @@ namespace Kikiri9.Player
             }
         }
 
+        private void OnBarredor(InputAction.CallbackContext _)
+        {
+            if (InputBlocked()) return;
+            if (!IsGameplayActive()) return;
+            if (breadLauncher != null)
+            {
+                if (breadLauncher.TryLaunchBarredor(rb.linearVelocity.x))
+                {
+                    if (animator != null) animator.SetTrigger(HashThrow);
+                    if (sfx != null) sfx.PlayThrow();
+                }
+            }
+        }
+
         private void StartSlide()
         {
             isSliding = true;
@@ -288,6 +353,9 @@ namespace Kikiri9.Player
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
             if (animator != null) animator.SetTrigger(HashSlide);
             if (sfx != null) sfx.PlaySlide();
+
+            // Slide NO hace dano: solo esquiva obstaculos bajos reduciendo el collider.
+            // (El xolo, que requeria slide, quedo fuera del pool por ahora).
         }
 
         private void EndSlide()

@@ -1,7 +1,7 @@
-// V6: al bajar el suelo a Y=-3.2, ajusta TODO lo que depende de esa Y para que
-// nada quede flotando: LevelSpawner.groundY, MiniBossSpawner.spawnY, GoalArch y
-// todas las Decor_* del nivel. Tambien baja la camara base para que el pollo no
-// quede pegado al centro vertical.
+// V7: fix de spawn Y para enemigos / obstaculos.
+// Delta del suelo original (-2 a -3.2) = -1.2. El LevelSpawner.groundY original
+// era -2.75; nuevo valor = -3.95. MiniBossSpawner.spawnY pasa de -1.5 a -2.7.
+// El pollo ya cae por gravedad, no requiere spawn ajustado.
 
 using Kikiri9.Player;
 using Kikiri9.World;
@@ -18,9 +18,11 @@ namespace Kikiri9.EditorTools
         private static readonly Color DoloresGroundFill = new Color(0.18f, 0.12f, 0.26f, 1f);
         private static readonly Color GuanajuatoGroundFill = new Color(0.21f, 0.14f, 0.28f, 1f);
 
-        private const float GroundY = -3.2f;
+        private const float GroundY = -3.8f;
         private const float OriginalGroundY = -2f;
         private const float DeltaY = GroundY - OriginalGroundY; // -1.2
+        private const float OriginalSpawnGroundY = -2.75f;
+        private const float OriginalBossSpawnY = -1.5f;
 
         public static void Build(AdaptiveBgVariant variant)
         {
@@ -35,14 +37,13 @@ namespace Kikiri9.EditorTools
                 : DoloresGroundFill;
             cam.clearFlags = CameraClearFlags.SolidColor;
 
-            // Bajar la camara para que el pollo no quede en el centro vertical
             var cp = camT.position;
             cp.y = -1f;
             camT.position = cp;
 
             LowerGround();
-            LowerAllSpawnReferences();
-            LowerAllDecorations();
+            FixSpawnYs();
+            LowerDecorations();
 
             var linea = GameObject.Find("LineaSueloVisual");
             if (linea == null)
@@ -55,11 +56,10 @@ namespace Kikiri9.EditorTools
                 linea.transform.position = new Vector3(linea.transform.position.x, GroundY, 0f);
             }
 
-            // Capas visuales
             var cieloSprite = AssetDatabase.LoadAssetAtPath<Sprite>($"{BackgroundsV3Importer.Dir}/cielo_panorama.png");
             float cNatH = cieloSprite != null ? cieloSprite.rect.height / cieloSprite.pixelsPerUnit : 7.24f;
             float cNatW = cieloSprite != null ? cieloSprite.rect.width / cieloSprite.pixelsPerUnit : 21.72f;
-            float cieloScale = Mathf.Max((2f * cam.orthographicSize) / cNatH, (2f * cam.orthographicSize * cam.aspect) / cNatW) * 1.01f;
+            float cieloScale = Mathf.Max((2f * cam.orthographicSize) / cNatH, (2f * cam.orthographicSize * cam.aspect) / cNatW) * 1.3f;
             CreateSkyLayer("Bg_Sky", cieloSprite, cieloScale, camT, sortingOrder: -30);
 
             string horizonFile = variant == AdaptiveBgVariant.DoloresHidalgo
@@ -71,19 +71,19 @@ namespace Kikiri9.EditorTools
 
             var horSprite = AssetDatabase.LoadAssetAtPath<Sprite>(horizonFile);
             var nearSprite = AssetDatabase.LoadAssetAtPath<Sprite>(nearFile);
-            float facadeScale = variant == AdaptiveBgVariant.Guanajuato ? 1.05f : 1.1f;
-            float horizonScale = variant == AdaptiveBgVariant.Guanajuato ? 1.15f : 1.2f;
+            float facadeScale = variant == AdaptiveBgVariant.Guanajuato ? 0.9f : 0.95f;
+            float horizonScale = variant == AdaptiveBgVariant.Guanajuato ? 1.0f : 1.05f;
 
             float nearAltoW = (nearSprite != null ? nearSprite.rect.height / nearSprite.pixelsPerUnit : 7.24f) * facadeScale;
             float horAltoW = (horSprite != null ? horSprite.rect.height / horSprite.pixelsPerUnit : 7.24f) * horizonScale;
 
-            float nearLockedY = GroundY + 0.375f * nearAltoW;
-            float horLockedY = GroundY + 0.375f * horAltoW + 0.5f;
+            float nearLockedY = GroundY + 0.42f * nearAltoW;
+            float horLockedY = GroundY + 0.4f * horAltoW + 0.3f;
 
             CreateParallaxLayer("Bg_Horizon", horizonFile, camT,
                 sortingOrder: -20, tint: Color.white,
                 parallax: 0.2f, lockedY: horLockedY,
-                scale: horizonScale, tileFactor: 2f);
+                scale: horizonScale, tileFactor: 3f);
 
             Color nearTint = variant == AdaptiveBgVariant.DoloresHidalgo
                 ? Color.white
@@ -91,13 +91,11 @@ namespace Kikiri9.EditorTools
             CreateParallaxLayer("Bg_Near", nearFile, camT,
                 sortingOrder: -10, tint: nearTint,
                 parallax: 0.45f, lockedY: nearLockedY,
-                scale: facadeScale, tileFactor: 2f);
+                scale: facadeScale, tileFactor: 3f);
 
             CreateGroundFill(camT, linea.transform,
                 variant == AdaptiveBgVariant.Guanajuato ? GuanajuatoGroundFill : DoloresGroundFill);
         }
-
-        // -------- ajustes de nivel para que nada quede flotando --------
 
         private static void LowerGround()
         {
@@ -108,59 +106,74 @@ namespace Kikiri9.EditorTools
             ground.transform.position = gp;
         }
 
-        private static void LowerAllDecorations()
+        private static void LowerDecorations()
         {
-            // Decor_* y GoalArch (de BuildDecoration + BuildGoalArch de Level01SceneBootstrap)
+            // Lista de nombres/tags que se desplazan con el piso. Idempotente gracias a
+            // FloorShiftMarker: guarda la Y original la primera vez y la usa en siguientes
+            // corridas, de modo que cambiar GroundY no acumula desplazamientos.
             var all = Object.FindObjectsByType<SpriteRenderer>(FindObjectsInactive.Include, FindObjectsSortMode.None);
             foreach (var sr in all)
             {
                 var go = sr.gameObject;
-                string n = go.name;
-                if (n == "GoalArch" || n.StartsWith("Decor_"))
+                if (!ShouldShift(go)) continue;
+                var marker = go.GetComponent<Kikiri9.World.FloorShiftMarker>();
+                if (marker == null)
                 {
-                    var p = go.transform.position;
-                    p.y += DeltaY; // mover la decoracion junto con el suelo
-                    go.transform.position = p;
+                    marker = go.AddComponent<Kikiri9.World.FloorShiftMarker>();
+                    marker.originalY = go.transform.position.y;
+                    marker.hasOriginal = true;
                 }
+                var p = go.transform.position;
+                p.y = marker.originalY + DeltaY;
+                go.transform.position = p;
             }
         }
 
-        private static void LowerAllSpawnReferences()
+        private static bool ShouldShift(GameObject go)
         {
-            // LevelSpawner.groundY
+            string n = go.name;
+            if (n == "GoalArch" || n.StartsWith("Decor_") || n.StartsWith("Enemy_") ||
+                n.StartsWith("Obstacle_") || n.StartsWith("Pickup_")) return true;
+            // Por tag
+            if (go.CompareTag("Enemy") || go.CompareTag("Obstacle") || go.CompareTag("Pickup")) return true;
+            return false;
+        }
+
+        private static void FixSpawnYs()
+        {
+            // Sprites de enemigos y pickups tienen pivot (0.5, 0.125). Con sprite ~3u de
+            // alto, el centro (que es la Y del transform) queda a 0.375u sobre los pies.
+            // Para alinear los pies con el piso visual: spawnY = GroundY + 0.4 (margen).
+            // Pivot de los sprites (0.5, 0.125). Sprite enemigo ~3u alto.
+            // Floor visual top esta bastante arriba del GroundY (bricks ocupan ~1u desde abajo).
+            // Empirico: GroundY - 0.4 deja los pies sobre el adoquin.
+            // Empirico: enemigos con pivot 0.125 + sprite ~3u -> groundY casi igual al piso visual.
+            float enemySpawnY = GroundY - 0.05f;
+            // Jefe un poco mas arriba porque sprite es mayor.
+            float bossSpawnY = GroundY + 0.5f;
+
             var spawners = Object.FindObjectsByType<Kikiri9.Levels.LevelSpawner>(FindObjectsInactive.Include, FindObjectsSortMode.None);
             foreach (var sp in spawners)
             {
                 var so = new SerializedObject(sp);
                 var p = so.FindProperty("groundY");
-                if (p != null)
-                {
-                    p.floatValue = GroundY + 0.2f; // un pelin arriba del suelo para que caigan
-                    so.ApplyModifiedProperties();
-                }
+                if (p != null) { p.floatValue = enemySpawnY; so.ApplyModifiedProperties(); }
             }
 
-            // MiniBossSpawner.spawnY
             var bossSps = Object.FindObjectsByType<Kikiri9.Levels.MiniBossSpawner>(FindObjectsInactive.Include, FindObjectsSortMode.None);
             foreach (var sp in bossSps)
             {
                 var so = new SerializedObject(sp);
                 var p = so.FindProperty("spawnY");
-                if (p != null)
-                {
-                    p.floatValue = GroundY + 1.5f;
-                    so.ApplyModifiedProperties();
-                }
+                if (p != null) { p.floatValue = bossSpawnY; so.ApplyModifiedProperties(); }
             }
         }
-
-        // -------- capas --------
 
         private static void CreateSkyLayer(string name, Sprite sprite, float scale, Transform camT, int sortingOrder)
         {
             if (sprite == null) return;
             var go = new GameObject(name);
-            go.transform.position = new Vector3(camT.position.x, 0f, 10f);
+            go.transform.position = new Vector3(camT.position.x, -2f, 10f);
             go.transform.localScale = new Vector3(scale, scale, 1f);
             var sr = go.AddComponent<SpriteRenderer>();
             sr.sprite = sprite;
@@ -171,7 +184,7 @@ namespace Kikiri9.EditorTools
             var follow = go.AddComponent<BackgroundFollowCamera>();
             var so = new SerializedObject(follow);
             so.FindProperty("cameraTransform").objectReferenceValue = camT;
-            so.FindProperty("lockedY").floatValue = 0f;
+            so.FindProperty("lockedY").floatValue = -2f;
             so.ApplyModifiedProperties();
         }
 
@@ -180,7 +193,7 @@ namespace Kikiri9.EditorTools
             float scale, float tileFactor)
         {
             var sprite = AssetDatabase.LoadAssetAtPath<Sprite>(path);
-            if (sprite == null) { Debug.LogWarning($"[Kikiri-9] falta sprite {path}"); return; }
+            if (sprite == null) return;
 
             float natW = sprite.rect.width / sprite.pixelsPerUnit;
             float natH = sprite.rect.height / sprite.pixelsPerUnit;
@@ -285,10 +298,6 @@ namespace Kikiri9.EditorTools
             var pollo = GameObject.FindGameObjectWithTag("Player");
             if (pollo != null && pollo.GetComponent<PlayerPunch>() == null)
                 pollo.AddComponent<PlayerPunch>();
-
-            var session = GameObject.Find("Session");
-            if (session != null && session.GetComponent<Kikiri9.UI.PunchChargeIndicatorInstaller>() == null)
-                session.AddComponent<Kikiri9.UI.PunchChargeIndicatorInstaller>();
 
             EditorSceneManager.MarkSceneDirty(scene);
             EditorSceneManager.SaveScene(scene, scenePath);

@@ -1,0 +1,8 @@
+﻿archivo,sprite,x_desde_izquierda,y_desde_abajo_unity,ancho,alto,pivot_x,pivot_y
+atlas/botones_rafaga.png,listo,0,0,448,448,0.5,0.5
+atlas/botones_rafaga.png,pulsado,448,0,448,448,0.5,0.5
+atlas/botones_rafaga.png,recarga_muestra,896,0,448,448,0.5,0.5
+atlas/nodos_mapa.png,completado,0,0,560,704,0.5,0.45454545
+atlas/nodos_mapa.png,disponible,560,0,560,704,0.5,0.45454545
+atlas/nodos_mapa.png,seleccionado,1120,0,560,704,0.5,0.45454545
+atlas/nodos_mapa.png,bloqueado,1680,0,560,704,0.5,0.45454545

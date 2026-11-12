@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_LowBranch
       objectReference: {fileID: 0}
+    - target: {fileID: 7366501032612907812, guid: 8bf852b1c4fd26b458162f1f578381f4, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

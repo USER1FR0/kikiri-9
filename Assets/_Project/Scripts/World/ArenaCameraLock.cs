@@ -59,7 +59,9 @@ namespace Kikiri9.World
                     if (f != null) savedTarget = (Transform)f.GetValue(follow);
                     follow.SetTarget(null);
                 }
-                lockedX = camT.position.x + 6f; // centro del arena ligeramente al frente
+                // Si MiniBossMomia llamo SetLockCenter antes, lockedX ya esta correcto.
+                // Solo usamos un fallback si nadie lo definio aun.
+                if (Mathf.Approximately(lockedX, 0f)) lockedX = camT.position.x + 6f;
             }
             else
             {

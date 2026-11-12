@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.Levels.LevelDefinition
   levelName: Dolores Hidalgo - Etapa 2
   backgroundSprite: {fileID: 0}
-  musicClip: {fileID: 8300000, guid: 9884d2da821a8e340accfbd2bceba053, type: 3}
+  musicClip: {fileID: 8300000, guid: 0ec1ec7dcdc8cad4ba6f8ae9aafcd100, type: 3}
   worldSpeed: 7.5
   maxSpeed: 10
   targetDistance: 750
@@ -34,8 +34,8 @@ MonoBehaviour:
   - {fileID: 177379635892079049, guid: 805c12f4c17c17d42a8c1bf50fbe1345, type: 3}
   - {fileID: 5482860974971058126, guid: dd72ce932b4651141a6c0377df9ac0cd, type: 3}
   - {fileID: 1436819208553476444, guid: 156c367dd5ffa9c479bf5dbe442a3a84, type: 3}
-  spawnIntervalRange: {x: 1, y: 1.7}
-  maxActiveEntities: 7
+  spawnIntervalRange: {x: 1.3, y: 2}
+  maxActiveEntities: 6
   tutorialText: 'Nueva etapa: zombis verdes (2 panes) y ramas bajas (deslizate con
     S o Shift).
 
@@ -44,13 +44,13 @@ MonoBehaviour:
 
     Meta: 750 metros.'
   pickupHighChance: 0.35
-  pickupHighYBonus: 2.2
-  minSpawnSeparation: 7
+  pickupHighYBonus: 1.2
+  minSpawnSeparation: 8
   maxJumpsInAir: 1
-  breadLowRatio: 1.5
-  enemyWeight: 60
-  obstacleWeight: 10
-  pickupWeight: 30
+  breadLowRatio: 3
+  enemyWeight: 52
+  obstacleWeight: 8
+  pickupWeight: 38
   safeStartMeters: 30
   endingNarrative: Dolores queda atras. Guanajuato espera entre callejones.
   goldBottlesReward: 1

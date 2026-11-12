@@ -1,0 +1,413 @@
+fileFormatVersion: 2
+guid: 45f1aa281223b2741ade510424fd25da
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4884337519590813211
+    second: combo_destello_0
+  - first:
+      213: 2303715460201438354
+    second: combo_destello_1
+  - first:
+      213: -5397103061905113151
+    second: combo_destello_2
+  - first:
+      213: -5825081317104634726
+    second: combo_destello_3
+  - first:
+      213: 9198420967046805736
+    second: combo_destello_4
+  - first:
+      213: -6389333818118071217
+    second: combo_destello_5
+  - first:
+      213: 9157015651618274471
+    second: combo_destello_6
+  - first:
+      213: 4242147949449575628
+    second: combo_destello_7
+  - first:
+      213: 5467939089316574240
+    second: combo_destello_8
+  - first:
+      213: 152452333991607321
+    second: combo_destello_9
+  - first:
+      213: -758820029090312139
+    second: combo_destello_10
+  - first:
+      213: 8710789661303245263
+    second: combo_destello_11
+  - first:
+      213: 3146661817751383042
+    second: combo_destello_12
+  - first:
+      213: 6712762982933517431
+    second: combo_destello_13
+  - first:
+      213: 1309885746400528825
+    second: combo_destello_14
+  - first:
+      213: 6946151142141516608
+    second: combo_destello_15
+  - first:
+      213: -2982888373849018022
+    second: combo_destello_16
+  - first:
+      213: 5540906491254927568
+    second: combo_destello_17
+  - first:
+      213: -6527732191885631986
+    second: combo_destello_18
+  - first:
+      213: 512562237720063973
+    second: combo_destello_19
+  - first:
+      213: 6065549014805132523
+    second: combo_destello_20
+  - first:
+      213: -9163092208691209586
+    second: combo_destello_21
+  - first:
+      213: 7462745121604046566
+    second: combo_destello_22
+  - first:
+      213: -4105597704196989541
+    second: combo_destello_23
+  - first:
+      213: -5954073314670641555
+    second: combo_destello_24
+  - first:
+      213: -2973476379165402265
+    second: combo_destello_25
+  - first:
+      213: 6555057581307555448
+    second: combo_destello_26
+  - first:
+      213: 3543570201008422910
+    second: combo_destello_27
+  - first:
+      213: 7921300621061529762
+    second: combo_destello_28
+  - first:
+      213: -8691800858330760925
+    second: combo_destello_29
+  - first:
+      213: 699821877965361887
+    second: combo_destello_30
+  - first:
+      213: -1128198106056406927
+    second: combo_destello_31
+  - first:
+      213: 330240031487488435
+    second: combo_destello_32
+  - first:
+      213: 4344891597767185491
+    second: combo_destello_33
+  - first:
+      213: -8855961994379894071
+    second: combo_destello_34
+  - first:
+      213: 4178887229777088701
+    second: combo_destello_00
+  - first:
+      213: 2913690136967726614
+    second: combo_destello_01
+  - first:
+      213: -3277513182694355696
+    second: combo_destello_02
+  - first:
+      213: 4795890836940059248
+    second: combo_destello_03
+  - first:
+      213: 4257807732691681483
+    second: combo_destello_04
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: combo_destello_00
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db097477bc36ef930800000000000000
+      internalID: 4178887229777088701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: combo_destello_01
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 616458ffdb18f6820800000000000000
+      internalID: 2913690136967726614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: combo_destello_02
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01dc7d6102fe382d0800000000000000
+      internalID: -3277513182694355696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: combo_destello_03
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 072fc557e4d6e8240800000000000000
+      internalID: 4795890836940059248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: combo_destello_04
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc0cff4f295c61b30800000000000000
+      internalID: 4257807732691681483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      combo_destello_0: -4884337519590813211
+      combo_destello_00: 4178887229777088701
+      combo_destello_01: 2913690136967726614
+      combo_destello_02: -3277513182694355696
+      combo_destello_03: 4795890836940059248
+      combo_destello_04: 4257807732691681483
+      combo_destello_1: 2303715460201438354
+      combo_destello_10: -758820029090312139
+      combo_destello_11: 8710789661303245263
+      combo_destello_12: 3146661817751383042
+      combo_destello_13: 6712762982933517431
+      combo_destello_14: 1309885746400528825
+      combo_destello_15: 6946151142141516608
+      combo_destello_16: -2982888373849018022
+      combo_destello_17: 5540906491254927568
+      combo_destello_18: -6527732191885631986
+      combo_destello_19: 512562237720063973
+      combo_destello_2: -5397103061905113151
+      combo_destello_20: 6065549014805132523
+      combo_destello_21: -9163092208691209586
+      combo_destello_22: 7462745121604046566
+      combo_destello_23: -4105597704196989541
+      combo_destello_24: -5954073314670641555
+      combo_destello_25: -2973476379165402265
+      combo_destello_26: 6555057581307555448
+      combo_destello_27: 3543570201008422910
+      combo_destello_28: 7921300621061529762
+      combo_destello_29: -8691800858330760925
+      combo_destello_3: -5825081317104634726
+      combo_destello_30: 699821877965361887
+      combo_destello_31: -1128198106056406927
+      combo_destello_32: 330240031487488435
+      combo_destello_33: 4344891597767185491
+      combo_destello_34: -8855961994379894071
+      combo_destello_4: 9198420967046805736
+      combo_destello_5: -6389333818118071217
+      combo_destello_6: 9157015651618274471
+      combo_destello_7: 4242147949449575628
+      combo_destello_8: 5467939089316574240
+      combo_destello_9: 152452333991607321
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -19,6 +19,17 @@ namespace Kikiri9.Session
 
         private void Start()
         {
+            // Usa el musicClip del LevelDefinition activo si existe, sin tocar el AudioSource
+            // cuando ya tiene el mismo clip asignado.
+            var lc = FindFirstObjectByType<Kikiri9.Levels.LevelController>();
+            if (lc != null && lc.Definition != null && lc.Definition.musicClip != null)
+            {
+                if (source.clip != lc.Definition.musicClip)
+                {
+                    source.clip = lc.Definition.musicClip;
+                }
+                source.loop = true;
+            }
             StartCoroutine(SubscribeWhenReady());
         }
 
