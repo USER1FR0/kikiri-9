@@ -2,6 +2,7 @@
 // coin count. Reacts to PlayerHealth, ScoreTracker, WorldScroller and LevelController; all
 // optional so the HUD degrades gracefully if any system is missing.
 
+using Kikiri9.Enemies;
 using Kikiri9.Levels;
 using Kikiri9.Player;
 using Kikiri9.Session;
@@ -92,6 +93,18 @@ namespace Kikiri9.UI
 
         private void UpdateMetersAndProgress()
         {
+            // Durante una pelea de jefe (nivel 3 momia-jefe, y nivel 4 Coronela mas
+            // adelante) la barra de recorrido muestra la vida del jefe en su lugar.
+            if (BossArenaManager.IsActive && BossArenaManager.ActiveBossHealth != null)
+            {
+                var boss = BossArenaManager.ActiveBossHealth;
+                if (metersText != null)
+                    metersText.text = $"JEFE {boss.CurrentHealth} / {boss.MaxHealth}";
+                if (progressSlider != null)
+                    progressSlider.value = boss.MaxHealth > 0 ? Mathf.Clamp01((float)boss.CurrentHealth / boss.MaxHealth) : 0f;
+                return;
+            }
+
             if (world == null) return;
             float meters = world.MetersAdvanced;
             float target = level != null && level.Definition != null ? level.Definition.targetDistance : 0f;

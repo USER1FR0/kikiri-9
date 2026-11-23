@@ -2,6 +2,7 @@
 // BreadLauncher, PlayerHealth and GameOverHandler. Clips are assigned via the Inspector or
 // by the editor bootstrap (Level01SceneBootstrap wires them from the Draft audio folder).
 
+using Kikiri9.Session;
 using UnityEngine;
 
 namespace Kikiri9.Player
@@ -35,7 +36,7 @@ namespace Kikiri9.Player
         private void Play(AudioClip clip)
         {
             if (clip == null || source == null) return;
-            source.PlayOneShot(clip, volume);
+            source.PlayOneShot(clip, volume * GameOptions.SfxVolume);
         }
     }
 }

@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Kikiri9.Session;
 using Kikiri9.UI;
+using TMPro;
 
 namespace Kikiri9.EditorTools
 {
@@ -112,7 +113,7 @@ namespace Kikiri9.EditorTools
 
             ChainNavigationVertical(playButton, continueButton, optionsButton, creditsButton, exitButton);
 
-            var optionsPanel = CreateOverlayPanel(canvasTransform, "OptionsPanel", "OPCIONES\n\n(Proximamente)");
+            var optionsPanel = CreateOptionsPanel(canvasTransform);
             var creditsPanel = CreateOverlayPanel(canvasTransform, "CreditsPanel", "CREDITOS\n\nManuel Mata Campos\nJuan Francisco Rodriguez Guerrero");
             var exitMessagePanel = CreateOverlayPanel(canvasTransform, "ExitMessagePanel", "Gracias por jugar. Puedes cerrar esta pestana para volver al portal.");
 
@@ -332,6 +333,142 @@ namespace Kikiri9.EditorTools
             // llamada) para que el menu se sienta "vivo" sin verse sincronizado.
             var floating = go.AddComponent<FloatingButton>();
             SetPrivateField(floating, "phaseOffset", floatPhase);
+
+            return button;
+        }
+
+        // Panel de Opciones real del Menu Principal: musica/SFX (sliders arrastrables),
+        // calidad y "mostrar controles" como botones ciclicos (mismo botones.png que el
+        // resto del menu). Es un solo GameObject (sin split container/visual, a diferencia
+        // de los paneles de UIBootstrap) porque MainMenuController ya lo activa/desactiva
+        // directamente con SetActive(); OptionsPanel.OnEnable() refresca los valores solo.
+        // El cierre lo sigue manejando el boton VOLVER existente (AddCloseButton + OnClosePanelPressed).
+        private static GameObject CreateOptionsPanel(Transform parent)
+        {
+            var go = new GameObject("OptionsPanel", typeof(RectTransform));
+            go.transform.SetParent(parent, false);
+            StretchFull(go.GetComponent<RectTransform>());
+
+            var bgImage = go.AddComponent<Image>();
+            bgImage.color = new Color(0f, 0f, 0f, 0.85f);
+
+            var title = CreateText(go.transform, "Title", "OPCIONES", 34, TextAnchor.MiddleCenter);
+            SetAnchoredRect(title.rectTransform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0f, 220f), new Vector2(700f, 60f));
+
+            var musicSlider = CreateOptionsSliderRow(go.transform, "Musica", 90f);
+            var sfxSlider = CreateOptionsSliderRow(go.transform, "Efectos", 20f);
+
+            var normalSecondary = LoadSprite(ButtonsSpriteSheetPath, "secundario_normal");
+            var highlightedSecondary = LoadSprite(ButtonsSpriteSheetPath, "secundario_seleccionado");
+            var pressedSecondary = LoadSprite(ButtonsSpriteSheetPath, "secundario_presionado");
+            var disabledSecondary = LoadSprite(ButtonsSpriteSheetPath, "secundario_desactivado");
+
+            var qualityButton = CreateSmallSpriteButton(go.transform, "QualityButton", "Calidad: Media",
+                new Vector2(-170f, -70f), new Vector2(300f, 80f),
+                normalSecondary, highlightedSecondary, pressedSecondary, disabledSecondary, out var qualityLabel);
+            var controlsButton = CreateSmallSpriteButton(go.transform, "ControlsButton", "Controles: Si",
+                new Vector2(170f, -70f), new Vector2(300f, 80f),
+                normalSecondary, highlightedSecondary, pressedSecondary, disabledSecondary, out var controlsLabel);
+
+            var op = go.AddComponent<OptionsPanel>();
+            SetPrivateField(op, "musicSlider", musicSlider);
+            SetPrivateField(op, "sfxSlider", sfxSlider);
+            SetPrivateField(op, "qualityButton", qualityButton);
+            SetPrivateField(op, "qualityLabel", qualityLabel);
+            SetPrivateField(op, "controlsButton", controlsButton);
+            SetPrivateField(op, "controlsLabel", controlsLabel);
+            // root y returnToPanel quedan null a proposito: ver comentario arriba.
+
+            UnityEventTools.AddPersistentListener(qualityButton.onClick, op.OnQualityClicked);
+            UnityEventTools.AddPersistentListener(controlsButton.onClick, op.OnControlsClicked);
+
+            return go;
+        }
+
+        private static Slider CreateOptionsSliderRow(Transform parent, string label, float yOffset)
+        {
+            var labelText = CreateText(parent, $"{label}Label", label, 24, TextAnchor.MiddleLeft);
+            SetAnchoredRect(labelText.rectTransform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f),
+                new Vector2(-330f, yOffset), new Vector2(220f, 36f));
+
+            var barraMarco = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/_Draft_2_Kikiri9/Art/UI/barra_marco.png");
+            var barraRelleno = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/_Draft_2_Kikiri9/Art/UI/barra_relleno.png");
+
+            var go = new GameObject($"{label}Slider", typeof(RectTransform), typeof(Image), typeof(Slider));
+            go.transform.SetParent(parent, false);
+            SetAnchoredRect((RectTransform)go.transform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f),
+                new Vector2(90f, yOffset), new Vector2(560f, 30f));
+
+            var bg = go.GetComponent<Image>();
+            bg.sprite = barraMarco;
+            bg.type = Image.Type.Sliced;
+
+            var slider = go.GetComponent<Slider>();
+            slider.minValue = 0f; slider.maxValue = 1f; slider.value = 1f;
+            slider.transition = Selectable.Transition.None;
+
+            var fillArea = new GameObject("Fill Area", typeof(RectTransform));
+            fillArea.transform.SetParent(go.transform, false);
+            var fillAreaRect = (RectTransform)fillArea.transform;
+            fillAreaRect.anchorMin = Vector2.zero; fillAreaRect.anchorMax = Vector2.one;
+            fillAreaRect.sizeDelta = new Vector2(-12f, -8f); fillAreaRect.anchoredPosition = Vector2.zero;
+
+            var fillGo = new GameObject("Fill", typeof(RectTransform), typeof(Image));
+            fillGo.transform.SetParent(fillArea.transform, false);
+            StretchFull((RectTransform)fillGo.transform);
+            var fillImg = fillGo.GetComponent<Image>();
+            fillImg.sprite = barraRelleno;
+            fillImg.type = Image.Type.Simple;
+
+            slider.fillRect = (RectTransform)fillGo.transform;
+            slider.targetGraphic = fillImg;
+            slider.direction = Slider.Direction.LeftToRight;
+
+            var handleArea = new GameObject("Handle Slide Area", typeof(RectTransform));
+            handleArea.transform.SetParent(go.transform, false);
+            var handleAreaRect = (RectTransform)handleArea.transform;
+            handleAreaRect.anchorMin = Vector2.zero; handleAreaRect.anchorMax = Vector2.one;
+            handleAreaRect.sizeDelta = new Vector2(-12f, 0f); handleAreaRect.anchoredPosition = Vector2.zero;
+
+            var handleGo = new GameObject("Handle", typeof(RectTransform), typeof(Image));
+            handleGo.transform.SetParent(handleArea.transform, false);
+            var handleImg = handleGo.GetComponent<Image>();
+            handleImg.color = new Color(1f, 0.85f, 0.45f, 1f);
+            var handleRect = (RectTransform)handleGo.transform;
+            handleRect.anchorMin = new Vector2(0f, 0.5f);
+            handleRect.anchorMax = new Vector2(0f, 0.5f);
+            handleRect.pivot = new Vector2(0.5f, 0.5f);
+            handleRect.sizeDelta = new Vector2(24f, 24f);
+            slider.handleRect = handleRect;
+
+            return slider;
+        }
+
+        private static Button CreateSmallSpriteButton(Transform parent, string name, string label, Vector2 anchoredPos, Vector2 size,
+            Sprite normal, Sprite highlighted, Sprite pressed, Sprite disabled, out TMP_Text labelText)
+        {
+            var go = new GameObject(name, typeof(RectTransform));
+            go.transform.SetParent(parent, false);
+            SetAnchoredRect((RectTransform)go.transform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), anchoredPos, size);
+
+            var image = go.AddComponent<Image>();
+            image.sprite = normal;
+            image.type = Image.Type.Simple;
+
+            var button = go.AddComponent<Button>();
+            button.targetGraphic = image;
+            button.transition = Selectable.Transition.SpriteSwap;
+            button.spriteState = new SpriteState { highlightedSprite = highlighted, pressedSprite = pressed, disabledSprite = disabled };
+
+            var textGo = new GameObject("Label", typeof(RectTransform));
+            textGo.transform.SetParent(go.transform, false);
+            labelText = textGo.AddComponent<TextMeshProUGUI>();
+            labelText.text = label;
+            labelText.fontSize = 22;
+            labelText.fontStyle = FontStyles.Bold;
+            labelText.alignment = TextAlignmentOptions.Center;
+            labelText.color = Color.white;
+            StretchFull((RectTransform)textGo.transform);
 
             return button;
         }
