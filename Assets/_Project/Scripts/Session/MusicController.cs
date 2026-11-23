@@ -1,5 +1,7 @@
 // Mutes the attached AudioSource while the game is not actively playing. Reacts to
-// GameStateManager state changes: music plays only on GameState.Playing.
+// GameStateManager state changes: music plays only on GameState.Playing. Applies
+// GameOptions.MusicVolume as the AudioSource volume and stays in sync if the player
+// cambia el slider de musica en Opciones mientras la cancion sigue sonando.
 
 using System.Collections;
 using UnityEngine;
@@ -30,6 +32,8 @@ namespace Kikiri9.Session
                 }
                 source.loop = true;
             }
+            ApplyVolume();
+            GameOptions.OnMusicVolumeChanged += ApplyVolume;
             StartCoroutine(SubscribeWhenReady());
         }
 
@@ -46,6 +50,12 @@ namespace Kikiri9.Session
         {
             if (subscribed && GameStateManager.Instance != null)
                 GameStateManager.Instance.OnStateChanged -= HandleStateChanged;
+            GameOptions.OnMusicVolumeChanged -= ApplyVolume;
+        }
+
+        private void ApplyVolume()
+        {
+            if (source != null) source.volume = GameOptions.MusicVolume;
         }
 
         private void HandleStateChanged(GameState s)

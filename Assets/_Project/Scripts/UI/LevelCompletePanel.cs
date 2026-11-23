@@ -55,6 +55,9 @@ namespace Kikiri9.UI
             if (root == null) return;
             if (s != GameState.LevelComplete) { root.SetActive(false); return; }
             root.SetActive(true);
+
+            var lc = FindFirstObjectByType<LevelController>();
+
             if (scoreText != null && ScoreTracker.Instance != null)
                 scoreText.text = $"Puntaje: {ScoreTracker.Instance.CurrentScore}";
             if (timeText != null)
@@ -64,13 +67,25 @@ namespace Kikiri9.UI
                 int ss = Mathf.FloorToInt(t % 60f);
                 timeText.text = $"Tiempo: {mm:00}:{ss:00}";
             }
-            if (narrativeText != null)
+            if (narrativeText != null && lc != null && lc.Definition != null)
+                narrativeText.text = lc.Definition.endingNarrative;
+
+            // Persistir progreso real en disco (#15): desbloquea el siguiente nivel,
+            // guarda el mejor puntaje y otorga la botella dorada del nivel solo la
+            // primera vez que se gana. Esto sobrevive a cerrar el juego, a diferencia
+            // de GameSession (que solo vive durante la sesion actual).
+            if (ScoreTracker.Instance != null)
             {
-                var lc = FindFirstObjectByType<LevelController>();
-                if (lc != null && lc.Definition != null) narrativeText.text = lc.Definition.endingNarrative;
+                int levelNumber = SaveService.LevelNumberForScene(SceneManager.GetActiveScene().name);
+                if (levelNumber > 0)
+                {
+                    int goldReward = (lc != null && lc.Definition != null) ? lc.Definition.goldBottlesReward : 0;
+                    SaveService.ReportLevelCompleted(levelNumber, ScoreTracker.Instance.CurrentScore, goldReward);
+                }
             }
 
-            // Persistir estado para 'Continuar' en el MainMenu
+            // GameSession se mantiene por compatibilidad dentro de la sesion en curso
+            // (otras pantallas pueden seguir leyendo Score/CurrentLevelSceneName).
             if (GameSession.Instance != null && ScoreTracker.Instance != null)
             {
                 GameSession.Instance.SetScore(ScoreTracker.Instance.CurrentScore);

@@ -15,6 +15,7 @@ namespace Kikiri9.UI
         [SerializeField] private GameObject continueButton;
         [SerializeField] private GameObject exitMessagePanel;
         [SerializeField] private string defaultLevelSceneName = "Level01_Dolores";
+        [SerializeField] private string levelSelectSceneName = "LevelSelect";
         [SerializeField] private GameObject firstSelectedButton;
 
         private void Start()
@@ -44,7 +45,10 @@ namespace Kikiri9.UI
                 return;
             }
 
-            bool hasSavedProgress = GameSession.Instance != null && GameSession.Instance.HasSavedProgress;
+            // Progreso real (#15): hay algo que continuar si ya se desbloqueo mas
+            // alla del nivel 1, es decir, si ya se gano al menos un nivel. Esto
+            // sobrevive a cerrar el juego, a diferencia del viejo GameSession.HasSavedProgress.
+            bool hasSavedProgress = SaveService.Load().highestUnlockedLevel > 1;
 
             // Lo dejamos activo (no SetActive(false)) para que siga formando parte de
             // la cadena de navegacion por teclado/gamepad; solo cambia su estado visual
@@ -58,24 +62,21 @@ namespace Kikiri9.UI
 
         public void OnPlayPressed()
         {
-            string sceneToLoad = defaultLevelSceneName;
-
-            if (GameSession.Instance != null)
-            {
-                GameSession.Instance.ResetSession();
-                GameSession.Instance.SetCurrentLevel(sceneToLoad);
-            }
-
-            LoadScene(sceneToLoad);
+            // JUGAR ya no arranca directo el Nivel 1: abre el Selector de Niveles,
+            // donde se elige cualquier nivel desbloqueado (el 1 siempre libre).
+            LoadScene(levelSelectSceneName);
         }
 
         public void OnContinuePressed()
         {
-            string sceneToLoad = defaultLevelSceneName;
+            var data = SaveService.Load();
+            string sceneToLoad = SaveService.SceneNameForLevel(data.highestUnlockedLevel);
 
-            if (GameSession.Instance != null && GameSession.Instance.HasSavedProgress)
+            // Si el nivel desbloqueado todavia no existe en el build (p. ej. Nivel 4
+            // antes del #14), caemos al nivel por defecto en vez de tronar.
+            if (string.IsNullOrEmpty(sceneToLoad) || !Application.CanStreamedLevelBeLoaded(sceneToLoad))
             {
-                sceneToLoad = GameSession.Instance.CurrentLevelSceneName;
+                sceneToLoad = defaultLevelSceneName;
             }
 
             LoadScene(sceneToLoad);

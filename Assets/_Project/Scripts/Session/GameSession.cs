@@ -54,5 +54,13 @@ namespace Kikiri9.Session
             HasSavedProgress = false;
             CurrentLevelSceneName = defaultLevelSceneName;
         }
+
+        // Red de seguridad para #15: si el jugador cierra el juego sin pasar por un
+        // punto de guardado explicito (LevelComplete/Pausa), esto asegura que lo que
+        // ya este en memoria (SaveService.cached) quede escrito en disco.
+        private void OnApplicationQuit()
+        {
+            SaveService.SaveNow();
+        }
     }
 }

@@ -2,6 +2,7 @@
 // moving, stops colliding (so the pollo can pass through) and is destroyed after a delay.
 
 using System;
+using Kikiri9.Session;
 using UnityEngine;
 
 namespace Kikiri9.Enemies
@@ -19,6 +20,12 @@ namespace Kikiri9.Enemies
 
         public static AudioClip ImpactoClip;
 
+        // Vida publica para quien necesite mostrarla (p. ej. HUDController durante
+        // una pelea de jefe). Se dispara con cada cambio, incluyendo Awake.
+        public int CurrentHealth => currentHealth;
+        public int MaxHealth => maxHealth;
+        public event Action<int, int> OnHealthChanged;
+
         private int currentHealth;
         private bool isDefeated;
         private Animator animator;
@@ -33,6 +40,7 @@ namespace Kikiri9.Enemies
             col = GetComponent<Collider2D>();
             rb = GetComponent<Rigidbody2D>();
             movement = GetComponent<EnemyMovement>();
+            OnHealthChanged?.Invoke(currentHealth, maxHealth);
         }
 
         public void TakeDamage(int amount)
@@ -52,6 +60,7 @@ namespace Kikiri9.Enemies
                 return;
             }
             currentHealth -= amount;
+            OnHealthChanged?.Invoke(currentHealth, maxHealth);
             var flash = GetComponent<EnemyDamageFlash>();
             if (flash != null) flash.Flash();
             if (currentHealth <= 0) Defeat();
@@ -66,7 +75,7 @@ namespace Kikiri9.Enemies
             Kikiri9.Session.FX.HitStop.Freeze(0.1f, 0.03f);
             Kikiri9.Session.FX.CameraShake.Shake(0.15f, 0.1f);
             if (ImpactoClip != null)
-                AudioSource.PlayClipAtPoint(ImpactoClip, transform.position, 0.8f);
+                AudioSource.PlayClipAtPoint(ImpactoClip, transform.position, 0.8f * GameOptions.SfxVolume);
             if (defeatVfxSprite != null)
                 Kikiri9.World.VfxSpawner.Spawn(defeatVfxSprite, transform.position + Vector3.up * 0.8f, 0.5f, 0.5f, 18);
             if (animator != null)
