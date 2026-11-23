@@ -83,7 +83,9 @@ namespace Kikiri9.EditorTools
             // Paneles con panel_resultados.png (9-sliced). Al ser los ultimos siblings,
             // sus dim+contenido tapan correctamente el HUD cuando el panel esta activo.
             BuildTutorialPanel(root.transform, panelBg, btnPrimary, btnSecondary);
-            BuildPausePanel(root.transform, panelBg, btnPrimary, btnSecondary);
+            var (pausePanel, pauseVisual) = BuildPausePanel(root.transform, panelBg, btnPrimary, btnSecondary);
+            var optionsPanel = BuildOptionsPanel(root.transform, panelBg, btnPrimary, btnSecondary, barraMarco, barraRelleno, pauseVisual);
+            WireOptionsIntoPause(pausePanel, optionsPanel);
             BuildLevelCompletePanel(root.transform, panelBg, btnPrimary, btnSecondary);
             BuildGameOverPanel(root.transform, panelBg, btnPrimary, btnSecondary);
 
@@ -303,7 +305,7 @@ namespace Kikiri9.EditorTools
             // Button auto-wires via helper.Awake()
         }
 
-        private static void BuildPausePanel(Transform parent, Sprite panelBg, ButtonSpriteSet btnPri, ButtonSpriteSet btnSec)
+        private static (PausePanel pausePanel, GameObject visual) BuildPausePanel(Transform parent, Sprite panelBg, ButtonSpriteSet btnPri, ButtonSpriteSet btnSec)
         {
             var (container, visual) = BuildPanelFrame("PausePanel", parent, panelBg, "PAUSA", out var _);
             var pp = container.AddComponent<PausePanel>();
@@ -328,6 +330,118 @@ namespace Kikiri9.EditorTools
             var so = new SerializedObject(pp);
             so.FindProperty("root").objectReferenceValue = visual;
             so.ApplyModifiedProperties();
+
+            return (pp, visual);
+        }
+
+        private static void WireOptionsIntoPause(PausePanel pausePanel, OptionsPanel optionsPanel)
+        {
+            var so = new SerializedObject(pausePanel);
+            so.FindProperty("optionsPanel").objectReferenceValue = optionsPanel;
+            so.ApplyModifiedProperties();
+        }
+
+        private static OptionsPanel BuildOptionsPanel(Transform parent, Sprite panelBg, ButtonSpriteSet btnPri, ButtonSpriteSet btnSec,
+            Sprite barraMarco, Sprite barraRelleno, GameObject returnToPanel)
+        {
+            var (container, visual) = BuildPanelFrame("OptionsPanel", parent, panelBg, "OPCIONES", out var body);
+            body.text = "";
+
+            var musicLabel = NewText("MusicLabel", visual.transform, "Musica", 26, TextAlignmentOptions.Left);
+            Anchor((RectTransform)musicLabel.transform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f),
+                new Vector2(-420f, 150f), new Vector2(260f, 40f));
+            var musicSlider = BuildInteractiveSlider("MusicSlider", visual.transform, barraMarco, barraRelleno);
+            Anchor((RectTransform)musicSlider.transform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f),
+                new Vector2(120f, 150f), new Vector2(680f, 36f));
+
+            var sfxLabel = NewText("SfxLabel", visual.transform, "Efectos", 26, TextAlignmentOptions.Left);
+            Anchor((RectTransform)sfxLabel.transform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f),
+                new Vector2(-420f, 80f), new Vector2(260f, 40f));
+            var sfxSlider = BuildInteractiveSlider("SfxSlider", visual.transform, barraMarco, barraRelleno);
+            Anchor((RectTransform)sfxSlider.transform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f),
+                new Vector2(120f, 80f), new Vector2(680f, 36f));
+
+            // Calidad y "mostrar controles" como botones ciclicos (mismo lenguaje de
+            // botones con sprite swap que el resto del juego, sin dropdowns/toggles nuevos).
+            var qualityBtn = NewButtonSet("QualityButton", visual.transform, btnSec, null, "Calidad: Media");
+            Anchor((RectTransform)qualityBtn.transform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f),
+                new Vector2(-220f, -20f), new Vector2(380f, 90f));
+            var qualityLabel = qualityBtn.transform.Find("Label").GetComponent<TMP_Text>();
+
+            var controlsBtn = NewButtonSet("ControlsButton", visual.transform, btnSec, null, "Controles: Si");
+            Anchor((RectTransform)controlsBtn.transform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f),
+                new Vector2(220f, -20f), new Vector2(380f, 90f));
+            var controlsLabel = controlsBtn.transform.Find("Label").GetComponent<TMP_Text>();
+
+            var closeBtn = NewButtonSet("CloseButton", visual.transform, btnPri, null, "Cerrar");
+            Anchor((RectTransform)closeBtn.transform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f),
+                new Vector2(0f, -150f), new Vector2(320f, 90f));
+
+            var op = container.AddComponent<OptionsPanel>();
+            var so = new SerializedObject(op);
+            so.FindProperty("root").objectReferenceValue = visual;
+            so.FindProperty("returnToPanel").objectReferenceValue = returnToPanel;
+            so.FindProperty("musicSlider").objectReferenceValue = musicSlider;
+            so.FindProperty("sfxSlider").objectReferenceValue = sfxSlider;
+            so.FindProperty("qualityButton").objectReferenceValue = qualityBtn.GetComponent<Button>();
+            so.FindProperty("qualityLabel").objectReferenceValue = qualityLabel;
+            so.FindProperty("controlsButton").objectReferenceValue = controlsBtn.GetComponent<Button>();
+            so.FindProperty("controlsLabel").objectReferenceValue = controlsLabel;
+            so.ApplyModifiedProperties();
+
+            WireBtn(qualityBtn, container, "OnQualityClicked");
+            WireBtn(controlsBtn, container, "OnControlsClicked");
+            WireBtn(closeBtn, container, "OnCloseClicked");
+
+            return op;
+        }
+
+        // Slider arrastrable (a diferencia de BuildFilledSlider, que es solo lectura
+        // para la barra de progreso del HUD): fondo con raycast para iniciar el drag,
+        // relleno y handle visible para agarrar con mouse/touch.
+        private static Slider BuildInteractiveSlider(string name, Transform parent, Sprite frameSprite, Sprite fillSprite)
+        {
+            var go = new GameObject(name, typeof(RectTransform), typeof(CanvasRenderer), typeof(Image), typeof(Slider));
+            go.transform.SetParent(parent, false);
+
+            var bgImg = go.GetComponent<Image>();
+            bgImg.sprite = frameSprite;
+            bgImg.type = Image.Type.Sliced;
+            bgImg.raycastTarget = true;
+
+            var slider = go.GetComponent<Slider>();
+            slider.minValue = 0f; slider.maxValue = 1f; slider.value = 1f;
+            slider.transition = Selectable.Transition.None;
+
+            var fillArea = new GameObject("Fill Area", typeof(RectTransform));
+            fillArea.transform.SetParent(go.transform, false);
+            Anchor((RectTransform)fillArea.transform, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(-16f, -10f));
+
+            var fill = NewImage("Fill", fillArea.transform, fillSprite);
+            fill.type = Image.Type.Simple;
+            StretchFill((RectTransform)fill.transform);
+
+            slider.fillRect = (RectTransform)fill.transform;
+            slider.targetGraphic = fill;
+            slider.direction = Slider.Direction.LeftToRight;
+
+            var handleArea = new GameObject("Handle Slide Area", typeof(RectTransform));
+            handleArea.transform.SetParent(go.transform, false);
+            Anchor((RectTransform)handleArea.transform, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(-16f, 0f));
+
+            var handleGo = new GameObject("Handle", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
+            handleGo.transform.SetParent(handleArea.transform, false);
+            var handleImg = handleGo.GetComponent<Image>();
+            handleImg.color = new Color(1f, 0.85f, 0.45f, 1f);
+            handleImg.raycastTarget = true;
+            var hrt = (RectTransform)handleGo.transform;
+            hrt.anchorMin = new Vector2(0f, 0.5f);
+            hrt.anchorMax = new Vector2(0f, 0.5f);
+            hrt.pivot = new Vector2(0.5f, 0.5f);
+            hrt.sizeDelta = new Vector2(26f, 26f);
+            slider.handleRect = hrt;
+
+            return slider;
         }
 
         private static void BuildLevelCompletePanel(Transform parent, Sprite panelBg, ButtonSpriteSet btnPri, ButtonSpriteSet btnSec)

@@ -1,5 +1,7 @@
 // Pause panel. Shown while GameState == Paused. Resume unpauses, Restart reloads scene,
-// Menu loads MainMenu scene (if present in build settings). Options is a placeholder.
+// Menu loads MainMenu scene (if present in build settings). Options abre OptionsPanel
+// (construido por UIBootstrap dentro del mismo UI_Root) y oculta este panel mientras
+// tanto; OptionsPanel.OnCloseClicked nos devuelve la visibilidad.
 
 using Kikiri9.Session;
 using UnityEngine;
@@ -10,6 +12,7 @@ namespace Kikiri9.UI
     public class PausePanel : MonoBehaviour
     {
         [SerializeField] private GameObject root;
+        [SerializeField] private OptionsPanel optionsPanel;
         [SerializeField] private string menuSceneName = "MainMenu";
 
         private bool subscribed;
@@ -35,7 +38,14 @@ namespace Kikiri9.UI
                 GameStateManager.Instance.OnStateChanged -= HandleStateChanged;
         }
 
-        private void HandleStateChanged(GameState s) { if (root != null) root.SetActive(s == GameState.Paused); }
+        private void HandleStateChanged(GameState s)
+        {
+            if (root != null) root.SetActive(s == GameState.Paused);
+
+            // Red de seguridad extra para #15: guardar al pausar, ademas de al
+            // completar nivel y al cerrar el juego (GameSession.OnApplicationQuit).
+            if (s == GameState.Paused) SaveService.SaveNow();
+        }
 
         public void OnResumeClicked() => GameStateManager.Instance?.SetState(GameState.Playing);
 
@@ -47,7 +57,11 @@ namespace Kikiri9.UI
             else SceneManager.LoadScene(current);
         }
 
-        public void OnOptionsClicked() { /* placeholder: ampliar en avance 3 */ }
+        public void OnOptionsClicked()
+        {
+            if (root != null) root.SetActive(false);
+            optionsPanel?.Show();
+        }
 
         public void OnMenuClicked()
         {

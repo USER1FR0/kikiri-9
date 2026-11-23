@@ -103,6 +103,7 @@ namespace Kikiri9.Enemies
                 arena = go.AddComponent<BossArenaManager>();
             }
             arena.SetActive(true);
+            arena.SetBossHealth(health);
 
             arenaCenterX = transform.position.x;
 

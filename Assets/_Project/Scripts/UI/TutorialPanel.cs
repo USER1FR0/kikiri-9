@@ -17,7 +17,9 @@ namespace Kikiri9.UI
         private void Start()
         {
             if (root == null) return;
-            if (!showOnStart) { root.SetActive(false); return; }
+            // showOnStart lo decide el nivel (algunos tutoriales son obligatorios);
+            // GameOptions.ShowControls es la preferencia del jugador en Opciones.
+            if (!showOnStart || !GameOptions.ShowControls) { root.SetActive(false); return; }
 
             var lc = FindFirstObjectByType<LevelController>();
             if (bodyText != null && lc != null && lc.Definition != null)
