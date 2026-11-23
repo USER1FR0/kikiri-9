@@ -38,7 +38,14 @@ namespace Kikiri9.UI
                 GameStateManager.Instance.OnStateChanged -= HandleStateChanged;
         }
 
-        private void HandleStateChanged(GameState s) { if (root != null) root.SetActive(s == GameState.Paused); }
+        private void HandleStateChanged(GameState s)
+        {
+            if (root != null) root.SetActive(s == GameState.Paused);
+
+            // Red de seguridad extra para #15: guardar al pausar, ademas de al
+            // completar nivel y al cerrar el juego (GameSession.OnApplicationQuit).
+            if (s == GameState.Paused) SaveService.SaveNow();
+        }
 
         public void OnResumeClicked() => GameStateManager.Instance?.SetState(GameState.Playing);
 

@@ -25,6 +25,7 @@ namespace Kikiri9.EditorTools
         private const string BootScenePath = "Assets/_Project/Scenes/Boot.unity";
         private const string MainMenuScenePath = "Assets/_Project/Scenes/MainMenu.unity";
         private const string Level01ScenePath = "Assets/_Project/Scenes/Level01_Dolores.unity";
+        private const string LevelSelectScenePath = "Assets/_Project/Scenes/LevelSelect.unity";
 
         [MenuItem("Tools/Kikiri-9/Build Main Menu")]
         public static void BuildMainMenuScenes()
@@ -131,6 +132,7 @@ namespace Kikiri9.EditorTools
             SetPrivateField(controller, "continueButton", continueButton.gameObject);
             SetPrivateField(controller, "exitMessagePanel", exitMessagePanel);
             SetPrivateField(controller, "defaultLevelSceneName", "Level01_Dolores");
+            SetPrivateField(controller, "levelSelectSceneName", "LevelSelect");
             SetPrivateField(controller, "firstSelectedButton", playButton.gameObject);
 
             UnityEventTools.AddPersistentListener(playButton.onClick, controller.OnPlayPressed);
@@ -163,10 +165,12 @@ namespace Kikiri9.EditorTools
             var scenes = EditorBuildSettings.scenes.ToList();
             scenes.RemoveAll(s => s.path == BootScenePath
                 || s.path == MainMenuScenePath
+                || s.path == LevelSelectScenePath
                 || s.path == Level01ScenePath);
 
-            // Orden: Boot (0) -> MainMenu (1) -> Level01_Dolores (2)
+            // Orden: Boot (0) -> MainMenu (1) -> LevelSelect (2) -> Level01_Dolores (3)
             scenes.Insert(0, new EditorBuildSettingsScene(Level01ScenePath, true));
+            scenes.Insert(0, new EditorBuildSettingsScene(LevelSelectScenePath, true));
             scenes.Insert(0, new EditorBuildSettingsScene(MainMenuScenePath, true));
             scenes.Insert(0, new EditorBuildSettingsScene(BootScenePath, true));
 
@@ -178,7 +182,7 @@ namespace Kikiri9.EditorTools
         public static void RegisterScenesOnly()
         {
             RegisterScenesInBuildSettings();
-            Debug.Log("Build Settings actualizado: Boot, MainMenu, Level01_Dolores.");
+            Debug.Log("Build Settings actualizado: Boot, MainMenu, LevelSelect, Level01_Dolores.");
         }
 
         private static GameObject CreateEventSystem()
