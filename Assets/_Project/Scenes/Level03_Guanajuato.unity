@@ -144,7 +144,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95510228}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8852dee1d9e76d842aed440268e772aa, type: 3}
   m_Name: 
@@ -3667,7 +3667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ffc9904cccacc42bd2bfecb1760c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.Levels.MiniBossSpawner
-  bossPrefab: {fileID: 8533700632252706801, guid: 08af4cbdea15ea548afd4757c37445f1, type: 3}
+  bossPrefab: {fileID: 0}
   triggerMeters: 1000
   spawnAheadDistance: 10
   spawnY: -3.3

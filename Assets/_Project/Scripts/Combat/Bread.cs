@@ -38,13 +38,14 @@ namespace Kikiri9.Combat
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (landed) return;
-            if (Time.time - spawnTime < grace) return;
             if (other == null) return;
 
-            // Ignorar pickups, el propio pollo y otros panes (atraviesa sin detonar).
             if (other.CompareTag("Player")) return;
             if (other.CompareTag("Pickup")) return;
             if (other.CompareTag("Bread")) return;
+
+            // Enemigos SIEMPRE reciben dano, sin grace, para que pegue incluso a
+            // bocajarro cuando el enemigo esta pegado al pollo al disparar.
             if (other.CompareTag("Enemy"))
             {
                 var enemyHealth = other.GetComponent<Kikiri9.Enemies.EnemyHealth>();
@@ -56,8 +57,12 @@ namespace Kikiri9.Combat
                     var src = inAir ? Kikiri9.Enemies.New.DamageSource.BreadInAir : Kikiri9.Enemies.New.DamageSource.Bread;
                     enemyHealth.TakeDamage(1, src, transform.position);
                 }
+                Land();
+                return;
             }
 
+            // Para suelos/obstaculos: respetar grace para no detonar al salir del muzzle.
+            if (Time.time - spawnTime < grace) return;
             Land();
         }
 

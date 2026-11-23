@@ -16,8 +16,8 @@ MonoBehaviour:
   backgroundSprite: {fileID: 0}
   musicClip: {fileID: 8300000, guid: 782cc7d336b3ba3418b1fccf0aa05583, type: 3}
   worldSpeed: 9
-  maxSpeed: 12
-  targetDistance: 1400
+  maxSpeed: 15
+  targetDistance: 1500
   enemyPrefabs:
   - {fileID: 6564748067615936379, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
   - {fileID: 6564748067615936379, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}

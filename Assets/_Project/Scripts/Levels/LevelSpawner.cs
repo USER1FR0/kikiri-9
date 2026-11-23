@@ -16,7 +16,7 @@ namespace Kikiri9.Levels
         [SerializeField] private float groundY = -2.75f;
         [SerializeField] private float pickupExtraY = 0.5f; // eleva pickups respecto a groundY
         [SerializeField] private float intenseFromMeters = 1000f;
-        [SerializeField] private float intenseSpawnMultiplier = 0.55f; // intervalo *0.55 = ~2x spawn
+        [SerializeField] private float intenseSpawnMultiplier = 0.4f; // intervalo *0.4 = ~2.5x spawn
         [SerializeField] private float minSeparation = 7f;
 
         private readonly List<GameObject> active = new List<GameObject>();

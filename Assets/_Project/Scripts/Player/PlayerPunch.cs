@@ -13,7 +13,7 @@ namespace Kikiri9.Player
     {
         [Header("Cooldown y daño")]
         [SerializeField] private float cooldown = 9f;
-        [SerializeField] private int damage = 3;
+        [SerializeField] private int damage = 2;
 
         [Header("Hitbox")]
         [SerializeField] private Vector2 hitboxSize = new Vector2(3.2f, 2.2f);
@@ -115,6 +115,7 @@ namespace Kikiri9.Player
             var rb = go.AddComponent<Rigidbody2D>();
             rb.bodyType = RigidbodyType2D.Kinematic;
             rb.gravityScale = 0f;
+            rb.useFullKinematicContacts = true; // dispara triggers vs enemigos Kinematic
             var col = go.AddComponent<BoxCollider2D>();
             col.isTrigger = true;
             col.size = hitboxSize;
