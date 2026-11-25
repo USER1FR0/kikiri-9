@@ -1,0 +1,20 @@
+﻿archivo,ancho_png,alto_png,ancho_celda,alto_celda,columnas,filas,offset,padding,pivot_x,pivot_y,ppu,fps,loop,orientacion,uso
+enemigos/mariachi/float_idle.png,576,96,96,96,6,1,0,0,0.5,0.125,100,8,si,izquierda,animacion
+enemigos/mariachi/attack.png,384,96,96,96,4,1,0,0,0.5,0.125,100,10,no,izquierda,animacion
+enemigos/mariachi/defeat.png,480,96,96,96,5,1,0,0,0.5,0.125,100,10,no,izquierda,animacion
+enemigos/zombi/crouch_idle.png,384,96,96,96,4,1,0,0,0.5,0.125,100,6,si,izquierda,animacion
+enemigos/zombi/jump_prepare.png,288,96,96,96,3,1,0,0,0.5,0.125,100,10,no,izquierda,animacion
+enemigos/zombi/jump_air.png,192,96,96,96,2,1,0,0,0.5,0.125,100,10,no,izquierda,animacion
+enemigos/zombi/land.png,192,96,96,96,2,1,0,0,0.5,0.125,100,12,no,izquierda,animacion
+enemigos/zombi/defeat.png,384,96,96,96,4,1,0,0,0.5,0.125,100,10,no,izquierda,animacion
+enemigos/xolo/run.png,480,48,80,48,6,1,0,0,0.5,0.125,100,14,si,izquierda,animacion
+enemigos/xolo/defeat.png,320,48,80,48,4,1,0,0,0.5,0.125,100,10,no,izquierda,animacion
+enemigos/mariachi/pose.png,96,96,96,96,1,1,0,0,0.5,0.125,100,0,no,izquierda,pose de referencia
+enemigos/mariachi/hit_flash.png,192,96,96,96,2,1,0,0,0.5,0.125,100,18,no,izquierda,destello opcional
+enemigos/zombi/pose.png,96,96,96,96,1,1,0,0,0.5,0.125,100,0,no,izquierda,pose de referencia
+enemigos/zombi/hit_flash.png,96,96,96,96,1,1,0,0,0.5,0.125,100,18,no,izquierda,destello opcional
+enemigos/xolo/pose.png,80,48,80,48,1,1,0,0,0.5,0.125,100,0,no,izquierda,pose de referencia
+enemigos/xolo/hit_flash.png,80,48,80,48,1,1,0,0,0.5,0.125,100,18,no,izquierda,destello opcional
+ui/oleada_inicio.png,768,180,768,180,1,1,0,0,0.5,0.5,100,0,no,-,marco UI para texto TMP
+ui/oleada_completa.png,768,180,768,180,1,1,0,0,0.5,0.5,100,0,no,-,marco UI para texto TMP
+vfx/combo_destello.png,640,64,128,64,5,1,0,0,0.5,0.5,100,20,no,-,efecto; texto TMP aparte

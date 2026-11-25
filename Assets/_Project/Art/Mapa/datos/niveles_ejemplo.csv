@@ -1,0 +1,5 @@
+﻿id_estable,numero_visible,ciudad,anchor_x,anchor_y,estado_ejemplo
+dh_01,1,Dolores Hidalgo,0.16,0.19,completado
+dh_02,2,Dolores Hidalgo,0.4,0.28,disponible
+gto_01,3,Guanajuato,0.65,0.355,seleccionado
+gto_02,4,Guanajuato,0.6,0.55,bloqueado

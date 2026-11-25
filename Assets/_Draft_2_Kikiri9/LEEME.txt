@@ -1,0 +1,23 @@
+KIKIRI-9: EL ÚLTIMO PAN
+
+CONTENIDO
+Art: personajes, fondos, suelo, obstáculos, objetos, interfaz, historia y efectos.
+Audio: tres pistas originales sintetizadas y once efectos. Audio provisional.
+Docs: documentación oficial en PDF y rúbrica de evaluación.
+
+HISTORIA
+01 tormenta; 02 laboratorio inactivo; 03 activación; 04 fuga; 05 descubrimiento del pan; 06 transición Dolores-Guanajuato; 07 Coronela; 08 amanecer.
+Las imágenes narrativas no contienen texto: añadirlo en el juego. No son vídeos ni fondos repetibles.
+
+HOJAS COMPLEMENTARIAS
+kikiri9_reposo_dano_derrota: filas reposo, daño y derrota; cuatro poses por fila.
+electricidad_activacion_cempasuchil: filas relámpago, activación y destello; cuatro cuadros por fila.
+Recortar y comprobar pivotes, escala y animación antes de usar. Los efectos no tienen colisión.
+
+IMPORTANTE
+Los sonidos de cacareo, gemidos y rotura de botella realista no están incluidos. El audio existente es provisional.
+Los gráficos requieren comprobar las uniones de suelo y fondos. No hay escenas ni código de Unity en este paquete.
+Consultar el PDF para reglas, narrativa, función de cada recurso, responsabilidades y cobertura de la rúbrica.
+
+RECORTE
+Diez atlas con celdas uniformes. Consultar Docs/medidas_recorte.csv y el capítulo 27 del PDF. Pollo: derecha. Enemigos y proyectil espectral: izquierda. No aplicar otra inversión a la momia. Atlas sin líneas ni etiquetas. Hojas de seis columnas: 3072 px de ancho; conservar resolución al importar.

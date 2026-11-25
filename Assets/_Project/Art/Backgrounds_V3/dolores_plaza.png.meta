@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: e14065060043abb45b894c9a2562b38c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5420206045670340059
+    second: dolores_plaza_0
+  - first:
+      213: 8433158508368851205
+    second: dolores_plaza_1
+  - first:
+      213: -9053849313081560972
+    second: dolores_plaza_2
+  - first:
+      213: -7111565730499512121
+    second: dolores_plaza_3
+  - first:
+      213: -5909805957285513057
+    second: dolores_plaza_4
+  - first:
+      213: 6954616577787652879
+    second: dolores_plaza_5
+  - first:
+      213: 1786071660376726061
+    second: dolores_plaza_6
+  - first:
+      213: -2342308081700022230
+    second: dolores_plaza_7
+  - first:
+      213: -582680052481854250
+    second: dolores_plaza_8
+  - first:
+      213: -2914635260870367628
+    second: dolores_plaza_9
+  - first:
+      213: 3548622991024516191
+    second: dolores_plaza_10
+  - first:
+      213: 3684027768872668887
+    second: dolores_plaza_11
+  - first:
+      213: 1332968838530650766
+    second: dolores_plaza_12
+  - first:
+      213: -7546615279096815091
+    second: dolores_plaza_13
+  - first:
+      213: -3787333159572750795
+    second: dolores_plaza_14
+  - first:
+      213: -449569789216148572
+    second: dolores_plaza_15
+  - first:
+      213: 4897571748178359380
+    second: dolores_plaza_16
+  - first:
+      213: 1287347341402777246
+    second: dolores_plaza_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dolores_plaza_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2172
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a0566a15f87c4b0800000000000000
+      internalID: -5420206045670340059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dolores_plaza_1
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 623
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50173e98bf8980570800000000000000
+      internalID: 8433158508368851205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dolores_plaza_2
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 604
+        width: 29
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 470fbd3e4044a5280800000000000000
+      internalID: -9053849313081560972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dolores_plaza_3
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 594
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c83cb495a4ae4d90800000000000000
+      internalID: -7111565730499512121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dolores_plaza_4
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 608
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9872881bc62cfda0800000000000000
+      internalID: -5909805957285513057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dolores_plaza_5
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 593
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0b631c2ee2c38060800000000000000
+      internalID: 6954616577787652879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dolores_plaza_6
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 604
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2a952c46b669c810800000000000000
+      internalID: 1786071660376726061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dolores_plaza_7
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 594
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a285eb3b5337e7fd0800000000000000
+      internalID: -2342308081700022230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dolores_plaza_8
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 592
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d4fc165497e9e7f0800000000000000
+      internalID: -582680052481854250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dolores_plaza_9
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 600
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4766ef13ca22d87d0800000000000000
+      internalID: -2914635260870367628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dolores_plaza_10
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 578
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5cecc51fcd3f3130800000000000000
+      internalID: 3548622991024516191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dolores_plaza_11
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 567
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7de845aacbb402330800000000000000
+      internalID: 3684027768872668887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dolores_plaza_12
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 546
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e82d845a818af7210800000000000000
+      internalID: 1332968838530650766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dolores_plaza_13
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 535
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0226e82369054790800000000000000
+      internalID: -7546615279096815091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dolores_plaza_14
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 545
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53ebb99be80b07bc0800000000000000
+      internalID: -3787333159572750795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dolores_plaza_15
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 546
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a3360c98aec2c9f0800000000000000
+      internalID: -449569789216148572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dolores_plaza_16
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 531
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 454f8287e8ba7f340800000000000000
+      internalID: 4897571748178359380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dolores_plaza_17
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 510
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e962bda16939dd110800000000000000
+      internalID: 1287347341402777246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      dolores_plaza_0: -5420206045670340059
+      dolores_plaza_1: 8433158508368851205
+      dolores_plaza_10: 3548622991024516191
+      dolores_plaza_11: 3684027768872668887
+      dolores_plaza_12: 1332968838530650766
+      dolores_plaza_13: -7546615279096815091
+      dolores_plaza_14: -3787333159572750795
+      dolores_plaza_15: -449569789216148572
+      dolores_plaza_16: 4897571748178359380
+      dolores_plaza_17: 1287347341402777246
+      dolores_plaza_2: -9053849313081560972
+      dolores_plaza_3: -7111565730499512121
+      dolores_plaza_4: -5909805957285513057
+      dolores_plaza_5: 6954616577787652879
+      dolores_plaza_6: 1786071660376726061
+      dolores_plaza_7: -2342308081700022230
+      dolores_plaza_8: -582680052481854250
+      dolores_plaza_9: -2914635260870367628
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

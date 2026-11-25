@@ -1,0 +1,899 @@
+fileFormatVersion: 2
+guid: a55fc1d5392dfa540aa798f5616da587
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1965102559271026632
+    second: obstaculos_decoracion_0
+  - first:
+      213: -5327517053185716904
+    second: obstaculos_decoracion_1
+  - first:
+      213: -2054868821416263697
+    second: obstaculos_decoracion_2
+  - first:
+      213: -462463545464637170
+    second: obstaculos_decoracion_3
+  - first:
+      213: -7921005259482572969
+    second: obstaculos_decoracion_4
+  - first:
+      213: 448374366592946082
+    second: obstaculos_decoracion_5
+  - first:
+      213: 3747965808291171443
+    second: obstaculos_decoracion_6
+  - first:
+      213: 4089908246735270983
+    second: obstaculos_decoracion_7
+  - first:
+      213: -2720467422382011698
+    second: obstaculos_decoracion_8
+  - first:
+      213: -8256334463913740273
+    second: obstaculos_decoracion_9
+  - first:
+      213: 5458924952286785902
+    second: obstaculos_decoracion_10
+  - first:
+      213: -8207199762727836503
+    second: obstaculos_decoracion_11
+  - first:
+      213: 5465023216808596348
+    second: obstaculos_decoracion_12
+  - first:
+      213: 7367520572677238946
+    second: obstaculos_decoracion_13
+  - first:
+      213: -5775354981130049091
+    second: obstaculos_decoracion_14
+  - first:
+      213: 9135798248612529220
+    second: obstaculos_decoracion_15
+  - first:
+      213: -2664591467619513149
+    second: obstaculos_decoracion_16
+  - first:
+      213: -3180858539141512947
+    second: obstaculos_decoracion_17
+  - first:
+      213: 7064597837121464496
+    second: obstaculos_decoracion_18
+  - first:
+      213: 277762406399401039
+    second: obstaculos_decoracion_19
+  - first:
+      213: -5444924576313710898
+    second: obstaculos_decoracion_20
+  - first:
+      213: -2431371519241853484
+    second: obstaculos_decoracion_21
+  - first:
+      213: -1234122271159683122
+    second: obstaculos_decoracion_22
+  - first:
+      213: 1820520823491397902
+    second: obstaculos_decoracion_23
+  - first:
+      213: 1837590841762618180
+    second: obstaculos_decoracion_24
+  - first:
+      213: 8884070288297543784
+    second: obstaculos_decoracion_25
+  - first:
+      213: -6430314921668812702
+    second: obstaculos_decoracion_26
+  - first:
+      213: -3620687899693151750
+    second: obstaculos_decoracion_27
+  - first:
+      213: 4235521676170046324
+    second: obstaculos_decoracion_28
+  - first:
+      213: 4663264323731406279
+    second: obstaculos_decoracion_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: obstaculos_decoracion_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 980
+        width: 88
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cf7f88bd52754b10800000000000000
+      internalID: 1965102559271026632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_1
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 939
+        width: 70
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85d870e677bd016b0800000000000000
+      internalID: -5327517053185716904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_2
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 955
+        width: 120
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fef357fa1b3ab73e0800000000000000
+      internalID: -2054868821416263697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_3
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 911
+        width: 116
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e09330b0bdff499f0800000000000000
+      internalID: -462463545464637170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_4
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 963
+        width: 9
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7575a8c0fafe21290800000000000000
+      internalID: -7921005259482572969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_5
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 959
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2afc92f5c12f83600800000000000000
+      internalID: 448374366592946082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_6
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 607
+        width: 760
+        height: 466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37c41898b03730430800000000000000
+      internalID: 3747965808291171443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_7
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 931
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 744b89291e542c830800000000000000
+      internalID: 4089908246735270983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_8
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 926
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecac5e10b45fe3ad0800000000000000
+      internalID: -2720467422382011698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 677
+        width: 327
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f083b9b8c8b9b6d80800000000000000
+      internalID: -8256334463913740273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_10
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 639
+        width: 360
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e61f19c425ff1cb40800000000000000
+      internalID: 5458924952286785902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_11
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 892
+        width: 15
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a4efe5ac4b2a1e80800000000000000
+      internalID: -8207199762727836503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_12
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 913
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c73932729a9a7db40800000000000000
+      internalID: 5465023216808596348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_13
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 903
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a03fc11de0be3660800000000000000
+      internalID: 7367520572677238946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_14
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 889
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db9e5f96e31d9dfa0800000000000000
+      internalID: -5775354981130049091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 401
+        height: 626
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4448f248a10e8ce70800000000000000
+      internalID: 9135798248612529220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_16
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 299
+        width: 271
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cc80058d28750bd0800000000000000
+      internalID: -2664591467619513149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_17
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 556
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d01c3b5f2025bd3d0800000000000000
+      internalID: -3180858539141512947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_18
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 283
+        width: 382
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b82e929d4e7a0260800000000000000
+      internalID: 7064597837121464496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_19
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 299
+        width: 239
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4cd46ddf6fcad300800000000000000
+      internalID: 277762406399401039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_20
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 315
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec6e60042fdbf64b0800000000000000
+      internalID: -5444924576313710898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_21
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 234
+        width: 77
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d566963c78024ed0800000000000000
+      internalID: -2431371519241853484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_22
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 274
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec7f02245548fdee0800000000000000
+      internalID: -1234122271159683122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_23
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 266
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e09086e1b0ac34910800000000000000
+      internalID: 1820520823491397902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_24
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 262
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44b95c5722f608910800000000000000
+      internalID: 1837590841762618180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_25
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 222
+        width: 34
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 868c39d7bde8a4b70800000000000000
+      internalID: 8884070288297543784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_26
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 217
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2606904e5aee2c6a0800000000000000
+      internalID: -6430314921668812702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_27
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 17
+        width: 376
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af90c38d98bb0cdc0800000000000000
+      internalID: -3620687899693151750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_28
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 25
+        width: 308
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47b2592168897ca30800000000000000
+      internalID: 4235521676170046324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstaculos_decoracion_29
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 24
+        width: 291
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd33c5023e37b040800000000000000
+      internalID: 4663264323731406279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      obstaculos_decoracion_0: 1965102559271026632
+      obstaculos_decoracion_1: -5327517053185716904
+      obstaculos_decoracion_10: 5458924952286785902
+      obstaculos_decoracion_11: -8207199762727836503
+      obstaculos_decoracion_12: 5465023216808596348
+      obstaculos_decoracion_13: 7367520572677238946
+      obstaculos_decoracion_14: -5775354981130049091
+      obstaculos_decoracion_15: 9135798248612529220
+      obstaculos_decoracion_16: -2664591467619513149
+      obstaculos_decoracion_17: -3180858539141512947
+      obstaculos_decoracion_18: 7064597837121464496
+      obstaculos_decoracion_19: 277762406399401039
+      obstaculos_decoracion_2: -2054868821416263697
+      obstaculos_decoracion_20: -5444924576313710898
+      obstaculos_decoracion_21: -2431371519241853484
+      obstaculos_decoracion_22: -1234122271159683122
+      obstaculos_decoracion_23: 1820520823491397902
+      obstaculos_decoracion_24: 1837590841762618180
+      obstaculos_decoracion_25: 8884070288297543784
+      obstaculos_decoracion_26: -6430314921668812702
+      obstaculos_decoracion_27: -3620687899693151750
+      obstaculos_decoracion_28: 4235521676170046324
+      obstaculos_decoracion_29: 4663264323731406279
+      obstaculos_decoracion_3: -462463545464637170
+      obstaculos_decoracion_4: -7921005259482572969
+      obstaculos_decoracion_5: 448374366592946082
+      obstaculos_decoracion_6: 3747965808291171443
+      obstaculos_decoracion_7: 4089908246735270983
+      obstaculos_decoracion_8: -2720467422382011698
+      obstaculos_decoracion_9: -8256334463913740273
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

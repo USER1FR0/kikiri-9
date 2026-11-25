@@ -1,0 +1,11 @@
+﻿Archivo,Ancho celda px,Alto celda px,Columnas,Filas,Pivote X,Pivote Y,Orientacion,Acciones de arriba a abajo
+Characters/kikiri9.png,512,384,6,4,0.5,0.125,right,correr / saltar / deslizar / lanzar
+Characters/kikiri9_reposo_dano_derrota.png,512,384,4,3,0.5,0.125,right,reposo / dano / derrota
+Characters/momia.png,512,384,6,2,0.5,0.125,left,caminar / derrota
+Characters/coronela.png,512,384,6,3,0.5,0.125,left,caminar / ataque / derrota
+Characters/zombi.png,512,384,6,2,0.5,0.125,left,caminar / derrota
+Environment/suelo.png,464,368,4,2,0.5,0.8260869565217391,no aplica,suelo / plataformas
+Environment/obstaculos_decoracion.png,464,400,4,3,0.5,0.08,no aplica,obstaculos / decoracion_a / decoracion_b
+Items/objetos_efectos.png,464,384,4,3,0.5,0.08333333333333333,no aplica,objetos / efectos_a / efectos_b
+UI/interfaz.png,464,304,4,4,0.5,0.5,no aplica,hud / controles / botones / paneles
+Effects/electricidad_activacion_cempasuchil.png,416,448,4,3,0.5,0.5,no aplica,relampago / activacion / cempasuchil

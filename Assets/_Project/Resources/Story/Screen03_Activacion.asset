@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e7d5ce854545c44a714e741b8a84d5, type: 3}
+  m_Name: Screen03_Activacion
+  m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.UI.Story.StoryScreenDefinition
+  background: {fileID: 3685599612367959363, guid: 3dde0808473e78848842de6b1fc2f825, type: 3}
+  pages:
+  - 'Un rayo cae en el pararrayos.
+
+
+    La corriente baja por los cables.
+
+    Encuentra
+    la jaula.
+
+    Encuentra el circuito que nadie reactivo.'
+  - 'Kikiri-9 abre los ojos.
+
+
+    Afuera, los muertos tambien.'
+  textEs: 
+  fadeInSeconds: 0.5
+  fadeOutSeconds: 0.35
+  effects:
+  - id: rayo_centro
+    frames:
+    - {fileID: -1478769609, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: 133825536, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: 761338291, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: -934902289, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    frameRate: 12
+    loop: 1
+    anchor: {x: 0.5, y: 0.78}
+    size: {x: 380, y: 560}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+    startDelay: 0
+    randomRepeatInterval: 2.2
+  - id: activacion_cuerpo
+    frames:
+    - {fileID: -819946207, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: 2037618413, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: -1928317748, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: 1863152343, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    frameRate: 10
+    loop: 1
+    anchor: {x: 0.52, y: 0.42}
+    size: {x: 320, y: 320}
+    tint: {r: 1, g: 1, b: 0.6, a: 0.95}
+    startDelay: 0
+    randomRepeatInterval: 0
+  - id: cempasuchil_fuerte
+    frames:
+    - {fileID: 190986936, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: -1968250982, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: 1316478228, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: 1592440299, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    frameRate: 7
+    loop: 1
+    anchor: {x: 0.14, y: 0.28}
+    size: {x: 200, y: 200}
+    tint: {r: 1, g: 0.7, b: 0.2, a: 1}
+    startDelay: 0
+    randomRepeatInterval: 0

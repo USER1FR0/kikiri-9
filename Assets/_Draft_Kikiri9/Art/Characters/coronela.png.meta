@@ -1,0 +1,483 @@
+fileFormatVersion: 2
+guid: 8690843bd7a7a634ca25cc046289f1f2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2574445454145472532
+    second: coronela_0
+  - first:
+      213: -5040298101123658380
+    second: coronela_1
+  - first:
+      213: 3960435887325159998
+    second: coronela_2
+  - first:
+      213: -2588488730050039253
+    second: coronela_3
+  - first:
+      213: 53392735413945092
+    second: coronela_4
+  - first:
+      213: 331706523285808032
+    second: coronela_5
+  - first:
+      213: 8297037166194620781
+    second: coronela_6
+  - first:
+      213: -5330704076332675437
+    second: coronela_7
+  - first:
+      213: 3970539663405824626
+    second: coronela_8
+  - first:
+      213: 3671618416880173521
+    second: coronela_9
+  - first:
+      213: 8129578774280805610
+    second: coronela_10
+  - first:
+      213: -7705652851153376052
+    second: coronela_11
+  - first:
+      213: 8841019556316116941
+    second: coronela_12
+  - first:
+      213: 5222977705709233936
+    second: coronela_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: coronela_0
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 671
+        width: 222
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce73a0cdf7bb54cd0800000000000000
+      internalID: -2574445454145472532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coronela_1
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 669
+        width: 214
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47dc278e4934d0ab0800000000000000
+      internalID: -5040298101123658380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coronela_2
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 671
+        width: 263
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e32a9bbc47b46f630800000000000000
+      internalID: 3960435887325159998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coronela_3
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 657
+        width: 239
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b22f344e637d31cd0800000000000000
+      internalID: -2588488730050039253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coronela_4
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 663
+        width: 213
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4034fe3f860bdb000800000000000000
+      internalID: 53392735413945092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coronela_5
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 659
+        width: 209
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a3612253557a9400800000000000000
+      internalID: 331706523285808032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coronela_6
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 31
+        width: 241
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d697e33d75ff42370800000000000000
+      internalID: 8297037166194620781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coronela_7
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 327
+        width: 276
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39ec677c2e88506b0800000000000000
+      internalID: -5330704076332675437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coronela_8
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 333
+        width: 295
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a37eb79c03a1730800000000000000
+      internalID: 3970539663405824626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coronela_9
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 291
+        width: 779
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d1cce04f7534f230800000000000000
+      internalID: 3671618416880173521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coronela_10
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 29
+        width: 227
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aec1096a2d012d070800000000000000
+      internalID: 8129578774280805610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coronela_11
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 27
+        width: 1035
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccce684ee85001590800000000000000
+      internalID: -7705652851153376052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coronela_12
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 252
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc7f08ad17c91ba70800000000000000
+      internalID: 8841019556316116941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coronela_13
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 60
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01765920d8ebb7840800000000000000
+      internalID: 5222977705709233936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      coronela_0: -2574445454145472532
+      coronela_1: -5040298101123658380
+      coronela_10: 8129578774280805610
+      coronela_11: -7705652851153376052
+      coronela_12: 8841019556316116941
+      coronela_13: 5222977705709233936
+      coronela_2: 3960435887325159998
+      coronela_3: -2588488730050039253
+      coronela_4: 53392735413945092
+      coronela_5: 331706523285808032
+      coronela_6: 8297037166194620781
+      coronela_7: -5330704076332675437
+      coronela_8: 3970539663405824626
+      coronela_9: 3671618416880173521
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

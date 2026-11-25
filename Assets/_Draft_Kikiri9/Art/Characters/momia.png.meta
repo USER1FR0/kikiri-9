@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: e4fbf6f34c0989b459ee021e8fe9aeb2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3634322899822235632
+    second: momia_0
+  - first:
+      213: 7134292852454333040
+    second: momia_1
+  - first:
+      213: -1682170311472892716
+    second: momia_2
+  - first:
+      213: -1547311968313776713
+    second: momia_3
+  - first:
+      213: 3177172288571673305
+    second: momia_4
+  - first:
+      213: 2699472685170350449
+    second: momia_5
+  - first:
+      213: 7220052649688169464
+    second: momia_6
+  - first:
+      213: -322757062038921367
+    second: momia_7
+  - first:
+      213: -695748900746565461
+    second: momia_8
+  - first:
+      213: -2435680810767849194
+    second: momia_9
+  - first:
+      213: 4159208722684720057
+    second: momia_10
+  - first:
+      213: -2292715891812551763
+    second: momia_11
+  - first:
+      213: 1644307036188421391
+    second: momia_12
+  - first:
+      213: 5160059075484290149
+    second: momia_13
+  - first:
+      213: 7263503809510957868
+    second: momia_14
+  - first:
+      213: 4164934817424583404
+    second: momia_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: momia_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 349
+        width: 327
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 010370df39a409dc0800000000000000
+      internalID: -3634322899822235632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: momia_1
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 351
+        width: 317
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07a162adc89120360800000000000000
+      internalID: 7134292852454333040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: momia_2
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 355
+        width: 343
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d433f4a30bb7a8e0800000000000000
+      internalID: -1682170311472892716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: momia_3
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 354
+        width: 333
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b562fb76f7d68ae0800000000000000
+      internalID: -1547311968313776713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: momia_4
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 198
+        width: 361
+        height: 513
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9da8782fc55971c20800000000000000
+      internalID: 3177172288571673305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: momia_5
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 632
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 179d270da14767520800000000000000
+      internalID: 2699472685170350449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: momia_6
+      rect:
+        serializedVersion: 2
+        x: 1822
+        y: 166
+        width: 320
+        height: 546
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fbf744a1a7c23460800000000000000
+      internalID: 7220052649688169464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: momia_7
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 13
+        width: 326
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96fdb608926558bf0800000000000000
+      internalID: -322757062038921367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: momia_8
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 13
+        width: 1092
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba8e12e9f043856f0800000000000000
+      internalID: -695748900746565461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: momia_9
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 224
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61962f71539b23ed0800000000000000
+      internalID: -2435680810767849194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: momia_10
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 240
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b3345efb4a78b930800000000000000
+      internalID: 4159208722684720057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: momia_11
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 232
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da3be913b03ae20e0800000000000000
+      internalID: -2292715891812551763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: momia_12
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 214
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0dafa99980c1d610800000000000000
+      internalID: 1644307036188421391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: momia_13
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 0
+        width: 383
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c8546d3663c9740800000000000000
+      internalID: 5160059075484290149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: momia_14
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 150
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c23e8962b362dc460800000000000000
+      internalID: 7263503809510957868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: momia_15
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 0
+        width: 319
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceaaf315622dcc930800000000000000
+      internalID: 4164934817424583404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      momia_0: -3634322899822235632
+      momia_1: 7134292852454333040
+      momia_10: 4159208722684720057
+      momia_11: -2292715891812551763
+      momia_12: 1644307036188421391
+      momia_13: 5160059075484290149
+      momia_14: 7263503809510957868
+      momia_15: 4164934817424583404
+      momia_2: -1682170311472892716
+      momia_3: -1547311968313776713
+      momia_4: 3177172288571673305
+      momia_5: 2699472685170350449
+      momia_6: 7220052649688169464
+      momia_7: -322757062038921367
+      momia_8: -695748900746565461
+      momia_9: -2435680810767849194
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

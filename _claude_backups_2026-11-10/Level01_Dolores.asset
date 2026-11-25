@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5325afad40e2134983dbf368e192370, type: 3}
+  m_Name: Level01_Dolores
+  m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.Levels.LevelDefinition
+  levelName: Dolores Hidalgo - Etapa 1
+  backgroundSprite: {fileID: 21300000, guid: 47b1f466024af08468b5957f39affa56, type: 3}
+  musicClip: {fileID: 8300000, guid: 9884d2da821a8e340accfbd2bceba053, type: 3}
+  worldSpeed: 3.5
+  maxSpeed: 6
+  targetDistance: 500
+  enemyPrefabs:
+  - {fileID: 3594023387938211102, guid: 1cb0001b5f139684e85a6fc3549bb1ac, type: 3}
+  obstaclePrefabs:
+  - {fileID: 8268349202210289163, guid: 0a962317b4c556a48a756395757f1181, type: 3}
+  - {fileID: 7366501032612907812, guid: 8bf852b1c4fd26b458162f1f578381f4, type: 3}
+  pickupPrefabs:
+  - {fileID: 177379635892079049, guid: 805c12f4c17c17d42a8c1bf50fbe1345, type: 3}
+  - {fileID: 5482860974971058126, guid: dd72ce932b4651141a6c0377df9ac0cd, type: 3}
+  - {fileID: 8911047900946545455, guid: 5d18d3957dbd2a1489b1531273aec55f, type: 3}
+  spawnIntervalRange: {x: 2, y: 3.5}
+  maxActiveEntities: 5
+  tutorialText: 'ESPACIO / W / Flecha arriba: Saltar
+
+    S / Flecha abajo / Shift:
+    Deslizar
+
+    J / Click: Lanzar pan
+
+
+    Meta: 500 metros sin perder los 3 corazones.'
+  endingNarrative: Primera etapa superada. Las calles de Dolores Hidalgo siguen llenas
+    de zombis. El pollo recupera el aliento y continua.
+  goldBottlesReward: 1

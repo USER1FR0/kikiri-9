@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3b0b56f14ab674198a1099789472e3, type: 3}
+  m_Name: StoryUIAssets
+  m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.UI.Story.StoryUIAssets
+  buttonNormal: {fileID: 1809117230, guid: 10dcd642d559406ab6208b0c1be7afb3, type: 3}
+  buttonPressed: {fileID: -717828422, guid: 10dcd642d559406ab6208b0c1be7afb3, type: 3}
+  buttonSelected: {fileID: -386410346, guid: 10dcd642d559406ab6208b0c1be7afb3, type: 3}
+  buttonDisabled: {fileID: -420645579, guid: 10dcd642d559406ab6208b0c1be7afb3, type: 3}
+  font: {fileID: 11400000, guid: 2c23ac03b99e4ba4590d307a153416d8, type: 2}

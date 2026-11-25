@@ -1,0 +1,639 @@
+fileFormatVersion: 2
+guid: 3c848cc210071be448c161bc612ea8d2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8210026414897807317
+    second: kikiri9_0
+  - first:
+      213: 6386272394138909727
+    second: kikiri9_1
+  - first:
+      213: -5674362020918182070
+    second: kikiri9_2
+  - first:
+      213: 8519692374491109655
+    second: kikiri9_3
+  - first:
+      213: 559720656820795428
+    second: kikiri9_4
+  - first:
+      213: 4956834109290681884
+    second: kikiri9_5
+  - first:
+      213: -1938727334107640083
+    second: kikiri9_6
+  - first:
+      213: -729156761516433068
+    second: kikiri9_7
+  - first:
+      213: -8044953340251812850
+    second: kikiri9_8
+  - first:
+      213: 2728039954325549077
+    second: kikiri9_9
+  - first:
+      213: -8307921801389599278
+    second: kikiri9_10
+  - first:
+      213: -4425059764531437122
+    second: kikiri9_11
+  - first:
+      213: 5410990038858086408
+    second: kikiri9_12
+  - first:
+      213: -5432330259287090078
+    second: kikiri9_13
+  - first:
+      213: -8548086832537267397
+    second: kikiri9_14
+  - first:
+      213: 8003315380186354225
+    second: kikiri9_15
+  - first:
+      213: 8087212978833841619
+    second: kikiri9_16
+  - first:
+      213: -6690576255576703465
+    second: kikiri9_17
+  - first:
+      213: -6891190434450019590
+    second: kikiri9_18
+  - first:
+      213: -2655737307537051260
+    second: kikiri9_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kikiri9_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 727
+        width: 229
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dfbe88968fdfe170800000000000000
+      internalID: 8210026414897807317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_1
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 744
+        width: 260
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c788318e890a850800000000000000
+      internalID: 6386272394138909727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_2
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 467
+        width: 245
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4f34385ecd9041b0800000000000000
+      internalID: -5674362020918182070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 781
+        width: 241
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 719952943170c3670800000000000000
+      internalID: 8519692374491109655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_4
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 431
+        width: 231
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 428704bc8f684c700800000000000000
+      internalID: 559720656820795428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_5
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 433
+        width: 246
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c169fc62c563ac440800000000000000
+      internalID: 4956834109290681884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_6
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 780
+        width: 231
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dee8c2ee2c14815e0800000000000000
+      internalID: -1938727334107640083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_7
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 782
+        width: 253
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4512d34e9c381e5f0800000000000000
+      internalID: -729156761516433068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_8
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 493
+        width: 229
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0cc2bf9f859a5090800000000000000
+      internalID: -8044953340251812850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_9
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 709
+        width: 248
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 510b5aa72e1fbd520800000000000000
+      internalID: 2728039954325549077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 489
+        width: 241
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d5137e832554bc80800000000000000
+      internalID: -8307921801389599278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_11
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 481
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb1ea31d6970792c0800000000000000
+      internalID: -4425059764531437122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_12
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 489
+        width: 231
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 808305d85c2b71b40800000000000000
+      internalID: 5410990038858086408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_13
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 25
+        width: 239
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26c5690396c7c94b0800000000000000
+      internalID: -5432330259287090078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_14
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 25
+        width: 259
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b331c65c0581f5980800000000000000
+      internalID: -8548086832537267397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_15
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 449
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1329d655fec711f60800000000000000
+      internalID: 8003315380186354225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_16
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 249
+        width: 232
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ddd15a3b5d8b3070800000000000000
+      internalID: 8087212978833841619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_17
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 21
+        width: 233
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71effaff75c4623a0800000000000000
+      internalID: -6690576255576703465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_18
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 25
+        width: 775
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afa690b9fc29d50a0800000000000000
+      internalID: -6891190434450019590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kikiri9_19
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 253
+        width: 530
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 481708f4dfce42bd0800000000000000
+      internalID: -2655737307537051260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      kikiri9_0: 8210026414897807317
+      kikiri9_1: 6386272394138909727
+      kikiri9_10: -8307921801389599278
+      kikiri9_11: -4425059764531437122
+      kikiri9_12: 5410990038858086408
+      kikiri9_13: -5432330259287090078
+      kikiri9_14: -8548086832537267397
+      kikiri9_15: 8003315380186354225
+      kikiri9_16: 8087212978833841619
+      kikiri9_17: -6690576255576703465
+      kikiri9_18: -6891190434450019590
+      kikiri9_19: -2655737307537051260
+      kikiri9_2: -5674362020918182070
+      kikiri9_3: 8519692374491109655
+      kikiri9_4: 559720656820795428
+      kikiri9_5: 4956834109290681884
+      kikiri9_6: -1938727334107640083
+      kikiri9_7: -729156761516433068
+      kikiri9_8: -8044953340251812850
+      kikiri9_9: 2728039954325549077
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

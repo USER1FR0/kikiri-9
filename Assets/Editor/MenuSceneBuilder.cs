@@ -1,0 +1,605 @@
+using System.Linq;
+using UnityEditor;
+using UnityEditor.SceneManagement;
+using UnityEngine;
+using UnityEditor.Events;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using Kikiri9.Session;
+using Kikiri9.UI;
+using TMPro;
+
+namespace Kikiri9.EditorTools
+{
+    // Herramienta de editor que construye las escenas Boot y MainMenu desde cero:
+    // Canvas, EventSystem, botones con Sprite Swap (usando interfaz.png) y el
+    // cableado de MainMenuController. Se puede volver a ejecutar para regenerar
+    // las escenas si algo se rompe a mano.
+    public static class MenuSceneBuilder
+    {
+        private const string InterfaceSpriteSheetPath = "Assets/_Draft_2_Kikiri9/Art/UI/interfaz.png";
+        private const string ButtonsSpriteSheetPath = "Assets/_Draft_2_Kikiri9/Art/UI/botones.png";
+        private const string MenuBackgroundPath = "Assets/_Draft_Kikiri9/Art/Backgrounds/menu_guanajuato.png";
+        private const string BootScenePath = "Assets/_Project/Scenes/Boot.unity";
+        private const string MainMenuScenePath = "Assets/_Project/Scenes/MainMenu.unity";
+        private const string Level01ScenePath = "Assets/_Project/Scenes/Level01_Dolores.unity";
+        private const string LevelSelectScenePath = "Assets/_Project/Scenes/LevelSelect.unity";
+
+        [MenuItem("Tools/Kikiri-9/Build Main Menu")]
+        public static void BuildMainMenuScenes()
+        {
+            BuildBootScene();
+            BuildMainMenuScene();
+            RegisterScenesInBuildSettings();
+
+            Debug.Log("Listo: se generaron Boot.unity y MainMenu.unity y se registraron en Build Settings.");
+        }
+
+        private static void BuildBootScene()
+        {
+            var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
+
+            CreateEventSystem();
+            CreateFaderObject();
+            CreateBackgroundCamera();
+
+            var canvasGo = CreateCanvas("Canvas");
+            var logoText = CreateText(canvasGo.transform, "LogoText", "KIKIRI-9", 48, TextAnchor.MiddleCenter);
+            StretchFull(logoText.rectTransform);
+
+            var bootGo = new GameObject("BootSplash");
+            var bootSplash = bootGo.AddComponent<BootSplash>();
+            SetPrivateField(bootSplash, "nextSceneName", "MainMenu");
+
+            EditorSceneManager.SaveScene(scene, BootScenePath, true);
+        }
+
+        private static void BuildMainMenuScene()
+        {
+            var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
+
+            CreateEventSystem();
+            CreateFaderObject();
+            EnsureGameSessionExists();
+            CreateBackgroundCamera();
+
+            var canvasGo = CreateCanvas("Canvas");
+            var canvasTransform = canvasGo.transform;
+
+            // Fondo: la ilustracion de Guanajuato (Dia de Muertos) ocupando toda la
+            // pantalla, detras de todo lo demas. preserveAspect queda en false porque
+            // la relacion de aspecto de la imagen (1672x941) practicamente coincide
+            // con la resolucion de referencia del canvas (1920x1080).
+            CreateBackgroundImage(canvasTransform);
+
+            // Titulo en dos lineas (nombre + subtitulo) en vez de una sola linea larga,
+            // para que se lea como un logotipo. Contorno oscuro para que no se pierda
+            // contra el cielo de la imagen de fondo.
+            var titleText = CreateText(canvasTransform, "TitleText", "KIKIRI-9", 64, TextAnchor.MiddleCenter);
+            titleText.fontStyle = FontStyle.Bold;
+            titleText.color = new Color(1f, 0.78f, 0.32f);
+            AddOutline(titleText.gameObject, new Color(0.15f, 0.05f, 0.2f), new Vector2(3f, -3f));
+            SetAnchoredRect(titleText.rectTransform, new Vector2(0.5f, 1f), new Vector2(0.5f, 1f), new Vector2(0f, -220f), new Vector2(900f, 90f));
+
+            var subtitleText = CreateText(canvasTransform, "SubtitleText", "EL ULTIMO PAN", 26, TextAnchor.MiddleCenter);
+            subtitleText.color = new Color(0.92f, 0.9f, 1f);
+            AddOutline(subtitleText.gameObject, new Color(0.15f, 0.05f, 0.2f), new Vector2(2f, -2f));
+            SetAnchoredRect(subtitleText.rectTransform, new Vector2(0.5f, 1f), new Vector2(0.5f, 1f), new Vector2(0f, -300f), new Vector2(700f, 50f));
+
+            // Panel semitransparente detras de los botones: asegura contraste sin
+            // importar que parte de la imagen quede detras (cielo, cerro o pueblo).
+            CreateMenuPanel(canvasTransform, new Vector2(0f, -146f), new Vector2(480f, 692f));
+
+            var normal = LoadSprite(ButtonsSpriteSheetPath, "primario_normal");
+            var highlighted = LoadSprite(ButtonsSpriteSheetPath, "primario_seleccionado");
+            var pressed = LoadSprite(ButtonsSpriteSheetPath, "primario_presionado");
+            var disabled = LoadSprite(ButtonsSpriteSheetPath, "primario_desactivado");
+
+            var normalSecondary = LoadSprite(ButtonsSpriteSheetPath, "secundario_normal");
+            var highlightedSecondary = LoadSprite(ButtonsSpriteSheetPath, "secundario_seleccionado");
+            var pressedSecondary = LoadSprite(ButtonsSpriteSheetPath, "secundario_presionado");
+            var disabledSecondary = LoadSprite(ButtonsSpriteSheetPath, "secundario_desactivado");
+
+            // JUGAR usa el sprite primario y es el boton mas grande: es la accion
+            // principal del menu. Los otros cuatro usan el sprite secundario y son
+            // mas pequenos, para dar jerarquia visual clara. SALIR queda con un
+            // espacio extra arriba para separarlo del resto (accion distinta a jugar).
+            var playButton = CreateMenuButton(canvasTransform, "PlayButton", "JUGAR", 90f, new Vector2(440f, 150f), 36, 0f, normal, highlighted, pressed, disabled);
+            var continueButton = CreateMenuButton(canvasTransform, "ContinueButton", "CONTINUAR", -50f, new Vector2(340f, 100f), 26, 0.8f, normalSecondary, highlightedSecondary, pressedSecondary, disabledSecondary);
+            var optionsButton = CreateMenuButton(canvasTransform, "OptionsButton", "OPCIONES", -165f, new Vector2(340f, 100f), 26, 1.6f, normalSecondary, highlightedSecondary, pressedSecondary, disabledSecondary);
+            var creditsButton = CreateMenuButton(canvasTransform, "CreditsButton", "CREDITOS", -280f, new Vector2(340f, 100f), 26, 2.4f, normalSecondary, highlightedSecondary, pressedSecondary, disabledSecondary);
+            var exitButton = CreateMenuButton(canvasTransform, "ExitButton", "SALIR", -410f, new Vector2(340f, 100f), 26, 3.2f, normalSecondary, highlightedSecondary, pressedSecondary, disabledSecondary);
+
+            ChainNavigationVertical(playButton, continueButton, optionsButton, creditsButton, exitButton);
+
+            var optionsPanel = CreateOptionsPanel(canvasTransform);
+            var creditsPanel = CreateOverlayPanel(canvasTransform, "CreditsPanel", "CREDITOS\n\nManuel Mata Campos\nJuan Francisco Rodriguez Guerrero");
+            var exitMessagePanel = CreateOverlayPanel(canvasTransform, "ExitMessagePanel", "Gracias por jugar. Puedes cerrar esta pestana para volver al portal.");
+
+            AddCloseButton(optionsPanel.transform);
+            AddCloseButton(creditsPanel.transform);
+
+            optionsPanel.SetActive(false);
+            creditsPanel.SetActive(false);
+            exitMessagePanel.SetActive(false);
+
+            var controllerGo = new GameObject("MainMenuController");
+            var controller = controllerGo.AddComponent<MainMenuController>();
+            SetPrivateField(controller, "optionsPanel", optionsPanel);
+            SetPrivateField(controller, "creditsPanel", creditsPanel);
+            SetPrivateField(controller, "continueButton", continueButton.gameObject);
+            SetPrivateField(controller, "exitMessagePanel", exitMessagePanel);
+            SetPrivateField(controller, "defaultLevelSceneName", "Level01_Dolores");
+            SetPrivateField(controller, "levelSelectSceneName", "LevelSelect");
+            SetPrivateField(controller, "firstSelectedButton", playButton.gameObject);
+
+            UnityEventTools.AddPersistentListener(playButton.onClick, controller.OnPlayPressed);
+            UnityEventTools.AddPersistentListener(continueButton.onClick, controller.OnContinuePressed);
+            UnityEventTools.AddPersistentListener(optionsButton.onClick, controller.OnOptionsPressed);
+            UnityEventTools.AddPersistentListener(creditsButton.onClick, controller.OnCreditsPressed);
+            UnityEventTools.AddPersistentListener(exitButton.onClick, controller.OnExitPressed);
+
+            foreach (var closeButton in optionsPanel.GetComponentsInChildren<Button>(true))
+            {
+                if (closeButton.gameObject.name == "CloseButton")
+                {
+                    UnityEventTools.AddPersistentListener(closeButton.onClick, controller.OnClosePanelPressed);
+                }
+            }
+
+            foreach (var closeButton in creditsPanel.GetComponentsInChildren<Button>(true))
+            {
+                if (closeButton.gameObject.name == "CloseButton")
+                {
+                    UnityEventTools.AddPersistentListener(closeButton.onClick, controller.OnClosePanelPressed);
+                }
+            }
+
+            EditorSceneManager.SaveScene(scene, MainMenuScenePath, true);
+        }
+
+        private static void RegisterScenesInBuildSettings()
+        {
+            var scenes = EditorBuildSettings.scenes.ToList();
+            scenes.RemoveAll(s => s.path == BootScenePath
+                || s.path == MainMenuScenePath
+                || s.path == LevelSelectScenePath
+                || s.path == Level01ScenePath);
+
+            // Orden: Boot (0) -> MainMenu (1) -> LevelSelect (2) -> Level01_Dolores (3)
+            scenes.Insert(0, new EditorBuildSettingsScene(Level01ScenePath, true));
+            scenes.Insert(0, new EditorBuildSettingsScene(LevelSelectScenePath, true));
+            scenes.Insert(0, new EditorBuildSettingsScene(MainMenuScenePath, true));
+            scenes.Insert(0, new EditorBuildSettingsScene(BootScenePath, true));
+
+            EditorBuildSettings.scenes = scenes.ToArray();
+        }
+
+        // Menu rapido independiente para agregar Level01 a Build Settings sin regenerar Boot/MainMenu
+        [MenuItem("Tools/Kikiri-9/Register Scenes In Build")]
+        public static void RegisterScenesOnly()
+        {
+            RegisterScenesInBuildSettings();
+            Debug.Log("Build Settings actualizado: Boot, MainMenu, LevelSelect, Level01_Dolores.");
+        }
+
+        private static GameObject CreateEventSystem()
+        {
+            var go = new GameObject("EventSystem");
+            go.AddComponent<EventSystem>();
+
+            var inputModule = go.AddComponent<InputSystemUIInputModule>();
+            // Al crear el componente por codigo no se asigna automaticamente el mapa de
+            // controles (mouse, teclado, gamepad, tactil). AssignDefaultActions() crea y
+            // asigna el set por defecto, igual que si lo hubieramos agregado a mano desde
+            // el menu de Unity.
+            inputModule.AssignDefaultActions();
+
+            return go;
+        }
+
+        private static GameObject CreateFaderObject()
+        {
+            var go = new GameObject("SceneFader");
+            var canvasGo = CreateCanvas("FadeCanvas");
+            canvasGo.transform.SetParent(go.transform);
+            var canvas = canvasGo.GetComponent<Canvas>();
+            canvas.sortingOrder = 1000;
+
+            var imageGo = new GameObject("FadeImage");
+            imageGo.transform.SetParent(canvasGo.transform);
+            var image = imageGo.AddComponent<Image>();
+            image.color = Color.black;
+            StretchFull(imageGo.GetComponent<RectTransform>());
+
+            var canvasGroup = imageGo.AddComponent<CanvasGroup>();
+
+            var fader = go.AddComponent<SceneFader>();
+            SetPrivateField(fader, "canvasGroup", canvasGroup);
+            SetPrivateField(fader, "fadeDuration", 0.4f);
+
+            return go;
+        }
+
+        private static void EnsureGameSessionExists()
+        {
+            var go = new GameObject("GameSession");
+            go.AddComponent<GameSession>();
+        }
+
+        private static void CreateBackgroundCamera()
+        {
+            var go = new GameObject("Main Camera");
+            var camera = go.AddComponent<Camera>();
+            camera.clearFlags = CameraClearFlags.SolidColor;
+            camera.backgroundColor = new Color(0.05f, 0.05f, 0.08f);
+            camera.orthographic = true;
+            go.tag = "MainCamera";
+        }
+
+        private static GameObject CreateCanvas(string name)
+        {
+            var go = new GameObject(name);
+            var canvas = go.AddComponent<Canvas>();
+            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+
+            var scaler = go.AddComponent<CanvasScaler>();
+            scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+            scaler.referenceResolution = new Vector2(1920, 1080);
+            scaler.matchWidthOrHeight = 0.5f;
+
+            go.AddComponent<GraphicRaycaster>();
+            return go;
+        }
+
+        private static void CreateBackgroundImage(Transform parent)
+        {
+            var go = new GameObject("Background", typeof(RectTransform));
+            go.transform.SetParent(parent, false);
+            go.transform.SetAsFirstSibling();
+
+            var image = go.AddComponent<Image>();
+            image.sprite = LoadSprite(MenuBackgroundPath, "menu_guanajuato_0");
+            image.type = Image.Type.Simple;
+            image.preserveAspect = false;
+            image.raycastTarget = false;
+
+            StretchFull(go.GetComponent<RectTransform>());
+        }
+
+        private static GameObject CreateMenuPanel(Transform parent, Vector2 anchoredPosition, Vector2 size)
+        {
+            var go = new GameObject("ButtonPanel", typeof(RectTransform));
+            go.transform.SetParent(parent, false);
+
+            var rect = go.GetComponent<RectTransform>();
+            SetAnchoredRect(rect, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), anchoredPosition, size);
+
+            var image = go.AddComponent<Image>();
+            image.color = new Color(0.06f, 0.03f, 0.09f, 0.55f);
+            image.raycastTarget = false;
+
+            return go;
+        }
+
+        private static Text CreateText(Transform parent, string name, string content, int fontSize, TextAnchor alignment)
+        {
+            var go = new GameObject(name, typeof(RectTransform));
+            go.transform.SetParent(parent, false);
+
+            var text = go.AddComponent<Text>();
+            text.text = content;
+            text.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+            text.fontSize = fontSize;
+            text.alignment = alignment;
+            text.color = Color.white;
+            return text;
+        }
+
+        private static void AddOutline(GameObject go, Color color, Vector2 distance)
+        {
+            var outline = go.AddComponent<Outline>();
+            outline.effectColor = color;
+            outline.effectDistance = distance;
+        }
+
+        private static Button CreateMenuButton(Transform parent, string name, string label, float yOffset, Vector2 size, int fontSize, float floatPhase, Sprite normal, Sprite highlighted, Sprite pressed, Sprite disabled)
+        {
+            var go = new GameObject(name, typeof(RectTransform));
+            go.transform.SetParent(parent, false);
+
+            var rect = go.GetComponent<RectTransform>();
+            SetAnchoredRect(rect, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0f, yOffset), size);
+
+            var image = go.AddComponent<Image>();
+            image.sprite = normal;
+            image.type = Image.Type.Simple;
+
+            var button = go.AddComponent<Button>();
+            button.targetGraphic = image;
+            button.transition = Selectable.Transition.SpriteSwap;
+
+            var spriteState = new SpriteState
+            {
+                highlightedSprite = highlighted,
+                pressedSprite = pressed,
+                disabledSprite = disabled
+            };
+            button.spriteState = spriteState;
+
+            var textComponent = CreateText(go.transform, "Label", label, fontSize, TextAnchor.MiddleCenter);
+            textComponent.fontStyle = FontStyle.Bold;
+            StretchFull(textComponent.rectTransform);
+
+            // Flotado suave e independiente por boton (phaseOffset distinto en cada
+            // llamada) para que el menu se sienta "vivo" sin verse sincronizado.
+            var floating = go.AddComponent<FloatingButton>();
+            SetPrivateField(floating, "phaseOffset", floatPhase);
+
+            return button;
+        }
+
+        // Panel de Opciones real del Menu Principal: musica/SFX (sliders arrastrables),
+        // calidad y "mostrar controles" como botones ciclicos (mismo botones.png que el
+        // resto del menu). Es un solo GameObject (sin split container/visual, a diferencia
+        // de los paneles de UIBootstrap) porque MainMenuController ya lo activa/desactiva
+        // directamente con SetActive(); OptionsPanel.OnEnable() refresca los valores solo.
+        // El cierre lo sigue manejando el boton VOLVER existente (AddCloseButton + OnClosePanelPressed).
+        private static GameObject CreateOptionsPanel(Transform parent)
+        {
+            var go = new GameObject("OptionsPanel", typeof(RectTransform));
+            go.transform.SetParent(parent, false);
+            StretchFull(go.GetComponent<RectTransform>());
+
+            // Dim opaco total detras para que no se vea el MainMenu debajo
+            var bgImage = go.AddComponent<Image>();
+            bgImage.color = new Color(0f, 0f, 0f, 0.92f);
+
+            // Contenedor decorativo (panel_resultados) centrado como marco del contenido
+            var panelContainer = new GameObject("Container", typeof(RectTransform), typeof(Image));
+            panelContainer.transform.SetParent(go.transform, false);
+            var pcRt = (RectTransform)panelContainer.transform;
+            pcRt.anchorMin = new Vector2(0.5f, 0.5f);
+            pcRt.anchorMax = new Vector2(0.5f, 0.5f);
+            pcRt.pivot = new Vector2(0.5f, 0.5f);
+            pcRt.anchoredPosition = new Vector2(0f, 20f);
+            pcRt.sizeDelta = new Vector2(920f, 620f);
+            var pcImg = panelContainer.GetComponent<Image>();
+            var panelSprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/_Project/Art/UI/Story/panel_resultados.png");
+            if (panelSprite != null)
+            {
+                pcImg.sprite = panelSprite;
+                pcImg.type = Image.Type.Sliced;
+            }
+            else
+            {
+                pcImg.color = new Color(0.06f, 0.03f, 0.09f, 0.95f);
+            }
+            pcImg.raycastTarget = false;
+
+            var title = CreateText(go.transform, "Title", "OPCIONES", 34, TextAnchor.MiddleCenter);
+            SetAnchoredRect(title.rectTransform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0f, 220f), new Vector2(700f, 60f));
+
+            var musicSlider = CreateOptionsSliderRow(go.transform, "Musica", 90f);
+            var sfxSlider = CreateOptionsSliderRow(go.transform, "Efectos", 20f);
+
+            var normalSecondary = LoadSprite(ButtonsSpriteSheetPath, "secundario_normal");
+            var highlightedSecondary = LoadSprite(ButtonsSpriteSheetPath, "secundario_seleccionado");
+            var pressedSecondary = LoadSprite(ButtonsSpriteSheetPath, "secundario_presionado");
+            var disabledSecondary = LoadSprite(ButtonsSpriteSheetPath, "secundario_desactivado");
+
+            var qualityButton = CreateSmallSpriteButton(go.transform, "QualityButton", "Calidad: Media",
+                new Vector2(-170f, -70f), new Vector2(300f, 80f),
+                normalSecondary, highlightedSecondary, pressedSecondary, disabledSecondary, out var qualityLabel);
+            var controlsButton = CreateSmallSpriteButton(go.transform, "ControlsButton", "Controles: Si",
+                new Vector2(170f, -70f), new Vector2(300f, 80f),
+                normalSecondary, highlightedSecondary, pressedSecondary, disabledSecondary, out var controlsLabel);
+
+            var op = go.AddComponent<OptionsPanel>();
+            SetPrivateField(op, "musicSlider", musicSlider);
+            SetPrivateField(op, "sfxSlider", sfxSlider);
+            SetPrivateField(op, "qualityButton", qualityButton);
+            SetPrivateField(op, "qualityLabel", qualityLabel);
+            SetPrivateField(op, "controlsButton", controlsButton);
+            SetPrivateField(op, "controlsLabel", controlsLabel);
+            // root y returnToPanel quedan null a proposito: ver comentario arriba.
+
+            UnityEventTools.AddPersistentListener(qualityButton.onClick, op.OnQualityClicked);
+            UnityEventTools.AddPersistentListener(controlsButton.onClick, op.OnControlsClicked);
+
+            return go;
+        }
+
+        private static Slider CreateOptionsSliderRow(Transform parent, string label, float yOffset)
+        {
+            var labelText = CreateText(parent, $"{label}Label", label, 24, TextAnchor.MiddleLeft);
+            SetAnchoredRect(labelText.rectTransform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f),
+                new Vector2(-330f, yOffset), new Vector2(220f, 36f));
+
+            var barraMarco = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/_Draft_2_Kikiri9/Art/UI/barra_marco.png");
+            var barraRelleno = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/_Draft_2_Kikiri9/Art/UI/barra_relleno.png");
+
+            var go = new GameObject($"{label}Slider", typeof(RectTransform), typeof(Image), typeof(Slider));
+            go.transform.SetParent(parent, false);
+            SetAnchoredRect((RectTransform)go.transform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f),
+                new Vector2(90f, yOffset), new Vector2(560f, 30f));
+
+            var bg = go.GetComponent<Image>();
+            bg.sprite = barraMarco;
+            bg.type = Image.Type.Sliced;
+
+            var slider = go.GetComponent<Slider>();
+            slider.minValue = 0f; slider.maxValue = 1f; slider.value = 1f;
+            slider.transition = Selectable.Transition.None;
+
+            var fillArea = new GameObject("Fill Area", typeof(RectTransform));
+            fillArea.transform.SetParent(go.transform, false);
+            var fillAreaRect = (RectTransform)fillArea.transform;
+            fillAreaRect.anchorMin = Vector2.zero; fillAreaRect.anchorMax = Vector2.one;
+            fillAreaRect.sizeDelta = new Vector2(-12f, -8f); fillAreaRect.anchoredPosition = Vector2.zero;
+
+            var fillGo = new GameObject("Fill", typeof(RectTransform), typeof(Image));
+            fillGo.transform.SetParent(fillArea.transform, false);
+            StretchFull((RectTransform)fillGo.transform);
+            var fillImg = fillGo.GetComponent<Image>();
+            fillImg.sprite = barraRelleno;
+            fillImg.type = Image.Type.Simple;
+
+            slider.fillRect = (RectTransform)fillGo.transform;
+            slider.targetGraphic = fillImg;
+            slider.direction = Slider.Direction.LeftToRight;
+
+            var handleArea = new GameObject("Handle Slide Area", typeof(RectTransform));
+            handleArea.transform.SetParent(go.transform, false);
+            var handleAreaRect = (RectTransform)handleArea.transform;
+            handleAreaRect.anchorMin = Vector2.zero; handleAreaRect.anchorMax = Vector2.one;
+            handleAreaRect.sizeDelta = new Vector2(-12f, 0f); handleAreaRect.anchoredPosition = Vector2.zero;
+
+            var handleGo = new GameObject("Handle", typeof(RectTransform), typeof(Image));
+            handleGo.transform.SetParent(handleArea.transform, false);
+            var handleImg = handleGo.GetComponent<Image>();
+            handleImg.color = new Color(1f, 0.85f, 0.45f, 1f);
+            var handleRect = (RectTransform)handleGo.transform;
+            handleRect.anchorMin = new Vector2(0f, 0.5f);
+            handleRect.anchorMax = new Vector2(0f, 0.5f);
+            handleRect.pivot = new Vector2(0.5f, 0.5f);
+            handleRect.sizeDelta = new Vector2(24f, 24f);
+            slider.handleRect = handleRect;
+
+            return slider;
+        }
+
+        private static Button CreateSmallSpriteButton(Transform parent, string name, string label, Vector2 anchoredPos, Vector2 size,
+            Sprite normal, Sprite highlighted, Sprite pressed, Sprite disabled, out TMP_Text labelText)
+        {
+            var go = new GameObject(name, typeof(RectTransform));
+            go.transform.SetParent(parent, false);
+            SetAnchoredRect((RectTransform)go.transform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), anchoredPos, size);
+
+            var image = go.AddComponent<Image>();
+            image.sprite = normal;
+            image.type = Image.Type.Simple;
+
+            var button = go.AddComponent<Button>();
+            button.targetGraphic = image;
+            button.transition = Selectable.Transition.SpriteSwap;
+            button.spriteState = new SpriteState { highlightedSprite = highlighted, pressedSprite = pressed, disabledSprite = disabled };
+
+            var textGo = new GameObject("Label", typeof(RectTransform));
+            textGo.transform.SetParent(go.transform, false);
+            labelText = textGo.AddComponent<TextMeshProUGUI>();
+            labelText.text = label;
+            labelText.fontSize = 22;
+            labelText.fontStyle = FontStyles.Bold;
+            labelText.alignment = TextAlignmentOptions.Center;
+            labelText.color = Color.white;
+            StretchFull((RectTransform)textGo.transform);
+
+            return button;
+        }
+
+        private static GameObject CreateOverlayPanel(Transform parent, string name, string message)
+        {
+            var go = new GameObject(name, typeof(RectTransform));
+            go.transform.SetParent(parent, false);
+
+            var rect = go.GetComponent<RectTransform>();
+            StretchFull(rect);
+
+            var image = go.AddComponent<Image>();
+            image.color = new Color(0f, 0f, 0f, 0.85f);
+
+            var text = CreateText(go.transform, "Message", message, 30, TextAnchor.MiddleCenter);
+            SetAnchoredRect(text.rectTransform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(1000f, 400f));
+
+            return go;
+        }
+
+        private static void AddCloseButton(Transform panelTransform)
+        {
+            var go = new GameObject("CloseButton", typeof(RectTransform));
+            go.transform.SetParent(panelTransform, false);
+
+            var rect = go.GetComponent<RectTransform>();
+            SetAnchoredRect(rect, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0f, 90f), new Vector2(360f, 110f));
+
+            // Mismo sprite que el boton JUGAR (primario_normal), Simple como MainMenu
+            var normal = LoadSprite(ButtonsSpriteSheetPath, "primario_normal");
+            var highlighted = LoadSprite(ButtonsSpriteSheetPath, "primario_seleccionado");
+            var pressed = LoadSprite(ButtonsSpriteSheetPath, "primario_presionado");
+            var disabled = LoadSprite(ButtonsSpriteSheetPath, "primario_desactivado");
+
+            var image = go.AddComponent<Image>();
+            image.sprite = normal;
+            image.type = Image.Type.Simple;
+            image.color = Color.white;
+
+            var btn = go.AddComponent<Button>();
+            btn.targetGraphic = image;
+            btn.transition = Selectable.Transition.SpriteSwap;
+            btn.spriteState = new SpriteState { highlightedSprite = highlighted, pressedSprite = pressed, disabledSprite = disabled };
+
+            var text = CreateText(go.transform, "Label", "VOLVER", 30, TextAnchor.MiddleCenter);
+            text.fontStyle = FontStyle.Bold;
+            StretchFull(text.rectTransform);
+            AddOutline(text.gameObject, new Color(0.1f, 0.05f, 0.01f, 1f), new Vector2(1.5f, -1.5f));
+        }
+
+        private static void ChainNavigationVertical(params Button[] buttons)
+        {
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                var navigation = new Navigation { mode = Navigation.Mode.Explicit };
+
+                if (i > 0)
+                {
+                    navigation.selectOnUp = buttons[i - 1];
+                }
+
+                if (i < buttons.Length - 1)
+                {
+                    navigation.selectOnDown = buttons[i + 1];
+                }
+
+                buttons[i].navigation = navigation;
+            }
+        }
+
+        private static void StretchFull(RectTransform rect)
+        {
+            rect.anchorMin = Vector2.zero;
+            rect.anchorMax = Vector2.one;
+            rect.offsetMin = Vector2.zero;
+            rect.offsetMax = Vector2.zero;
+        }
+
+        private static void SetAnchoredRect(RectTransform rect, Vector2 anchorMin, Vector2 anchorMax, Vector2 anchoredPosition, Vector2 sizeDelta)
+        {
+            rect.anchorMin = anchorMin;
+            rect.anchorMax = anchorMax;
+            rect.anchoredPosition = anchoredPosition;
+            rect.sizeDelta = sizeDelta;
+        }
+
+        private static Sprite LoadSprite(string path, string spriteName)
+        {
+            return AssetDatabase.LoadAllAssetsAtPath(path)
+                .OfType<Sprite>()
+                .FirstOrDefault(s => s.name == spriteName);
+        }
+
+        private static void SetPrivateField(object target, string fieldName, object value)
+        {
+            var field = target.GetType().GetField(fieldName, System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Public);
+            if (field == null)
+            {
+                Debug.LogWarning($"MenuSceneBuilder: no se encontro el campo '{fieldName}' en {target.GetType().Name}.");
+                return;
+            }
+
+            field.SetValue(target, value);
+        }
+    }
+}

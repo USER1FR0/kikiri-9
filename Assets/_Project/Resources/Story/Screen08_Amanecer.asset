@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e7d5ce854545c44a714e741b8a84d5, type: 3}
+  m_Name: Screen08_Amanecer
+  m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.UI.Story.StoryScreenDefinition
+  background: {fileID: 2260795218314309336, guid: ff209e91d4270794ab18765e5ac7b41a, type: 3}
+  pages:
+  - 'El Callejon del Beso se vacia.
+
+
+    La Coronela recibe el ultimo pan
+
+    con
+    las dos manos.'
+  - 'El amanecer entra por los callejones.
+
+    Limpia la ciudad despacio.'
+  - 'Kikiri-9 cierra los ojos.
+
+
+    Esta vez, nadie va a volver a encenderlo.
+
+    Esta
+    vez, nadie necesita hacerlo.'
+  textEs: 
+  fadeInSeconds: 0.5
+  fadeOutSeconds: 0.35
+  effects:
+  - id: cempasuchil_final
+    frames:
+    - {fileID: 190986936, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: -1968250982, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: 1316478228, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: 1592440299, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    frameRate: 3
+    loop: 1
+    anchor: {x: 0.5, y: 0.2}
+    size: {x: 240, y: 240}
+    tint: {r: 1, g: 0.85, b: 0.4, a: 0.85}
+    startDelay: 0
+    randomRepeatInterval: 0
