@@ -10,6 +10,22 @@ namespace Kikiri9.Session
     public class PlayerHealth : MonoBehaviour
     {
         private const string EnemyTag = "Enemy";
+        private const string ObstacleTag = "Obstacle";
+
+        // Un obstaculo no saltado hace el mismo dano que un enemigo: 1 corazon
+        // y el jugador lo atraviesa (los obstaculos ahora son triggers), evitando
+        // que Kikiri se quede atorado contra ellos.
+        private static bool IsDamagingTag(GameObject go)
+            => go.CompareTag(EnemyTag) || go.CompareTag(ObstacleTag);
+
+        // Para obstaculos: si los pies de Kikiri quedan por encima del centro
+        // del obstaculo, viene cayendo desde arriba (aterrizo sobre el) y NO debe
+        // recibir dano. Solo hace dano el golpe de lado (a ras de piso).
+        private bool LandedOnTop(Collider2D obstacle)
+        {
+            if (ownCollider == null || obstacle == null) return false;
+            return ownCollider.bounds.min.y >= obstacle.bounds.center.y;
+        }
 
         [SerializeField] private int maxHealth = 3;
         [SerializeField] private float invulnerabilityDuration = 1f;
@@ -42,8 +58,9 @@ namespace Kikiri9.Session
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (!collision.gameObject.CompareTag(EnemyTag)) return;
+            if (!IsDamagingTag(collision.gameObject)) return;
             if (IsInvulnerable) { IgnorePair(collision.collider); return; }
+            if (collision.collider.CompareTag(ObstacleTag) && LandedOnTop(collision.collider)) return;
             TakeDamage(1);
             IgnorePair(collision.collider);
         }
@@ -51,13 +68,14 @@ namespace Kikiri9.Session
         private void OnCollisionStay2D(Collision2D collision)
         {
             if (!IsInvulnerable) return;
-            if (collision.gameObject.CompareTag(EnemyTag)) IgnorePair(collision.collider);
+            if (IsDamagingTag(collision.gameObject)) IgnorePair(collision.collider);
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (!other.CompareTag(EnemyTag)) return;
+            if (!IsDamagingTag(other.gameObject)) return;
             if (IsInvulnerable) { IgnorePair(other); return; }
+            if (other.CompareTag(ObstacleTag) && LandedOnTop(other)) return;
             TakeDamage(1);
             IgnorePair(other);
         }
