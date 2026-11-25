@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2541f498660d48d46a44044998920d0e, type: 3}
+  m_Name: StoryFlow
+  m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.UI.Story.StoryFlow
+  beforeLevel1:
+  - {fileID: 11400000, guid: d027cf45f6f63e744b0b411276fc6262, type: 2}
+  - {fileID: 11400000, guid: d96cd76b2fd863e48bd4b649b00c3c18, type: 2}
+  - {fileID: 11400000, guid: a266ecfa5f75cf64189585c7e81b9d39, type: 2}
+  - {fileID: 11400000, guid: 1582341479dc5464ea7c080c4b6cbeab, type: 2}
+  - {fileID: 11400000, guid: 38bbadcaf22b32b40bded15fd6da807f, type: 2}
+  beforeLevel2:
+  - {fileID: 11400000, guid: 3ccce8b64153a4b41be3daf9b555cefa, type: 2}
+  beforeLevel3:
+  - {fileID: 11400000, guid: f299148b8a74cd6499f5b9a2cf10a79e, type: 2}
+  beforeLevel4:
+  - {fileID: 11400000, guid: c1ec09f89e2f10e43a1dcd7dc1d7b410, type: 2}
+  endingScreens:
+  - {fileID: 11400000, guid: cacec259271e28149b2f8b22f743c521, type: 2}
+  creditsSceneName: CreditsScene

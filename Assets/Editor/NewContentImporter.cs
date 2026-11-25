@@ -113,7 +113,9 @@ namespace Kikiri9.EditorTools
                         idx++;
                     }
                 }
+#pragma warning disable 618 // TextureImporter.spritesheet obsoleto; sigue funcional en Unity 6
                 ti.spritesheet = rects.ToArray();
+#pragma warning restore 618
             }
             else
             {

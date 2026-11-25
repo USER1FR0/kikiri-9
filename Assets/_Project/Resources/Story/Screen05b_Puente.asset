@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e7d5ce854545c44a714e741b8a84d5, type: 3}
+  m_Name: Screen05b_Puente
+  m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.UI.Story.StoryScreenDefinition
+  background: {fileID: 4758439415700094296, guid: d5a9f47f7e9bf104a9492ebb7f5a7a22, type: 3}
+  pages:
+  - 'Dolores cambia.
+
+
+    Los que cayeron primero
+
+    empiezan a levantarse distintos.'
+  - 'Algunos ya no mueren de un solo pan.
+
+    Otros brincan paredes
+
+    que antes
+    los contenian.'
+  - 'Kikiri-9 va a tener que correr mas rapido.
+
+    Y pegar mas fuerte.'
+  textEs: 
+  fadeInSeconds: 0.5
+  fadeOutSeconds: 0.35
+  effects:
+  - id: rayos_puente
+    frames:
+    - {fileID: -1478769609, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: 133825536, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: 761338291, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: -934902289, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    frameRate: 11
+    loop: 1
+    anchor: {x: 0.5, y: 0.75}
+    size: {x: 380, y: 560}
+    tint: {r: 1, g: 0.95, b: 0.85, a: 0.85}
+    startDelay: 0
+    randomRepeatInterval: 2.8

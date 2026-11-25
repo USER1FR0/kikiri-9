@@ -35,6 +35,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/Level04_Guanajuato.unity
     guid: 6b435fe6ad96a4f45a82b7bc894b1fa5
+  - enabled: 1
+    path: Assets/_Project/Scenes/StoryScene.unity
+    guid: 45f75c277fc332c46a103f92a8c599ce
+  - enabled: 1
+    path: Assets/_Project/Scenes/CreditsScene.unity
+    guid: 7c8deb79c0517024784e602268b8ae03
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

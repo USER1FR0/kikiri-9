@@ -5,6 +5,8 @@
 
 using System;
 using Kikiri9.Session;
+using Kikiri9.UI.Story;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -34,6 +36,92 @@ namespace Kikiri9.UI
         private void Start()
         {
             Refresh();
+            EnsureReplayButton();
+        }
+
+        // Crea un boton flotante "VER HISTORIA" si no existe ya, sin tocar el
+        // LevelSelectBuilder. Reproduce toda la narrativa en orden al presionarlo.
+        private void EnsureReplayButton()
+        {
+            if (GameObject.Find("ReplayStoryCanvas") != null) return;
+
+            var uiAssets = StoryUIAssets.Get();
+
+            var canvasGo = new GameObject("ReplayStoryCanvas",
+                typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
+            var canvas = canvasGo.GetComponent<Canvas>();
+            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            canvas.sortingOrder = 50;
+            var scaler = canvasGo.GetComponent<CanvasScaler>();
+            scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+            scaler.referenceResolution = new Vector2(1920f, 1080f);
+            SceneManager.MoveGameObjectToScene(canvasGo, SceneManager.GetActiveScene());
+
+            var go = new GameObject("ReplayStoryButton",
+                typeof(RectTransform), typeof(Image), typeof(Button));
+            go.transform.SetParent(canvasGo.transform, false);
+            var rt = (RectTransform)go.transform;
+            rt.anchorMin = new Vector2(1f, 1f);
+            rt.anchorMax = new Vector2(1f, 1f);
+            rt.pivot = new Vector2(1f, 1f);
+            rt.anchoredPosition = new Vector2(-40f, -40f);
+            rt.sizeDelta = new Vector2(320f, 90f);
+
+            var img = go.GetComponent<Image>();
+            var btn = go.GetComponent<Button>();
+            btn.targetGraphic = img;
+            if (uiAssets != null && uiAssets.buttonNormal != null)
+            {
+                img.sprite = uiAssets.buttonNormal;
+                img.type = Image.Type.Simple;   // mismo render que JUGAR del MainMenu
+                img.preserveAspect = false;
+                img.color = Color.white;
+                btn.transition = Selectable.Transition.SpriteSwap;
+                btn.spriteState = new SpriteState
+                {
+                    highlightedSprite = uiAssets.buttonSelected,
+                    pressedSprite = uiAssets.buttonPressed,
+                    disabledSprite = uiAssets.buttonDisabled
+                };
+            }
+            else
+            {
+                img.sprite = Resources.GetBuiltinResource<Sprite>("UI/Skin/UISprite.psd");
+                img.type = Image.Type.Sliced;
+                img.color = new Color(0.98f, 0.56f, 0.12f, 1f);
+            }
+
+            var labelGo = new GameObject("Label", typeof(RectTransform), typeof(TextMeshProUGUI));
+            labelGo.transform.SetParent(go.transform, false);
+            var lrt = (RectTransform)labelGo.transform;
+            lrt.anchorMin = Vector2.zero;
+            lrt.anchorMax = Vector2.one;
+            lrt.offsetMin = new Vector2(16f, 10f);
+            lrt.offsetMax = new Vector2(-16f, -10f);
+            var tmp = labelGo.GetComponent<TextMeshProUGUI>();
+            tmp.text = "VER HISTORIA";
+            tmp.alignment = TextAlignmentOptions.Center;
+            tmp.fontStyle = FontStyles.Bold;
+            tmp.color = Color.white;
+            tmp.outlineColor = new Color(0.08f, 0.04f, 0.01f, 1f);
+            tmp.outlineWidth = 0.28f;
+            tmp.enableAutoSizing = true;
+            tmp.fontSizeMin = 16f;
+            tmp.fontSizeMax = 26f;
+            if (uiAssets != null && uiAssets.font != null) tmp.font = uiAssets.font;
+
+            btn.onClick.AddListener(OnReplayStoryClicked);
+        }
+
+        public void OnReplayStoryClicked()
+        {
+            string current = SceneManager.GetActiveScene().name;
+            if (!StoryQueue.TryEnqueueFullReplay(current))
+            {
+                Debug.LogWarning("[ReplayStory] No se pudo encolar: StoryFlow.Get() devolvio null o estaba vacio. Corre Tools > Kikiri-9 > Build Story + Credits.");
+                return;
+            }
+            StoryQueue.LoadStoryScene();
         }
 
         private void Refresh()
@@ -73,6 +161,13 @@ namespace Kikiri9.UI
 
             if (card == null || string.IsNullOrEmpty(card.sceneName)) return;
             if (!Application.CanStreamedLevelBeLoaded(card.sceneName)) return;
+
+            // Si este nivel tiene pantallas narrativas aun no vistas, pasan primero.
+            if (StoryQueue.TryEnqueueBeforeLevel(levelNumber, card.sceneName))
+            {
+                StoryQueue.LoadStoryScene();
+                return;
+            }
 
             if (SceneFader.Instance != null) SceneFader.Instance.LoadSceneWithFade(card.sceneName);
             else SceneManager.LoadScene(card.sceneName);

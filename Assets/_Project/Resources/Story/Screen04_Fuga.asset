@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e7d5ce854545c44a714e741b8a84d5, type: 3}
+  m_Name: Screen04_Fuga
+  m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.UI.Story.StoryScreenDefinition
+  background: {fileID: 4744837784487933241, guid: cf8230a6b0be2d840abb2a526ba7d4f6, type: 3}
+  pages:
+  - 'Dolores ya no es Dolores.
+
+
+    Zombis en las bardas.
+
+    Zombis en los puestos
+    de ceramica.
+
+    Zombis hasta en la parroquia.'
+  - 'Una mochila olvidada en el suelo.
+
+    Dentro, panes de muerto envueltos en
+    papel.
+
+
+    Algo le dice que valen
+
+    mas que cualquier cosa.'
+  textEs: 
+  fadeInSeconds: 0.5
+  fadeOutSeconds: 0.35
+  effects: []

@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e7d5ce854545c44a714e741b8a84d5, type: 3}
+  m_Name: Screen05_DescubrimientoPan
+  m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.UI.Story.StoryScreenDefinition
+  background: {fileID: -1216579596837928049, guid: c79984b2ac732ac40b146a736a83bfd9, type: 3}
+  pages:
+  - 'Lanza el primero por accidente.
+
+
+    El zombi que lo acechaba se detiene.
+
+    Dobla
+    las rodillas.
+
+    Se deshace en polvo.'
+  - 'El cempasuchil del suelo brilla mas fuerte.
+
+
+    El pan no es comida.
+
+    Es
+    lo unico que puede devolverlos
+
+    a donde deben estar.'
+  textEs: 
+  fadeInSeconds: 0.5
+  fadeOutSeconds: 0.35
+  effects:
+  - id: cempasuchil_descubrir
+    frames:
+    - {fileID: 190986936, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: -1968250982, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: 1316478228, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: 1592440299, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    frameRate: 6
+    loop: 1
+    anchor: {x: 0.16, y: 0.18}
+    size: {x: 200, y: 200}
+    tint: {r: 1, g: 0.75, b: 0.25, a: 1}
+    startDelay: 0
+    randomRepeatInterval: 0

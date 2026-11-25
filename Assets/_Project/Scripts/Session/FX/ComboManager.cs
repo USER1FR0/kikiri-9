@@ -22,7 +22,7 @@ namespace Kikiri9.Session.FX
 
         private int kills;
         private float displayScale = 1f;
-        private AudioSource audio;
+        private AudioSource audioSrc;
 
         private TextMeshPro label;
         private SpriteRenderer destelloSr;
@@ -35,10 +35,10 @@ namespace Kikiri9.Session.FX
         {
             if (Instance != null && Instance != this) { Destroy(gameObject); return; }
             Instance = this;
-            audio = GetComponent<AudioSource>();
-            if (audio == null) audio = gameObject.AddComponent<AudioSource>();
-            audio.pitch = 0.75f;
-            audio.playOnAwake = false;
+            audioSrc = GetComponent<AudioSource>();
+            if (audioSrc == null) audioSrc = gameObject.AddComponent<AudioSource>();
+            audioSrc.pitch = 0.75f;
+            audioSrc.playOnAwake = false;
             TryLoadDestelloFromResources();
             BuildVisual();
         }
@@ -90,7 +90,7 @@ namespace Kikiri9.Session.FX
             if (Instance == null) return;
             Instance.kills++;
             Instance.PulseVisual();
-            if (Instance.comboSfx != null) Instance.audio.PlayOneShot(Instance.comboSfx, 0.7f);
+            if (Instance.comboSfx != null) Instance.audioSrc.PlayOneShot(Instance.comboSfx, 0.7f);
             OnComboChanged?.Invoke(Instance.kills);
 
             if (Instance.kills >= Instance.maxCombo)
@@ -110,7 +110,7 @@ namespace Kikiri9.Session.FX
             var ammo = player.GetComponent<Kikiri9.Combat.Barredor.PanBarredorAmmo>();
             if (ammo == null) ammo = player.AddComponent<Kikiri9.Combat.Barredor.PanBarredorAmmo>();
             ammo.Add(1);
-            if (comboSfx != null) audio.PlayOneShot(comboSfx, 1f);
+            if (comboSfx != null) audioSrc.PlayOneShot(comboSfx, 1f);
         }
 
         public static void NotifyDamage()

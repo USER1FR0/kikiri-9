@@ -62,8 +62,8 @@ namespace Kikiri9.UI
 
         public void OnPlayPressed()
         {
-            // JUGAR ya no arranca directo el Nivel 1: abre el Selector de Niveles,
-            // donde se elige cualquier nivel desbloqueado (el 1 siempre libre).
+            // JUGAR abre el Selector de Niveles. La narrativa de cada nivel se
+            // dispara desde ahi o al avanzar en Level Complete.
             LoadScene(levelSelectSceneName);
         }
 
@@ -95,6 +95,14 @@ namespace Kikiri9.UI
         public void OnCreditsPressed()
         {
             CloseAllPanels();
+
+            // Si existe una escena CreditsScene en el build, la carga (nueva experiencia
+            // dedicada). Si no, cae al panel overlay original para no perder la funcion.
+            if (Application.CanStreamedLevelBeLoaded("CreditsScene"))
+            {
+                LoadScene("CreditsScene");
+                return;
+            }
 
             if (creditsPanel != null)
             {
