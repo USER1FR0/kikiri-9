@@ -190,7 +190,8 @@ namespace Kikiri9.Player
         private bool CheckGrounded()
         {
             if (groundCheck == null) return false;
-            int count = Physics2D.OverlapCircleNonAlloc(groundCheck.position, groundCheckRadius, groundHitBuffer, groundLayer);
+            var filter = new ContactFilter2D { useLayerMask = true, layerMask = groundLayer, useTriggers = true };
+            int count = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, filter, groundHitBuffer);
             for (int i = 0; i < count; i++)
             {
                 var c = groundHitBuffer[i];

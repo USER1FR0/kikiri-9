@@ -126,18 +126,34 @@ namespace Kikiri9.Player
     public class PunchHitbox : MonoBehaviour
     {
         private int damage;
+        private System.Collections.Generic.HashSet<int> alreadyHit = new System.Collections.Generic.HashSet<int>();
 
         public void Setup(int d, float lifetime)
         {
             damage = d;
             Destroy(gameObject, lifetime);
+            // OverlapBox inmediato: captura enemigos ya adentro al spawn (bocajarro).
+            var col = GetComponent<BoxCollider2D>();
+            if (col == null) return;
+            Vector2 center = (Vector2)transform.position + col.offset;
+            Vector2 size = col.size;
+            var hits = Physics2D.OverlapBoxAll(center, size, 0f);
+            foreach (var h in hits) ApplyHit(h);
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
+        private void OnTriggerEnter2D(Collider2D other) => ApplyHit(other);
+
+        private void ApplyHit(Collider2D other)
         {
+            if (other == null) return;
             if (!other.CompareTag("Enemy")) return;
             var h = other.GetComponent<EnemyHealth>();
-            if (h != null) h.TakeDamage(damage, Kikiri9.Enemies.New.DamageSource.Rafaga, transform.position);
+            if (h == null) h = other.GetComponentInParent<EnemyHealth>();
+            if (h == null) return;
+            int id = h.GetInstanceID();
+            if (alreadyHit.Contains(id)) return;
+            alreadyHit.Add(id);
+            h.TakeDamage(damage, Kikiri9.Enemies.New.DamageSource.Rafaga, transform.position);
         }
     }
 }

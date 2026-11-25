@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e7d5ce854545c44a714e741b8a84d5, type: 3}
+  m_Name: Screen06_Transicion
+  m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.UI.Story.StoryScreenDefinition
+  background: {fileID: -6364612110009314994, guid: 4dc61630524ccdb46a0ecb76a411ef32, type: 3}
+  pages:
+  - 'Sale de Dolores por la carretera vieja.
+
+
+    El camino sube entre cerros.
+
+    La
+    lluvia no lo sigue.'
+  - 'Al fondo, los callejones de Guanajuato
+
+    encienden sus faroles uno por uno.
+
+
+    Alguien
+    lo espera alla.
+
+    Todavia no sabe quien.'
+  textEs: 
+  fadeInSeconds: 0.5
+  fadeOutSeconds: 0.35
+  effects: []

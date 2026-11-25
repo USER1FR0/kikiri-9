@@ -45,7 +45,9 @@ namespace Kikiri9.Levels
             if (Time.time < nextSpawnTime) return;
 
             active.RemoveAll(e => e == null);
-            if (active.Count < level.Definition.maxActiveEntities)
+            int maxActive = level.Definition.maxActiveEntities
+                + (IsIntense(intenseFromMeters) ? Mathf.Max(0, level.Definition.intenseMaxActiveBoost) : 0);
+            if (active.Count < maxActive)
             {
                 var pos = new Vector3(spawnReference.position.x + spawnAheadDistance, groundY, 0f);
 
@@ -83,28 +85,34 @@ namespace Kikiri9.Levels
         private float lastObstacleMeters = -999f;
         [SerializeField] private float enemyGapAfterObstacle = 10f;
 
-        private static SpawnCategory PickWeighted(List<SpawnCategory> avail, LevelDefinition def)
+        private static SpawnCategory PickWeighted(List<SpawnCategory> avail, LevelDefinition def, float enemyMult, float pickupMult)
         {
             float sum = 0f;
-            foreach (var c in avail) sum += CategoryWeight(def, c);
-            if (sum <= 0f) return avail[Random.Range(0, avail.Count)];
-            float roll = Random.value * sum;
+            foreach (var c in avail) sum += CategoryWeight(def, c, enemyMult, pickupMult);
+            if (sum <= 0f) return avail[UnityEngine.Random.Range(0, avail.Count)];
+            float r = UnityEngine.Random.Range(0f, sum);
             float cum = 0f;
             foreach (var c in avail)
             {
-                cum += CategoryWeight(def, c);
-                if (roll <= cum) return c;
+                cum += CategoryWeight(def, c, enemyMult, pickupMult);
+                if (r <= cum) return c;
             }
             return avail[avail.Count - 1];
         }
 
-        private static float CategoryWeight(LevelDefinition def, SpawnCategory c)
+        private static bool IsIntense(float intenseFromMeters)
+        {
+            return Kikiri9.World.WorldScroller.Instance != null
+                && Kikiri9.World.WorldScroller.Instance.MetersAdvanced >= intenseFromMeters;
+        }
+
+        private static float CategoryWeight(LevelDefinition def, SpawnCategory c, float enemyMult, float pickupMult)
         {
             switch (c)
             {
-                case SpawnCategory.Enemy: return Mathf.Max(0f, def.enemyWeight);
+                case SpawnCategory.Enemy: return Mathf.Max(0f, def.enemyWeight) * Mathf.Max(0f, enemyMult);
                 case SpawnCategory.Obstacle: return Mathf.Max(0f, def.obstacleWeight);
-                default: return Mathf.Max(0f, def.pickupWeight);
+                default: return Mathf.Max(0f, def.pickupWeight) * Mathf.Max(0f, pickupMult);
             }
         }
 
@@ -159,7 +167,12 @@ namespace Kikiri9.Levels
                 }
             }
 
-            float wE = def.enemyWeight, wO = def.obstacleWeight, wP = def.pickupWeight;
+            // Modo intenso: aplicar multiplicadores de peso y pool extra de enemigos/pickups
+            bool intense = IsIntense(intenseFromMeters);
+            float enemyMult = intense ? Mathf.Max(0f, def.intenseEnemyWeightMult) : 1f;
+            float pickupMult = intense ? Mathf.Max(0f, def.intensePickupWeightMult) : 1f;
+
+            float wE = def.enemyWeight * enemyMult, wO = def.obstacleWeight, wP = def.pickupWeight * pickupMult;
             bool useWeighted = (wE + wO + wP) > 0f;
 
             var avail = new List<SpawnCategory>(3);
@@ -202,7 +215,7 @@ namespace Kikiri9.Levels
 
             SpawnCategory chosen;
             if (useWeighted)
-                chosen = PickWeighted(avail, def);
+                chosen = PickWeighted(avail, def, enemyMult, pickupMult);
             else
                 chosen = avail[Random.Range(0, avail.Count)];
 
@@ -217,10 +230,23 @@ namespace Kikiri9.Levels
 
             switch (chosen)
             {
-                case SpawnCategory.Enemy:    return def.enemyPrefabs[Random.Range(0, eC)];
+                case SpawnCategory.Enemy:    return PickFromPools(def.enemyPrefabs, intense ? def.intenseExtraEnemyPrefabs : null);
                 case SpawnCategory.Obstacle: return def.obstaclePrefabs[Random.Range(0, oC)];
-                default:                     return def.pickupPrefabs[Random.Range(0, pC)];
+                default:                     return PickFromPools(def.pickupPrefabs, intense ? def.intenseExtraPickupPrefabs : null);
             }
+        }
+
+
+        // Elige un prefab del pool base o del pool extra (si existe). Si no hay nada, null.
+        private static GameObject PickFromPools(GameObject[] basePool, GameObject[] extraPool)
+        {
+            int baseN = basePool != null ? basePool.Length : 0;
+            int extraN = extraPool != null ? extraPool.Length : 0;
+            int total = baseN + extraN;
+            if (total == 0) return null;
+            int idx = Random.Range(0, total);
+            if (idx < baseN) return basePool[idx];
+            return extraPool[idx - baseN];
         }
 
         private void ScheduleNext()

@@ -338,6 +338,20 @@ namespace Kikiri9.EditorTools
             var mbs = GameObject.Find("MiniBossSpawner");
             if (mbs != null) mbs.SetActive(false);
 
+            // CheckpointBanner: aviso al cruzar los 1000m (zona inundada)
+            var cbGo = GameObject.Find("CheckpointBanner_1000m");
+            if (cbGo == null)
+            {
+                cbGo = new GameObject("CheckpointBanner_1000m");
+                cbGo.AddComponent<Kikiri9.Levels.CheckpointBanner>();
+            }
+            var cb = cbGo.GetComponent<Kikiri9.Levels.CheckpointBanner>();
+            if (cb != null)
+            {
+                SetFieldFloat(cb, "triggerMeters", 1000f);
+                SetFieldObject(cb, "bannerSprite", GetSprite($"{UIWavesDir}/oleada_inicio.png"));
+            }
+
             EditorSceneManager.MarkSceneDirty(scene);
             EditorSceneManager.SaveScene(scene, Level3Scene);
         }

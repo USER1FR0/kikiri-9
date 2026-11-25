@@ -98,4 +98,6 @@ namespace Kikiri9.UI
             if (returnToPanel != null) returnToPanel.SetActive(true);
         }
     }
+
+    // _reimport_force: touch para que Unity refresque el cache de ScriptAssemblies
 }
