@@ -339,6 +339,13 @@ namespace Kikiri9.Player
             }
         }
 
+        // Metodos publicos para controles tactiles de movil (TouchControlsManager).
+        // Replican el mismo path que los callbacks de InputAction sin duplicar logica.
+        public void OnTouchJumpPressed()  { OnJumpPressed(default); }
+        public void OnTouchJumpReleased() { OnJumpReleased(default); }
+        public void OnTouchSlidePressed() { OnSlidePressed(default); }
+        public void OnTouchThrowPressed() { OnThrow(default); }
+
         private void OnBarredor(InputAction.CallbackContext _)
         {
             if (InputBlocked()) return;
