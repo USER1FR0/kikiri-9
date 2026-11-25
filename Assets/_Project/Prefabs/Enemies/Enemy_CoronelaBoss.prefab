@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3628845767657064944
+--- !u!1 &556679504275540297
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,13 +8,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1732363628519421229}
-  - component: {fileID: 8666197144730844178}
-  - component: {fileID: 8202685473525875824}
-  - component: {fileID: 2413841679354185510}
-  - component: {fileID: 4516481472870606745}
-  - component: {fileID: 4447055611403543651}
-  - component: {fileID: 1080615815005870386}
+  - component: {fileID: 4701474974255650359}
+  - component: {fileID: 3088953560887963958}
+  - component: {fileID: 8798692749638584618}
+  - component: {fileID: 7877292783836214928}
+  - component: {fileID: 4545664561016157444}
+  - component: {fileID: 8098029357424355553}
+  - component: {fileID: 682850955609777773}
   m_Layer: 0
   m_Name: Enemy_CoronelaBoss
   m_TagString: Enemy
@@ -22,13 +22,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1732363628519421229
+--- !u!4 &4701474974255650359
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3628845767657064944}
+  m_GameObject: {fileID: 556679504275540297}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -37,14 +37,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8666197144730844178
+--- !u!212 &3088953560887963958
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3628845767657064944}
+  m_GameObject: {fileID: 556679504275540297}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -96,13 +96,13 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!70 &8202685473525875824
+--- !u!70 &8798692749638584618
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3628845767657064944}
+  m_GameObject: {fileID: 556679504275540297}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -133,13 +133,13 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.4, y: 2}
   m_Direction: 0
---- !u!114 &2413841679354185510
+--- !u!114 &7877292783836214928
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3628845767657064944}
+  m_GameObject: {fileID: 556679504275540297}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eee13e085d41bd34a9ac22fec2ae466b, type: 3}
@@ -150,13 +150,13 @@ MonoBehaviour:
   defeatVfxSprite: {fileID: 0}
   defeatAnimTrigger: Defeat
   destroyAfterDefeat: 15
---- !u!114 &4516481472870606745
+--- !u!114 &4545664561016157444
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3628845767657064944}
+  m_GameObject: {fileID: 556679504275540297}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a32af63e70b92a849bcf6d04847c4b3a, type: 3}
@@ -164,13 +164,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.Enemies.EnemyDamageFlash
   flashDuration: 0.08
   flashColor: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &4447055611403543651
+--- !u!114 &8098029357424355553
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3628845767657064944}
+  m_GameObject: {fileID: 556679504275540297}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de38cc7558a32cf40ba3a50e4216b2c4, type: 3}
@@ -180,13 +180,13 @@ MonoBehaviour:
   yOffset: 2.4
   bgColor: {r: 0, g: 0, b: 0, a: 0.7}
   fillColor: {r: 0.95, g: 0.25, b: 0.25, a: 1}
---- !u!114 &1080615815005870386
+--- !u!114 &682850955609777773
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3628845767657064944}
+  m_GameObject: {fileID: 556679504275540297}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a40b6eb0ee4d74845b48704af3e49977, type: 3}
@@ -197,7 +197,7 @@ MonoBehaviour:
   attackIntervalMin: 2.2
   attackIntervalMax: 2.8
   telegraphDuration: 0.5
-  projectilePrefab: {fileID: 7261587822796278312, guid: 8990ebbd8c3a78b47b91b8c5d993fc80, type: 3}
+  projectilePrefab: {fileID: 1290306473382023627, guid: 8990ebbd8c3a78b47b91b8c5d993fc80, type: 3}
   projectileSpeed: 7
   muzzleOffset: {x: -1, y: 0.3, z: 0}
   breadDropPrefab: {fileID: 8911047900946545455, guid: 5d18d3957dbd2a1489b1531273aec55f, type: 3}

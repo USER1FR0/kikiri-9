@@ -17,7 +17,7 @@ MonoBehaviour:
   musicClip: {fileID: 0}
   worldSpeed: 8.5
   maxSpeed: 11
-  targetDistance: 50000
+  targetDistance: 5000
   enemyPrefabs:
   - {fileID: 6564748067615936379, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}
   - {fileID: 3594023387938211102, guid: 1cb0001b5f139684e85a6fc3549bb1ac, type: 3}
