@@ -124,3 +124,7 @@ desktop.ini
 
 # Local-only scratch
 _Local/
+"" 
+"# Build outputs" 
+"Build_apk/" 
+"Builds/" 

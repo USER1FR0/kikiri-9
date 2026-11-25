@@ -30,6 +30,13 @@ namespace Kikiri9.UI
         [Header("Progress")]
         [SerializeField] private Slider progressSlider;
 
+        // Cache para evitar rebuilds de Canvas cada frame cuando los valores cambian solo
+        // una fraccion. Antes esto disparaba SetVerticesDirty 60 veces/seg con 700+ batches.
+        private int lastMetersInt = int.MinValue;
+        private float lastProgress = -1f;
+        private int lastBossHp = int.MinValue;
+        private float lastBossProgress = -1f;
+
         private PlayerHealth health;
         private PlayerAmmo ammo;
         private ScoreTracker score;
@@ -93,28 +100,52 @@ namespace Kikiri9.UI
 
         private void UpdateMetersAndProgress()
         {
-            // Durante una pelea de jefe (nivel 3 momia-jefe, y nivel 4 Coronela mas
-            // adelante) la barra de recorrido muestra la vida del jefe en su lugar.
+            // Jefe activo: barra de progreso muestra HP del jefe (ya cambia en pasos de 1,
+            // pero cacheamos igual para evitar setear el mismo valor dos veces).
             if (BossArenaManager.IsActive && BossArenaManager.ActiveBossHealth != null)
             {
                 var boss = BossArenaManager.ActiveBossHealth;
-                if (metersText != null)
+                if (metersText != null && boss.CurrentHealth != lastBossHp)
+                {
                     metersText.text = $"JEFE {boss.CurrentHealth} / {boss.MaxHealth}";
+                    lastBossHp = boss.CurrentHealth;
+                }
                 if (progressSlider != null)
-                    progressSlider.value = boss.MaxHealth > 0 ? Mathf.Clamp01((float)boss.CurrentHealth / boss.MaxHealth) : 0f;
+                {
+                    float p = boss.MaxHealth > 0 ? Mathf.Clamp01((float)boss.CurrentHealth / boss.MaxHealth) : 0f;
+                    if (!Mathf.Approximately(p, lastBossProgress))
+                    {
+                        progressSlider.value = p;
+                        lastBossProgress = p;
+                    }
+                }
                 return;
             }
 
             if (world == null) return;
             float meters = world.MetersAdvanced;
             float target = level != null && level.Definition != null ? level.Definition.targetDistance : 0f;
-            // Clamp display al target: durante LevelOutro el WorldScroller sigue sumando
-            // metros fantasma pero el HUD no debe mostrar valores por encima de la meta.
             float displayMeters = target > 0f ? Mathf.Min(meters, target) : meters;
-            if (metersText != null)
-                metersText.text = target > 0f ? $"{Mathf.FloorToInt(displayMeters)} / {Mathf.FloorToInt(target)} m" : $"{Mathf.FloorToInt(displayMeters)} m";
+
+            // Texto solo cuando cambia el entero (antes se reasignaba el mismo string 60/seg).
+            int metersInt = Mathf.FloorToInt(displayMeters);
+            if (metersText != null && metersInt != lastMetersInt)
+            {
+                metersText.text = target > 0f ? $"{metersInt} / {Mathf.FloorToInt(target)} m" : $"{metersInt} m";
+                lastMetersInt = metersInt;
+            }
+
+            // Slider solo cuando el valor cambia en >= 0.5% (ancho tipico de 1 pixel en barra
+            // de 200px). Evita rebuilds del Canvas por fracciones imperceptibles.
             if (progressSlider != null && target > 0f)
-                progressSlider.value = Mathf.Clamp01(meters / target);
+            {
+                float newProgress = Mathf.Clamp01(meters / target);
+                if (Mathf.Abs(newProgress - lastProgress) > 0.005f || (newProgress >= 1f && lastProgress < 1f))
+                {
+                    progressSlider.value = newProgress;
+                    lastProgress = newProgress;
+                }
+            }
         }
 
         private void UpdateHearts(int current, int max)

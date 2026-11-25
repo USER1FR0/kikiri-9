@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.Levels.LevelDefinition
   levelName: Guanajuato - Etapa Final
   backgroundSprite: {fileID: 0}
-  musicClip: {fileID: 0}
-  worldSpeed: 8.5
-  maxSpeed: 11
+  musicClip: {fileID: 8300000, guid: 782cc7d336b3ba3418b1fccf0aa05583, type: 3}
+  worldSpeed: 9.5
+  maxSpeed: 14
   targetDistance: 5000
   enemyPrefabs:
   - {fileID: 6564748067615936379, guid: 816b4bc84e57ffc48b9d71fc79c5da1d, type: 3}

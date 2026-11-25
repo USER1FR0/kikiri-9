@@ -63,7 +63,15 @@ namespace Kikiri9.Enemies
             OnHealthChanged?.Invoke(currentHealth, maxHealth);
             var flash = GetComponent<EnemyDamageFlash>();
             if (flash != null) flash.Flash();
-            if (currentHealth <= 0) Defeat();
+            if (currentHealth <= 0)
+            {
+                Defeat();
+            }
+            else
+            {
+                // Stun breve + knockback para que no alcance al pollo entre golpes
+                StartCoroutine(StunRoutine(0.4f, impactPos));
+            }
         }
 
         private void Defeat()
@@ -112,6 +120,25 @@ namespace Kikiri9.Enemies
             // A kinematic body keeps its velocity after the movement script is disabled.
             if (rb != null) rb.linearVelocity = Vector2.zero;
             Destroy(gameObject, destroyAfterDefeat);
+        }
+
+        private System.Collections.IEnumerator StunRoutine(float duration, UnityEngine.Vector3 impactPos)
+        {
+            var move = GetComponent<EnemyMovement>();
+            var rb = GetComponent<Rigidbody2D>();
+            Vector2 preVel = Vector2.zero;
+            if (move != null) move.enabled = false;
+            if (rb != null)
+            {
+                preVel = rb.linearVelocity;
+                // Knockback: empuja al enemigo hacia atras (lejos del impacto)
+                float dir = Mathf.Sign(transform.position.x - impactPos.x);
+                if (dir == 0f) dir = 1f;
+                rb.linearVelocity = new Vector2(dir * 2f, rb.linearVelocity.y);
+            }
+            yield return new UnityEngine.WaitForSeconds(duration);
+            if (move != null && this != null) move.enabled = true;
+            if (rb != null && this != null) rb.linearVelocity = preVel;
         }
 
         // Right click the component in the Inspector during Play mode to test the defeat.

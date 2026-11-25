@@ -31,6 +31,7 @@ namespace Kikiri9.UI
 
         private void TryBuild()
         {
+            if (barredorIcon == null) barredorIcon = Resources.Load<Sprite>("PowerUps/pan_indicator");
             var breadNode = GameObject.Find("Bread");
             if (breadNode == null) return;
             var breadRt = breadNode.GetComponent<RectTransform>();

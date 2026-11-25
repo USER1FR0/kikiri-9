@@ -130,7 +130,7 @@ namespace Kikiri9.EditorTools
                 var h = NewImage($"Heart_{i}", placaV.transform, heartFull);
                 h.preserveAspect = true;
                 Anchor((RectTransform)h.transform, new Vector2(0f, 0.5f), new Vector2(0f, 0.5f), new Vector2(0.5f, 0.5f),
-                    new Vector2(65f + i * 115f, 0f), new Vector2(65f, 65f));
+                    new Vector2(75f + i * 120f, 0f), new Vector2(75f, 75f));
                 hearts[i] = h;
             }
 
@@ -146,7 +146,7 @@ namespace Kikiri9.EditorTools
             var placaT = NewImage("PlacaTiempo", top.transform, placaTiempo);
             Anchor((RectTransform)placaT.transform, new Vector2(1f, 0.5f), new Vector2(1f, 0.5f), new Vector2(1f, 0.5f),
                 new Vector2(-30f, 0f), new Vector2(420f, 120f));
-            var time = NewText("TimeText", placaT.transform, "00:00", 32, TextAlignmentOptions.Center);
+            var time = NewText("TimeText", placaT.transform, "00:00", 36, TextAlignmentOptions.Center);
             Anchor((RectTransform)time.transform, new Vector2(0f, 0.5f), new Vector2(0f, 0.5f), new Vector2(0f, 0.5f),
                 new Vector2(40f, 0f), new Vector2(200f, 60f));
             // base_pausa como fondo del boton: 100x100 compacto, pegado al borde derecho.
@@ -156,7 +156,7 @@ namespace Kikiri9.EditorTools
             pbImg.sprite = basePausaSprite;
             pbImg.type = Image.Type.Simple;
             Anchor((RectTransform)pauseBtnGo.transform, new Vector2(1f, 0.5f), new Vector2(1f, 0.5f), new Vector2(1f, 0.5f),
-                new Vector2(-35f, 0f), new Vector2(80f, 80f));
+                new Vector2(-45f, 0f), new Vector2(95f, 95f));
             // Icono pausa con padding proporcional: icon final ~60x60 dentro de base 80x80.
             var pauseIcoGo = NewImage("Icon", pauseBtnGo.transform, pauseIcon);
             pauseIcoGo.preserveAspect = true;
@@ -167,18 +167,18 @@ namespace Kikiri9.EditorTools
             var bot = new GameObject("BottomBar", typeof(RectTransform));
             bot.transform.SetParent(hudGo.transform, false);
             Anchor((RectTransform)bot.transform, new Vector2(0f, 0f), new Vector2(1f, 0f), new Vector2(0.5f, 0f),
-                new Vector2(0f, 20f), new Vector2(-40f, 110f));
+                new Vector2(0f, 20f), new Vector2(-40f, 130f));
 
             // Metros (texto solo, bottom-left)
             var meters = NewText("MetersText", bot.transform, "0 / 500 m", 34, TextAlignmentOptions.Left);
             Anchor((RectTransform)meters.transform, new Vector2(0f, 0.5f), new Vector2(0f, 0.5f), new Vector2(0f, 0.5f),
-                new Vector2(30f, 0f), new Vector2(280f, 50f));
+                new Vector2(30f, 0f), new Vector2(300f, 55f));
             meters.color = Color.white;
 
             // Barra de progreso: marco + relleno, centrada. Thin para que no domine.
             var barraGo = NewImage("ProgressFrame", bot.transform, barraMarco);
             Anchor((RectTransform)barraGo.transform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f),
-                Vector2.zero, new Vector2(560f, 28f));
+                Vector2.zero, new Vector2(680f, 40f));
             var slider = BuildFilledSlider(barraGo.transform, barraRelleno);
             var sliderRT = (RectTransform)slider.transform;
             sliderRT.anchorMin = Vector2.zero; sliderRT.anchorMax = Vector2.one; sliderRT.pivot = new Vector2(0.5f, 0.5f);
@@ -188,8 +188,8 @@ namespace Kikiri9.EditorTools
 
             // Contadores pan + botella (bottom-right). Wrap 200 wide => separacion 220.
             TMP_Text breadText, coinsText;
-            BuildIconCounter("Bread", bot.transform, breadIcon, "0", new Vector2(-240f, 0f), out breadText);
-            BuildIconCounter("Coins", bot.transform, coinIcon, "0", new Vector2(-20f, 0f), out coinsText);
+            BuildIconCounter("Bread", bot.transform, breadIcon, "0", new Vector2(-300f, 0f), out breadText);
+            BuildIconCounter("Coins", bot.transform, coinIcon, "0", new Vector2(-50f, 0f), out coinsText);
 
             var ctrl = hudGo.AddComponent<HUDController>();
             var so = new SerializedObject(ctrl);
@@ -540,9 +540,10 @@ namespace Kikiri9.EditorTools
             Anchor((RectTransform)visual.transform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f),
                 Vector2.zero, new Vector2(1200f, 650f));
 
-            // Dim screen behind panel
+            // Dim screen behind panel (opaco para ocultar completamente HUD y gameplay)
             var dim = NewImage("Dim", visual.transform, null);
-            dim.color = new Color(0f, 0f, 0f, 0.65f);
+            dim.color = new Color(0f, 0f, 0f, 0.95f);
+            dim.raycastTarget = true;
             StretchParent((RectTransform)dim.transform, new Vector2(5000f, 5000f));
 
             // Panel bg: panel_resultados.png con 9-slice (border 20) para escalar sin deformar
@@ -617,8 +618,8 @@ namespace Kikiri9.EditorTools
             go.transform.SetParent(parent, false);
             var img = go.GetComponent<Image>();
             img.sprite = set.normal;
-            img.type = Image.Type.Sliced; // los sprites tienen borde 24, se escalan sin deformar
-            img.pixelsPerUnitMultiplier = 1f;
+            img.type = Image.Type.Simple;  // mismo render que JUGAR: naranja limpio sin base morada
+            img.preserveAspect = false;
 
             var btn = go.GetComponent<Button>();
             btn.transition = Selectable.Transition.SpriteSwap;

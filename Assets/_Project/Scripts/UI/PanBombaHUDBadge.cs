@@ -33,6 +33,7 @@ namespace Kikiri9.UI
 
         private void TryBuild()
         {
+            if (panBombaIcon == null) panBombaIcon = Resources.Load<Sprite>("PowerUps/pan_indicator");
             // Busca el GameObject "Bread" dentro del UI_Root (contador de pan normal)
             var breadNode = GameObject.Find("Bread");
             if (breadNode == null) return;

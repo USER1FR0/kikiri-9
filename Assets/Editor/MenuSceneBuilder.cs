@@ -353,8 +353,31 @@ namespace Kikiri9.EditorTools
             go.transform.SetParent(parent, false);
             StretchFull(go.GetComponent<RectTransform>());
 
+            // Dim opaco total detras para que no se vea el MainMenu debajo
             var bgImage = go.AddComponent<Image>();
-            bgImage.color = new Color(0f, 0f, 0f, 0.85f);
+            bgImage.color = new Color(0f, 0f, 0f, 0.92f);
+
+            // Contenedor decorativo (panel_resultados) centrado como marco del contenido
+            var panelContainer = new GameObject("Container", typeof(RectTransform), typeof(Image));
+            panelContainer.transform.SetParent(go.transform, false);
+            var pcRt = (RectTransform)panelContainer.transform;
+            pcRt.anchorMin = new Vector2(0.5f, 0.5f);
+            pcRt.anchorMax = new Vector2(0.5f, 0.5f);
+            pcRt.pivot = new Vector2(0.5f, 0.5f);
+            pcRt.anchoredPosition = new Vector2(0f, 20f);
+            pcRt.sizeDelta = new Vector2(920f, 620f);
+            var pcImg = panelContainer.GetComponent<Image>();
+            var panelSprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/_Project/Art/UI/Story/panel_resultados.png");
+            if (panelSprite != null)
+            {
+                pcImg.sprite = panelSprite;
+                pcImg.type = Image.Type.Sliced;
+            }
+            else
+            {
+                pcImg.color = new Color(0.06f, 0.03f, 0.09f, 0.95f);
+            }
+            pcImg.raycastTarget = false;
 
             var title = CreateText(go.transform, "Title", "OPCIONES", 34, TextAnchor.MiddleCenter);
             SetAnchoredRect(title.rectTransform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0f, 220f), new Vector2(700f, 60f));
@@ -500,15 +523,28 @@ namespace Kikiri9.EditorTools
             go.transform.SetParent(panelTransform, false);
 
             var rect = go.GetComponent<RectTransform>();
-            SetAnchoredRect(rect, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0f, 120f), new Vector2(240f, 56f));
+            SetAnchoredRect(rect, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0f, 90f), new Vector2(360f, 110f));
+
+            // Mismo sprite que el boton JUGAR (primario_normal), Simple como MainMenu
+            var normal = LoadSprite(ButtonsSpriteSheetPath, "primario_normal");
+            var highlighted = LoadSprite(ButtonsSpriteSheetPath, "primario_seleccionado");
+            var pressed = LoadSprite(ButtonsSpriteSheetPath, "primario_presionado");
+            var disabled = LoadSprite(ButtonsSpriteSheetPath, "primario_desactivado");
 
             var image = go.AddComponent<Image>();
-            image.color = new Color(0.3f, 0.3f, 0.3f, 1f);
+            image.sprite = normal;
+            image.type = Image.Type.Simple;
+            image.color = Color.white;
 
-            go.AddComponent<Button>();
+            var btn = go.AddComponent<Button>();
+            btn.targetGraphic = image;
+            btn.transition = Selectable.Transition.SpriteSwap;
+            btn.spriteState = new SpriteState { highlightedSprite = highlighted, pressedSprite = pressed, disabledSprite = disabled };
 
-            var text = CreateText(go.transform, "Label", "VOLVER", 24, TextAnchor.MiddleCenter);
+            var text = CreateText(go.transform, "Label", "VOLVER", 30, TextAnchor.MiddleCenter);
+            text.fontStyle = FontStyle.Bold;
             StretchFull(text.rectTransform);
+            AddOutline(text.gameObject, new Color(0.1f, 0.05f, 0.01f, 1f), new Vector2(1.5f, -1.5f));
         }
 
         private static void ChainNavigationVertical(params Button[] buttons)

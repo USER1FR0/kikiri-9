@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e7d5ce854545c44a714e741b8a84d5, type: 3}
+  m_Name: Screen02_Laboratorio
+  m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.UI.Story.StoryScreenDefinition
+  background: {fileID: 7646128108544271137, guid: 269d963d65241ed419706445febdbf28, type: 3}
+  pages:
+  - 'Al otro lado del pueblo,
+
+    en un laboratorio apagado,
+
+    un pollo mecanico
+    duerme.'
+  - 'Lo construyeron para correr mas rapido
+
+    que cualquier cosa viva.
+
+
+    Lo
+    apagaron antes de probarlo.
+
+    Lo olvidaron.'
+  textEs: 
+  fadeInSeconds: 0.5
+  fadeOutSeconds: 0.35
+  effects:
+  - id: cempasuchil_lab
+    frames:
+    - {fileID: 190986936, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: -1968250982, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: 1316478228, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    - {fileID: 1592440299, guid: 7e51589bdf26477984469644a320ef70, type: 3}
+    frameRate: 4
+    loop: 1
+    anchor: {x: 0.12, y: 0.22}
+    size: {x: 160, y: 160}
+    tint: {r: 1, g: 0.85, b: 0.5, a: 0.55}
+    startDelay: 0
+    randomRepeatInterval: 0

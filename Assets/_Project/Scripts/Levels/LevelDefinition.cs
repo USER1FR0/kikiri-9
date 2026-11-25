@@ -37,6 +37,18 @@ namespace Kikiri9.Levels
         public float pickupWeight = 0f;
         public float safeStartMeters = 0f;    // primeros N metros sin obstaculos/enemigos
 
+        [Header("Modo intenso (post intenseFromMeters en LevelSpawner)")]
+        [Tooltip("Pool extra de enemigos que se agrega SOLO en modo intenso. Vacio = sin extras.")]
+        public GameObject[] intenseExtraEnemyPrefabs;
+        [Tooltip("Pool extra de pickups que se agrega SOLO en modo intenso. Vacio = sin extras.")]
+        public GameObject[] intenseExtraPickupPrefabs;
+        [Tooltip("Multiplicador del peso 'enemy' en modo intenso. 1 = sin cambio.")]
+        public float intenseEnemyWeightMult = 1f;
+        [Tooltip("Multiplicador del peso 'pickup' en modo intenso. 1 = sin cambio.")]
+        public float intensePickupWeightMult = 1f;
+        [Tooltip("Extra de maxActiveEntities en modo intenso. 0 = sin cambio.")]
+        public int intenseMaxActiveBoost = 0;
+
         [Header("Narrativa final")]
         [TextArea(3, 6)] public string endingNarrative = "Dolores quedo atras. El pollo sigue su camino hacia Guanajuato.";
         public int goldBottlesReward = 1;

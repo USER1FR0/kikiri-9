@@ -190,7 +190,8 @@ namespace Kikiri9.Player
         private bool CheckGrounded()
         {
             if (groundCheck == null) return false;
-            int count = Physics2D.OverlapCircleNonAlloc(groundCheck.position, groundCheckRadius, groundHitBuffer, groundLayer);
+            var filter = new ContactFilter2D { useLayerMask = true, layerMask = groundLayer, useTriggers = true };
+            int count = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, filter, groundHitBuffer);
             for (int i = 0; i < count; i++)
             {
                 var c = groundHitBuffer[i];
@@ -236,7 +237,16 @@ namespace Kikiri9.Player
             }
             else
             {
-                horizontal = runSpeed;
+                // Acelera el auto-run proporcional al WorldScroller para sentir la recta final
+                float speedMul = 1f;
+                if (Kikiri9.World.WorldScroller.Instance != null)
+                {
+                    var ws = Kikiri9.World.WorldScroller.Instance;
+                    // Ratio actual vs la velocidad base del scroller; si subio, el pollo tambien
+                    float baseWs = 5f; // valor base referencial; si ws.CurrentSpeed > base, escalamos
+                    if (ws.CurrentSpeed > baseWs) speedMul = ws.CurrentSpeed / baseWs;
+                }
+                horizontal = runSpeed * Mathf.Clamp(speedMul, 1f, 2.2f);
             }
             rb.linearVelocity = new Vector2(horizontal, rb.linearVelocity.y);
 

@@ -3,6 +3,7 @@
 
 using Kikiri9.Levels;
 using Kikiri9.Session;
+using Kikiri9.UI.Story;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -102,7 +103,39 @@ namespace Kikiri9.UI
         public void OnNextClicked()
         {
             Time.timeScale = 1f;
-            LoadWithFade(nextSceneName, false);
+
+            int currentLevel = SaveService.LevelNumberForScene(SceneManager.GetActiveScene().name);
+
+            // Calculamos el destino REAL via SaveService. El nextSceneName serializado
+            // puede estar desactualizado o vacio en algunos prefabs; SaveService es la
+            // fuente de verdad del mapeo nivel -> escena.
+            string computedNext = null;
+            if (currentLevel > 0 && currentLevel < SaveService.LevelCount)
+                computedNext = SaveService.SceneNameForLevel(currentLevel + 1);
+            string target = !string.IsNullOrEmpty(computedNext) ? computedNext : nextSceneName;
+
+            // Ganar el ultimo nivel: epilogo + creditos
+            if (currentLevel >= SaveService.LevelCount && currentLevel > 0)
+            {
+                var flow = StoryFlow.Get();
+                string creditsTarget = flow != null ? flow.creditsSceneName : "CreditsScene";
+                if (StoryQueue.TryEnqueueEnding(creditsTarget))
+                {
+                    StoryQueue.LoadStoryScene();
+                    return;
+                }
+            }
+            else if (currentLevel > 0)
+            {
+                int nextLevel = currentLevel + 1;
+                if (StoryQueue.TryEnqueueBeforeLevel(nextLevel, target))
+                {
+                    StoryQueue.LoadStoryScene();
+                    return;
+                }
+            }
+
+            LoadWithFade(target, false);
         }
 
         private void LoadWithFade(string sceneName, bool fallbackToMenu)
