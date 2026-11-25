@@ -34,7 +34,7 @@ namespace Kikiri9.UI
 
         private static void TryFix(string sceneName)
         {
-            if (!sceneName.StartsWith("Level")) return;
+            if (!sceneName.StartsWith("Level") || sceneName == "LevelSelect") return;
 
             var panels = Object.FindObjectsByType<OptionsPanel>(FindObjectsInactive.Include, FindObjectsSortMode.None);
             foreach (var op in panels) ApplyFixes(op.gameObject);
