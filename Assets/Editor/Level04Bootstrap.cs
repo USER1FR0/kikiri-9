@@ -165,7 +165,7 @@ namespace Kikiri9.EditorTools
 
             var health = go.AddComponent<EnemyHealth>();
             var soHealth = new SerializedObject(health);
-            soHealth.FindProperty("maxHealth").intValue = 12;
+            soHealth.FindProperty("maxHealth").intValue = 10;
             soHealth.FindProperty("defeatPoints").intValue = 2000;
             // Mucho mas que endDelay + duracion de la animacion de derrota (ver CoronelaBoss):
             // si EnemyHealth destruye el GameObject antes de que termine su propia
@@ -250,7 +250,7 @@ namespace Kikiri9.EditorTools
             def.goldBottlesReward = 2;
             def.tutorialText = "Ultima etapa: enemigos combinados a maxima velocidad.\n"
                 + "Al llegar a 2000m el camino se corta: aparece la Coronela.\n"
-                + "Lanzale pan (J / Click) para quitarle sus 12 puntos de vida.\n"
+                + "Lanzale pan (J / Click) para quitarle sus 10 puntos de vida.\n"
                 + "Su proyectil espectral quita un corazon: cuidado.";
             def.endingNarrative = "La Coronela cae entre las primeras luces del amanecer.\n"
                 + "Kikiri-9 por fin puede descansar: el ultimo pan ha llegado a quien lo esperaba.\n"

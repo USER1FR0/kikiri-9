@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee13e085d41bd34a9ac22fec2ae466b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Kikiri9.Enemies.EnemyHealth
-  maxHealth: 12
+  maxHealth: 10
   defeatPoints: 2000
   defeatVfxSprite: {fileID: 0}
   defeatAnimTrigger: Defeat
@@ -201,7 +201,7 @@ MonoBehaviour:
   projectileSpeed: 7
   muzzleOffset: {x: -1, y: 0.3, z: 0}
   breadDropPrefab: {fileID: 8911047900946545455, guid: 5d18d3957dbd2a1489b1531273aec55f, type: 3}
-  breadInterval: 4
+  breadInterval: 3
   breadSpawnY: -1.5
   arenaHalfWidth: 5
   caminarFrames:
