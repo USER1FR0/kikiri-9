@@ -69,26 +69,80 @@ namespace Kikiri9.EditorTools
 
         // -------- Prefabs --------
 
+        private const string GhostOrbSpritePath = "Assets/_Project/Generated/Coronela_GhostOrb.png";
+
         private static void CreateCoronelaProjectile()
         {
-            var sprite = FindSubSprite(CoronelaSheetPath, "ataque_01");
+            // No reusamos un frame del cuerpo de la Coronela (coronela.png) para el
+            // proyectil: esos frames tienen el pivote cerca de los pies (pensado para
+            // caminar sobre el piso), asi que un CircleCollider2D centrado en el
+            // transform quedaria descentrado respecto a lo que se ve dibujado (el
+            // circulo de colision se extiende por debajo del dibujo, donde no hay
+            // nada visible, y puede "tocar" al jugador aunque el fantasma ya haya
+            // pasado por arriba visualmente). En vez de eso generamos un sprite
+            // circular propio: su pivote queda exacto al centro, igual que el
+            // CircleCollider2D, as que lo que se ve coincide con lo que da dano.
+            var sprite = GetOrCreateGhostOrbSprite();
 
             var go = new GameObject("Coronela_SpectralProjectile", typeof(SpriteRenderer), typeof(CircleCollider2D));
             var sr = go.GetComponent<SpriteRenderer>();
             sr.sprite = sprite;
-            sr.color = new Color(0.65f, 0.35f, 0.9f, 0.75f); // morado espectral translucido
             sr.sortingOrder = 14;
-            go.transform.localScale = Vector3.one * 0.25f;
+            go.transform.localScale = Vector3.one;
 
             var col = go.GetComponent<CircleCollider2D>();
             col.isTrigger = true;
-            col.radius = 1f;
+            col.radius = 0.28f; // un poco mas chico que el sprite (radio 0.25) para que el golpe se sienta justo
 
             go.AddComponent<CoronelaSpectralProjectile>();
 
             if (File.Exists(PrefabCoronelaProjectile)) AssetDatabase.DeleteAsset(PrefabCoronelaProjectile);
             PrefabUtility.SaveAsPrefabAsset(go, PrefabCoronelaProjectile);
             Object.DestroyImmediate(go);
+        }
+
+        private static Sprite GetOrCreateGhostOrbSprite()
+        {
+            var existing = AssetDatabase.LoadAssetAtPath<Sprite>(GhostOrbSpritePath);
+            if (existing != null) return existing;
+
+            var dir = Path.GetDirectoryName(GhostOrbSpritePath);
+            if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
+
+            const int size = 64; // 64px / 128 ppu = 0.5 unidades de diametro (radio 0.25)
+            var tex = new Texture2D(size, size, TextureFormat.RGBA32, false);
+            var purple = new Color(0.65f, 0.35f, 0.95f);
+            float center = (size - 1) / 2f;
+            float radius = size / 2f;
+
+            for (int y = 0; y < size; y++)
+            {
+                for (int x = 0; x < size; x++)
+                {
+                    float dx = x - center;
+                    float dy = y - center;
+                    float dist = Mathf.Sqrt(dx * dx + dy * dy);
+                    float t = Mathf.Clamp01(1f - dist / radius);
+                    float alpha = Mathf.SmoothStep(0f, 1f, t);
+                    tex.SetPixel(x, y, new Color(purple.r, purple.g, purple.b, alpha));
+                }
+            }
+            tex.Apply();
+
+            File.WriteAllBytes(GhostOrbSpritePath, tex.EncodeToPNG());
+            Object.DestroyImmediate(tex);
+            AssetDatabase.ImportAsset(GhostOrbSpritePath);
+
+            var importer = (TextureImporter)AssetImporter.GetAtPath(GhostOrbSpritePath);
+            importer.textureType = TextureImporterType.Sprite;
+            importer.spritePixelsPerUnit = 128;
+            importer.alphaIsTransparency = true;
+            importer.mipmapEnabled = false;
+            importer.filterMode = FilterMode.Bilinear;
+            EditorUtility.SetDirty(importer);
+            importer.SaveAndReimport();
+
+            return AssetDatabase.LoadAssetAtPath<Sprite>(GhostOrbSpritePath);
         }
 
         private static void CreateCoronelaBoss()
@@ -111,7 +165,7 @@ namespace Kikiri9.EditorTools
 
             var health = go.AddComponent<EnemyHealth>();
             var soHealth = new SerializedObject(health);
-            soHealth.FindProperty("maxHealth").intValue = 12;
+            soHealth.FindProperty("maxHealth").intValue = 10;
             soHealth.FindProperty("defeatPoints").intValue = 2000;
             // Mucho mas que endDelay + duracion de la animacion de derrota (ver CoronelaBoss):
             // si EnemyHealth destruye el GameObject antes de que termine su propia
@@ -174,11 +228,12 @@ namespace Kikiri9.EditorTools
             def.levelName = "Guanajuato - Etapa Final";
             def.worldSpeed = 8.5f;
             def.maxSpeed = 11f;
-            // Muy por encima de triggerMeters (2000): el mundo se congela al llegar ahi
+            // Por encima de triggerMeters (2000): el mundo se congela al llegar ahi
             // (BossArenaManager.IsActive) y la unica forma de terminar el nivel es
             // derrotando a la Coronela (CoronelaBoss llama a SetState(LevelComplete)
-            // directamente). Este valor nunca se alcanza corriendo.
-            def.targetDistance = 50000f;
+            // directamente). Este valor nunca se alcanza corriendo (el mundo ya esta
+            // congelado desde los 2000m).
+            def.targetDistance = 5000f;
             def.enemyPrefabs = enemyPrefabs;
             def.obstaclePrefabs = obstaclePrefabs;
             def.pickupPrefabs = pickupPrefabs;
@@ -195,7 +250,7 @@ namespace Kikiri9.EditorTools
             def.goldBottlesReward = 2;
             def.tutorialText = "Ultima etapa: enemigos combinados a maxima velocidad.\n"
                 + "Al llegar a 2000m el camino se corta: aparece la Coronela.\n"
-                + "Lanzale pan (J / Click) para quitarle sus 12 puntos de vida.\n"
+                + "Lanzale pan (J / Click) para quitarle sus 10 puntos de vida.\n"
                 + "Su proyectil espectral quita un corazon: cuidado.";
             def.endingNarrative = "La Coronela cae entre las primeras luces del amanecer.\n"
                 + "Kikiri-9 por fin puede descansar: el ultimo pan ha llegado a quien lo esperaba.\n"
