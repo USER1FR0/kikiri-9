@@ -29,7 +29,7 @@ namespace Kikiri9.Enemies
 
         [Header("Suministro de pan")]
         [SerializeField] private GameObject breadDropPrefab;
-        [SerializeField] private float breadInterval = 4f;
+        [SerializeField] private float breadInterval = 3f;
         [SerializeField] private float breadSpawnY = -1.5f;
         [SerializeField] private float arenaHalfWidth = 5f;
 

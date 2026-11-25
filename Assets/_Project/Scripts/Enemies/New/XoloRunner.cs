@@ -1,4 +1,10 @@
-// Xolo: corre rapido pegado al piso. Vulnerable solo al slide. SIN SONIDO.
+// Xolo: corre rapido pegado al piso. Vulnerable al slide y al pan (ver
+// EnemyVulnerability). SIN SONIDO.
+//
+// Kinematic + sin gravedad, igual que el resto de los enemigos (EnemyMovement): un
+// cuerpo Dynamic con gravedad chocaba fisicamente contra los obstaculos solidos y se
+// quedaba atorado contra ellos, generando contactos inestables con el jugador que
+// disparaban el daño dos veces.
 
 using UnityEngine;
 
@@ -16,17 +22,15 @@ namespace Kikiri9.Enemies.New
         private void Awake()
         {
             rb = GetComponent<Rigidbody2D>();
-            rb.bodyType = RigidbodyType2D.Dynamic;
-            rb.gravityScale = 2f;
+            rb.bodyType = RigidbodyType2D.Kinematic;
+            rb.gravityScale = 0f;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-            rb.interpolation = RigidbodyInterpolation2D.Interpolate;
-            rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
             if (Camera.main != null) camT = Camera.main.transform;
         }
 
         private void FixedUpdate()
         {
-            rb.linearVelocity = new Vector2(speedX, rb.linearVelocity.y);
+            rb.linearVelocity = new Vector2(speedX, 0f);
         }
 
         private void Update()
